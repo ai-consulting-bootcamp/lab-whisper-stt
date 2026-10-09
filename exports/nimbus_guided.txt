@@ -1,0 +1,51 @@
+[00:00:00 - 00:00:06] Good morning everyone! This is the weekly engineering sync for Project Nimbus. Today
+[00:00:06 - 00:00:13] is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL
+[00:00:13 - 00:00:20] latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start with the
+[00:00:20 - 00:00:21] migration?
+[00:00:22 - 00:00:30] Sure, thanks Marcus. So the Kubernetes migration is about 70% done. We moved the authentication
+[00:00:30 - 00:00:36] service, and the billing service to the new EKS cluster last week. The main blocker right
+[00:00:36 - 00:00:42] now is the Redis cache. When we deployed it with Helm, the persistent volume claims were
+[00:00:42 - 00:00:50] failing, because of a misconfigured storage class. I opened a ticket, JIRA number NIM-482,
+[00:00:50 - 00:00:53] and I expect it to be fixed by Tuesday.
+[00:00:53 - 00:00:59] OK, good. Do we need anything from the DevOps team?
+[00:00:59 - 00:01:06] Yes, we need Tomasz to approve the Terraform changes for the VPC peering. Without that,
+[00:01:06 - 00:01:10] the pods in the staging namespace cannot reach the legacy database.
+[00:01:11 - 00:01:17] I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but
+[00:01:17 - 00:01:23] I did not have time. Just to confirm, are we still using the T3 large instances for
+[00:01:23 - 00:01:27] the worker nodes, or did we switch to Graviton?
+[00:01:28 - 00:01:35] We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker images
+[00:01:35 - 00:01:38] now build for both architectures.
+[00:01:39 - 00:01:47] Great. Let's move to item 2, the PostgreSQL latency issue. Tomasz, what did you find?
+[00:01:48 - 00:01:56] So, the P99 latency on the orders endpoint went from about 80 ms to almost 400 ms after
+[00:01:56 - 00:02:02] the release on the 12th. I ran xplane-analyze on the sloke queries, and the problem is a
+[00:02:02 - 00:02:08] missing composite index on the orders table, on customer ID, and created that. Someone
+[00:02:08 - 00:02:12] dropped it during the schema migration with Alembic.
+[00:02:13 - 00:02:16] Ouch. Is there a fix ready?
+[00:02:17 - 00:02:23] Yes. I wrote a new migration that recreates the index concurrently, so it will not lock
+[00:02:23 - 00:02:30] the table. I also added a check in our CI pipeline, using PGstat statements, so we get
+[00:02:30 - 00:02:35] an alert in metadog if any query goes above 200 ms.
+[00:02:36 - 00:02:43] That's really helpful. From the product side, customers definitely noticed. We had 11 support
+[00:02:43 - 00:02:50] tickets about slow checkout in the last week, and our NPS score dropped by 3 points.
+[00:02:51 - 00:02:59] Thanks, Aisha. OK, item 3, the Q3 OKRs. Aisha, can you give us the summary?
+[00:03:00 - 00:03:08] Sure. We have 3 key results for this quarter. First, reduce checkout abandonment from 18%
+[00:03:08 - 00:03:16] to 12%. We are currently at 14%, so we are on track, but not finished. Second, launch
+[00:03:16 - 00:03:22] the new recommendation engine, which uses the embedding model from the data science
+[00:03:22 - 00:03:29] team. That one is delayed, because the vector database, we chose Pinecone, needs a security
+[00:03:29 - 00:03:36] review from the compliance team. And third, achieve SOC 2 type 2 readiness. We are about
+[00:03:36 - 00:03:41] halfway there. What is the risk on the SOC 2 work?
+[00:03:42 - 00:03:48] The main risk is the audit logging. We need every access to customer data to be logged
+[00:03:48 - 00:03:55] and retained for one year. Right now we only keep logs in CloudWatch for 30 days.
+[00:03:56 - 00:04:02] We could export the logs to S3 with a lifecycle policy, and move them to Glacier after 90
+[00:04:02 - 00:04:07] days. That would be cheap, and it would meet the retention requirement.
+[00:04:08 - 00:04:12] Perfect. Let's take that offline, and write it up.
+[00:04:13 - 00:04:20] Last item, hiring. We have 2 open roles. A senior backend engineer with Go, and gRPC
+[00:04:20 - 00:04:26] experience, and a machine learning engineer for the recommendation work. We have 3 candidates
+[00:04:26 - 00:04:32] in the final round. Priya and Thomas, please submit your interview feedback in Greenhouse
+[00:04:32 - 00:04:33] by Friday.
+[00:04:34 - 00:04:35] Will do.
+[00:04:36 - 00:04:39] Yes, I will have mine done tomorrow.
+[00:04:40 - 00:04:46] Great. To summarize the action items. Priya will fix the Redis storage class issue by
+[00:04:46 - 00:04:53] Tuesday. Thomas will review the Terraform pull request today, and deploy the index migration.
+[00:04:53 - 00:04:59] Aisha will schedule the Pinecone security review, and draft the log retention plan with
+[00:04:59 - 00:05:04] Priya. And everyone, please send your Greenhouse feedback by Friday.
+[00:05:04 - 00:05:07] Thanks everyone, see you next week.

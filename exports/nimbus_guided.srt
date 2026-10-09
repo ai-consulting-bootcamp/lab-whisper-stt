@@ -1,0 +1,204 @@
+1
+00:00:00,000 --> 00:00:06,000
+Good morning everyone! This is the weekly engineering sync for Project Nimbus. Today
+
+2
+00:00:06,000 --> 00:00:13,080
+is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL
+
+3
+00:00:13,080 --> 00:00:20,360
+latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start with the
+
+4
+00:00:20,360 --> 00:00:21,360
+migration?
+
+5
+00:00:22,360 --> 00:00:30,760
+Sure, thanks Marcus. So the Kubernetes migration is about 70% done. We moved the authentication
+
+6
+00:00:30,760 --> 00:00:36,800
+service, and the billing service to the new EKS cluster last week. The main blocker right
+
+7
+00:00:36,800 --> 00:00:42,720
+now is the Redis cache. When we deployed it with Helm, the persistent volume claims were
+
+8
+00:00:42,720 --> 00:00:50,720
+failing, because of a misconfigured storage class. I opened a ticket, JIRA number NIM-482,
+
+9
+00:00:50,720 --> 00:00:53,720
+and I expect it to be fixed by Tuesday.
+
+10
+00:00:53,720 --> 00:00:59,720
+OK, good. Do we need anything from the DevOps team?
+
+11
+00:00:59,720 --> 00:01:06,720
+Yes, we need Tomasz to approve the Terraform changes for the VPC peering. Without that,
+
+12
+00:01:06,720 --> 00:01:10,720
+the pods in the staging namespace cannot reach the legacy database.
+
+13
+00:01:11,720 --> 00:01:17,720
+I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but
+
+14
+00:01:17,720 --> 00:01:23,720
+I did not have time. Just to confirm, are we still using the T3 large instances for
+
+15
+00:01:23,720 --> 00:01:27,720
+the worker nodes, or did we switch to Graviton?
+
+16
+00:01:28,720 --> 00:01:35,720
+We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker images
+
+17
+00:01:35,720 --> 00:01:38,720
+now build for both architectures.
+
+18
+00:01:39,720 --> 00:01:47,720
+Great. Let's move to item 2, the PostgreSQL latency issue. Tomasz, what did you find?
+
+19
+00:01:48,720 --> 00:01:56,720
+So, the P99 latency on the orders endpoint went from about 80 ms to almost 400 ms after
+
+20
+00:01:56,720 --> 00:02:02,720
+the release on the 12th. I ran xplane-analyze on the sloke queries, and the problem is a
+
+21
+00:02:02,720 --> 00:02:08,720
+missing composite index on the orders table, on customer ID, and created that. Someone
+
+22
+00:02:08,720 --> 00:02:12,720
+dropped it during the schema migration with Alembic.
+
+23
+00:02:13,720 --> 00:02:16,720
+Ouch. Is there a fix ready?
+
+24
+00:02:17,720 --> 00:02:23,720
+Yes. I wrote a new migration that recreates the index concurrently, so it will not lock
+
+25
+00:02:23,720 --> 00:02:30,720
+the table. I also added a check in our CI pipeline, using PGstat statements, so we get
+
+26
+00:02:30,720 --> 00:02:35,720
+an alert in metadog if any query goes above 200 ms.
+
+27
+00:02:36,720 --> 00:02:43,720
+That's really helpful. From the product side, customers definitely noticed. We had 11 support
+
+28
+00:02:43,720 --> 00:02:50,720
+tickets about slow checkout in the last week, and our NPS score dropped by 3 points.
+
+29
+00:02:51,720 --> 00:02:59,720
+Thanks, Aisha. OK, item 3, the Q3 OKRs. Aisha, can you give us the summary?
+
+30
+00:03:00,720 --> 00:03:08,720
+Sure. We have 3 key results for this quarter. First, reduce checkout abandonment from 18%
+
+31
+00:03:08,720 --> 00:03:16,720
+to 12%. We are currently at 14%, so we are on track, but not finished. Second, launch
+
+32
+00:03:16,720 --> 00:03:22,720
+the new recommendation engine, which uses the embedding model from the data science
+
+33
+00:03:22,720 --> 00:03:29,720
+team. That one is delayed, because the vector database, we chose Pinecone, needs a security
+
+34
+00:03:29,720 --> 00:03:36,720
+review from the compliance team. And third, achieve SOC 2 type 2 readiness. We are about
+
+35
+00:03:36,720 --> 00:03:41,720
+halfway there. What is the risk on the SOC 2 work?
+
+36
+00:03:42,720 --> 00:03:48,720
+The main risk is the audit logging. We need every access to customer data to be logged
+
+37
+00:03:48,720 --> 00:03:55,720
+and retained for one year. Right now we only keep logs in CloudWatch for 30 days.
+
+38
+00:03:56,720 --> 00:04:02,720
+We could export the logs to S3 with a lifecycle policy, and move them to Glacier after 90
+
+39
+00:04:02,720 --> 00:04:07,720
+days. That would be cheap, and it would meet the retention requirement.
+
+40
+00:04:08,720 --> 00:04:12,720
+Perfect. Let's take that offline, and write it up.
+
+41
+00:04:13,720 --> 00:04:20,720
+Last item, hiring. We have 2 open roles. A senior backend engineer with Go, and gRPC
+
+42
+00:04:20,720 --> 00:04:26,720
+experience, and a machine learning engineer for the recommendation work. We have 3 candidates
+
+43
+00:04:26,720 --> 00:04:32,720
+in the final round. Priya and Thomas, please submit your interview feedback in Greenhouse
+
+44
+00:04:32,720 --> 00:04:33,720
+by Friday.
+
+45
+00:04:34,720 --> 00:04:35,720
+Will do.
+
+46
+00:04:36,720 --> 00:04:39,720
+Yes, I will have mine done tomorrow.
+
+47
+00:04:40,720 --> 00:04:46,720
+Great. To summarize the action items. Priya will fix the Redis storage class issue by
+
+48
+00:04:46,720 --> 00:04:53,720
+Tuesday. Thomas will review the Terraform pull request today, and deploy the index migration.
+
+49
+00:04:53,720 --> 00:04:59,720
+Aisha will schedule the Pinecone security review, and draft the log retention plan with
+
+50
+00:04:59,720 --> 00:05:04,720
+Priya. And everyone, please send your Greenhouse feedback by Friday.
+
+51
+00:05:04,720 --> 00:05:07,720
+Thanks everyone, see you next week.
+
