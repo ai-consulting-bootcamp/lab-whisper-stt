@@ -1,0 +1,56 @@
+[0.00s - 5.80s] Good morning everyone! This is the weekly engineering sync for Project Nimbus.
+[5.80s - 9.92s] Today is Thursday, and we have four items on the agenda.
+[9.92s - 18.00s] The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update.
+[18.00s - 22.40s] Priya, do you want to start with the migration?
+[22.40s - 28.96s] Sure, thanks Marcus. So the Kubernetes migration is about 70% done.
+[28.96s - 35.56s] We moved the authentication service, and the billing service to the new EKS cluster last week.
+[35.56s - 38.56s] The main blocker right now is the Redis cache.
+[38.56s - 46.36s] When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class.
+[46.36s - 54.56s] I opened a ticket, Jira number NIM-482, and I expect it to be fixed by Tuesday.
+[54.56s - 59.96s] Okay, good. Do we need anything from the DevOps team?
+[59.96s - 60.96s] Yes.
+[60.00s - 65.96s] Yes, we need Tomasz to approve the Terraform changes for the VPC peering.
+[65.96s - 72.08s] Without that, the pods in the staging namespace cannot reach the legacy database.
+[72.08s - 76.04s] I can review the Terraform pull request this afternoon.
+[76.04s - 80.44s] I saw it in GitHub yesterday, but I did not have time.
+[80.44s - 86.32s] Just to confirm, are we still using the T3 large instances for the worker nodes, or did
+[86.32s - 89.12s] we switch to Graviton?
+[89.12s - 91.16s] We switched to Graviton.
+[91.16s - 99.16s] The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures.
+[99.16s - 100.16s] Great.
+[100.16s - 105.56s] Let's move to item 2, the PostgreSQL latency issue.
+[105.56s - 108.16s] Tomasz, what did you find?
+[108.16s - 115.24s] So, the P99 latency on the order endpoint went from about 80 milliseconds to almost
+[115.28s - 119.16s] 400 milliseconds after the release on the 12th.
+[119.16s - 119.92s] Ironic, ple-
+[120.00s - 126.16s] analyze on the slope queries and the problem is a missing composite index on the orders table
+[126.16s - 132.72s] on customer id and created that. Someone dropped it during the schema migration with Alembic.
+[134.00s - 136.16s] Ouch! Is there a fix ready?
+[137.36s - 142.48s] Yes. I wrote a new migration that recreates the index concurrently,
+[142.48s - 147.84s] so it will not lock the table. I also added a check in our CI pipeline,
+[147.84s - 155.44s] using pgstat statements, so we get an alert in metadog if any query goes above 200 milliseconds.
+[156.72s - 164.32s] That's really helpful. From the product side, customers definitely noticed. We had 11 support
+[164.32s - 170.48s] tickets about slow checkout in the last week, and our NPS score dropped by 3 points.
+[170.48s - 179.44s] Thanks, Aisha. Okay, item 3, the Q3OKRs. Aisha, can you give us the summary?
+[180.00s - 185.00s] Sure. We have three key results for this quarter.
+[185.00s - 190.00s] First, reduce checkout abandonment from 18% to 12%.
+[190.00s - 196.00s] We are currently at 14%, so we are on track, but not finished.
+[196.00s - 203.00s] Second, launch the new recommendation engine, which uses the embedding model from the data science team.
+[203.00s - 212.00s] That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team.
+[212.00s - 219.00s] And third, achieve SOC 2 type 2 readiness. We are about halfway there.
+[219.00s - 223.00s] What is the risk on the SOC 2 work?
+[223.00s - 231.00s] The main risk is the audit logging. We need every access to customer data to be logged and retained for one year.
+[231.00s - 236.00s] Right now we only keep logs in CloudWatch for 30 days.
+[236.00s - 240.00s] We could export the logs to S3 with a live site.
+[240.00s - 245.80s] policy and move them to Glacier after 90 days. That would be cheap, and it would
+[245.80s - 253.28s] meet the retention requirement. Perfect. Let's take that offline and write it up.
+[253.28s - 260.24s] Last item, hiring. We have two open roles, a senior back-end engineer with Go and
+[260.24s - 266.20s] gRPC experience, and a machine learning engineer for the recommendation work. We
+[266.20s - 271.64s] have three candidates in the final round. Priya and Thomas, please submit your
+[271.64s - 278.84s] interview feedback in Greenhouse by Friday. We'll do. Yes, I will have mine
+[278.84s - 285.44s] done tomorrow. Great. To summarize the action items, Priya will fix the
+[285.44s - 290.52s] Redis storage class issue by Tuesday. Thomas will review the Terraform poll
+[290.52s - 295.84s] request today and deploy the index migration. Aisha will schedule the Pine
+[295.84s - 301.84s] Cone security review and draft the log retention plan with
+[300.00s - 305.00s] And everyone, please send your greenhouse feedback by Friday.
+[305.00s - 308.00s] Thanks everyone, see you next week!
