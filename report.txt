@@ -1,0 +1,61 @@
+Whisper Speech-to-Text – Lab Report
+Prompted vs. Unprompted Transcription
+I tested both transcription approaches using the same 30-second audio 
+sample. For the guided approach, I provided Whisper with contextual 
+terms related to Hawaiian fishing traditions, including "Hukilau", 
+"fishing nets", and "ropes".
+
+The results were quite similar, since Whisper already recognized 
+most of the spoken content correctly without additional context. 
+However, the Word Error Rate (WER) decreased from **20.8% without a 
+prompt to 18.2% with a prompt** when compared to the reference 
+transcript. The guided version also recognized some conversational 
+expressions differently, such as "uh-huh" and "Yeah, sometimes".
+
+This suggests that contextual prompts can improve transcription 
+accuracy, although the improvement in this example was relatively 
+small.
+
+Benefits of Audio Chunking
+For the second part of the lab, I used a meeting recording of 
+approximately five minutes. To limit API usage, I processed only 
+the first 120 seconds and divided them into six chunks of 20 seconds 
+each.
+
+Chunking makes it possible to process longer recordings in smaller 
+parts, which is particularly useful when dealing with API file-size 
+limitations. Each chunk can be transcribed separately, and its 
+timestamps can then be adjusted using the chunk's starting position.
+
+I also exported the combined transcription in TXT, SRT, and JSON 
+formats, making the results easier to read, search, and reuse.
+
+Challenges
+One challenge was adapting the code from previous exercises, 
+which relied on microphone recordings, to work with existing MP3 
+files. I also needed to understand when converting audio to WAV was 
+necessary and when the original MP3 could be used directly.
+
+Another challenge was maintaining accurate timestamps across 
+multiple chunks. Since Whisper returns timestamps relative to 
+each individual chunk, I had to add the corresponding time offsets.
+Additionally, fixed chunk boundaries sometimes interrupted 
+sentences, which could negatively affect transcription quality.
+
+Recommendations for Improving Accuracy
+Based on the results, I would recommend providing relevant technical 
+terms and names as contextual prompts, especially for specialized 
+meetings.
+
+For longer recordings, I would also consider using larger chunks or 
+slightly overlapping segments to avoid cutting sentences at fixed 
+boundaries. Splitting audio at natural pauses could further improve 
+the results.
+
+Finally, comparing transcripts against a verified reference and 
+manually reviewing unclear technical terms would help identify errors 
+that Whisper might otherwise miss.
+
+Overall, the lab showed me how transcription accuracy, audio 
+preprocessing, chunking, and timestamp handling work together 
+to create a practical speech-to-text workflow.

@@ -1,0 +1,1455 @@
+{
+  "source_file": "project_nimbus_meeting.mp3",
+  "processed_duration_seconds": 120.0,
+  "chunk_duration_seconds": 20,
+  "text": "Good morning everyone. This is the weekly engineering sync for Project Nimbus. Today is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start? with the migration. Sure, thanks Marcus. So the kubernetes migration is about 70% done. We moved the authentication service, and the billing service to the new EKS cluster last week. The main blocker right now is the RIDIZ cache. When we deployed it with... The persistent volume claims were failing because of a misconfigured storage class. I opened a ticket, here a number n-i-m-pash-4-8-2, and I expect it to be fixed by Tuesday. Okay, good. Do we need anything from the DevOps team? Yes, we need Thomas to approve the Terraform changes for the VPC peering. Without that, the pods in the staging namespace cannot reach the legacy database. I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but I did not have time. Just to confirm, are we still using the T3 large instances for the worker nodes, or did we switch to Graviton? We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures. Great. Let's move to item 2, the PostgreSQL latency issue. Thomas, what did you find? So, the P99 latency on the order endpoint went from about 80 milliseconds to almost 400 milliseconds after the release on the 12th. I ran X-Player.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.139999866485596,
+      "text": "Good morning everyone. This is the weekly engineering sync for Project Nimbus. Today"
+    },
+    {
+      "start": 6.139999866485596,
+      "end": 13.0600004196167,
+      "text": "is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL"
+    },
+    {
+      "start": 13.0600004196167,
+      "end": 19.979999542236328,
+      "text": "latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start?"
+    },
+    {
+      "start": 20.0,
+      "end": 20.9200000166893,
+      "text": "with the migration."
+    },
+    {
+      "start": 22.460000038146973,
+      "end": 24.09999990463257,
+      "text": "Sure, thanks Marcus."
+    },
+    {
+      "start": 24.59999990463257,
+      "end": 28.539999961853027,
+      "text": "So the kubernetes migration is about 70% done."
+    },
+    {
+      "start": 28.9399995803833,
+      "end": 31.31999969482422,
+      "text": "We moved the authentication service,"
+    },
+    {
+      "start": 31.520000457763672,
+      "end": 35.5,
+      "text": "and the billing service to the new EKS cluster last week."
+    },
+    {
+      "start": 35.579999923706055,
+      "end": 38.13999938964844,
+      "text": "The main blocker right now is the RIDIZ cache."
+    },
+    {
+      "start": 38.579999923706055,
+      "end": 39.97999954223633,
+      "text": "When we deployed it with..."
+    },
+    {
+      "start": 40.0,
+      "end": 45.96000003814697,
+      "text": "The persistent volume claims were failing because of a misconfigured storage class."
+    },
+    {
+      "start": 46.44000005722046,
+      "end": 53.34000015258789,
+      "text": "I opened a ticket, here a number n-i-m-pash-4-8-2, and I expect it to be fixed by Tuesday."
+    },
+    {
+      "start": 54.72000026702881,
+      "end": 58.70000076293945,
+      "text": "Okay, good. Do we need anything from the DevOps team?"
+    },
+    {
+      "start": 60.0,
+      "end": 65.09999990463257,
+      "text": "Yes, we need Thomas to approve the Terraform changes for the VPC peering."
+    },
+    {
+      "start": 65.69999980926514,
+      "end": 70.84000015258789,
+      "text": "Without that, the pods in the staging namespace cannot reach the legacy database."
+    },
+    {
+      "start": 72.14000034332275,
+      "end": 75.53999996185303,
+      "text": "I can review the Terraform pull request this afternoon."
+    },
+    {
+      "start": 75.97999954223633,
+      "end": 79.71999931335449,
+      "text": "I saw it in GitHub yesterday, but I did not have time."
+    },
+    {
+      "start": 80.0,
+      "end": 87.80000019073486,
+      "text": "Just to confirm, are we still using the T3 large instances for the worker nodes, or did we switch to Graviton?"
+    },
+    {
+      "start": 88.68000030517578,
+      "end": 98.78000068664551,
+      "text": "We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures."
+    },
+    {
+      "start": 100.0,
+      "end": 104.98000001907349,
+      "text": "Great. Let's move to item 2, the PostgreSQL latency issue."
+    },
+    {
+      "start": 105.5,
+      "end": 107.5,
+      "text": "Thomas, what did you find?"
+    },
+    {
+      "start": 108.77999973297119,
+      "end": 115.26000022888184,
+      "text": "So, the P99 latency on the order endpoint went from about 80 milliseconds to almost"
+    },
+    {
+      "start": 115.42000007629395,
+      "end": 119.13999938964844,
+      "text": "400 milliseconds after the release on the 12th."
+    },
+    {
+      "start": 119.13999938964844,
+      "end": 119.97999954223633,
+      "text": "I ran X-Player."
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.25999999046325684,
+      "word": "Good"
+    },
+    {
+      "start": 0.25999999046325684,
+      "end": 0.6200000047683716,
+      "word": "morning"
+    },
+    {
+      "start": 0.6200000047683716,
+      "end": 1.340000033378601,
+      "word": "everyone"
+    },
+    {
+      "start": 1.840000033378601,
+      "end": 2.0399999618530273,
+      "word": "This"
+    },
+    {
+      "start": 2.0399999618530273,
+      "end": 2.240000009536743,
+      "word": "is"
+    },
+    {
+      "start": 2.240000009536743,
+      "end": 2.440000057220459,
+      "word": "the"
+    },
+    {
+      "start": 2.440000057220459,
+      "end": 2.7799999713897705,
+      "word": "weekly"
+    },
+    {
+      "start": 2.7799999713897705,
+      "end": 3.4000000953674316,
+      "word": "engineering"
+    },
+    {
+      "start": 3.4000000953674316,
+      "end": 3.7799999713897705,
+      "word": "sync"
+    },
+    {
+      "start": 3.7799999713897705,
+      "end": 4.119999885559082,
+      "word": "for"
+    },
+    {
+      "start": 4.119999885559082,
+      "end": 4.760000228881836,
+      "word": "Project"
+    },
+    {
+      "start": 4.760000228881836,
+      "end": 5.699999809265137,
+      "word": "Nimbus"
+    },
+    {
+      "start": 5.900000095367432,
+      "end": 6.139999866485596,
+      "word": "Today"
+    },
+    {
+      "start": 6.139999866485596,
+      "end": 6.420000076293945,
+      "word": "is"
+    },
+    {
+      "start": 6.420000076293945,
+      "end": 6.900000095367432,
+      "word": "Thursday"
+    },
+    {
+      "start": 7.21999979019165,
+      "end": 7.440000057220459,
+      "word": "and"
+    },
+    {
+      "start": 7.440000057220459,
+      "end": 7.639999866485596,
+      "word": "we"
+    },
+    {
+      "start": 7.639999866485596,
+      "end": 7.900000095367432,
+      "word": "have"
+    },
+    {
+      "start": 7.900000095367432,
+      "end": 8.239999771118164,
+      "word": "four"
+    },
+    {
+      "start": 8.239999771118164,
+      "end": 8.520000457763672,
+      "word": "items"
+    },
+    {
+      "start": 8.520000457763672,
+      "end": 8.800000190734863,
+      "word": "on"
+    },
+    {
+      "start": 8.800000190734863,
+      "end": 9.0600004196167,
+      "word": "the"
+    },
+    {
+      "start": 9.0600004196167,
+      "end": 9.4399995803833,
+      "word": "agenda"
+    },
+    {
+      "start": 10.0,
+      "end": 10.140000343322754,
+      "word": "The"
+    },
+    {
+      "start": 10.140000343322754,
+      "end": 10.699999809265137,
+      "word": "Kubernetes"
+    },
+    {
+      "start": 10.699999809265137,
+      "end": 11.34000015258789,
+      "word": "migration"
+    },
+    {
+      "start": 11.800000190734863,
+      "end": 11.960000038146973,
+      "word": "the"
+    },
+    {
+      "start": 11.960000038146973,
+      "end": 13.0600004196167,
+      "word": "PostgreSQL"
+    },
+    {
+      "start": 13.0600004196167,
+      "end": 13.619999885559082,
+      "word": "latency"
+    },
+    {
+      "start": 13.619999885559082,
+      "end": 14.079999923706055,
+      "word": "issue"
+    },
+    {
+      "start": 14.420000076293945,
+      "end": 14.680000305175781,
+      "word": "the"
+    },
+    {
+      "start": 14.680000305175781,
+      "end": 15.119999885559082,
+      "word": "Q3"
+    },
+    {
+      "start": 15.119999885559082,
+      "end": 16.0,
+      "word": "OKRs"
+    },
+    {
+      "start": 16.040000915527344,
+      "end": 16.34000015258789,
+      "word": "and"
+    },
+    {
+      "start": 16.34000015258789,
+      "end": 16.639999389648438,
+      "word": "the"
+    },
+    {
+      "start": 16.639999389648438,
+      "end": 16.940000534057617,
+      "word": "hiring"
+    },
+    {
+      "start": 16.940000534057617,
+      "end": 17.5,
+      "word": "update"
+    },
+    {
+      "start": 18.31999969482422,
+      "end": 18.540000915527344,
+      "word": "Priya"
+    },
+    {
+      "start": 18.600000381469727,
+      "end": 18.84000015258789,
+      "word": "do"
+    },
+    {
+      "start": 18.84000015258789,
+      "end": 19.040000915527344,
+      "word": "you"
+    },
+    {
+      "start": 19.040000915527344,
+      "end": 19.3799991607666,
+      "word": "want"
+    },
+    {
+      "start": 19.3799991607666,
+      "end": 19.760000228881836,
+      "word": "to"
+    },
+    {
+      "start": 19.760000228881836,
+      "end": 19.979999542236328,
+      "word": "start"
+    },
+    {
+      "start": 20.0,
+      "end": 20.319999992847443,
+      "word": "with"
+    },
+    {
+      "start": 20.319999992847443,
+      "end": 20.400000005960464,
+      "word": "the"
+    },
+    {
+      "start": 20.400000005960464,
+      "end": 20.9200000166893,
+      "word": "migration"
+    },
+    {
+      "start": 22.460000038146973,
+      "end": 22.960000038146973,
+      "word": "Sure"
+    },
+    {
+      "start": 23.16000008583069,
+      "end": 23.579999923706055,
+      "word": "thanks"
+    },
+    {
+      "start": 23.579999923706055,
+      "end": 24.09999990463257,
+      "word": "Marcus"
+    },
+    {
+      "start": 24.59999990463257,
+      "end": 24.860000133514404,
+      "word": "So"
+    },
+    {
+      "start": 24.860000133514404,
+      "end": 25.44000005722046,
+      "word": "the"
+    },
+    {
+      "start": 25.44000005722046,
+      "end": 25.65999984741211,
+      "word": "kubernetes"
+    },
+    {
+      "start": 25.65999984741211,
+      "end": 26.300000190734863,
+      "word": "migration"
+    },
+    {
+      "start": 26.300000190734863,
+      "end": 26.619999885559082,
+      "word": "is"
+    },
+    {
+      "start": 26.619999885559082,
+      "end": 27.019999980926514,
+      "word": "about"
+    },
+    {
+      "start": 27.019999980926514,
+      "end": 27.639999866485596,
+      "word": "70"
+    },
+    {
+      "start": 27.639999866485596,
+      "end": 28.15999984741211,
+      "word": ""
+    },
+    {
+      "start": 28.15999984741211,
+      "end": 28.539999961853027,
+      "word": "done"
+    },
+    {
+      "start": 28.9399995803833,
+      "end": 29.22000026702881,
+      "word": "We"
+    },
+    {
+      "start": 29.22000026702881,
+      "end": 29.5600004196167,
+      "word": "moved"
+    },
+    {
+      "start": 29.5600004196167,
+      "end": 29.899999618530273,
+      "word": "the"
+    },
+    {
+      "start": 29.899999618530273,
+      "end": 30.600000381469727,
+      "word": "authentication"
+    },
+    {
+      "start": 30.600000381469727,
+      "end": 31.31999969482422,
+      "word": "service"
+    },
+    {
+      "start": 31.520000457763672,
+      "end": 31.760000228881836,
+      "word": "and"
+    },
+    {
+      "start": 31.760000228881836,
+      "end": 32.10000038146973,
+      "word": "the"
+    },
+    {
+      "start": 32.10000038146973,
+      "end": 32.239999771118164,
+      "word": "billing"
+    },
+    {
+      "start": 32.239999771118164,
+      "end": 32.69999980926514,
+      "word": "service"
+    },
+    {
+      "start": 32.69999980926514,
+      "end": 32.97999954223633,
+      "word": "to"
+    },
+    {
+      "start": 32.97999954223633,
+      "end": 33.260000228881836,
+      "word": "the"
+    },
+    {
+      "start": 33.260000228881836,
+      "end": 33.579999923706055,
+      "word": "new"
+    },
+    {
+      "start": 33.579999923706055,
+      "end": 33.9399995803833,
+      "word": "EKS"
+    },
+    {
+      "start": 33.9399995803833,
+      "end": 34.34000015258789,
+      "word": "cluster"
+    },
+    {
+      "start": 34.34000015258789,
+      "end": 34.81999969482422,
+      "word": "last"
+    },
+    {
+      "start": 34.81999969482422,
+      "end": 35.5,
+      "word": "week"
+    },
+    {
+      "start": 35.579999923706055,
+      "end": 35.859999656677246,
+      "word": "The"
+    },
+    {
+      "start": 35.859999656677246,
+      "end": 36.18000030517578,
+      "word": "main"
+    },
+    {
+      "start": 36.18000030517578,
+      "end": 36.71999931335449,
+      "word": "blocker"
+    },
+    {
+      "start": 36.71999931335449,
+      "end": 36.8799991607666,
+      "word": "right"
+    },
+    {
+      "start": 36.8799991607666,
+      "end": 37.1200008392334,
+      "word": "now"
+    },
+    {
+      "start": 37.1200008392334,
+      "end": 37.29999923706055,
+      "word": "is"
+    },
+    {
+      "start": 37.29999923706055,
+      "end": 37.540000915527344,
+      "word": "the"
+    },
+    {
+      "start": 37.540000915527344,
+      "end": 37.78000068664551,
+      "word": "RIDIZ"
+    },
+    {
+      "start": 37.78000068664551,
+      "end": 38.13999938964844,
+      "word": "cache"
+    },
+    {
+      "start": 38.579999923706055,
+      "end": 38.84000015258789,
+      "word": "When"
+    },
+    {
+      "start": 38.84000015258789,
+      "end": 39.10000038146973,
+      "word": "we"
+    },
+    {
+      "start": 39.10000038146973,
+      "end": 39.459999084472656,
+      "word": "deployed"
+    },
+    {
+      "start": 39.459999084472656,
+      "end": 39.70000076293945,
+      "word": "it"
+    },
+    {
+      "start": 39.70000076293945,
+      "end": 39.97999954223633,
+      "word": "with"
+    },
+    {
+      "start": 40.0,
+      "end": 40.68000000715256,
+      "word": "The"
+    },
+    {
+      "start": 40.68000000715256,
+      "end": 41.3400000333786,
+      "word": "persistent"
+    },
+    {
+      "start": 41.3400000333786,
+      "end": 42.019999980926514,
+      "word": "volume"
+    },
+    {
+      "start": 42.019999980926514,
+      "end": 42.44000005722046,
+      "word": "claims"
+    },
+    {
+      "start": 42.44000005722046,
+      "end": 42.75999999046326,
+      "word": "were"
+    },
+    {
+      "start": 42.75999999046326,
+      "end": 43.09999990463257,
+      "word": "failing"
+    },
+    {
+      "start": 43.09999990463257,
+      "end": 43.74000000953674,
+      "word": "because"
+    },
+    {
+      "start": 43.74000000953674,
+      "end": 43.980000019073486,
+      "word": "of"
+    },
+    {
+      "start": 43.980000019073486,
+      "end": 44.15999984741211,
+      "word": "a"
+    },
+    {
+      "start": 44.15999984741211,
+      "end": 44.88000011444092,
+      "word": "misconfigured"
+    },
+    {
+      "start": 44.88000011444092,
+      "end": 45.40000009536743,
+      "word": "storage"
+    },
+    {
+      "start": 45.40000009536743,
+      "end": 45.96000003814697,
+      "word": "class"
+    },
+    {
+      "start": 46.44000005722046,
+      "end": 46.579999923706055,
+      "word": "I"
+    },
+    {
+      "start": 46.579999923706055,
+      "end": 46.980000019073486,
+      "word": "opened"
+    },
+    {
+      "start": 46.980000019073486,
+      "end": 47.28000020980835,
+      "word": "a"
+    },
+    {
+      "start": 47.28000020980835,
+      "end": 47.579999923706055,
+      "word": "ticket"
+    },
+    {
+      "start": 48.0600004196167,
+      "end": 48.10000038146973,
+      "word": "here"
+    },
+    {
+      "start": 48.10000038146973,
+      "end": 48.260000228881836,
+      "word": "a"
+    },
+    {
+      "start": 48.260000228881836,
+      "end": 48.579999923706055,
+      "word": "number"
+    },
+    {
+      "start": 48.579999923706055,
+      "end": 48.859999656677246,
+      "word": "n"
+    },
+    {
+      "start": 48.859999656677246,
+      "end": 48.859999656677246,
+      "word": "i"
+    },
+    {
+      "start": 48.859999656677246,
+      "end": 49.140000343322754,
+      "word": "m"
+    },
+    {
+      "start": 49.140000343322754,
+      "end": 49.420000076293945,
+      "word": "pash"
+    },
+    {
+      "start": 49.420000076293945,
+      "end": 49.72000026702881,
+      "word": "4"
+    },
+    {
+      "start": 49.72000026702881,
+      "end": 50.02000045776367,
+      "word": "8"
+    },
+    {
+      "start": 50.02000045776367,
+      "end": 50.39999961853027,
+      "word": "2"
+    },
+    {
+      "start": 50.53999996185303,
+      "end": 50.84000015258789,
+      "word": "and"
+    },
+    {
+      "start": 50.84000015258789,
+      "end": 51.140000343322754,
+      "word": "I"
+    },
+    {
+      "start": 51.140000343322754,
+      "end": 51.5,
+      "word": "expect"
+    },
+    {
+      "start": 51.5,
+      "end": 51.72000026702881,
+      "word": "it"
+    },
+    {
+      "start": 51.72000026702881,
+      "end": 51.920000076293945,
+      "word": "to"
+    },
+    {
+      "start": 51.920000076293945,
+      "end": 52.39999961853027,
+      "word": "be"
+    },
+    {
+      "start": 52.39999961853027,
+      "end": 52.39999961853027,
+      "word": "fixed"
+    },
+    {
+      "start": 52.39999961853027,
+      "end": 52.80000019073486,
+      "word": "by"
+    },
+    {
+      "start": 52.80000019073486,
+      "end": 53.34000015258789,
+      "word": "Tuesday"
+    },
+    {
+      "start": 54.72000026702881,
+      "end": 55.079999923706055,
+      "word": "Okay"
+    },
+    {
+      "start": 55.39999961853027,
+      "end": 55.68000030517578,
+      "word": "good"
+    },
+    {
+      "start": 56.040000915527344,
+      "end": 56.28000068664551,
+      "word": "Do"
+    },
+    {
+      "start": 56.28000068664551,
+      "end": 56.5,
+      "word": "we"
+    },
+    {
+      "start": 56.5,
+      "end": 56.739999771118164,
+      "word": "need"
+    },
+    {
+      "start": 56.739999771118164,
+      "end": 57.20000076293945,
+      "word": "anything"
+    },
+    {
+      "start": 57.20000076293945,
+      "end": 57.5,
+      "word": "from"
+    },
+    {
+      "start": 57.5,
+      "end": 57.84000015258789,
+      "word": "the"
+    },
+    {
+      "start": 57.84000015258789,
+      "end": 58.20000076293945,
+      "word": "DevOps"
+    },
+    {
+      "start": 58.20000076293945,
+      "end": 58.70000076293945,
+      "word": "team"
+    },
+    {
+      "start": 60.0,
+      "end": 60.41999998688698,
+      "word": "Yes"
+    },
+    {
+      "start": 60.62000000476837,
+      "end": 60.81999999284744,
+      "word": "we"
+    },
+    {
+      "start": 60.81999999284744,
+      "end": 61.10000002384186,
+      "word": "need"
+    },
+    {
+      "start": 61.10000002384186,
+      "end": 61.519999980926514,
+      "word": "Thomas"
+    },
+    {
+      "start": 61.519999980926514,
+      "end": 61.82000005245209,
+      "word": "to"
+    },
+    {
+      "start": 61.82000005245209,
+      "end": 62.22000002861023,
+      "word": "approve"
+    },
+    {
+      "start": 62.22000002861023,
+      "end": 62.66000008583069,
+      "word": "the"
+    },
+    {
+      "start": 62.66000008583069,
+      "end": 62.96000003814697,
+      "word": "Terraform"
+    },
+    {
+      "start": 62.96000003814697,
+      "end": 63.55999994277954,
+      "word": "changes"
+    },
+    {
+      "start": 63.55999994277954,
+      "end": 63.88000011444092,
+      "word": "for"
+    },
+    {
+      "start": 63.88000011444092,
+      "end": 64.15999984741211,
+      "word": "the"
+    },
+    {
+      "start": 64.15999984741211,
+      "end": 64.55999994277954,
+      "word": "VPC"
+    },
+    {
+      "start": 64.55999994277954,
+      "end": 65.09999990463257,
+      "word": "peering"
+    },
+    {
+      "start": 65.69999980926514,
+      "end": 65.98000001907349,
+      "word": "Without"
+    },
+    {
+      "start": 65.98000001907349,
+      "end": 66.5,
+      "word": "that"
+    },
+    {
+      "start": 66.73999977111816,
+      "end": 66.94000005722046,
+      "word": "the"
+    },
+    {
+      "start": 66.94000005722046,
+      "end": 67.15999984741211,
+      "word": "pods"
+    },
+    {
+      "start": 67.15999984741211,
+      "end": 67.38000011444092,
+      "word": "in"
+    },
+    {
+      "start": 67.38000011444092,
+      "end": 67.59999990463257,
+      "word": "the"
+    },
+    {
+      "start": 67.59999990463257,
+      "end": 68.0,
+      "word": "staging"
+    },
+    {
+      "start": 68.0,
+      "end": 68.65999984741211,
+      "word": "namespace"
+    },
+    {
+      "start": 68.65999984741211,
+      "end": 69.03999996185303,
+      "word": "cannot"
+    },
+    {
+      "start": 69.03999996185303,
+      "end": 69.39999961853027,
+      "word": "reach"
+    },
+    {
+      "start": 69.39999961853027,
+      "end": 69.68000030517578,
+      "word": "the"
+    },
+    {
+      "start": 69.68000030517578,
+      "end": 70.10000038146973,
+      "word": "legacy"
+    },
+    {
+      "start": 70.10000038146973,
+      "end": 70.84000015258789,
+      "word": "database"
+    },
+    {
+      "start": 72.14000034332275,
+      "end": 72.19999980926514,
+      "word": "I"
+    },
+    {
+      "start": 72.19999980926514,
+      "end": 72.5,
+      "word": "can"
+    },
+    {
+      "start": 72.5,
+      "end": 72.88000011444092,
+      "word": "review"
+    },
+    {
+      "start": 72.88000011444092,
+      "end": 73.23999977111816,
+      "word": "the"
+    },
+    {
+      "start": 73.23999977111816,
+      "end": 73.65999984741211,
+      "word": "Terraform"
+    },
+    {
+      "start": 73.65999984741211,
+      "end": 74.07999992370605,
+      "word": "pull"
+    },
+    {
+      "start": 74.07999992370605,
+      "end": 74.53999996185303,
+      "word": "request"
+    },
+    {
+      "start": 74.53999996185303,
+      "end": 75.03999996185303,
+      "word": "this"
+    },
+    {
+      "start": 75.03999996185303,
+      "end": 75.53999996185303,
+      "word": "afternoon"
+    },
+    {
+      "start": 75.97999954223633,
+      "end": 76.28000068664551,
+      "word": "I"
+    },
+    {
+      "start": 76.28000068664551,
+      "end": 76.52000045776367,
+      "word": "saw"
+    },
+    {
+      "start": 76.52000045776367,
+      "end": 76.68000030517578,
+      "word": "it"
+    },
+    {
+      "start": 76.68000030517578,
+      "end": 76.92000007629395,
+      "word": "in"
+    },
+    {
+      "start": 76.92000007629395,
+      "end": 77.34000015258789,
+      "word": "GitHub"
+    },
+    {
+      "start": 77.34000015258789,
+      "end": 77.95999908447266,
+      "word": "yesterday"
+    },
+    {
+      "start": 78.18000030517578,
+      "end": 78.39999961853027,
+      "word": "but"
+    },
+    {
+      "start": 78.39999961853027,
+      "end": 78.60000038146973,
+      "word": "I"
+    },
+    {
+      "start": 78.60000038146973,
+      "end": 78.76000022888184,
+      "word": "did"
+    },
+    {
+      "start": 78.76000022888184,
+      "end": 78.95999908447266,
+      "word": "not"
+    },
+    {
+      "start": 78.95999908447266,
+      "end": 79.31999969482422,
+      "word": "have"
+    },
+    {
+      "start": 79.31999969482422,
+      "end": 79.71999931335449,
+      "word": "time"
+    },
+    {
+      "start": 80.0,
+      "end": 80.5,
+      "word": "Just"
+    },
+    {
+      "start": 80.5,
+      "end": 80.9200000166893,
+      "word": "to"
+    },
+    {
+      "start": 80.9200000166893,
+      "end": 81.36000001430511,
+      "word": "confirm"
+    },
+    {
+      "start": 81.70000004768372,
+      "end": 81.8400000333786,
+      "word": "are"
+    },
+    {
+      "start": 81.8400000333786,
+      "end": 82.05999994277954,
+      "word": "we"
+    },
+    {
+      "start": 82.05999994277954,
+      "end": 82.35999989509583,
+      "word": "still"
+    },
+    {
+      "start": 82.35999989509583,
+      "end": 82.72000002861023,
+      "word": "using"
+    },
+    {
+      "start": 82.72000002861023,
+      "end": 83.03999996185303,
+      "word": "the"
+    },
+    {
+      "start": 83.03999996185303,
+      "end": 83.44000005722046,
+      "word": "T3"
+    },
+    {
+      "start": 83.44000005722046,
+      "end": 83.92000007629395,
+      "word": "large"
+    },
+    {
+      "start": 83.92000007629395,
+      "end": 84.28000020980835,
+      "word": "instances"
+    },
+    {
+      "start": 84.28000020980835,
+      "end": 84.67999982833862,
+      "word": "for"
+    },
+    {
+      "start": 84.67999982833862,
+      "end": 84.8600001335144,
+      "word": "the"
+    },
+    {
+      "start": 84.8600001335144,
+      "end": 85.28000020980835,
+      "word": "worker"
+    },
+    {
+      "start": 85.28000020980835,
+      "end": 85.6399998664856,
+      "word": "nodes"
+    },
+    {
+      "start": 85.92000007629395,
+      "end": 86.1399998664856,
+      "word": "or"
+    },
+    {
+      "start": 86.1399998664856,
+      "end": 86.3600001335144,
+      "word": "did"
+    },
+    {
+      "start": 86.3600001335144,
+      "end": 86.6399998664856,
+      "word": "we"
+    },
+    {
+      "start": 86.6399998664856,
+      "end": 86.92000007629395,
+      "word": "switch"
+    },
+    {
+      "start": 86.92000007629395,
+      "end": 87.44000005722046,
+      "word": "to"
+    },
+    {
+      "start": 87.44000005722046,
+      "end": 87.80000019073486,
+      "word": "Graviton"
+    },
+    {
+      "start": 88.68000030517578,
+      "end": 89.30000019073486,
+      "word": "We"
+    },
+    {
+      "start": 89.30000019073486,
+      "end": 89.69999980926514,
+      "word": "switched"
+    },
+    {
+      "start": 89.69999980926514,
+      "end": 90.22000026702881,
+      "word": "to"
+    },
+    {
+      "start": 90.22000026702881,
+      "end": 91.02000045776367,
+      "word": "Graviton"
+    },
+    {
+      "start": 91.11999988555908,
+      "end": 91.34000015258789,
+      "word": "The"
+    },
+    {
+      "start": 91.34000015258789,
+      "end": 91.77999973297119,
+      "word": "ARM"
+    },
+    {
+      "start": 91.77999973297119,
+      "end": 92.26000022888184,
+      "word": "based"
+    },
+    {
+      "start": 92.26000022888184,
+      "end": 92.72000026702881,
+      "word": "instances"
+    },
+    {
+      "start": 92.72000026702881,
+      "end": 93.0600004196167,
+      "word": "are"
+    },
+    {
+      "start": 93.0600004196167,
+      "end": 93.46000003814697,
+      "word": "about"
+    },
+    {
+      "start": 93.46000003814697,
+      "end": 93.97999954223633,
+      "word": "20"
+    },
+    {
+      "start": 93.97999954223633,
+      "end": 94.5,
+      "word": ""
+    },
+    {
+      "start": 94.5,
+      "end": 94.9399995803833,
+      "word": "cheaper"
+    },
+    {
+      "start": 95.19999980926514,
+      "end": 95.4399995803833,
+      "word": "and"
+    },
+    {
+      "start": 95.4399995803833,
+      "end": 95.73999977111816,
+      "word": "our"
+    },
+    {
+      "start": 95.73999977111816,
+      "end": 96.04000091552734,
+      "word": "Docker"
+    },
+    {
+      "start": 96.04000091552734,
+      "end": 96.39999961853027,
+      "word": "images"
+    },
+    {
+      "start": 96.39999961853027,
+      "end": 96.79999923706055,
+      "word": "now"
+    },
+    {
+      "start": 96.79999923706055,
+      "end": 97.13999938964844,
+      "word": "build"
+    },
+    {
+      "start": 97.13999938964844,
+      "end": 97.45999908447266,
+      "word": "for"
+    },
+    {
+      "start": 97.45999908447266,
+      "end": 97.79999923706055,
+      "word": "both"
+    },
+    {
+      "start": 97.79999923706055,
+      "end": 98.78000068664551,
+      "word": "architectures"
+    },
+    {
+      "start": 100.0,
+      "end": 100.46000000834465,
+      "word": "Great"
+    },
+    {
+      "start": 100.81999999284744,
+      "end": 101.29999995231628,
+      "word": "Let's"
+    },
+    {
+      "start": 101.29999995231628,
+      "end": 101.5,
+      "word": "move"
+    },
+    {
+      "start": 101.5,
+      "end": 101.86000001430511,
+      "word": "to"
+    },
+    {
+      "start": 101.86000001430511,
+      "end": 102.01999998092651,
+      "word": "item"
+    },
+    {
+      "start": 102.01999998092651,
+      "end": 102.48000001907349,
+      "word": "2"
+    },
+    {
+      "start": 102.66000008583069,
+      "end": 102.88000011444092,
+      "word": "the"
+    },
+    {
+      "start": 102.88000011444092,
+      "end": 103.96000003814697,
+      "word": "PostgreSQL"
+    },
+    {
+      "start": 103.96000003814697,
+      "end": 104.48000001907349,
+      "word": "latency"
+    },
+    {
+      "start": 104.48000001907349,
+      "end": 104.98000001907349,
+      "word": "issue"
+    },
+    {
+      "start": 105.5,
+      "end": 106.0,
+      "word": "Thomas"
+    },
+    {
+      "start": 106.34000015258789,
+      "end": 106.61999988555908,
+      "word": "what"
+    },
+    {
+      "start": 106.61999988555908,
+      "end": 106.8600001335144,
+      "word": "did"
+    },
+    {
+      "start": 106.8600001335144,
+      "end": 107.09999990463257,
+      "word": "you"
+    },
+    {
+      "start": 107.09999990463257,
+      "end": 107.5,
+      "word": "find"
+    },
+    {
+      "start": 108.77999973297119,
+      "end": 109.14000034332275,
+      "word": "So"
+    },
+    {
+      "start": 109.4399995803833,
+      "end": 109.61999988555908,
+      "word": "the"
+    },
+    {
+      "start": 109.61999988555908,
+      "end": 110.5,
+      "word": "P99"
+    },
+    {
+      "start": 110.5,
+      "end": 111.07999992370605,
+      "word": "latency"
+    },
+    {
+      "start": 111.07999992370605,
+      "end": 111.34000015258789,
+      "word": "on"
+    },
+    {
+      "start": 111.34000015258789,
+      "end": 111.64000034332275,
+      "word": "the"
+    },
+    {
+      "start": 111.64000034332275,
+      "end": 111.81999969482422,
+      "word": "order"
+    },
+    {
+      "start": 111.81999969482422,
+      "end": 112.38000011444092,
+      "word": "endpoint"
+    },
+    {
+      "start": 112.38000011444092,
+      "end": 112.72000026702881,
+      "word": "went"
+    },
+    {
+      "start": 112.72000026702881,
+      "end": 113.02000045776367,
+      "word": "from"
+    },
+    {
+      "start": 113.02000045776367,
+      "end": 113.35999965667725,
+      "word": "about"
+    },
+    {
+      "start": 113.35999965667725,
+      "end": 113.77999973297119,
+      "word": "80"
+    },
+    {
+      "start": 113.77999973297119,
+      "end": 114.34000015258789,
+      "word": "milliseconds"
+    },
+    {
+      "start": 114.34000015258789,
+      "end": 114.88000011444092,
+      "word": "to"
+    },
+    {
+      "start": 114.88000011444092,
+      "end": 115.26000022888184,
+      "word": "almost"
+    },
+    {
+      "start": 115.42000007629395,
+      "end": 116.13999938964844,
+      "word": "400"
+    },
+    {
+      "start": 116.13999938964844,
+      "end": 116.86000061035156,
+      "word": "milliseconds"
+    },
+    {
+      "start": 116.86000061035156,
+      "end": 117.29999923706055,
+      "word": "after"
+    },
+    {
+      "start": 117.29999923706055,
+      "end": 117.60000038146973,
+      "word": "the"
+    },
+    {
+      "start": 117.60000038146973,
+      "end": 117.84000015258789,
+      "word": "release"
+    },
+    {
+      "start": 117.84000015258789,
+      "end": 118.04000091552734,
+      "word": "on"
+    },
+    {
+      "start": 118.04000091552734,
+      "end": 118.26000022888184,
+      "word": "the"
+    },
+    {
+      "start": 118.26000022888184,
+      "end": 119.13999938964844,
+      "word": "12th"
+    },
+    {
+      "start": 119.13999938964844,
+      "end": 119.44000053405762,
+      "word": "I"
+    },
+    {
+      "start": 119.44000053405762,
+      "end": 119.65999984741211,
+      "word": "ran"
+    },
+    {
+      "start": 119.65999984741211,
+      "end": 119.97999954223633,
+      "word": "X"
+    },
+    {
+      "start": 119.97999954223633,
+      "end": 119.97999954223633,
+      "word": "Player"
+    }
+  ]
+}
