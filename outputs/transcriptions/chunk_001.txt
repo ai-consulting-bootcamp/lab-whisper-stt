@@ -1,0 +1,14 @@
+[00:00:00.000 - 00:00:05.100] Yes, we need Thomas to approve the Terraform changes for the VPC peering.
+[00:00:05.760 - 00:00:10.840] Without that, the pods in the staging namespace cannot reach the legacy database.
+[00:00:12.200 - 00:00:15.540] I can review the Terraform pull request this afternoon.
+[00:00:16.080 - 00:00:19.740] I saw it in GitHub yesterday, but I did not have time.
+[00:00:20.360 - 00:00:26.340] Just to confirm, are we still using the T3 large instances for the worker nodes, or did
+[00:00:26.340 - 00:00:27.820] we switch to Graviton?
+[00:00:28.820 - 00:00:30.660] We switched to Graviton.
+[00:00:31.200 - 00:00:38.800] The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures.
+[00:00:40.300 - 00:00:40.420] Great.
+[00:00:40.840 - 00:00:45.420] Let's move to item 2, the PostgreSQL latency issue.
+[00:00:45.480 - 00:00:47.480] Thomas, what did you find?
+[00:00:48.720 - 00:00:55.300] So, the P99 latency on the order's endpoint went from about 80 milliseconds to almost
+[00:00:55.300 - 00:00:59.340] 400 milliseconds after the release on the 12th.
+[00:00:59.440 - 00:00:59.980] Ironic, ple-

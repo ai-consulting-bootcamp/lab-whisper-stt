@@ -1,0 +1,6 @@
+openai>=1.30,<3
+python-dotenv>=1.0,<2
+pydub==0.25.1
+imageio-ffmpeg>=0.5,<1
+matplotlib>=3.8,<4
+ipykernel>=6,<8

@@ -1,0 +1,5 @@
+Baseline: unprompted (no prompt), reused from Step 3.
+Comparison: prompted, using the same audio and model parameters.
+Changed excerpts:
+replace: everyone! -> everyone.
+replace: Marcus! -> Marcus.

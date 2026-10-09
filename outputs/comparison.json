@@ -1,0 +1,16 @@
+{
+  "prompt": "Project Nimbus, Nimbus.",
+  "differences": [
+    {
+      "operation": "replace",
+      "unprompted": "everyone!",
+      "prompted": "everyone."
+    },
+    {
+      "operation": "replace",
+      "unprompted": "Marcus!",
+      "prompted": "Marcus."
+    }
+  ],
+  "accuracy_claim": "No reference transcript; WER not measured"
+}

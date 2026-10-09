@@ -1,0 +1,11 @@
+[00:00:00.000 - 00:00:05.320] Good morning everyone! This is the weekly engineering sync for Project Nimbus.
+[00:00:06.000 - 00:00:09.460] Today is Thursday, and we have four items on the agenda.
+[00:00:10.120 - 00:00:17.520] The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update.
+[00:00:18.340 - 00:00:20.920] Priya, do you want to start with the migration?
+[00:00:22.120 - 00:00:24.100] Sure, thanks Marcus!
+[00:00:24.520 - 00:00:28.520] So the Kubernetes migration is about 70% done.
+[00:00:28.520 - 00:00:35.160] We moved the authentication service, and the billing service to the new EKS cluster last week.
+[00:00:35.700 - 00:00:38.140] The main blocker right now is the Redis cache.
+[00:00:38.620 - 00:00:46.200] When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class.
+[00:00:46.300 - 00:00:53.320] I opened a ticket, Jira number NIM-482, and I expect it to be fixed by Tuesday.
+[00:00:54.380 - 00:00:58.980] Okay, good. Do we need anything from the DevOps team?

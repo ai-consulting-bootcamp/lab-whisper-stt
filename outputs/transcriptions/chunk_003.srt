@@ -1,0 +1,39 @@
+1
+00:00:00,740 --> 00:00:04,620
+Sure. We have three key results for this quarter.
+
+2
+00:00:05,600 --> 00:00:10,000
+First, reduce checkout abandonment from 18% to 12%.
+
+3
+00:00:10,700 --> 00:00:15,680
+We are currently at 14%, so we are on track, but not finished.
+
+4
+00:00:16,300 --> 00:00:23,180
+Second, launch the new recommendation engine, which uses the embedding model from the data science team.
+
+5
+00:00:23,180 --> 00:00:32,180
+That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team.
+
+6
+00:00:32,720 --> 00:00:38,820
+And third, achieve SOC 2 type 2 readiness. We are about halfway there.
+
+7
+00:00:39,640 --> 00:00:41,980
+What is the risk on the SOC 2 work?
+
+8
+00:00:42,760 --> 00:00:50,920
+The main risk is the audit logging. We need every access to customer data to be logged and retained for one year.
+
+9
+00:00:50,920 --> 00:00:55,700
+Right now we only keep logs in CloudWatch for 30 days.
+
+10
+00:00:57,000 --> 00:00:59,980
+We could export the logs to S3 with a live site.

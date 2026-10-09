@@ -1,0 +1,18 @@
+[00:00:00.000 - 00:00:05.240] They analyze on the slow queries, and the problem is a missing composite index on the
+[00:00:05.240 - 00:00:08.880] orders table, on customer ID, and created that.
+[00:00:09.400 - 00:00:12.840] Someone dropped it during the schema migration with Alembic.
+[00:00:14.160 - 00:00:14.480] Ouch!
+[00:00:14.900 - 00:00:16.220] Is there a fix ready?
+[00:00:17.420 - 00:00:17.900] Yes.
+[00:00:17.960 - 00:00:23.880] I wrote a new migration that recreates the index concurrently, so it will not lock the
+[00:00:24.440 - 00:00:24.440] 
+[00:00:24.440 - 00:00:24.560] SQL.
+[00:00:24.880 - 00:00:32.440] I also added a check in our CI pipeline, using pgstat statements, so we get an alert in Datadog
+[00:00:32.440 - 00:00:35.620] if any query goes above 200 milliseconds.
+[00:00:36.920 - 00:00:38.240] That's really helpful.
+[00:00:38.800 - 00:00:42.540] From the product side, customers definitely noticed.
+[00:00:43.020 - 00:00:49.260] We had 11 support tickets about slow checkout in the last week, and our NPS score dropped
+[00:00:49.260 - 00:00:50.660] by 3 points.
+[00:00:51.960 - 00:00:53.540] Thanks, Aisha.
+[00:00:53.540 - 00:00:57.260] Okay, item 3, the Q3OKRs.
+[00:00:57.780 - 00:00:59.540] Aisha, can you give us the summary?

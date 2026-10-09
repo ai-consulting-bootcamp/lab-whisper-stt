@@ -1,0 +1,5924 @@
+{
+  "text": "Good morning everyone. This is the weekly engineering sync for Project Nimbus. Today is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start with the migration? Sure, thanks Marcus. So the Kubernetes migration is about 70% done. We moved the authentication service, and the billing service to the new EKS cluster last week. The main blocker right now is the Redis cache. When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class. I opened a ticket, Jira number NIM-482, and I expect it to be fixed by Tuesday. Okay, good. Do we need anything from the DevOps team? Yes, we need Thomas to approve the Terraform changes for the VPC peering. Without that, the pods in the staging namespace cannot reach the legacy database. I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but I did not have time. Just to confirm, are we still using the T3 large instances for the worker nodes, or did we switch to Graviton? We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures. Great. Let's move to item 2, the PostgreSQL latency issue. Thomas, what did you find? So, the P99 latency on the order's endpoint went from about 80 milliseconds to almost 400 milliseconds after the release on the 12th. Ironic, ple- They analyze on the slow queries, and the problem is a missing composite index on the orders table, on customer ID, and created that. Someone dropped it during the schema migration with Alembic. Ouch! Is there a fix ready? Yes. I wrote a new migration that recreates the index concurrently, so it will not lock the  SQL. I also added a check in our CI pipeline, using pgstat statements, so we get an alert in Datadog if any query goes above 200 milliseconds. That's really helpful. From the product side, customers definitely noticed. We had 11 support tickets about slow checkout in the last week, and our NPS score dropped by 3 points. Thanks, Aisha. Okay, item 3, the Q3OKRs. Aisha, can you give us the summary? Sure. We have three key results for this quarter. First, reduce checkout abandonment from 18% to 12%. We are currently at 14%, so we are on track, but not finished. Second, launch the new recommendation engine, which uses the embedding model from the data science team. That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team. And third, achieve SOC 2 type 2 readiness. We are about halfway there. What is the risk on the SOC 2 work? The main risk is the audit logging. We need every access to customer data to be logged and retained for one year. Right now we only keep logs in CloudWatch for 30 days. We could export the logs to S3 with a live site. and move them to Glacier after 90 days. That would be cheap, and it would meet the retention requirement. Perfect. Let's take that offline, and write it up. Last item, hiring. We have two open roles. A senior backend engineer with Go, and gRPC experience, and a machine learning engineer for the recommendation work. We have three candidates in the final round. Priya and Thomas, please submit your interview feedback in Greenhouse by Friday. Will do. Yes, I will have mine done tomorrow. Great. To summarize the action items. Priya will fix the Riddiz storage class issue by Tuesday. Thomas will review the Terraform pull request today, and deploy the index migration. Aisha will schedule the Pinecone security review, and draft the log retention plan with. And everyone, please send your greenhouse feedback by Friday. Thanks everyone, see you next week.",
+  "segments": [
+    {
+      "id": 0,
+      "avg_logprob": -0.29601648449897766,
+      "compression_ratio": 1.5043859481811523,
+      "end": 5.320000171661377,
+      "no_speech_prob": 0.007374409586191177,
+      "seek": 0,
+      "start": 0.0,
+      "temperature": 0.0,
+      "text": " Good morning everyone. This is the weekly engineering sync for Project Nimbus.",
+      "tokens": [
+        50364,
+        2205,
+        2446,
+        1518,
+        13,
+        639,
+        307,
+        264,
+        12460,
+        7043,
+        20271,
+        337,
+        9849,
+        426,
+        17306,
+        301,
+        13,
+        50654
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 1,
+      "avg_logprob": -0.29601648449897766,
+      "compression_ratio": 1.5043859481811523,
+      "end": 9.460000038146973,
+      "no_speech_prob": 0.007374409586191177,
+      "seek": 0,
+      "start": 6.0,
+      "temperature": 0.0,
+      "text": " Today is Thursday, and we have four items on the agenda.",
+      "tokens": [
+        50654,
+        2692,
+        307,
+        10383,
+        11,
+        293,
+        321,
+        362,
+        1451,
+        4754,
+        322,
+        264,
+        9829,
+        13,
+        50864
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 2,
+      "avg_logprob": -0.29601648449897766,
+      "compression_ratio": 1.5043859481811523,
+      "end": 17.520000457763672,
+      "no_speech_prob": 0.007374409586191177,
+      "seek": 0,
+      "start": 10.0600004196167,
+      "temperature": 0.0,
+      "text": " The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update.",
+      "tokens": [
+        50864,
+        440,
+        23145,
+        17011,
+        11,
+        264,
+        10223,
+        33248,
+        39934,
+        27043,
+        2734,
+        11,
+        264,
+        1249,
+        18,
+        2264,
+        49,
+        82,
+        11,
+        293,
+        264,
+        15335,
+        5623,
+        13,
+        51264
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 3,
+      "avg_logprob": -0.29601648449897766,
+      "compression_ratio": 1.5043859481811523,
+      "end": 20.920000076293945,
+      "no_speech_prob": 0.007374409586191177,
+      "seek": 0,
+      "start": 18.34000015258789,
+      "temperature": 0.0,
+      "text": " Priya, do you want to start with the migration?",
+      "tokens": [
+        51264,
+        8087,
+        3016,
+        11,
+        360,
+        291,
+        528,
+        281,
+        722,
+        365,
+        264,
+        17011,
+        30,
+        51464
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 4,
+      "avg_logprob": -0.29601648449897766,
+      "compression_ratio": 1.5043859481811523,
+      "end": 28.520000457763672,
+      "no_speech_prob": 0.007374409586191177,
+      "seek": 0,
+      "start": 22.1200008392334,
+      "temperature": 0.0,
+      "text": " Sure, thanks Marcus. So the Kubernetes migration is about 70% done.",
+      "tokens": [
+        51464,
+        4894,
+        11,
+        3231,
+        26574,
+        13,
+        407,
+        264,
+        23145,
+        17011,
+        307,
+        466,
+        5285,
+        4,
+        1096,
+        13,
+        51814
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 5,
+      "avg_logprob": -0.2175096869468689,
+      "compression_ratio": 1.4219409227371216,
+      "end": 35.15999984741211,
+      "no_speech_prob": 0.1610213816165924,
+      "seek": 2852,
+      "start": 28.520000457763672,
+      "temperature": 0.0,
+      "text": " We moved the authentication service, and the billing service to the new EKS cluster last week.",
+      "tokens": [
+        50364,
+        492,
+        4259,
+        264,
+        26643,
+        2643,
+        11,
+        293,
+        264,
+        35618,
+        2643,
+        281,
+        264,
+        777,
+        462,
+        31558,
+        13630,
+        1036,
+        1243,
+        13,
+        50714
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 6,
+      "avg_logprob": -0.2175096869468689,
+      "compression_ratio": 1.4219409227371216,
+      "end": 38.13999938964844,
+      "no_speech_prob": 0.1610213816165924,
+      "seek": 2852,
+      "start": 35.70000076293945,
+      "temperature": 0.0,
+      "text": " The main blocker right now is the Redis cache.",
+      "tokens": [
+        50714,
+        440,
+        2135,
+        3461,
+        260,
+        558,
+        586,
+        307,
+        264,
+        4477,
+        271,
+        19459,
+        13,
+        50864
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 7,
+      "avg_logprob": -0.2175096869468689,
+      "compression_ratio": 1.4219409227371216,
+      "end": 46.20000076293945,
+      "no_speech_prob": 0.1610213816165924,
+      "seek": 2852,
+      "start": 38.619998931884766,
+      "temperature": 0.0,
+      "text": " When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class.",
+      "tokens": [
+        50864,
+        1133,
+        321,
+        17826,
+        309,
+        365,
+        6128,
+        76,
+        11,
+        264,
+        24315,
+        5523,
+        9441,
+        645,
+        18223,
+        11,
+        570,
+        295,
+        257,
+        27631,
+        20646,
+        3831,
+        6725,
+        1508,
+        13,
+        51264
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 8,
+      "avg_logprob": -0.2175096869468689,
+      "compression_ratio": 1.4219409227371216,
+      "end": 53.31999969482422,
+      "no_speech_prob": 0.1610213816165924,
+      "seek": 2852,
+      "start": 46.29999923706055,
+      "temperature": 0.0,
+      "text": " I opened a ticket, Jira number NIM-482, and I expect it to be fixed by Tuesday.",
+      "tokens": [
+        51264,
+        286,
+        5625,
+        257,
+        10550,
+        11,
+        508,
+        4271,
+        1230,
+        426,
+        6324,
+        12,
+        13318,
+        17,
+        11,
+        293,
+        286,
+        2066,
+        309,
+        281,
+        312,
+        6806,
+        538,
+        10017,
+        13,
+        51664
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 9,
+      "avg_logprob": -0.24192258715629578,
+      "compression_ratio": 0.868852436542511,
+      "end": 58.97999954223633,
+      "no_speech_prob": 0.5353935956954956,
+      "seek": 5332,
+      "start": 54.380001068115234,
+      "temperature": 0.0,
+      "text": " Okay, good. Do we need anything from the DevOps team?",
+      "tokens": [
+        50414,
+        1033,
+        11,
+        665,
+        13,
+        1144,
+        321,
+        643,
+        1340,
+        490,
+        264,
+        43051,
+        1469,
+        30,
+        50664
+      ],
+      "chunk_index": 0
+    },
+    {
+      "id": 10,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 65.09999990463257,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 60.0,
+      "temperature": 0.0,
+      "text": " Yes, we need Thomas to approve the Terraform changes for the VPC peering.",
+      "tokens": [
+        50364,
+        1079,
+        11,
+        321,
+        643,
+        8500,
+        281,
+        18827,
+        264,
+        25366,
+        837,
+        2962,
+        337,
+        264,
+        691,
+        12986,
+        520,
+        1794,
+        13,
+        50648
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 11,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 70.84000015258789,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 65.76000022888184,
+      "temperature": 0.0,
+      "text": " Without that, the pods in the staging namespace cannot reach the legacy database.",
+      "tokens": [
+        50648,
+        9129,
+        300,
+        11,
+        264,
+        31925,
+        294,
+        264,
+        41085,
+        5288,
+        17940,
+        2644,
+        2524,
+        264,
+        11711,
+        8149,
+        13,
+        50968
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 12,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 75.53999996185303,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 72.19999980926514,
+      "temperature": 0.0,
+      "text": " I can review the Terraform pull request this afternoon.",
+      "tokens": [
+        50968,
+        286,
+        393,
+        3131,
+        264,
+        25366,
+        837,
+        2235,
+        5308,
+        341,
+        6499,
+        13,
+        51166
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 13,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 79.73999977111816,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 76.07999992370605,
+      "temperature": 0.0,
+      "text": " I saw it in GitHub yesterday, but I did not have time.",
+      "tokens": [
+        51166,
+        286,
+        1866,
+        309,
+        294,
+        23331,
+        5186,
+        11,
+        457,
+        286,
+        630,
+        406,
+        362,
+        565,
+        13,
+        51386
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 14,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 86.34000015258789,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 80.36000061035156,
+      "temperature": 0.0,
+      "text": " Just to confirm, are we still using the T3 large instances for the worker nodes, or did",
+      "tokens": [
+        51386,
+        1449,
+        281,
+        9064,
+        11,
+        366,
+        321,
+        920,
+        1228,
+        264,
+        314,
+        18,
+        2416,
+        14519,
+        337,
+        264,
+        11346,
+        13891,
+        11,
+        420,
+        630,
+        51680
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 15,
+      "avg_logprob": -0.25343748927116394,
+      "compression_ratio": 1.5450819730758667,
+      "end": 87.81999969482422,
+      "no_speech_prob": 0.8213838934898376,
+      "seek": 0,
+      "start": 86.34000015258789,
+      "temperature": 0.0,
+      "text": " we switch to Graviton?",
+      "tokens": [
+        51680,
+        321,
+        3679,
+        281,
+        8985,
+        10398,
+        266,
+        30,
+        51820
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 16,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 90.65999984741211,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 88.81999969482422,
+      "temperature": 0.0,
+      "text": " We switched to Graviton.",
+      "tokens": [
+        50414,
+        492,
+        16858,
+        281,
+        8985,
+        10398,
+        266,
+        13,
+        50532
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 17,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 98.79999923706055,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 91.20000076293945,
+      "temperature": 0.0,
+      "text": " The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures.",
+      "tokens": [
+        50532,
+        440,
+        45209,
+        12,
+        6032,
+        14519,
+        366,
+        466,
+        945,
+        4,
+        12284,
+        11,
+        293,
+        527,
+        33772,
+        5267,
+        586,
+        1322,
+        337,
+        1293,
+        6331,
+        1303,
+        13,
+        50964
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 18,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 100.41999816894531,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 100.29999923706055,
+      "temperature": 0.0,
+      "text": " Great.",
+      "tokens": [
+        50964,
+        3769,
+        13,
+        51014
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 19,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 105.41999816894531,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 100.84000015258789,
+      "temperature": 0.0,
+      "text": " Let's move to item 2, the PostgreSQL latency issue.",
+      "tokens": [
+        51014,
+        961,
+        311,
+        1286,
+        281,
+        3174,
+        568,
+        11,
+        264,
+        10223,
+        33248,
+        39934,
+        27043,
+        2734,
+        13,
+        51244
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 20,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 107.47999954223633,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 105.47999954223633,
+      "temperature": 0.0,
+      "text": " Thomas, what did you find?",
+      "tokens": [
+        51244,
+        8500,
+        11,
+        437,
+        630,
+        291,
+        915,
+        30,
+        51414
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 21,
+      "avg_logprob": -0.33375778794288635,
+      "compression_ratio": 1.3652968406677246,
+      "end": 115.29999923706055,
+      "no_speech_prob": 0.016089409589767456,
+      "seek": 2782,
+      "start": 108.72000122070312,
+      "temperature": 0.0,
+      "text": " So, the P99 latency on the order's endpoint went from about 80 milliseconds to almost",
+      "tokens": [
+        51414,
+        407,
+        11,
+        264,
+        430,
+        8494,
+        27043,
+        322,
+        264,
+        1668,
+        311,
+        35795,
+        1437,
+        490,
+        466,
+        4688,
+        34184,
+        281,
+        1920,
+        51734
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 22,
+      "avg_logprob": -0.5230166912078857,
+      "compression_ratio": 0.9375,
+      "end": 119.34000015258789,
+      "no_speech_prob": 0.6021957397460938,
+      "seek": 5530,
+      "start": 115.29999923706055,
+      "temperature": 0.0,
+      "text": " 400 milliseconds after the release on the 12th.",
+      "tokens": [
+        50364,
+        8423,
+        34184,
+        257,
+        844,
+        260,
+        264,
+        4374,
+        322,
+        264,
+        2272,
+        392,
+        13,
+        50554
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 23,
+      "avg_logprob": -0.5230166912078857,
+      "compression_ratio": 0.9375,
+      "end": 119.97999954223633,
+      "no_speech_prob": 0.6021957397460938,
+      "seek": 5530,
+      "start": 119.43999862670898,
+      "temperature": 0.0,
+      "text": " Ironic, ple-",
+      "tokens": [
+        50554,
+        286,
+        10011,
+        11,
+        3362,
+        12,
+        50594
+      ],
+      "chunk_index": 1
+    },
+    {
+      "id": 24,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 125.23999977111816,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 120.0,
+      "temperature": 0.0,
+      "text": " They analyze on the slow queries, and the problem is a missing composite index on the",
+      "tokens": [
+        50364,
+        814,
+        12477,
+        322,
+        264,
+        2964,
+        24109,
+        11,
+        293,
+        264,
+        1154,
+        307,
+        257,
+        5361,
+        25557,
+        8186,
+        322,
+        264,
+        50614
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 25,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 128.88000011444092,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 125.23999977111816,
+      "temperature": 0.0,
+      "text": " orders table, on customer ID, and created that.",
+      "tokens": [
+        50614,
+        9470,
+        3199,
+        11,
+        322,
+        5474,
+        7348,
+        11,
+        293,
+        2942,
+        300,
+        13,
+        50832
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 26,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 132.8400001525879,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 129.39999961853027,
+      "temperature": 0.0,
+      "text": " Someone dropped it during the schema migration with Alembic.",
+      "tokens": [
+        50832,
+        8734,
+        8119,
+        309,
+        1830,
+        264,
+        34078,
+        17011,
+        365,
+        9366,
+        2504,
+        299,
+        13,
+        51042
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 27,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 134.47999954223633,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 134.1599998474121,
+      "temperature": 0.0,
+      "text": " Ouch!",
+      "tokens": [
+        51042,
+        27217,
+        0,
+        51118
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 28,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 136.2199993133545,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 134.89999961853027,
+      "temperature": 0.0,
+      "text": " Is there a fix ready?",
+      "tokens": [
+        51118,
+        1119,
+        456,
+        257,
+        3191,
+        1919,
+        30,
+        51214
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 29,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 137.89999961853027,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 137.42000007629395,
+      "temperature": 0.0,
+      "text": " Yes.",
+      "tokens": [
+        51214,
+        1079,
+        13,
+        51278
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 30,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 143.8799991607666,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 137.95999908447266,
+      "temperature": 0.0,
+      "text": " I wrote a new migration that recreates the index concurrently, so it will not lock the",
+      "tokens": [
+        51278,
+        286,
+        4114,
+        257,
+        777,
+        17011,
+        300,
+        850,
+        620,
+        279,
+        264,
+        8186,
+        37702,
+        356,
+        11,
+        370,
+        309,
+        486,
+        406,
+        4017,
+        264,
+        51558
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 31,
+      "avg_logprob": -0.3421207070350647,
+      "compression_ratio": 1.521327018737793,
+      "end": 144.44000053405762,
+      "no_speech_prob": 0.5090330243110657,
+      "seek": 0,
+      "start": 144.44000053405762,
+      "temperature": 0.0,
+      "text": "",
+      "tokens": [],
+      "chunk_index": 2
+    },
+    {
+      "id": 32,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 144.55999946594238,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 144.44000053405762,
+      "temperature": 0.0,
+      "text": " SQL.",
+      "tokens": [
+        50364,
+        19200,
+        13,
+        50414
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 33,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 152.43999862670898,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 144.8799991607666,
+      "temperature": 0.0,
+      "text": " I also added a check in our CI pipeline, using pgstat statements, so we get an alert in Datadog",
+      "tokens": [
+        50414,
+        286,
+        611,
+        3869,
+        257,
+        1520,
+        294,
+        527,
+        37777,
+        15517,
+        11,
+        1228,
+        280,
+        70,
+        19435,
+        12363,
+        11,
+        370,
+        321,
+        483,
+        364,
+        9615,
+        294,
+        9315,
+        345,
+        664,
+        50764
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 34,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 155.61999893188477,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 152.43999862670898,
+      "temperature": 0.0,
+      "text": " if any query goes above 200 milliseconds.",
+      "tokens": [
+        50764,
+        498,
+        604,
+        14581,
+        1709,
+        3673,
+        2331,
+        34184,
+        13,
+        50996
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 35,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 158.2400016784668,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 156.9199981689453,
+      "temperature": 0.0,
+      "text": " That's really helpful.",
+      "tokens": [
+        50996,
+        663,
+        311,
+        534,
+        4961,
+        13,
+        51090
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 36,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 162.54000091552734,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 158.79999923706055,
+      "temperature": 0.0,
+      "text": " From the product side, customers definitely noticed.",
+      "tokens": [
+        51090,
+        3358,
+        264,
+        1674,
+        1252,
+        11,
+        4581,
+        2138,
+        5694,
+        13,
+        51294
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 37,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 169.2599983215332,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 163.02000045776367,
+      "temperature": 0.0,
+      "text": " We had 11 support tickets about slow checkout in the last week, and our NPS score dropped",
+      "tokens": [
+        51294,
+        492,
+        632,
+        2975,
+        1406,
+        12628,
+        466,
+        2964,
+        37153,
+        294,
+        264,
+        1036,
+        1243,
+        11,
+        293,
+        527,
+        426,
+        6273,
+        6175,
+        8119,
+        51612
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 38,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 170.6599998474121,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 169.2599983215332,
+      "temperature": 0.0,
+      "text": " by 3 points.",
+      "tokens": [
+        51612,
+        538,
+        805,
+        2793,
+        13,
+        51712
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 39,
+      "avg_logprob": -0.3924753963947296,
+      "compression_ratio": 1.3884297609329224,
+      "end": 173.54000091552734,
+      "no_speech_prob": 0.6446829438209534,
+      "seek": 2444,
+      "start": 171.95999908447266,
+      "temperature": 0.0,
+      "text": " Thanks, Aisha.",
+      "tokens": [
+        51712,
+        2561,
+        11,
+        316,
+        16546,
+        13,
+        51826
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 40,
+      "avg_logprob": -0.38729774951934814,
+      "compression_ratio": 0.9242424368858337,
+      "end": 177.2599983215332,
+      "no_speech_prob": 0.004171859938651323,
+      "seek": 5354,
+      "start": 173.54000091552734,
+      "temperature": 0.0,
+      "text": " Okay, item 3, the Q3OKRs.",
+      "tokens": [
+        50376,
+        1033,
+        11,
+        3174,
+        805,
+        11,
+        264,
+        1249,
+        18,
+        9443,
+        49,
+        82,
+        13,
+        50546
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 41,
+      "avg_logprob": -0.38729774951934814,
+      "compression_ratio": 0.9242424368858337,
+      "end": 179.54000091552734,
+      "no_speech_prob": 0.004171859938651323,
+      "seek": 5354,
+      "start": 177.77999877929688,
+      "temperature": 0.0,
+      "text": " Aisha, can you give us the summary?",
+      "tokens": [
+        50546,
+        316,
+        16546,
+        11,
+        393,
+        291,
+        976,
+        505,
+        264,
+        12691,
+        30,
+        50670
+      ],
+      "chunk_index": 2
+    },
+    {
+      "id": 42,
+      "avg_logprob": -0.24160274863243103,
+      "compression_ratio": 1.393782377243042,
+      "end": 184.61999988555908,
+      "no_speech_prob": 0.6103144884109497,
+      "seek": 0,
+      "start": 180.74000000953674,
+      "temperature": 0.0,
+      "text": " Sure. We have three key results for this quarter.",
+      "tokens": [
+        50414,
+        4894,
+        13,
+        492,
+        362,
+        1045,
+        2141,
+        3542,
+        337,
+        341,
+        6555,
+        13,
+        50614
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 43,
+      "avg_logprob": -0.24160274863243103,
+      "compression_ratio": 1.393782377243042,
+      "end": 190.0,
+      "no_speech_prob": 0.6103144884109497,
+      "seek": 0,
+      "start": 185.59999990463257,
+      "temperature": 0.0,
+      "text": " First, reduce checkout abandonment from 18% to 12%.",
+      "tokens": [
+        50614,
+        2386,
+        11,
+        5407,
+        37153,
+        9072,
+        518,
+        490,
+        2443,
+        4,
+        281,
+        2272,
+        6856,
+        50864
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 44,
+      "avg_logprob": -0.24160274863243103,
+      "compression_ratio": 1.393782377243042,
+      "end": 195.68000030517578,
+      "no_speech_prob": 0.6103144884109497,
+      "seek": 0,
+      "start": 190.69999980926514,
+      "temperature": 0.0,
+      "text": " We are currently at 14%, so we are on track, but not finished.",
+      "tokens": [
+        50864,
+        492,
+        366,
+        4362,
+        412,
+        3499,
+        8923,
+        370,
+        321,
+        366,
+        322,
+        2837,
+        11,
+        457,
+        406,
+        4335,
+        13,
+        51164
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 45,
+      "avg_logprob": -0.24160274863243103,
+      "compression_ratio": 1.393782377243042,
+      "end": 203.18000030517578,
+      "no_speech_prob": 0.6103144884109497,
+      "seek": 0,
+      "start": 196.29999923706055,
+      "temperature": 0.0,
+      "text": " Second, launch the new recommendation engine, which uses the embedding model from the data science team.",
+      "tokens": [
+        51164,
+        5736,
+        11,
+        4025,
+        264,
+        777,
+        11879,
+        2848,
+        11,
+        597,
+        4960,
+        264,
+        12240,
+        3584,
+        2316,
+        490,
+        264,
+        1412,
+        3497,
+        1469,
+        13,
+        51514
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 46,
+      "avg_logprob": -0.22647270560264587,
+      "compression_ratio": 1.506666660308838,
+      "end": 212.18000030517578,
+      "no_speech_prob": 0.04100024327635765,
+      "seek": 2318,
+      "start": 203.18000030517578,
+      "temperature": 0.0,
+      "text": " That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team.",
+      "tokens": [
+        50364,
+        663,
+        472,
+        307,
+        20268,
+        11,
+        570,
+        264,
+        8062,
+        8149,
+        11,
+        321,
+        5111,
+        33531,
+        66,
+        546,
+        11,
+        2203,
+        257,
+        3825,
+        3131,
+        490,
+        264,
+        15882,
+        1469,
+        13,
+        50814
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 47,
+      "avg_logprob": -0.22647270560264587,
+      "compression_ratio": 1.506666660308838,
+      "end": 218.81999969482422,
+      "no_speech_prob": 0.04100024327635765,
+      "seek": 2318,
+      "start": 212.72000122070312,
+      "temperature": 0.0,
+      "text": " And third, achieve SOC 2 type 2 readiness. We are about halfway there.",
+      "tokens": [
+        50814,
+        400,
+        2636,
+        11,
+        4584,
+        10621,
+        34,
+        568,
+        2010,
+        568,
+        34954,
+        13,
+        492,
+        366,
+        466,
+        15461,
+        456,
+        13,
+        51164
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 48,
+      "avg_logprob": -0.22647270560264587,
+      "compression_ratio": 1.506666660308838,
+      "end": 221.97999954223633,
+      "no_speech_prob": 0.04100024327635765,
+      "seek": 2318,
+      "start": 219.63999938964844,
+      "temperature": 0.0,
+      "text": " What is the risk on the SOC 2 work?",
+      "tokens": [
+        51164,
+        708,
+        307,
+        264,
+        3148,
+        322,
+        264,
+        10621,
+        34,
+        568,
+        589,
+        30,
+        51364
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 49,
+      "avg_logprob": -0.22647270560264587,
+      "compression_ratio": 1.506666660308838,
+      "end": 230.9199981689453,
+      "no_speech_prob": 0.04100024327635765,
+      "seek": 2318,
+      "start": 222.7599983215332,
+      "temperature": 0.0,
+      "text": " The main risk is the audit logging. We need every access to customer data to be logged and retained for one year.",
+      "tokens": [
+        51364,
+        440,
+        2135,
+        3148,
+        307,
+        264,
+        17748,
+        27991,
+        13,
+        492,
+        643,
+        633,
+        2105,
+        281,
+        5474,
+        1412,
+        281,
+        312,
+        27231,
+        293,
+        33438,
+        337,
+        472,
+        1064,
+        13,
+        51764
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 50,
+      "avg_logprob": -0.1809740513563156,
+      "compression_ratio": 1.0842105150222778,
+      "end": 235.70000076293945,
+      "no_speech_prob": 0.02686605229973793,
+      "seek": 5092,
+      "start": 230.9199981689453,
+      "temperature": 0.0,
+      "text": " Right now we only keep logs in CloudWatch for 30 days.",
+      "tokens": [
+        50364,
+        1779,
+        586,
+        321,
+        787,
+        1066,
+        20820,
+        294,
+        8061,
+        36204,
+        337,
+        2217,
+        1708,
+        13,
+        50614
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 51,
+      "avg_logprob": -0.1809740513563156,
+      "compression_ratio": 1.0842105150222778,
+      "end": 239.97999954223633,
+      "no_speech_prob": 0.02686605229973793,
+      "seek": 5092,
+      "start": 237.0,
+      "temperature": 0.0,
+      "text": " We could export the logs to S3 with a live site.",
+      "tokens": [
+        50614,
+        492,
+        727,
+        10725,
+        264,
+        20820,
+        281,
+        318,
+        18,
+        365,
+        257,
+        1621,
+        3621,
+        13,
+        50814
+      ],
+      "chunk_index": 3
+    },
+    {
+      "id": 52,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 243.6600000858307,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 240.0,
+      "temperature": 0.0,
+      "text": " and move them to Glacier after 90 days.",
+      "tokens": [
+        50414,
+        293,
+        1286,
+        552,
+        281,
+        5209,
+        326,
+        811,
+        934,
+        4289,
+        1708,
+        13,
+        50564
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 53,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 248.0,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 244.1399998664856,
+      "temperature": 0.0,
+      "text": " That would be cheap, and it would meet the retention requirement.",
+      "tokens": [
+        50564,
+        663,
+        576,
+        312,
+        7084,
+        11,
+        293,
+        309,
+        576,
+        1677,
+        264,
+        22871,
+        11695,
+        13,
+        50764
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 54,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 252.89999961853027,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 249.11999988555908,
+      "temperature": 0.0,
+      "text": " Perfect. Let's take that offline, and write it up.",
+      "tokens": [
+        50814,
+        10246,
+        13,
+        961,
+        311,
+        747,
+        300,
+        21857,
+        11,
+        293,
+        2464,
+        309,
+        493,
+        13,
+        51014
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 55,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 255.68000030517578,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 254.0600004196167,
+      "temperature": 0.0,
+      "text": " Last item, hiring.",
+      "tokens": [
+        51064,
+        5264,
+        3174,
+        11,
+        15335,
+        13,
+        51164
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 56,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 257.7800006866455,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 256.20000076293945,
+      "temperature": 0.0,
+      "text": " We have two open roles.",
+      "tokens": [
+        51164,
+        492,
+        362,
+        732,
+        1269,
+        9604,
+        13,
+        51264
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 57,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 262.1200008392334,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 258.04000091552734,
+      "temperature": 0.0,
+      "text": " A senior backend engineer with Go, and gRPC experience,",
+      "tokens": [
+        51264,
+        316,
+        7965,
+        38087,
+        11403,
+        365,
+        1037,
+        11,
+        293,
+        290,
+        49,
+        12986,
+        1752,
+        11,
+        51464
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 58,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 265.6200008392334,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 262.45999908447266,
+      "temperature": 0.0,
+      "text": " and a machine learning engineer for the recommendation work.",
+      "tokens": [
+        51464,
+        293,
+        257,
+        3479,
+        2539,
+        11403,
+        337,
+        264,
+        11879,
+        589,
+        13,
+        51664
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 59,
+      "avg_logprob": -0.2535126209259033,
+      "compression_ratio": 1.5296610593795776,
+      "end": 268.6200008392334,
+      "no_speech_prob": 0.8176842331886292,
+      "seek": 0,
+      "start": 265.7199993133545,
+      "temperature": 0.0,
+      "text": " We have three candidates in the final round.",
+      "tokens": [
+        51664,
+        492,
+        362,
+        1045,
+        11255,
+        294,
+        264,
+        2572,
+        3098,
+        13,
+        51814
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 60,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 274.4000015258789,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 268.6200008392334,
+      "temperature": 0.0,
+      "text": " Priya and Thomas, please submit your interview feedback in Greenhouse by Friday.",
+      "tokens": [
+        50364,
+        8087,
+        3016,
+        293,
+        8500,
+        11,
+        1767,
+        10315,
+        428,
+        4049,
+        5824,
+        294,
+        6969,
+        6410,
+        538,
+        6984,
+        13,
+        50664
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 61,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 276.2799987792969,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 275.79999923706055,
+      "temperature": 0.0,
+      "text": " Will do.",
+      "tokens": [
+        50664,
+        3099,
+        360,
+        13,
+        50764
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 62,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 279.8400001525879,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 277.5200004577637,
+      "temperature": 0.0,
+      "text": " Yes, I will have mine done tomorrow.",
+      "tokens": [
+        50764,
+        1079,
+        11,
+        286,
+        486,
+        362,
+        3892,
+        1096,
+        4153,
+        13,
+        50914
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 63,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 283.61999893188477,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 280.86000061035156,
+      "temperature": 0.0,
+      "text": " Great. To summarize the action items.",
+      "tokens": [
+        50964,
+        3769,
+        13,
+        1407,
+        20858,
+        264,
+        3069,
+        4754,
+        13,
+        51114
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 64,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 287.8199996948242,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 284.5800018310547,
+      "temperature": 0.0,
+      "text": " Priya will fix the Riddiz storage class issue by Tuesday.",
+      "tokens": [
+        51114,
+        8087,
+        3016,
+        486,
+        3191,
+        264,
+        497,
+        14273,
+        590,
+        6725,
+        1508,
+        2734,
+        538,
+        10017,
+        13,
+        51314
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 65,
+      "avg_logprob": -0.2662673592567444,
+      "compression_ratio": 1.4688994884490967,
+      "end": 293.8199996948242,
+      "no_speech_prob": 0.06447621434926987,
+      "seek": 2862,
+      "start": 288.5999984741211,
+      "temperature": 0.0,
+      "text": " Thomas will review the Terraform pull request today, and deploy the index migration.",
+      "tokens": [
+        51314,
+        8500,
+        486,
+        3131,
+        264,
+        25366,
+        837,
+        2235,
+        5308,
+        965,
+        11,
+        293,
+        7274,
+        264,
+        8186,
+        17011,
+        13,
+        51614
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 66,
+      "avg_logprob": -0.3268946409225464,
+      "compression_ratio": 1.047619104385376,
+      "end": 299.9799995422363,
+      "no_speech_prob": 0.8369940519332886,
+      "seek": 5382,
+      "start": 293.8199996948242,
+      "temperature": 0.0,
+      "text": " Aisha will schedule the Pinecone security review, and draft the log retention plan with.",
+      "tokens": [
+        50364,
+        316,
+        16546,
+        486,
+        7567,
+        264,
+        33531,
+        66,
+        546,
+        3825,
+        3131,
+        11,
+        293,
+        11206,
+        264,
+        3565,
+        22871,
+        1393,
+        365,
+        13,
+        50664
+      ],
+      "chunk_index": 4
+    },
+    {
+      "id": 67,
+      "avg_logprob": -0.38825392723083496,
+      "compression_ratio": 1.1149425506591797,
+      "end": 304.8200001716614,
+      "no_speech_prob": 0.30276763439178467,
+      "seek": 0,
+      "start": 300.0,
+      "temperature": 0.0,
+      "text": " And everyone, please send your greenhouse feedback by Friday.",
+      "tokens": [
+        50414,
+        400,
+        1518,
+        11,
+        1767,
+        2845,
+        428,
+        22126,
+        5824,
+        538,
+        6984,
+        13,
+        50614
+      ],
+      "chunk_index": 5
+    },
+    {
+      "id": 68,
+      "avg_logprob": -0.38825392723083496,
+      "compression_ratio": 1.1149425506591797,
+      "end": 307.94000005722046,
+      "no_speech_prob": 0.30276763439178467,
+      "seek": 0,
+      "start": 305.3600001335144,
+      "temperature": 0.0,
+      "text": " Thanks everyone, see you next week.",
+      "tokens": [
+        50614,
+        2561,
+        1518,
+        11,
+        536,
+        291,
+        958,
+        1243,
+        13,
+        50764
+      ],
+      "chunk_index": 5
+    }
+  ],
+  "words": [
+    {
+      "end": 0.2199999988079071,
+      "start": 0.0,
+      "word": "Good",
+      "chunk_index": 0
+    },
+    {
+      "end": 0.6200000047683716,
+      "start": 0.2199999988079071,
+      "word": "morning",
+      "chunk_index": 0
+    },
+    {
+      "end": 1.340000033378601,
+      "start": 0.6200000047683716,
+      "word": "everyone",
+      "chunk_index": 0
+    },
+    {
+      "end": 2.0199999809265137,
+      "start": 1.9800000190734863,
+      "word": "This",
+      "chunk_index": 0
+    },
+    {
+      "end": 2.240000009536743,
+      "start": 2.0199999809265137,
+      "word": "is",
+      "chunk_index": 0
+    },
+    {
+      "end": 2.4200000762939453,
+      "start": 2.240000009536743,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 2.7799999713897705,
+      "start": 2.4200000762939453,
+      "word": "weekly",
+      "chunk_index": 0
+    },
+    {
+      "end": 3.4000000953674316,
+      "start": 2.7799999713897705,
+      "word": "engineering",
+      "chunk_index": 0
+    },
+    {
+      "end": 3.799999952316284,
+      "start": 3.4000000953674316,
+      "word": "sync",
+      "chunk_index": 0
+    },
+    {
+      "end": 4.119999885559082,
+      "start": 3.799999952316284,
+      "word": "for",
+      "chunk_index": 0
+    },
+    {
+      "end": 4.760000228881836,
+      "start": 4.119999885559082,
+      "word": "Project",
+      "chunk_index": 0
+    },
+    {
+      "end": 5.320000171661377,
+      "start": 4.760000228881836,
+      "word": "Nimbus",
+      "chunk_index": 0
+    },
+    {
+      "end": 6.099999904632568,
+      "start": 6.0,
+      "word": "Today",
+      "chunk_index": 0
+    },
+    {
+      "end": 6.440000057220459,
+      "start": 6.099999904632568,
+      "word": "is",
+      "chunk_index": 0
+    },
+    {
+      "end": 6.900000095367432,
+      "start": 6.440000057220459,
+      "word": "Thursday",
+      "chunk_index": 0
+    },
+    {
+      "end": 7.440000057220459,
+      "start": 7.260000228881836,
+      "word": "and",
+      "chunk_index": 0
+    },
+    {
+      "end": 7.639999866485596,
+      "start": 7.440000057220459,
+      "word": "we",
+      "chunk_index": 0
+    },
+    {
+      "end": 7.900000095367432,
+      "start": 7.639999866485596,
+      "word": "have",
+      "chunk_index": 0
+    },
+    {
+      "end": 8.239999771118164,
+      "start": 7.900000095367432,
+      "word": "four",
+      "chunk_index": 0
+    },
+    {
+      "end": 8.520000457763672,
+      "start": 8.239999771118164,
+      "word": "items",
+      "chunk_index": 0
+    },
+    {
+      "end": 8.819999694824219,
+      "start": 8.520000457763672,
+      "word": "on",
+      "chunk_index": 0
+    },
+    {
+      "end": 9.0600004196167,
+      "start": 8.819999694824219,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 9.460000038146973,
+      "start": 9.0600004196167,
+      "word": "agenda",
+      "chunk_index": 0
+    },
+    {
+      "end": 10.119999885559082,
+      "start": 10.0600004196167,
+      "word": "The",
+      "chunk_index": 0
+    },
+    {
+      "end": 10.680000305175781,
+      "start": 10.119999885559082,
+      "word": "Kubernetes",
+      "chunk_index": 0
+    },
+    {
+      "end": 11.319999694824219,
+      "start": 10.680000305175781,
+      "word": "migration",
+      "chunk_index": 0
+    },
+    {
+      "end": 11.960000038146973,
+      "start": 11.800000190734863,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 13.039999961853027,
+      "start": 11.960000038146973,
+      "word": "PostgreSQL",
+      "chunk_index": 0
+    },
+    {
+      "end": 13.619999885559082,
+      "start": 13.039999961853027,
+      "word": "latency",
+      "chunk_index": 0
+    },
+    {
+      "end": 14.079999923706055,
+      "start": 13.619999885559082,
+      "word": "issue",
+      "chunk_index": 0
+    },
+    {
+      "end": 14.65999984741211,
+      "start": 14.420000076293945,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 15.119999885559082,
+      "start": 14.65999984741211,
+      "word": "Q3",
+      "chunk_index": 0
+    },
+    {
+      "end": 16.040000915527344,
+      "start": 15.119999885559082,
+      "word": "OKRs",
+      "chunk_index": 0
+    },
+    {
+      "end": 16.31999969482422,
+      "start": 16.040000915527344,
+      "word": "and",
+      "chunk_index": 0
+    },
+    {
+      "end": 16.639999389648438,
+      "start": 16.31999969482422,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 16.940000534057617,
+      "start": 16.639999389648438,
+      "word": "hiring",
+      "chunk_index": 0
+    },
+    {
+      "end": 17.520000457763672,
+      "start": 16.940000534057617,
+      "word": "update",
+      "chunk_index": 0
+    },
+    {
+      "end": 18.399999618530273,
+      "start": 18.34000015258789,
+      "word": "Priya",
+      "chunk_index": 0
+    },
+    {
+      "end": 18.84000015258789,
+      "start": 18.6200008392334,
+      "word": "do",
+      "chunk_index": 0
+    },
+    {
+      "end": 19.040000915527344,
+      "start": 18.84000015258789,
+      "word": "you",
+      "chunk_index": 0
+    },
+    {
+      "end": 19.3799991607666,
+      "start": 19.040000915527344,
+      "word": "want",
+      "chunk_index": 0
+    },
+    {
+      "end": 19.68000030517578,
+      "start": 19.3799991607666,
+      "word": "to",
+      "chunk_index": 0
+    },
+    {
+      "end": 19.979999542236328,
+      "start": 19.68000030517578,
+      "word": "start",
+      "chunk_index": 0
+    },
+    {
+      "end": 20.239999771118164,
+      "start": 19.979999542236328,
+      "word": "with",
+      "chunk_index": 0
+    },
+    {
+      "end": 20.559999465942383,
+      "start": 20.239999771118164,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 20.920000076293945,
+      "start": 20.559999465942383,
+      "word": "migration",
+      "chunk_index": 0
+    },
+    {
+      "end": 22.84000015258789,
+      "start": 22.1200008392334,
+      "word": "Sure",
+      "chunk_index": 0
+    },
+    {
+      "end": 23.540000915527344,
+      "start": 23.079999923706055,
+      "word": "thanks",
+      "chunk_index": 0
+    },
+    {
+      "end": 24.100000381469727,
+      "start": 23.540000915527344,
+      "word": "Marcus",
+      "chunk_index": 0
+    },
+    {
+      "end": 24.860000610351562,
+      "start": 24.520000457763672,
+      "word": "So",
+      "chunk_index": 0
+    },
+    {
+      "end": 25.219999313354492,
+      "start": 24.860000610351562,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 25.65999984741211,
+      "start": 25.219999313354492,
+      "word": "Kubernetes",
+      "chunk_index": 0
+    },
+    {
+      "end": 26.280000686645508,
+      "start": 25.65999984741211,
+      "word": "migration",
+      "chunk_index": 0
+    },
+    {
+      "end": 26.6200008392334,
+      "start": 26.280000686645508,
+      "word": "is",
+      "chunk_index": 0
+    },
+    {
+      "end": 27.020000457763672,
+      "start": 26.6200008392334,
+      "word": "about",
+      "chunk_index": 0
+    },
+    {
+      "end": 27.639999389648438,
+      "start": 27.020000457763672,
+      "word": "70",
+      "chunk_index": 0
+    },
+    {
+      "end": 28.15999984741211,
+      "start": 27.639999389648438,
+      "word": "",
+      "chunk_index": 0
+    },
+    {
+      "end": 28.520000457763672,
+      "start": 28.15999984741211,
+      "word": "done",
+      "chunk_index": 0
+    },
+    {
+      "end": 29.139999389648438,
+      "start": 28.520000457763672,
+      "word": "We",
+      "chunk_index": 0
+    },
+    {
+      "end": 29.540000915527344,
+      "start": 29.139999389648438,
+      "word": "moved",
+      "chunk_index": 0
+    },
+    {
+      "end": 29.920000076293945,
+      "start": 29.540000915527344,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 30.399999618530273,
+      "start": 29.920000076293945,
+      "word": "authentication",
+      "chunk_index": 0
+    },
+    {
+      "end": 31.31999969482422,
+      "start": 30.399999618530273,
+      "word": "service",
+      "chunk_index": 0
+    },
+    {
+      "end": 31.760000228881836,
+      "start": 31.579999923706055,
+      "word": "and",
+      "chunk_index": 0
+    },
+    {
+      "end": 32.060001373291016,
+      "start": 31.760000228881836,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 32.220001220703125,
+      "start": 32.060001373291016,
+      "word": "billing",
+      "chunk_index": 0
+    },
+    {
+      "end": 32.720001220703125,
+      "start": 32.220001220703125,
+      "word": "service",
+      "chunk_index": 0
+    },
+    {
+      "end": 32.97999954223633,
+      "start": 32.720001220703125,
+      "word": "to",
+      "chunk_index": 0
+    },
+    {
+      "end": 33.279998779296875,
+      "start": 32.97999954223633,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 33.52000045776367,
+      "start": 33.279998779296875,
+      "word": "new",
+      "chunk_index": 0
+    },
+    {
+      "end": 33.91999816894531,
+      "start": 33.52000045776367,
+      "word": "EKS",
+      "chunk_index": 0
+    },
+    {
+      "end": 34.34000015258789,
+      "start": 33.91999816894531,
+      "word": "cluster",
+      "chunk_index": 0
+    },
+    {
+      "end": 34.84000015258789,
+      "start": 34.34000015258789,
+      "word": "last",
+      "chunk_index": 0
+    },
+    {
+      "end": 35.15999984741211,
+      "start": 34.84000015258789,
+      "word": "week",
+      "chunk_index": 0
+    },
+    {
+      "end": 35.84000015258789,
+      "start": 35.70000076293945,
+      "word": "The",
+      "chunk_index": 0
+    },
+    {
+      "end": 36.18000030517578,
+      "start": 35.84000015258789,
+      "word": "main",
+      "chunk_index": 0
+    },
+    {
+      "end": 36.63999938964844,
+      "start": 36.18000030517578,
+      "word": "blocker",
+      "chunk_index": 0
+    },
+    {
+      "end": 36.880001068115234,
+      "start": 36.63999938964844,
+      "word": "right",
+      "chunk_index": 0
+    },
+    {
+      "end": 37.119998931884766,
+      "start": 36.880001068115234,
+      "word": "now",
+      "chunk_index": 0
+    },
+    {
+      "end": 37.29999923706055,
+      "start": 37.119998931884766,
+      "word": "is",
+      "chunk_index": 0
+    },
+    {
+      "end": 37.52000045776367,
+      "start": 37.29999923706055,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 37.779998779296875,
+      "start": 37.52000045776367,
+      "word": "Redis",
+      "chunk_index": 0
+    },
+    {
+      "end": 38.13999938964844,
+      "start": 37.779998779296875,
+      "word": "cache",
+      "chunk_index": 0
+    },
+    {
+      "end": 38.79999923706055,
+      "start": 38.619998931884766,
+      "word": "When",
+      "chunk_index": 0
+    },
+    {
+      "end": 39.099998474121094,
+      "start": 38.79999923706055,
+      "word": "we",
+      "chunk_index": 0
+    },
+    {
+      "end": 39.439998626708984,
+      "start": 39.099998474121094,
+      "word": "deployed",
+      "chunk_index": 0
+    },
+    {
+      "end": 39.70000076293945,
+      "start": 39.439998626708984,
+      "word": "it",
+      "chunk_index": 0
+    },
+    {
+      "end": 40.2599983215332,
+      "start": 39.70000076293945,
+      "word": "with",
+      "chunk_index": 0
+    },
+    {
+      "end": 40.279998779296875,
+      "start": 40.2599983215332,
+      "word": "Helm",
+      "chunk_index": 0
+    },
+    {
+      "end": 40.79999923706055,
+      "start": 40.560001373291016,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 41.380001068115234,
+      "start": 40.79999923706055,
+      "word": "persistent",
+      "chunk_index": 0
+    },
+    {
+      "end": 42.02000045776367,
+      "start": 41.380001068115234,
+      "word": "volume",
+      "chunk_index": 0
+    },
+    {
+      "end": 42.41999816894531,
+      "start": 42.02000045776367,
+      "word": "claims",
+      "chunk_index": 0
+    },
+    {
+      "end": 42.779998779296875,
+      "start": 42.41999816894531,
+      "word": "were",
+      "chunk_index": 0
+    },
+    {
+      "end": 43.08000183105469,
+      "start": 42.779998779296875,
+      "word": "failing",
+      "chunk_index": 0
+    },
+    {
+      "end": 43.720001220703125,
+      "start": 43.400001525878906,
+      "word": "because",
+      "chunk_index": 0
+    },
+    {
+      "end": 43.939998626708984,
+      "start": 43.720001220703125,
+      "word": "of",
+      "chunk_index": 0
+    },
+    {
+      "end": 44.13999938964844,
+      "start": 43.939998626708984,
+      "word": "a",
+      "chunk_index": 0
+    },
+    {
+      "end": 44.84000015258789,
+      "start": 44.13999938964844,
+      "word": "misconfigured",
+      "chunk_index": 0
+    },
+    {
+      "end": 45.400001525878906,
+      "start": 44.84000015258789,
+      "word": "storage",
+      "chunk_index": 0
+    },
+    {
+      "end": 46.20000076293945,
+      "start": 45.400001525878906,
+      "word": "class",
+      "chunk_index": 0
+    },
+    {
+      "end": 46.599998474121094,
+      "start": 46.29999923706055,
+      "word": "I",
+      "chunk_index": 0
+    },
+    {
+      "end": 46.97999954223633,
+      "start": 46.599998474121094,
+      "word": "opened",
+      "chunk_index": 0
+    },
+    {
+      "end": 47.279998779296875,
+      "start": 46.97999954223633,
+      "word": "a",
+      "chunk_index": 0
+    },
+    {
+      "end": 47.58000183105469,
+      "start": 47.279998779296875,
+      "word": "ticket",
+      "chunk_index": 0
+    },
+    {
+      "end": 48.18000030517578,
+      "start": 48.0,
+      "word": "Jira",
+      "chunk_index": 0
+    },
+    {
+      "end": 48.58000183105469,
+      "start": 48.18000030517578,
+      "word": "number",
+      "chunk_index": 0
+    },
+    {
+      "end": 49.119998931884766,
+      "start": 48.58000183105469,
+      "word": "NIM",
+      "chunk_index": 0
+    },
+    {
+      "end": 50.41999816894531,
+      "start": 49.119998931884766,
+      "word": "482",
+      "chunk_index": 0
+    },
+    {
+      "end": 50.81999969482422,
+      "start": 50.560001373291016,
+      "word": "and",
+      "chunk_index": 0
+    },
+    {
+      "end": 51.13999938964844,
+      "start": 50.81999969482422,
+      "word": "I",
+      "chunk_index": 0
+    },
+    {
+      "end": 51.47999954223633,
+      "start": 51.13999938964844,
+      "word": "expect",
+      "chunk_index": 0
+    },
+    {
+      "end": 51.70000076293945,
+      "start": 51.47999954223633,
+      "word": "it",
+      "chunk_index": 0
+    },
+    {
+      "end": 51.939998626708984,
+      "start": 51.70000076293945,
+      "word": "to",
+      "chunk_index": 0
+    },
+    {
+      "end": 52.400001525878906,
+      "start": 51.939998626708984,
+      "word": "be",
+      "chunk_index": 0
+    },
+    {
+      "end": 52.400001525878906,
+      "start": 52.400001525878906,
+      "word": "fixed",
+      "chunk_index": 0
+    },
+    {
+      "end": 52.79999923706055,
+      "start": 52.400001525878906,
+      "word": "by",
+      "chunk_index": 0
+    },
+    {
+      "end": 53.31999969482422,
+      "start": 52.79999923706055,
+      "word": "Tuesday",
+      "chunk_index": 0
+    },
+    {
+      "end": 55.060001373291016,
+      "start": 54.380001068115234,
+      "word": "Okay",
+      "chunk_index": 0
+    },
+    {
+      "end": 55.720001220703125,
+      "start": 55.459999084472656,
+      "word": "good",
+      "chunk_index": 0
+    },
+    {
+      "end": 56.279998779296875,
+      "start": 56.119998931884766,
+      "word": "Do",
+      "chunk_index": 0
+    },
+    {
+      "end": 56.5,
+      "start": 56.279998779296875,
+      "word": "we",
+      "chunk_index": 0
+    },
+    {
+      "end": 56.7400016784668,
+      "start": 56.5,
+      "word": "need",
+      "chunk_index": 0
+    },
+    {
+      "end": 57.20000076293945,
+      "start": 56.7400016784668,
+      "word": "anything",
+      "chunk_index": 0
+    },
+    {
+      "end": 57.52000045776367,
+      "start": 57.20000076293945,
+      "word": "from",
+      "chunk_index": 0
+    },
+    {
+      "end": 57.86000061035156,
+      "start": 57.52000045776367,
+      "word": "the",
+      "chunk_index": 0
+    },
+    {
+      "end": 58.20000076293945,
+      "start": 57.86000061035156,
+      "word": "DevOps",
+      "chunk_index": 0
+    },
+    {
+      "end": 58.97999954223633,
+      "start": 58.20000076293945,
+      "word": "team",
+      "chunk_index": 0
+    },
+    {
+      "end": 60.34000000357628,
+      "start": 60.0,
+      "word": "Yes",
+      "chunk_index": 1
+    },
+    {
+      "end": 60.77999997138977,
+      "start": 60.60000002384186,
+      "word": "we",
+      "chunk_index": 1
+    },
+    {
+      "end": 61.080000042915344,
+      "start": 60.77999997138977,
+      "word": "need",
+      "chunk_index": 1
+    },
+    {
+      "end": 61.519999980926514,
+      "start": 61.080000042915344,
+      "word": "Thomas",
+      "chunk_index": 1
+    },
+    {
+      "end": 61.82000005245209,
+      "start": 61.519999980926514,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 62.22000002861023,
+      "start": 61.82000005245209,
+      "word": "approve",
+      "chunk_index": 1
+    },
+    {
+      "end": 62.6800000667572,
+      "start": 62.22000002861023,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 62.94000005722046,
+      "start": 62.6800000667572,
+      "word": "Terraform",
+      "chunk_index": 1
+    },
+    {
+      "end": 63.55999994277954,
+      "start": 62.94000005722046,
+      "word": "changes",
+      "chunk_index": 1
+    },
+    {
+      "end": 63.88000011444092,
+      "start": 63.55999994277954,
+      "word": "for",
+      "chunk_index": 1
+    },
+    {
+      "end": 64.07999992370605,
+      "start": 63.88000011444092,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 64.55999994277954,
+      "start": 64.07999992370605,
+      "word": "VPC",
+      "chunk_index": 1
+    },
+    {
+      "end": 65.09999990463257,
+      "start": 64.55999994277954,
+      "word": "peering",
+      "chunk_index": 1
+    },
+    {
+      "end": 65.98000001907349,
+      "start": 65.76000022888184,
+      "word": "Without",
+      "chunk_index": 1
+    },
+    {
+      "end": 66.5,
+      "start": 65.98000001907349,
+      "word": "that",
+      "chunk_index": 1
+    },
+    {
+      "end": 66.94000005722046,
+      "start": 66.76000022888184,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 67.15999984741211,
+      "start": 66.94000005722046,
+      "word": "pods",
+      "chunk_index": 1
+    },
+    {
+      "end": 67.38000011444092,
+      "start": 67.15999984741211,
+      "word": "in",
+      "chunk_index": 1
+    },
+    {
+      "end": 67.59999990463257,
+      "start": 67.38000011444092,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 68.0,
+      "start": 67.59999990463257,
+      "word": "staging",
+      "chunk_index": 1
+    },
+    {
+      "end": 68.65999984741211,
+      "start": 68.0,
+      "word": "namespace",
+      "chunk_index": 1
+    },
+    {
+      "end": 69.03999996185303,
+      "start": 68.65999984741211,
+      "word": "cannot",
+      "chunk_index": 1
+    },
+    {
+      "end": 69.39999961853027,
+      "start": 69.03999996185303,
+      "word": "reach",
+      "chunk_index": 1
+    },
+    {
+      "end": 69.68000030517578,
+      "start": 69.39999961853027,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 70.10000038146973,
+      "start": 69.68000030517578,
+      "word": "legacy",
+      "chunk_index": 1
+    },
+    {
+      "end": 70.84000015258789,
+      "start": 70.10000038146973,
+      "word": "database",
+      "chunk_index": 1
+    },
+    {
+      "end": 72.19999980926514,
+      "start": 72.19999980926514,
+      "word": "I",
+      "chunk_index": 1
+    },
+    {
+      "end": 72.47999954223633,
+      "start": 72.19999980926514,
+      "word": "can",
+      "chunk_index": 1
+    },
+    {
+      "end": 72.88000011444092,
+      "start": 72.47999954223633,
+      "word": "review",
+      "chunk_index": 1
+    },
+    {
+      "end": 73.23999977111816,
+      "start": 72.88000011444092,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 73.65999984741211,
+      "start": 73.23999977111816,
+      "word": "Terraform",
+      "chunk_index": 1
+    },
+    {
+      "end": 74.07999992370605,
+      "start": 73.65999984741211,
+      "word": "pull",
+      "chunk_index": 1
+    },
+    {
+      "end": 74.53999996185303,
+      "start": 74.07999992370605,
+      "word": "request",
+      "chunk_index": 1
+    },
+    {
+      "end": 75.0600004196167,
+      "start": 74.53999996185303,
+      "word": "this",
+      "chunk_index": 1
+    },
+    {
+      "end": 75.53999996185303,
+      "start": 75.0600004196167,
+      "word": "afternoon",
+      "chunk_index": 1
+    },
+    {
+      "end": 76.23999977111816,
+      "start": 76.07999992370605,
+      "word": "I",
+      "chunk_index": 1
+    },
+    {
+      "end": 76.52000045776367,
+      "start": 76.23999977111816,
+      "word": "saw",
+      "chunk_index": 1
+    },
+    {
+      "end": 76.68000030517578,
+      "start": 76.52000045776367,
+      "word": "it",
+      "chunk_index": 1
+    },
+    {
+      "end": 76.8799991607666,
+      "start": 76.68000030517578,
+      "word": "in",
+      "chunk_index": 1
+    },
+    {
+      "end": 77.34000015258789,
+      "start": 76.8799991607666,
+      "word": "GitHub",
+      "chunk_index": 1
+    },
+    {
+      "end": 77.95999908447266,
+      "start": 77.34000015258789,
+      "word": "yesterday",
+      "chunk_index": 1
+    },
+    {
+      "end": 78.39999961853027,
+      "start": 78.18000030517578,
+      "word": "but",
+      "chunk_index": 1
+    },
+    {
+      "end": 78.6200008392334,
+      "start": 78.39999961853027,
+      "word": "I",
+      "chunk_index": 1
+    },
+    {
+      "end": 78.76000022888184,
+      "start": 78.6200008392334,
+      "word": "did",
+      "chunk_index": 1
+    },
+    {
+      "end": 78.95999908447266,
+      "start": 78.76000022888184,
+      "word": "not",
+      "chunk_index": 1
+    },
+    {
+      "end": 79.31999969482422,
+      "start": 78.95999908447266,
+      "word": "have",
+      "chunk_index": 1
+    },
+    {
+      "end": 79.73999977111816,
+      "start": 79.31999969482422,
+      "word": "time",
+      "chunk_index": 1
+    },
+    {
+      "end": 80.5,
+      "start": 80.36000061035156,
+      "word": "Just",
+      "chunk_index": 1
+    },
+    {
+      "end": 80.86000061035156,
+      "start": 80.5,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 81.36000061035156,
+      "start": 80.86000061035156,
+      "word": "confirm",
+      "chunk_index": 1
+    },
+    {
+      "end": 81.84000015258789,
+      "start": 81.65999984741211,
+      "word": "are",
+      "chunk_index": 1
+    },
+    {
+      "end": 82.04000091552734,
+      "start": 81.84000015258789,
+      "word": "we",
+      "chunk_index": 1
+    },
+    {
+      "end": 82.36000061035156,
+      "start": 82.04000091552734,
+      "word": "still",
+      "chunk_index": 1
+    },
+    {
+      "end": 82.70000076293945,
+      "start": 82.36000061035156,
+      "word": "using",
+      "chunk_index": 1
+    },
+    {
+      "end": 83.07999992370605,
+      "start": 82.70000076293945,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 83.42000007629395,
+      "start": 83.07999992370605,
+      "word": "T3",
+      "chunk_index": 1
+    },
+    {
+      "end": 83.92000007629395,
+      "start": 83.42000007629395,
+      "word": "large",
+      "chunk_index": 1
+    },
+    {
+      "end": 84.28000068664551,
+      "start": 83.92000007629395,
+      "word": "instances",
+      "chunk_index": 1
+    },
+    {
+      "end": 84.70000076293945,
+      "start": 84.28000068664551,
+      "word": "for",
+      "chunk_index": 1
+    },
+    {
+      "end": 84.89999961853027,
+      "start": 84.70000076293945,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 85.28000068664551,
+      "start": 84.89999961853027,
+      "word": "worker",
+      "chunk_index": 1
+    },
+    {
+      "end": 85.63999938964844,
+      "start": 85.28000068664551,
+      "word": "nodes",
+      "chunk_index": 1
+    },
+    {
+      "end": 86.13999938964844,
+      "start": 85.8799991607666,
+      "word": "or",
+      "chunk_index": 1
+    },
+    {
+      "end": 86.34000015258789,
+      "start": 86.13999938964844,
+      "word": "did",
+      "chunk_index": 1
+    },
+    {
+      "end": 86.63999938964844,
+      "start": 86.34000015258789,
+      "word": "we",
+      "chunk_index": 1
+    },
+    {
+      "end": 86.92000007629395,
+      "start": 86.63999938964844,
+      "word": "switch",
+      "chunk_index": 1
+    },
+    {
+      "end": 87.26000022888184,
+      "start": 86.92000007629395,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 87.81999969482422,
+      "start": 87.26000022888184,
+      "word": "Graviton",
+      "chunk_index": 1
+    },
+    {
+      "end": 89.15999984741211,
+      "start": 88.76000022888184,
+      "word": "We",
+      "chunk_index": 1
+    },
+    {
+      "end": 89.70000076293945,
+      "start": 89.15999984741211,
+      "word": "switched",
+      "chunk_index": 1
+    },
+    {
+      "end": 90.21999931335449,
+      "start": 89.70000076293945,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 90.65999984741211,
+      "start": 90.21999931335449,
+      "word": "Graviton",
+      "chunk_index": 1
+    },
+    {
+      "end": 91.34000015258789,
+      "start": 91.20000076293945,
+      "word": "The",
+      "chunk_index": 1
+    },
+    {
+      "end": 91.78000068664551,
+      "start": 91.34000015258789,
+      "word": "ARM",
+      "chunk_index": 1
+    },
+    {
+      "end": 92.2599983215332,
+      "start": 91.78000068664551,
+      "word": "based",
+      "chunk_index": 1
+    },
+    {
+      "end": 92.72000122070312,
+      "start": 92.2599983215332,
+      "word": "instances",
+      "chunk_index": 1
+    },
+    {
+      "end": 93.06000137329102,
+      "start": 92.72000122070312,
+      "word": "are",
+      "chunk_index": 1
+    },
+    {
+      "end": 93.43999862670898,
+      "start": 93.06000137329102,
+      "word": "about",
+      "chunk_index": 1
+    },
+    {
+      "end": 93.97999954223633,
+      "start": 93.43999862670898,
+      "word": "20",
+      "chunk_index": 1
+    },
+    {
+      "end": 94.5,
+      "start": 93.97999954223633,
+      "word": "",
+      "chunk_index": 1
+    },
+    {
+      "end": 94.91999816894531,
+      "start": 94.5,
+      "word": "cheaper",
+      "chunk_index": 1
+    },
+    {
+      "end": 95.41999816894531,
+      "start": 95.2400016784668,
+      "word": "and",
+      "chunk_index": 1
+    },
+    {
+      "end": 95.77999877929688,
+      "start": 95.41999816894531,
+      "word": "our",
+      "chunk_index": 1
+    },
+    {
+      "end": 96.04000091552734,
+      "start": 95.77999877929688,
+      "word": "Docker",
+      "chunk_index": 1
+    },
+    {
+      "end": 96.38000106811523,
+      "start": 96.04000091552734,
+      "word": "images",
+      "chunk_index": 1
+    },
+    {
+      "end": 96.81999969482422,
+      "start": 96.38000106811523,
+      "word": "now",
+      "chunk_index": 1
+    },
+    {
+      "end": 97.15999984741211,
+      "start": 96.81999969482422,
+      "word": "build",
+      "chunk_index": 1
+    },
+    {
+      "end": 97.45999908447266,
+      "start": 97.15999984741211,
+      "word": "for",
+      "chunk_index": 1
+    },
+    {
+      "end": 97.77999877929688,
+      "start": 97.45999908447266,
+      "word": "both",
+      "chunk_index": 1
+    },
+    {
+      "end": 98.79999923706055,
+      "start": 97.77999877929688,
+      "word": "architectures",
+      "chunk_index": 1
+    },
+    {
+      "end": 100.41999816894531,
+      "start": 100.29999923706055,
+      "word": "Great",
+      "chunk_index": 1
+    },
+    {
+      "end": 101.27999877929688,
+      "start": 100.84000015258789,
+      "word": "Let's",
+      "chunk_index": 1
+    },
+    {
+      "end": 101.47999954223633,
+      "start": 101.27999877929688,
+      "word": "move",
+      "chunk_index": 1
+    },
+    {
+      "end": 101.95999908447266,
+      "start": 101.47999954223633,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 102.04000091552734,
+      "start": 101.95999908447266,
+      "word": "item",
+      "chunk_index": 1
+    },
+    {
+      "end": 102.43999862670898,
+      "start": 102.04000091552734,
+      "word": "2",
+      "chunk_index": 1
+    },
+    {
+      "end": 102.86000061035156,
+      "start": 102.61999893188477,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 103.97999954223633,
+      "start": 102.86000061035156,
+      "word": "PostgreSQL",
+      "chunk_index": 1
+    },
+    {
+      "end": 104.47999954223633,
+      "start": 103.97999954223633,
+      "word": "latency",
+      "chunk_index": 1
+    },
+    {
+      "end": 105.41999816894531,
+      "start": 104.47999954223633,
+      "word": "issue",
+      "chunk_index": 1
+    },
+    {
+      "end": 106.04000091552734,
+      "start": 105.47999954223633,
+      "word": "Thomas",
+      "chunk_index": 1
+    },
+    {
+      "end": 106.61999893188477,
+      "start": 106.29999923706055,
+      "word": "what",
+      "chunk_index": 1
+    },
+    {
+      "end": 106.86000061035156,
+      "start": 106.61999893188477,
+      "word": "did",
+      "chunk_index": 1
+    },
+    {
+      "end": 107.0999984741211,
+      "start": 106.86000061035156,
+      "word": "you",
+      "chunk_index": 1
+    },
+    {
+      "end": 107.47999954223633,
+      "start": 107.0999984741211,
+      "word": "find",
+      "chunk_index": 1
+    },
+    {
+      "end": 109.18000030517578,
+      "start": 108.72000122070312,
+      "word": "So",
+      "chunk_index": 1
+    },
+    {
+      "end": 109.61999893188477,
+      "start": 109.41999816894531,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 110.5,
+      "start": 109.61999893188477,
+      "word": "P99",
+      "chunk_index": 1
+    },
+    {
+      "end": 111.06000137329102,
+      "start": 110.5,
+      "word": "latency",
+      "chunk_index": 1
+    },
+    {
+      "end": 111.34000015258789,
+      "start": 111.06000137329102,
+      "word": "on",
+      "chunk_index": 1
+    },
+    {
+      "end": 111.63999938964844,
+      "start": 111.34000015258789,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 112.04000091552734,
+      "start": 111.63999938964844,
+      "word": "order's",
+      "chunk_index": 1
+    },
+    {
+      "end": 112.36000061035156,
+      "start": 112.04000091552734,
+      "word": "endpoint",
+      "chunk_index": 1
+    },
+    {
+      "end": 112.72000122070312,
+      "start": 112.36000061035156,
+      "word": "went",
+      "chunk_index": 1
+    },
+    {
+      "end": 113.02000045776367,
+      "start": 112.72000122070312,
+      "word": "from",
+      "chunk_index": 1
+    },
+    {
+      "end": 113.38000106811523,
+      "start": 113.02000045776367,
+      "word": "about",
+      "chunk_index": 1
+    },
+    {
+      "end": 113.77999877929688,
+      "start": 113.38000106811523,
+      "word": "80",
+      "chunk_index": 1
+    },
+    {
+      "end": 114.31999969482422,
+      "start": 113.77999877929688,
+      "word": "milliseconds",
+      "chunk_index": 1
+    },
+    {
+      "end": 114.88000106811523,
+      "start": 114.31999969482422,
+      "word": "to",
+      "chunk_index": 1
+    },
+    {
+      "end": 115.29999923706055,
+      "start": 114.88000106811523,
+      "word": "almost",
+      "chunk_index": 1
+    },
+    {
+      "end": 116.06000137329102,
+      "start": 115.29999923706055,
+      "word": "400",
+      "chunk_index": 1
+    },
+    {
+      "end": 116.70000076293945,
+      "start": 116.06000137329102,
+      "word": "milliseconds",
+      "chunk_index": 1
+    },
+    {
+      "end": 117.31999969482422,
+      "start": 116.70000076293945,
+      "word": "after",
+      "chunk_index": 1
+    },
+    {
+      "end": 117.5999984741211,
+      "start": 117.31999969482422,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 117.84000015258789,
+      "start": 117.5999984741211,
+      "word": "release",
+      "chunk_index": 1
+    },
+    {
+      "end": 118.04000091552734,
+      "start": 117.84000015258789,
+      "word": "on",
+      "chunk_index": 1
+    },
+    {
+      "end": 118.22000122070312,
+      "start": 118.04000091552734,
+      "word": "the",
+      "chunk_index": 1
+    },
+    {
+      "end": 119.34000015258789,
+      "start": 118.22000122070312,
+      "word": "12th",
+      "chunk_index": 1
+    },
+    {
+      "end": 119.7400016784668,
+      "start": 119.43999862670898,
+      "word": "Ironic",
+      "chunk_index": 1
+    },
+    {
+      "end": 119.97999954223633,
+      "start": 119.86000061035156,
+      "word": "ple",
+      "chunk_index": 1
+    },
+    {
+      "end": 119.97999954223633,
+      "start": 119.97999954223633,
+      "word": "",
+      "chunk_index": 1
+    },
+    {
+      "end": 120.31999999284744,
+      "start": 120.0,
+      "word": "They",
+      "chunk_index": 2
+    },
+    {
+      "end": 120.60000002384186,
+      "start": 120.31999999284744,
+      "word": "analyze",
+      "chunk_index": 2
+    },
+    {
+      "end": 120.89999997615814,
+      "start": 120.60000002384186,
+      "word": "on",
+      "chunk_index": 2
+    },
+    {
+      "end": 121.0,
+      "start": 120.89999997615814,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 121.29999995231628,
+      "start": 121.0,
+      "word": "slow",
+      "chunk_index": 2
+    },
+    {
+      "end": 121.82000005245209,
+      "start": 121.29999995231628,
+      "word": "queries",
+      "chunk_index": 2
+    },
+    {
+      "end": 122.3199999332428,
+      "start": 122.11999988555908,
+      "word": "and",
+      "chunk_index": 2
+    },
+    {
+      "end": 122.59999990463257,
+      "start": 122.3199999332428,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 122.92000007629395,
+      "start": 122.59999990463257,
+      "word": "problem",
+      "chunk_index": 2
+    },
+    {
+      "end": 123.09999990463257,
+      "start": 122.92000007629395,
+      "word": "is",
+      "chunk_index": 2
+    },
+    {
+      "end": 123.59999990463257,
+      "start": 123.09999990463257,
+      "word": "a",
+      "chunk_index": 2
+    },
+    {
+      "end": 123.64000010490417,
+      "start": 123.59999990463257,
+      "word": "missing",
+      "chunk_index": 2
+    },
+    {
+      "end": 124.32000017166138,
+      "start": 123.64000010490417,
+      "word": "composite",
+      "chunk_index": 2
+    },
+    {
+      "end": 124.6399998664856,
+      "start": 124.32000017166138,
+      "word": "index",
+      "chunk_index": 2
+    },
+    {
+      "end": 124.94000005722046,
+      "start": 124.6399998664856,
+      "word": "on",
+      "chunk_index": 2
+    },
+    {
+      "end": 125.23999977111816,
+      "start": 124.94000005722046,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 125.48000001907349,
+      "start": 125.23999977111816,
+      "word": "orders",
+      "chunk_index": 2
+    },
+    {
+      "end": 126.0,
+      "start": 125.48000001907349,
+      "word": "table",
+      "chunk_index": 2
+    },
+    {
+      "end": 126.6399998664856,
+      "start": 126.30000019073486,
+      "word": "on",
+      "chunk_index": 2
+    },
+    {
+      "end": 127.07999992370605,
+      "start": 126.6399998664856,
+      "word": "customer",
+      "chunk_index": 2
+    },
+    {
+      "end": 127.44000005722046,
+      "start": 127.07999992370605,
+      "word": "ID",
+      "chunk_index": 2
+    },
+    {
+      "end": 127.92000007629395,
+      "start": 127.61999988555908,
+      "word": "and",
+      "chunk_index": 2
+    },
+    {
+      "end": 128.5,
+      "start": 127.92000007629395,
+      "word": "created",
+      "chunk_index": 2
+    },
+    {
+      "end": 128.88000011444092,
+      "start": 128.5,
+      "word": "that",
+      "chunk_index": 2
+    },
+    {
+      "end": 129.6599998474121,
+      "start": 129.39999961853027,
+      "word": "Someone",
+      "chunk_index": 2
+    },
+    {
+      "end": 130.02000045776367,
+      "start": 129.6599998474121,
+      "word": "dropped",
+      "chunk_index": 2
+    },
+    {
+      "end": 130.31999969482422,
+      "start": 130.02000045776367,
+      "word": "it",
+      "chunk_index": 2
+    },
+    {
+      "end": 130.69999980926514,
+      "start": 130.31999969482422,
+      "word": "during",
+      "chunk_index": 2
+    },
+    {
+      "end": 131.30000019073486,
+      "start": 130.69999980926514,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 131.30000019073486,
+      "start": 131.30000019073486,
+      "word": "schema",
+      "chunk_index": 2
+    },
+    {
+      "end": 131.85999965667725,
+      "start": 131.30000019073486,
+      "word": "migration",
+      "chunk_index": 2
+    },
+    {
+      "end": 132.3400001525879,
+      "start": 131.85999965667725,
+      "word": "with",
+      "chunk_index": 2
+    },
+    {
+      "end": 132.8400001525879,
+      "start": 132.3400001525879,
+      "word": "Alembic",
+      "chunk_index": 2
+    },
+    {
+      "end": 134.47999954223633,
+      "start": 134.1599998474121,
+      "word": "Ouch",
+      "chunk_index": 2
+    },
+    {
+      "end": 135.1599998474121,
+      "start": 134.89999961853027,
+      "word": "Is",
+      "chunk_index": 2
+    },
+    {
+      "end": 135.4399995803833,
+      "start": 135.1599998474121,
+      "word": "there",
+      "chunk_index": 2
+    },
+    {
+      "end": 135.64000034332275,
+      "start": 135.4399995803833,
+      "word": "a",
+      "chunk_index": 2
+    },
+    {
+      "end": 135.80000019073486,
+      "start": 135.64000034332275,
+      "word": "fix",
+      "chunk_index": 2
+    },
+    {
+      "end": 136.2199993133545,
+      "start": 135.80000019073486,
+      "word": "ready",
+      "chunk_index": 2
+    },
+    {
+      "end": 137.89999961853027,
+      "start": 137.42000007629395,
+      "word": "Yes",
+      "chunk_index": 2
+    },
+    {
+      "end": 138.60000038146973,
+      "start": 137.95999908447266,
+      "word": "I",
+      "chunk_index": 2
+    },
+    {
+      "end": 138.70000076293945,
+      "start": 138.60000038146973,
+      "word": "wrote",
+      "chunk_index": 2
+    },
+    {
+      "end": 138.95999908447266,
+      "start": 138.70000076293945,
+      "word": "a",
+      "chunk_index": 2
+    },
+    {
+      "end": 139.26000022888184,
+      "start": 138.95999908447266,
+      "word": "new",
+      "chunk_index": 2
+    },
+    {
+      "end": 139.68000030517578,
+      "start": 139.26000022888184,
+      "word": "migration",
+      "chunk_index": 2
+    },
+    {
+      "end": 140.20000076293945,
+      "start": 139.68000030517578,
+      "word": "that",
+      "chunk_index": 2
+    },
+    {
+      "end": 140.8400001525879,
+      "start": 140.20000076293945,
+      "word": "recreates",
+      "chunk_index": 2
+    },
+    {
+      "end": 141.47999954223633,
+      "start": 140.8400001525879,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 141.47999954223633,
+      "start": 141.47999954223633,
+      "word": "index",
+      "chunk_index": 2
+    },
+    {
+      "end": 142.55999946594238,
+      "start": 141.47999954223633,
+      "word": "concurrently",
+      "chunk_index": 2
+    },
+    {
+      "end": 142.81999969482422,
+      "start": 142.55999946594238,
+      "word": "so",
+      "chunk_index": 2
+    },
+    {
+      "end": 143.02000045776367,
+      "start": 142.81999969482422,
+      "word": "it",
+      "chunk_index": 2
+    },
+    {
+      "end": 143.23999977111816,
+      "start": 143.02000045776367,
+      "word": "will",
+      "chunk_index": 2
+    },
+    {
+      "end": 143.5,
+      "start": 143.23999977111816,
+      "word": "not",
+      "chunk_index": 2
+    },
+    {
+      "end": 143.7800006866455,
+      "start": 143.5,
+      "word": "lock",
+      "chunk_index": 2
+    },
+    {
+      "end": 144.10000038146973,
+      "start": 143.7800006866455,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 144.55999946594238,
+      "start": 144.44000053405762,
+      "word": "SQL",
+      "chunk_index": 2
+    },
+    {
+      "end": 145.10000038146973,
+      "start": 144.8799991607666,
+      "word": "I",
+      "chunk_index": 2
+    },
+    {
+      "end": 145.5,
+      "start": 145.10000038146973,
+      "word": "also",
+      "chunk_index": 2
+    },
+    {
+      "end": 145.8400001525879,
+      "start": 145.5,
+      "word": "added",
+      "chunk_index": 2
+    },
+    {
+      "end": 146.2199993133545,
+      "start": 145.8400001525879,
+      "word": "a",
+      "chunk_index": 2
+    },
+    {
+      "end": 146.26000022888184,
+      "start": 146.2199993133545,
+      "word": "check",
+      "chunk_index": 2
+    },
+    {
+      "end": 146.42000007629395,
+      "start": 146.26000022888184,
+      "word": "in",
+      "chunk_index": 2
+    },
+    {
+      "end": 146.7199993133545,
+      "start": 146.42000007629395,
+      "word": "our",
+      "chunk_index": 2
+    },
+    {
+      "end": 147.10000038146973,
+      "start": 146.7199993133545,
+      "word": "CI",
+      "chunk_index": 2
+    },
+    {
+      "end": 147.70000076293945,
+      "start": 147.10000038146973,
+      "word": "pipeline",
+      "chunk_index": 2
+    },
+    {
+      "end": 148.39999961853027,
+      "start": 148.04000091552734,
+      "word": "using",
+      "chunk_index": 2
+    },
+    {
+      "end": 149.2199993133545,
+      "start": 148.39999961853027,
+      "word": "pgstat",
+      "chunk_index": 2
+    },
+    {
+      "end": 150.0,
+      "start": 149.2199993133545,
+      "word": "statements",
+      "chunk_index": 2
+    },
+    {
+      "end": 150.60000038146973,
+      "start": 150.31999969482422,
+      "word": "so",
+      "chunk_index": 2
+    },
+    {
+      "end": 150.81999969482422,
+      "start": 150.60000038146973,
+      "word": "we",
+      "chunk_index": 2
+    },
+    {
+      "end": 151.0,
+      "start": 150.81999969482422,
+      "word": "get",
+      "chunk_index": 2
+    },
+    {
+      "end": 151.2199993133545,
+      "start": 151.0,
+      "word": "an",
+      "chunk_index": 2
+    },
+    {
+      "end": 151.44000053405762,
+      "start": 151.2199993133545,
+      "word": "alert",
+      "chunk_index": 2
+    },
+    {
+      "end": 151.94000053405762,
+      "start": 151.44000053405762,
+      "word": "in",
+      "chunk_index": 2
+    },
+    {
+      "end": 152.43999862670898,
+      "start": 151.94000053405762,
+      "word": "Datadog",
+      "chunk_index": 2
+    },
+    {
+      "end": 152.63999938964844,
+      "start": 152.43999862670898,
+      "word": "if",
+      "chunk_index": 2
+    },
+    {
+      "end": 153.04000091552734,
+      "start": 152.63999938964844,
+      "word": "any",
+      "chunk_index": 2
+    },
+    {
+      "end": 153.36000061035156,
+      "start": 153.04000091552734,
+      "word": "query",
+      "chunk_index": 2
+    },
+    {
+      "end": 153.63999938964844,
+      "start": 153.36000061035156,
+      "word": "goes",
+      "chunk_index": 2
+    },
+    {
+      "end": 153.95999908447266,
+      "start": 153.63999938964844,
+      "word": "above",
+      "chunk_index": 2
+    },
+    {
+      "end": 154.7400016784668,
+      "start": 153.95999908447266,
+      "word": "200",
+      "chunk_index": 2
+    },
+    {
+      "end": 155.61999893188477,
+      "start": 154.7400016784668,
+      "word": "milliseconds",
+      "chunk_index": 2
+    },
+    {
+      "end": 157.2400016784668,
+      "start": 156.9199981689453,
+      "word": "That's",
+      "chunk_index": 2
+    },
+    {
+      "end": 157.61999893188477,
+      "start": 157.2400016784668,
+      "word": "really",
+      "chunk_index": 2
+    },
+    {
+      "end": 158.2400016784668,
+      "start": 157.61999893188477,
+      "word": "helpful",
+      "chunk_index": 2
+    },
+    {
+      "end": 159.02000045776367,
+      "start": 158.79999923706055,
+      "word": "From",
+      "chunk_index": 2
+    },
+    {
+      "end": 159.2599983215332,
+      "start": 159.02000045776367,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 159.7599983215332,
+      "start": 159.2599983215332,
+      "word": "product",
+      "chunk_index": 2
+    },
+    {
+      "end": 160.4000015258789,
+      "start": 159.7599983215332,
+      "word": "side",
+      "chunk_index": 2
+    },
+    {
+      "end": 161.22000122070312,
+      "start": 160.9000015258789,
+      "word": "customers",
+      "chunk_index": 2
+    },
+    {
+      "end": 161.88000106811523,
+      "start": 161.22000122070312,
+      "word": "definitely",
+      "chunk_index": 2
+    },
+    {
+      "end": 162.54000091552734,
+      "start": 161.88000106811523,
+      "word": "noticed",
+      "chunk_index": 2
+    },
+    {
+      "end": 163.18000030517578,
+      "start": 163.02000045776367,
+      "word": "We",
+      "chunk_index": 2
+    },
+    {
+      "end": 163.4199981689453,
+      "start": 163.18000030517578,
+      "word": "had",
+      "chunk_index": 2
+    },
+    {
+      "end": 163.81999969482422,
+      "start": 163.4199981689453,
+      "word": "11",
+      "chunk_index": 2
+    },
+    {
+      "end": 164.43999862670898,
+      "start": 163.81999969482422,
+      "word": "support",
+      "chunk_index": 2
+    },
+    {
+      "end": 164.86000061035156,
+      "start": 164.43999862670898,
+      "word": "tickets",
+      "chunk_index": 2
+    },
+    {
+      "end": 165.38000106811523,
+      "start": 164.86000061035156,
+      "word": "about",
+      "chunk_index": 2
+    },
+    {
+      "end": 165.7599983215332,
+      "start": 165.38000106811523,
+      "word": "slow",
+      "chunk_index": 2
+    },
+    {
+      "end": 166.0999984741211,
+      "start": 165.7599983215332,
+      "word": "checkout",
+      "chunk_index": 2
+    },
+    {
+      "end": 166.38000106811523,
+      "start": 166.0999984741211,
+      "word": "in",
+      "chunk_index": 2
+    },
+    {
+      "end": 166.68000030517578,
+      "start": 166.38000106811523,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 166.93999862670898,
+      "start": 166.68000030517578,
+      "word": "last",
+      "chunk_index": 2
+    },
+    {
+      "end": 167.3400001525879,
+      "start": 166.93999862670898,
+      "word": "week",
+      "chunk_index": 2
+    },
+    {
+      "end": 167.81999969482422,
+      "start": 167.54000091552734,
+      "word": "and",
+      "chunk_index": 2
+    },
+    {
+      "end": 168.04000091552734,
+      "start": 167.81999969482422,
+      "word": "our",
+      "chunk_index": 2
+    },
+    {
+      "end": 168.56000137329102,
+      "start": 168.04000091552734,
+      "word": "NPS",
+      "chunk_index": 2
+    },
+    {
+      "end": 168.95999908447266,
+      "start": 168.56000137329102,
+      "word": "score",
+      "chunk_index": 2
+    },
+    {
+      "end": 169.2599983215332,
+      "start": 168.95999908447266,
+      "word": "dropped",
+      "chunk_index": 2
+    },
+    {
+      "end": 169.6599998474121,
+      "start": 169.2599983215332,
+      "word": "by",
+      "chunk_index": 2
+    },
+    {
+      "end": 170.0,
+      "start": 169.6599998474121,
+      "word": "3",
+      "chunk_index": 2
+    },
+    {
+      "end": 170.6599998474121,
+      "start": 170.0,
+      "word": "points",
+      "chunk_index": 2
+    },
+    {
+      "end": 172.6599998474121,
+      "start": 171.95999908447266,
+      "word": "Thanks",
+      "chunk_index": 2
+    },
+    {
+      "end": 173.54000091552734,
+      "start": 172.86000061035156,
+      "word": "Aisha",
+      "chunk_index": 2
+    },
+    {
+      "end": 174.29999923706055,
+      "start": 173.54000091552734,
+      "word": "Okay",
+      "chunk_index": 2
+    },
+    {
+      "end": 174.9000015258789,
+      "start": 174.54000091552734,
+      "word": "item",
+      "chunk_index": 2
+    },
+    {
+      "end": 175.38000106811523,
+      "start": 174.9000015258789,
+      "word": "3",
+      "chunk_index": 2
+    },
+    {
+      "end": 175.81999969482422,
+      "start": 175.63999938964844,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 177.2599983215332,
+      "start": 175.81999969482422,
+      "word": "Q3OKRs",
+      "chunk_index": 2
+    },
+    {
+      "end": 177.88000106811523,
+      "start": 177.77999877929688,
+      "word": "Aisha",
+      "chunk_index": 2
+    },
+    {
+      "end": 178.38000106811523,
+      "start": 178.22000122070312,
+      "word": "can",
+      "chunk_index": 2
+    },
+    {
+      "end": 178.5800018310547,
+      "start": 178.38000106811523,
+      "word": "you",
+      "chunk_index": 2
+    },
+    {
+      "end": 178.7599983215332,
+      "start": 178.5800018310547,
+      "word": "give",
+      "chunk_index": 2
+    },
+    {
+      "end": 179.02000045776367,
+      "start": 178.7599983215332,
+      "word": "us",
+      "chunk_index": 2
+    },
+    {
+      "end": 179.38000106811523,
+      "start": 179.02000045776367,
+      "word": "the",
+      "chunk_index": 2
+    },
+    {
+      "end": 179.54000091552734,
+      "start": 179.38000106811523,
+      "word": "summary",
+      "chunk_index": 2
+    },
+    {
+      "end": 181.41999995708466,
+      "start": 180.74000000953674,
+      "word": "Sure",
+      "chunk_index": 3
+    },
+    {
+      "end": 182.03999996185303,
+      "start": 181.72000002861023,
+      "word": "We",
+      "chunk_index": 3
+    },
+    {
+      "end": 182.3199999332428,
+      "start": 182.03999996185303,
+      "word": "have",
+      "chunk_index": 3
+    },
+    {
+      "end": 182.6800000667572,
+      "start": 182.3199999332428,
+      "word": "three",
+      "chunk_index": 3
+    },
+    {
+      "end": 182.94000005722046,
+      "start": 182.6800000667572,
+      "word": "key",
+      "chunk_index": 3
+    },
+    {
+      "end": 183.35999989509583,
+      "start": 182.94000005722046,
+      "word": "results",
+      "chunk_index": 3
+    },
+    {
+      "end": 183.72000002861023,
+      "start": 183.35999989509583,
+      "word": "for",
+      "chunk_index": 3
+    },
+    {
+      "end": 184.0199999809265,
+      "start": 183.72000002861023,
+      "word": "this",
+      "chunk_index": 3
+    },
+    {
+      "end": 184.61999988555908,
+      "start": 184.0199999809265,
+      "word": "quarter",
+      "chunk_index": 3
+    },
+    {
+      "end": 185.59999990463257,
+      "start": 185.59999990463257,
+      "word": "First",
+      "chunk_index": 3
+    },
+    {
+      "end": 186.30000019073486,
+      "start": 185.96000003814697,
+      "word": "reduce",
+      "chunk_index": 3
+    },
+    {
+      "end": 186.8400001525879,
+      "start": 186.30000019073486,
+      "word": "checkout",
+      "chunk_index": 3
+    },
+    {
+      "end": 187.61999988555908,
+      "start": 186.8400001525879,
+      "word": "abandonment",
+      "chunk_index": 3
+    },
+    {
+      "end": 187.88000011444092,
+      "start": 187.61999988555908,
+      "word": "from",
+      "chunk_index": 3
+    },
+    {
+      "end": 188.31999969482422,
+      "start": 187.88000011444092,
+      "word": "18",
+      "chunk_index": 3
+    },
+    {
+      "end": 188.81999969482422,
+      "start": 188.31999969482422,
+      "word": "",
+      "chunk_index": 3
+    },
+    {
+      "end": 189.07999992370605,
+      "start": 188.81999969482422,
+      "word": "to",
+      "chunk_index": 3
+    },
+    {
+      "end": 190.0,
+      "start": 189.07999992370605,
+      "word": "12",
+      "chunk_index": 3
+    },
+    {
+      "end": 190.88000011444092,
+      "start": 190.69999980926514,
+      "word": "We",
+      "chunk_index": 3
+    },
+    {
+      "end": 191.10000038146973,
+      "start": 190.88000011444092,
+      "word": "are",
+      "chunk_index": 3
+    },
+    {
+      "end": 191.52000045776367,
+      "start": 191.10000038146973,
+      "word": "currently",
+      "chunk_index": 3
+    },
+    {
+      "end": 191.80000019073486,
+      "start": 191.52000045776367,
+      "word": "at",
+      "chunk_index": 3
+    },
+    {
+      "end": 193.10000038146973,
+      "start": 191.80000019073486,
+      "word": "14",
+      "chunk_index": 3
+    },
+    {
+      "end": 193.5600004196167,
+      "start": 193.10000038146973,
+      "word": "so",
+      "chunk_index": 3
+    },
+    {
+      "end": 193.73999977111816,
+      "start": 193.5600004196167,
+      "word": "we",
+      "chunk_index": 3
+    },
+    {
+      "end": 193.92000007629395,
+      "start": 193.73999977111816,
+      "word": "are",
+      "chunk_index": 3
+    },
+    {
+      "end": 194.5,
+      "start": 193.92000007629395,
+      "word": "on",
+      "chunk_index": 3
+    },
+    {
+      "end": 194.5,
+      "start": 194.5,
+      "word": "track",
+      "chunk_index": 3
+    },
+    {
+      "end": 194.89999961853027,
+      "start": 194.7200002670288,
+      "word": "but",
+      "chunk_index": 3
+    },
+    {
+      "end": 195.2200002670288,
+      "start": 194.89999961853027,
+      "word": "not",
+      "chunk_index": 3
+    },
+    {
+      "end": 195.68000030517578,
+      "start": 195.2200002670288,
+      "word": "finished",
+      "chunk_index": 3
+    },
+    {
+      "end": 196.7800006866455,
+      "start": 196.29999923706055,
+      "word": "Second",
+      "chunk_index": 3
+    },
+    {
+      "end": 197.45999908447266,
+      "start": 197.07999992370605,
+      "word": "launch",
+      "chunk_index": 3
+    },
+    {
+      "end": 197.70000076293945,
+      "start": 197.45999908447266,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 198.0,
+      "start": 197.70000076293945,
+      "word": "new",
+      "chunk_index": 3
+    },
+    {
+      "end": 198.57999992370605,
+      "start": 198.0,
+      "word": "recommendation",
+      "chunk_index": 3
+    },
+    {
+      "end": 199.3799991607666,
+      "start": 198.57999992370605,
+      "word": "engine",
+      "chunk_index": 3
+    },
+    {
+      "end": 199.89999961853027,
+      "start": 199.63999938964844,
+      "word": "which",
+      "chunk_index": 3
+    },
+    {
+      "end": 200.2800006866455,
+      "start": 199.89999961853027,
+      "word": "uses",
+      "chunk_index": 3
+    },
+    {
+      "end": 200.60000038146973,
+      "start": 200.2800006866455,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 201.07999992370605,
+      "start": 200.60000038146973,
+      "word": "embedding",
+      "chunk_index": 3
+    },
+    {
+      "end": 201.3799991607666,
+      "start": 201.07999992370605,
+      "word": "model",
+      "chunk_index": 3
+    },
+    {
+      "end": 201.68000030517578,
+      "start": 201.3799991607666,
+      "word": "from",
+      "chunk_index": 3
+    },
+    {
+      "end": 202.0,
+      "start": 201.68000030517578,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 202.2199993133545,
+      "start": 202.0,
+      "word": "data",
+      "chunk_index": 3
+    },
+    {
+      "end": 202.6200008392334,
+      "start": 202.2199993133545,
+      "word": "science",
+      "chunk_index": 3
+    },
+    {
+      "end": 203.18000030517578,
+      "start": 202.6200008392334,
+      "word": "team",
+      "chunk_index": 3
+    },
+    {
+      "end": 203.94000053405762,
+      "start": 203.18000030517578,
+      "word": "That",
+      "chunk_index": 3
+    },
+    {
+      "end": 204.18000030517578,
+      "start": 203.94000053405762,
+      "word": "one",
+      "chunk_index": 3
+    },
+    {
+      "end": 204.36000061035156,
+      "start": 204.18000030517578,
+      "word": "is",
+      "chunk_index": 3
+    },
+    {
+      "end": 204.92000007629395,
+      "start": 204.36000061035156,
+      "word": "delayed",
+      "chunk_index": 3
+    },
+    {
+      "end": 205.63999938964844,
+      "start": 205.3400001525879,
+      "word": "because",
+      "chunk_index": 3
+    },
+    {
+      "end": 205.95999908447266,
+      "start": 205.63999938964844,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 206.3400001525879,
+      "start": 205.95999908447266,
+      "word": "vector",
+      "chunk_index": 3
+    },
+    {
+      "end": 207.07999992370605,
+      "start": 206.3400001525879,
+      "word": "database",
+      "chunk_index": 3
+    },
+    {
+      "end": 207.55999946594238,
+      "start": 207.3400001525879,
+      "word": "we",
+      "chunk_index": 3
+    },
+    {
+      "end": 207.94000053405762,
+      "start": 207.55999946594238,
+      "word": "chose",
+      "chunk_index": 3
+    },
+    {
+      "end": 208.6599998474121,
+      "start": 207.94000053405762,
+      "word": "Pinecone",
+      "chunk_index": 3
+    },
+    {
+      "end": 209.23999977111816,
+      "start": 209.23999977111816,
+      "word": "needs",
+      "chunk_index": 3
+    },
+    {
+      "end": 209.54000091552734,
+      "start": 209.23999977111816,
+      "word": "a",
+      "chunk_index": 3
+    },
+    {
+      "end": 210.04000091552734,
+      "start": 209.54000091552734,
+      "word": "security",
+      "chunk_index": 3
+    },
+    {
+      "end": 210.52000045776367,
+      "start": 210.04000091552734,
+      "word": "review",
+      "chunk_index": 3
+    },
+    {
+      "end": 210.76000022888184,
+      "start": 210.52000045776367,
+      "word": "from",
+      "chunk_index": 3
+    },
+    {
+      "end": 211.07999992370605,
+      "start": 210.76000022888184,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 211.54000091552734,
+      "start": 211.07999992370605,
+      "word": "compliance",
+      "chunk_index": 3
+    },
+    {
+      "end": 212.18000030517578,
+      "start": 211.54000091552734,
+      "word": "team",
+      "chunk_index": 3
+    },
+    {
+      "end": 212.93999862670898,
+      "start": 212.72000122070312,
+      "word": "And",
+      "chunk_index": 3
+    },
+    {
+      "end": 213.43999862670898,
+      "start": 212.93999862670898,
+      "word": "third",
+      "chunk_index": 3
+    },
+    {
+      "end": 214.13999938964844,
+      "start": 213.72000122070312,
+      "word": "achieve",
+      "chunk_index": 3
+    },
+    {
+      "end": 214.61999893188477,
+      "start": 214.13999938964844,
+      "word": "SOC",
+      "chunk_index": 3
+    },
+    {
+      "end": 215.0,
+      "start": 214.61999893188477,
+      "word": "2",
+      "chunk_index": 3
+    },
+    {
+      "end": 215.29999923706055,
+      "start": 215.0,
+      "word": "type",
+      "chunk_index": 3
+    },
+    {
+      "end": 215.7400016784668,
+      "start": 215.29999923706055,
+      "word": "2",
+      "chunk_index": 3
+    },
+    {
+      "end": 216.20000076293945,
+      "start": 215.7400016784668,
+      "word": "readiness",
+      "chunk_index": 3
+    },
+    {
+      "end": 216.81999969482422,
+      "start": 216.70000076293945,
+      "word": "We",
+      "chunk_index": 3
+    },
+    {
+      "end": 217.0,
+      "start": 216.81999969482422,
+      "word": "are",
+      "chunk_index": 3
+    },
+    {
+      "end": 217.36000061035156,
+      "start": 217.0,
+      "word": "about",
+      "chunk_index": 3
+    },
+    {
+      "end": 217.79999923706055,
+      "start": 217.36000061035156,
+      "word": "halfway",
+      "chunk_index": 3
+    },
+    {
+      "end": 218.81999969482422,
+      "start": 217.79999923706055,
+      "word": "there",
+      "chunk_index": 3
+    },
+    {
+      "end": 219.88000106811523,
+      "start": 219.63999938964844,
+      "word": "What",
+      "chunk_index": 3
+    },
+    {
+      "end": 220.06000137329102,
+      "start": 219.88000106811523,
+      "word": "is",
+      "chunk_index": 3
+    },
+    {
+      "end": 220.38000106811523,
+      "start": 220.06000137329102,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 220.45999908447266,
+      "start": 220.38000106811523,
+      "word": "risk",
+      "chunk_index": 3
+    },
+    {
+      "end": 220.68000030517578,
+      "start": 220.45999908447266,
+      "word": "on",
+      "chunk_index": 3
+    },
+    {
+      "end": 221.13999938964844,
+      "start": 220.68000030517578,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 221.31999969482422,
+      "start": 221.13999938964844,
+      "word": "SOC",
+      "chunk_index": 3
+    },
+    {
+      "end": 221.6599998474121,
+      "start": 221.31999969482422,
+      "word": "2",
+      "chunk_index": 3
+    },
+    {
+      "end": 221.97999954223633,
+      "start": 221.6599998474121,
+      "word": "work",
+      "chunk_index": 3
+    },
+    {
+      "end": 223.4199981689453,
+      "start": 222.7599983215332,
+      "word": "The",
+      "chunk_index": 3
+    },
+    {
+      "end": 223.7599983215332,
+      "start": 223.4199981689453,
+      "word": "main",
+      "chunk_index": 3
+    },
+    {
+      "end": 224.02000045776367,
+      "start": 223.7599983215332,
+      "word": "risk",
+      "chunk_index": 3
+    },
+    {
+      "end": 224.2400016784668,
+      "start": 224.02000045776367,
+      "word": "is",
+      "chunk_index": 3
+    },
+    {
+      "end": 224.70000076293945,
+      "start": 224.2400016784668,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 224.77999877929688,
+      "start": 224.70000076293945,
+      "word": "audit",
+      "chunk_index": 3
+    },
+    {
+      "end": 225.3400001525879,
+      "start": 224.77999877929688,
+      "word": "logging",
+      "chunk_index": 3
+    },
+    {
+      "end": 226.0,
+      "start": 225.86000061035156,
+      "word": "We",
+      "chunk_index": 3
+    },
+    {
+      "end": 226.31999969482422,
+      "start": 226.0,
+      "word": "need",
+      "chunk_index": 3
+    },
+    {
+      "end": 226.7400016784668,
+      "start": 226.31999969482422,
+      "word": "every",
+      "chunk_index": 3
+    },
+    {
+      "end": 227.0999984741211,
+      "start": 226.7400016784668,
+      "word": "access",
+      "chunk_index": 3
+    },
+    {
+      "end": 227.45999908447266,
+      "start": 227.0999984741211,
+      "word": "to",
+      "chunk_index": 3
+    },
+    {
+      "end": 227.88000106811523,
+      "start": 227.45999908447266,
+      "word": "customer",
+      "chunk_index": 3
+    },
+    {
+      "end": 228.2400016784668,
+      "start": 227.88000106811523,
+      "word": "data",
+      "chunk_index": 3
+    },
+    {
+      "end": 228.43999862670898,
+      "start": 228.2400016784668,
+      "word": "to",
+      "chunk_index": 3
+    },
+    {
+      "end": 228.9000015258789,
+      "start": 228.43999862670898,
+      "word": "be",
+      "chunk_index": 3
+    },
+    {
+      "end": 228.9000015258789,
+      "start": 228.9000015258789,
+      "word": "logged",
+      "chunk_index": 3
+    },
+    {
+      "end": 229.29999923706055,
+      "start": 228.9000015258789,
+      "word": "and",
+      "chunk_index": 3
+    },
+    {
+      "end": 229.72000122070312,
+      "start": 229.29999923706055,
+      "word": "retained",
+      "chunk_index": 3
+    },
+    {
+      "end": 230.11999893188477,
+      "start": 229.72000122070312,
+      "word": "for",
+      "chunk_index": 3
+    },
+    {
+      "end": 230.45999908447266,
+      "start": 230.11999893188477,
+      "word": "one",
+      "chunk_index": 3
+    },
+    {
+      "end": 230.9199981689453,
+      "start": 230.45999908447266,
+      "word": "year",
+      "chunk_index": 3
+    },
+    {
+      "end": 231.7599983215332,
+      "start": 230.9199981689453,
+      "word": "Right",
+      "chunk_index": 3
+    },
+    {
+      "end": 232.0800018310547,
+      "start": 231.7599983215332,
+      "word": "now",
+      "chunk_index": 3
+    },
+    {
+      "end": 232.2400016784668,
+      "start": 232.0800018310547,
+      "word": "we",
+      "chunk_index": 3
+    },
+    {
+      "end": 232.63999938964844,
+      "start": 232.2400016784668,
+      "word": "only",
+      "chunk_index": 3
+    },
+    {
+      "end": 232.95999908447266,
+      "start": 232.63999938964844,
+      "word": "keep",
+      "chunk_index": 3
+    },
+    {
+      "end": 233.4000015258789,
+      "start": 232.95999908447266,
+      "word": "logs",
+      "chunk_index": 3
+    },
+    {
+      "end": 233.70000076293945,
+      "start": 233.4000015258789,
+      "word": "in",
+      "chunk_index": 3
+    },
+    {
+      "end": 234.38000106811523,
+      "start": 233.70000076293945,
+      "word": "CloudWatch",
+      "chunk_index": 3
+    },
+    {
+      "end": 234.72000122070312,
+      "start": 234.38000106811523,
+      "word": "for",
+      "chunk_index": 3
+    },
+    {
+      "end": 235.18000030517578,
+      "start": 234.72000122070312,
+      "word": "30",
+      "chunk_index": 3
+    },
+    {
+      "end": 235.70000076293945,
+      "start": 235.18000030517578,
+      "word": "days",
+      "chunk_index": 3
+    },
+    {
+      "end": 237.1599998474121,
+      "start": 237.0,
+      "word": "We",
+      "chunk_index": 3
+    },
+    {
+      "end": 237.45999908447266,
+      "start": 237.1599998474121,
+      "word": "could",
+      "chunk_index": 3
+    },
+    {
+      "end": 237.88000106811523,
+      "start": 237.45999908447266,
+      "word": "export",
+      "chunk_index": 3
+    },
+    {
+      "end": 238.22000122070312,
+      "start": 237.88000106811523,
+      "word": "the",
+      "chunk_index": 3
+    },
+    {
+      "end": 238.43999862670898,
+      "start": 238.22000122070312,
+      "word": "logs",
+      "chunk_index": 3
+    },
+    {
+      "end": 238.70000076293945,
+      "start": 238.43999862670898,
+      "word": "to",
+      "chunk_index": 3
+    },
+    {
+      "end": 239.13999938964844,
+      "start": 238.70000076293945,
+      "word": "S3",
+      "chunk_index": 3
+    },
+    {
+      "end": 239.4000015258789,
+      "start": 239.13999938964844,
+      "word": "with",
+      "chunk_index": 3
+    },
+    {
+      "end": 239.68000030517578,
+      "start": 239.4000015258789,
+      "word": "a",
+      "chunk_index": 3
+    },
+    {
+      "end": 239.77999877929688,
+      "start": 239.68000030517578,
+      "word": "live",
+      "chunk_index": 3
+    },
+    {
+      "end": 239.97999954223633,
+      "start": 239.77999877929688,
+      "word": "site",
+      "chunk_index": 3
+    },
+    {
+      "end": 240.74000000953674,
+      "start": 240.0,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 241.39999997615814,
+      "start": 240.74000000953674,
+      "word": "move",
+      "chunk_index": 4
+    },
+    {
+      "end": 241.74000000953674,
+      "start": 241.39999997615814,
+      "word": "them",
+      "chunk_index": 4
+    },
+    {
+      "end": 241.9800000190735,
+      "start": 241.74000000953674,
+      "word": "to",
+      "chunk_index": 4
+    },
+    {
+      "end": 242.29999995231628,
+      "start": 241.9800000190735,
+      "word": "Glacier",
+      "chunk_index": 4
+    },
+    {
+      "end": 242.74000000953674,
+      "start": 242.29999995231628,
+      "word": "after",
+      "chunk_index": 4
+    },
+    {
+      "end": 243.22000002861023,
+      "start": 242.74000000953674,
+      "word": "90",
+      "chunk_index": 4
+    },
+    {
+      "end": 243.6600000858307,
+      "start": 243.22000002861023,
+      "word": "days",
+      "chunk_index": 4
+    },
+    {
+      "end": 244.38000011444092,
+      "start": 244.1399998664856,
+      "word": "That",
+      "chunk_index": 4
+    },
+    {
+      "end": 244.57999992370605,
+      "start": 244.38000011444092,
+      "word": "would",
+      "chunk_index": 4
+    },
+    {
+      "end": 244.8600001335144,
+      "start": 244.57999992370605,
+      "word": "be",
+      "chunk_index": 4
+    },
+    {
+      "end": 245.07999992370605,
+      "start": 244.8600001335144,
+      "word": "cheap",
+      "chunk_index": 4
+    },
+    {
+      "end": 245.5199999809265,
+      "start": 245.30000019073486,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 245.69999980926514,
+      "start": 245.5199999809265,
+      "word": "it",
+      "chunk_index": 4
+    },
+    {
+      "end": 245.94000005722046,
+      "start": 245.69999980926514,
+      "word": "would",
+      "chunk_index": 4
+    },
+    {
+      "end": 246.1399998664856,
+      "start": 245.94000005722046,
+      "word": "meet",
+      "chunk_index": 4
+    },
+    {
+      "end": 246.42000007629395,
+      "start": 246.1399998664856,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 246.8600001335144,
+      "start": 246.42000007629395,
+      "word": "retention",
+      "chunk_index": 4
+    },
+    {
+      "end": 248.0,
+      "start": 246.8600001335144,
+      "word": "requirement",
+      "chunk_index": 4
+    },
+    {
+      "end": 249.53999996185303,
+      "start": 249.11999988555908,
+      "word": "Perfect",
+      "chunk_index": 4
+    },
+    {
+      "end": 250.46000003814697,
+      "start": 250.0600004196167,
+      "word": "Let's",
+      "chunk_index": 4
+    },
+    {
+      "end": 250.8400001525879,
+      "start": 250.46000003814697,
+      "word": "take",
+      "chunk_index": 4
+    },
+    {
+      "end": 251.10000038146973,
+      "start": 250.8400001525879,
+      "word": "that",
+      "chunk_index": 4
+    },
+    {
+      "end": 251.52000045776367,
+      "start": 251.10000038146973,
+      "word": "offline",
+      "chunk_index": 4
+    },
+    {
+      "end": 251.96000003814697,
+      "start": 251.76000022888184,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 252.26000022888184,
+      "start": 251.96000003814697,
+      "word": "write",
+      "chunk_index": 4
+    },
+    {
+      "end": 252.46000003814697,
+      "start": 252.26000022888184,
+      "word": "it",
+      "chunk_index": 4
+    },
+    {
+      "end": 252.89999961853027,
+      "start": 252.46000003814697,
+      "word": "up",
+      "chunk_index": 4
+    },
+    {
+      "end": 254.39999961853027,
+      "start": 254.0600004196167,
+      "word": "Last",
+      "chunk_index": 4
+    },
+    {
+      "end": 254.8400001525879,
+      "start": 254.39999961853027,
+      "word": "item",
+      "chunk_index": 4
+    },
+    {
+      "end": 255.68000030517578,
+      "start": 255.68000030517578,
+      "word": "hiring",
+      "chunk_index": 4
+    },
+    {
+      "end": 256.3199996948242,
+      "start": 256.20000076293945,
+      "word": "We",
+      "chunk_index": 4
+    },
+    {
+      "end": 256.6200008392334,
+      "start": 256.3199996948242,
+      "word": "have",
+      "chunk_index": 4
+    },
+    {
+      "end": 256.8400001525879,
+      "start": 256.6200008392334,
+      "word": "two",
+      "chunk_index": 4
+    },
+    {
+      "end": 257.2199993133545,
+      "start": 256.8400001525879,
+      "word": "open",
+      "chunk_index": 4
+    },
+    {
+      "end": 257.7800006866455,
+      "start": 257.2199993133545,
+      "word": "roles",
+      "chunk_index": 4
+    },
+    {
+      "end": 258.1800003051758,
+      "start": 258.04000091552734,
+      "word": "A",
+      "chunk_index": 4
+    },
+    {
+      "end": 258.54000091552734,
+      "start": 258.1800003051758,
+      "word": "senior",
+      "chunk_index": 4
+    },
+    {
+      "end": 259.1200008392334,
+      "start": 258.54000091552734,
+      "word": "backend",
+      "chunk_index": 4
+    },
+    {
+      "end": 259.57999992370605,
+      "start": 259.1200008392334,
+      "word": "engineer",
+      "chunk_index": 4
+    },
+    {
+      "end": 259.8999996185303,
+      "start": 259.57999992370605,
+      "word": "with",
+      "chunk_index": 4
+    },
+    {
+      "end": 260.1800003051758,
+      "start": 259.8999996185303,
+      "word": "Go",
+      "chunk_index": 4
+    },
+    {
+      "end": 260.63999938964844,
+      "start": 260.26000022888184,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 261.1800003051758,
+      "start": 260.63999938964844,
+      "word": "gRPC",
+      "chunk_index": 4
+    },
+    {
+      "end": 262.1200008392334,
+      "start": 261.1800003051758,
+      "word": "experience",
+      "chunk_index": 4
+    },
+    {
+      "end": 262.57999992370605,
+      "start": 262.45999908447266,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 262.8400001525879,
+      "start": 262.57999992370605,
+      "word": "a",
+      "chunk_index": 4
+    },
+    {
+      "end": 263.1200008392334,
+      "start": 262.8400001525879,
+      "word": "machine",
+      "chunk_index": 4
+    },
+    {
+      "end": 263.5200004577637,
+      "start": 263.1200008392334,
+      "word": "learning",
+      "chunk_index": 4
+    },
+    {
+      "end": 263.9400005340576,
+      "start": 263.5200004577637,
+      "word": "engineer",
+      "chunk_index": 4
+    },
+    {
+      "end": 264.23999977111816,
+      "start": 263.9400005340576,
+      "word": "for",
+      "chunk_index": 4
+    },
+    {
+      "end": 264.5599994659424,
+      "start": 264.23999977111816,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 265.07999992370605,
+      "start": 264.5599994659424,
+      "word": "recommendation",
+      "chunk_index": 4
+    },
+    {
+      "end": 265.6200008392334,
+      "start": 265.07999992370605,
+      "word": "work",
+      "chunk_index": 4
+    },
+    {
+      "end": 266.2800006866455,
+      "start": 265.7199993133545,
+      "word": "We",
+      "chunk_index": 4
+    },
+    {
+      "end": 266.54000091552734,
+      "start": 266.2800006866455,
+      "word": "have",
+      "chunk_index": 4
+    },
+    {
+      "end": 266.92000007629395,
+      "start": 266.54000091552734,
+      "word": "three",
+      "chunk_index": 4
+    },
+    {
+      "end": 267.3999996185303,
+      "start": 266.92000007629395,
+      "word": "candidates",
+      "chunk_index": 4
+    },
+    {
+      "end": 267.76000022888184,
+      "start": 267.3999996185303,
+      "word": "in",
+      "chunk_index": 4
+    },
+    {
+      "end": 267.95999908447266,
+      "start": 267.76000022888184,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 268.26000022888184,
+      "start": 267.95999908447266,
+      "word": "final",
+      "chunk_index": 4
+    },
+    {
+      "end": 268.6200008392334,
+      "start": 268.26000022888184,
+      "word": "round",
+      "chunk_index": 4
+    },
+    {
+      "end": 269.4400005340576,
+      "start": 268.6200008392334,
+      "word": "Priya",
+      "chunk_index": 4
+    },
+    {
+      "end": 269.70000076293945,
+      "start": 269.4400005340576,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 270.2800006866455,
+      "start": 269.70000076293945,
+      "word": "Thomas",
+      "chunk_index": 4
+    },
+    {
+      "end": 271.04000091552734,
+      "start": 270.57999992370605,
+      "word": "please",
+      "chunk_index": 4
+    },
+    {
+      "end": 271.42000007629395,
+      "start": 271.04000091552734,
+      "word": "submit",
+      "chunk_index": 4
+    },
+    {
+      "end": 271.76000022888184,
+      "start": 271.42000007629395,
+      "word": "your",
+      "chunk_index": 4
+    },
+    {
+      "end": 272.2599983215332,
+      "start": 271.76000022888184,
+      "word": "interview",
+      "chunk_index": 4
+    },
+    {
+      "end": 272.7799987792969,
+      "start": 272.2599983215332,
+      "word": "feedback",
+      "chunk_index": 4
+    },
+    {
+      "end": 273.0800018310547,
+      "start": 272.7799987792969,
+      "word": "in",
+      "chunk_index": 4
+    },
+    {
+      "end": 273.560001373291,
+      "start": 273.0800018310547,
+      "word": "Greenhouse",
+      "chunk_index": 4
+    },
+    {
+      "end": 273.8400001525879,
+      "start": 273.560001373291,
+      "word": "by",
+      "chunk_index": 4
+    },
+    {
+      "end": 274.4000015258789,
+      "start": 273.8400001525879,
+      "word": "Friday",
+      "chunk_index": 4
+    },
+    {
+      "end": 275.86000061035156,
+      "start": 275.79999923706055,
+      "word": "Will",
+      "chunk_index": 4
+    },
+    {
+      "end": 276.2799987792969,
+      "start": 275.86000061035156,
+      "word": "do",
+      "chunk_index": 4
+    },
+    {
+      "end": 277.86000061035156,
+      "start": 277.5200004577637,
+      "word": "Yes",
+      "chunk_index": 4
+    },
+    {
+      "end": 278.2400016784668,
+      "start": 277.88000106811523,
+      "word": "I",
+      "chunk_index": 4
+    },
+    {
+      "end": 278.439998626709,
+      "start": 278.2400016784668,
+      "word": "will",
+      "chunk_index": 4
+    },
+    {
+      "end": 278.6599998474121,
+      "start": 278.439998626709,
+      "word": "have",
+      "chunk_index": 4
+    },
+    {
+      "end": 279.0200004577637,
+      "start": 278.6599998474121,
+      "word": "mine",
+      "chunk_index": 4
+    },
+    {
+      "end": 279.3400001525879,
+      "start": 279.0200004577637,
+      "word": "done",
+      "chunk_index": 4
+    },
+    {
+      "end": 279.8400001525879,
+      "start": 279.3400001525879,
+      "word": "tomorrow",
+      "chunk_index": 4
+    },
+    {
+      "end": 281.5800018310547,
+      "start": 280.86000061035156,
+      "word": "Great",
+      "chunk_index": 4
+    },
+    {
+      "end": 282.1599998474121,
+      "start": 281.9000015258789,
+      "word": "To",
+      "chunk_index": 4
+    },
+    {
+      "end": 282.45999908447266,
+      "start": 282.1599998474121,
+      "word": "summarize",
+      "chunk_index": 4
+    },
+    {
+      "end": 282.88000106811523,
+      "start": 282.45999908447266,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 283.36000061035156,
+      "start": 282.88000106811523,
+      "word": "action",
+      "chunk_index": 4
+    },
+    {
+      "end": 283.7200012207031,
+      "start": 283.36000061035156,
+      "word": "items",
+      "chunk_index": 4
+    },
+    {
+      "end": 284.63999938964844,
+      "start": 284.5800018310547,
+      "word": "Priya",
+      "chunk_index": 4
+    },
+    {
+      "end": 284.95999908447266,
+      "start": 284.63999938964844,
+      "word": "will",
+      "chunk_index": 4
+    },
+    {
+      "end": 285.29999923706055,
+      "start": 284.95999908447266,
+      "word": "fix",
+      "chunk_index": 4
+    },
+    {
+      "end": 285.5999984741211,
+      "start": 285.29999923706055,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 285.7799987792969,
+      "start": 285.5999984741211,
+      "word": "Riddiz",
+      "chunk_index": 4
+    },
+    {
+      "end": 286.2599983215332,
+      "start": 285.7799987792969,
+      "word": "storage",
+      "chunk_index": 4
+    },
+    {
+      "end": 286.7799987792969,
+      "start": 286.2599983215332,
+      "word": "class",
+      "chunk_index": 4
+    },
+    {
+      "end": 287.060001373291,
+      "start": 286.7799987792969,
+      "word": "issue",
+      "chunk_index": 4
+    },
+    {
+      "end": 287.3400001525879,
+      "start": 287.060001373291,
+      "word": "by",
+      "chunk_index": 4
+    },
+    {
+      "end": 287.8199996948242,
+      "start": 287.3400001525879,
+      "word": "Tuesday",
+      "chunk_index": 4
+    },
+    {
+      "end": 288.7599983215332,
+      "start": 288.5999984741211,
+      "word": "Thomas",
+      "chunk_index": 4
+    },
+    {
+      "end": 289.11999893188477,
+      "start": 288.7599983215332,
+      "word": "will",
+      "chunk_index": 4
+    },
+    {
+      "end": 289.4799995422363,
+      "start": 289.11999893188477,
+      "word": "review",
+      "chunk_index": 4
+    },
+    {
+      "end": 289.7599983215332,
+      "start": 289.4799995422363,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 290.29999923706055,
+      "start": 289.7599983215332,
+      "word": "Terraform",
+      "chunk_index": 4
+    },
+    {
+      "end": 290.61999893188477,
+      "start": 290.29999923706055,
+      "word": "pull",
+      "chunk_index": 4
+    },
+    {
+      "end": 291.1599998474121,
+      "start": 290.61999893188477,
+      "word": "request",
+      "chunk_index": 4
+    },
+    {
+      "end": 291.6599998474121,
+      "start": 291.1599998474121,
+      "word": "today",
+      "chunk_index": 4
+    },
+    {
+      "end": 292.060001373291,
+      "start": 291.8199996948242,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 292.45999908447266,
+      "start": 292.060001373291,
+      "word": "deploy",
+      "chunk_index": 4
+    },
+    {
+      "end": 292.8400001525879,
+      "start": 292.45999908447266,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 293.1599998474121,
+      "start": 292.8400001525879,
+      "word": "index",
+      "chunk_index": 4
+    },
+    {
+      "end": 293.8199996948242,
+      "start": 293.1599998474121,
+      "word": "migration",
+      "chunk_index": 4
+    },
+    {
+      "end": 294.70000076293945,
+      "start": 293.8199996948242,
+      "word": "Aisha",
+      "chunk_index": 4
+    },
+    {
+      "end": 295.0,
+      "start": 294.70000076293945,
+      "word": "will",
+      "chunk_index": 4
+    },
+    {
+      "end": 295.45999908447266,
+      "start": 295.0,
+      "word": "schedule",
+      "chunk_index": 4
+    },
+    {
+      "end": 295.7599983215332,
+      "start": 295.45999908447266,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 296.20000076293945,
+      "start": 295.7599983215332,
+      "word": "Pinecone",
+      "chunk_index": 4
+    },
+    {
+      "end": 296.86000061035156,
+      "start": 296.20000076293945,
+      "word": "security",
+      "chunk_index": 4
+    },
+    {
+      "end": 297.4000015258789,
+      "start": 296.86000061035156,
+      "word": "review",
+      "chunk_index": 4
+    },
+    {
+      "end": 297.86000061035156,
+      "start": 297.63999938964844,
+      "word": "and",
+      "chunk_index": 4
+    },
+    {
+      "end": 298.1800003051758,
+      "start": 297.86000061035156,
+      "word": "draft",
+      "chunk_index": 4
+    },
+    {
+      "end": 298.5200004577637,
+      "start": 298.1800003051758,
+      "word": "the",
+      "chunk_index": 4
+    },
+    {
+      "end": 298.70000076293945,
+      "start": 298.5200004577637,
+      "word": "log",
+      "chunk_index": 4
+    },
+    {
+      "end": 299.2400016784668,
+      "start": 298.70000076293945,
+      "word": "retention",
+      "chunk_index": 4
+    },
+    {
+      "end": 299.70000076293945,
+      "start": 299.2400016784668,
+      "word": "plan",
+      "chunk_index": 4
+    },
+    {
+      "end": 299.9799995422363,
+      "start": 299.70000076293945,
+      "word": "with",
+      "chunk_index": 4
+    },
+    {
+      "end": 301.0,
+      "start": 300.0,
+      "word": "And",
+      "chunk_index": 5
+    },
+    {
+      "end": 301.7000000476837,
+      "start": 301.0,
+      "word": "everyone",
+      "chunk_index": 5
+    },
+    {
+      "end": 302.40000009536743,
+      "start": 302.05999994277954,
+      "word": "please",
+      "chunk_index": 5
+    },
+    {
+      "end": 302.74000000953674,
+      "start": 302.40000009536743,
+      "word": "send",
+      "chunk_index": 5
+    },
+    {
+      "end": 302.9800000190735,
+      "start": 302.74000000953674,
+      "word": "your",
+      "chunk_index": 5
+    },
+    {
+      "end": 303.4800000190735,
+      "start": 302.9800000190735,
+      "word": "greenhouse",
+      "chunk_index": 5
+    },
+    {
+      "end": 304.0199999809265,
+      "start": 303.4800000190735,
+      "word": "feedback",
+      "chunk_index": 5
+    },
+    {
+      "end": 304.3400001525879,
+      "start": 304.0199999809265,
+      "word": "by",
+      "chunk_index": 5
+    },
+    {
+      "end": 304.8200001716614,
+      "start": 304.3400001525879,
+      "word": "Friday",
+      "chunk_index": 5
+    },
+    {
+      "end": 305.8400001525879,
+      "start": 305.3600001335144,
+      "word": "Thanks",
+      "chunk_index": 5
+    },
+    {
+      "end": 306.5199999809265,
+      "start": 305.8400001525879,
+      "word": "everyone",
+      "chunk_index": 5
+    },
+    {
+      "end": 307.0,
+      "start": 306.78000020980835,
+      "word": "see",
+      "chunk_index": 5
+    },
+    {
+      "end": 307.19999980926514,
+      "start": 307.0,
+      "word": "you",
+      "chunk_index": 5
+    },
+    {
+      "end": 307.59999990463257,
+      "start": 307.19999980926514,
+      "word": "next",
+      "chunk_index": 5
+    },
+    {
+      "end": 307.94000005722046,
+      "start": 307.59999990463257,
+      "word": "week",
+      "chunk_index": 5
+    }
+  ],
+  "duration": 309.202,
+  "model": "whisper-1",
+  "provenance": "Combined from real chunk API responses; timestamps shifted to source timeline"
+}

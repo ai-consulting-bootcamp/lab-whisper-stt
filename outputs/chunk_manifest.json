@@ -1,0 +1,38 @@
+[
+  {
+    "index": 0,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_000.wav",
+    "offset": 0.0,
+    "duration": 60.0
+  },
+  {
+    "index": 1,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_001.wav",
+    "offset": 60.0,
+    "duration": 60.0
+  },
+  {
+    "index": 2,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_002.wav",
+    "offset": 120.0,
+    "duration": 60.0
+  },
+  {
+    "index": 3,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_003.wav",
+    "offset": 180.0,
+    "duration": 60.0
+  },
+  {
+    "index": 4,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_004.wav",
+    "offset": 240.0,
+    "duration": 60.0
+  },
+  {
+    "index": 5,
+    "path": "F:\\UserData\\Desktop\\AI_Consulting_and_Integration\\Week_01\\Day_5\\lab-whisper-stt\\outputs\\audio\\chunk_005.wav",
+    "offset": 300.0,
+    "duration": 9.202
+  }
+]

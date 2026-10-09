@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:03,660
+and move them to Glacier after 90 days.
+
+2
+00:00:04,140 --> 00:00:08,000
+That would be cheap, and it would meet the retention requirement.
+
+3
+00:00:09,120 --> 00:00:12,900
+Perfect. Let's take that offline, and write it up.
+
+4
+00:00:14,060 --> 00:00:15,680
+Last item, hiring.
+
+5
+00:00:16,200 --> 00:00:17,780
+We have two open roles.
+
+6
+00:00:18,040 --> 00:00:22,120
+A senior backend engineer with Go, and gRPC experience,
+
+7
+00:00:22,460 --> 00:00:25,620
+and a machine learning engineer for the recommendation work.
+
+8
+00:00:25,720 --> 00:00:28,620
+We have three candidates in the final round.
+
+9
+00:00:28,620 --> 00:00:34,400
+Priya and Thomas, please submit your interview feedback in Greenhouse by Friday.
+
+10
+00:00:35,800 --> 00:00:36,280
+Will do.
+
+11
+00:00:37,520 --> 00:00:39,840
+Yes, I will have mine done tomorrow.
+
+12
+00:00:40,860 --> 00:00:43,620
+Great. To summarize the action items.
+
+13
+00:00:44,580 --> 00:00:47,820
+Priya will fix the Riddiz storage class issue by Tuesday.
+
+14
+00:00:48,600 --> 00:00:53,820
+Thomas will review the Terraform pull request today, and deploy the index migration.
+
+15
+00:00:53,820 --> 00:00:59,980
+Aisha will schedule the Pinecone security review, and draft the log retention plan with.

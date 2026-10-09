@@ -1,0 +1,1055 @@
+{
+  "provenance": {
+    "status": "real_api_response",
+    "model": "whisper-1",
+    "utc": "2026-10-09T13:44:04.344134+00:00",
+    "audio_sha256": "126cd777760458f5d6ea6beb750d60ad591fce3938ce96e66be2ebaa3dc70a7e",
+    "parameters": {
+      "model": "whisper-1",
+      "language": "en",
+      "temperature": 0,
+      "response_format": "verbose_json",
+      "timestamp_granularities": [
+        "segment",
+        "word"
+      ],
+      "prompt": "Project Nimbus, Nimbus."
+    },
+    "label": "chunk_004",
+    "request_id": "req_8a3fb0a1b18d4094938455d75b3aeaab"
+  },
+  "response": {
+    "duration": 60.0,
+    "language": "english",
+    "text": "and move them to Glacier after 90 days. That would be cheap, and it would meet the retention requirement. Perfect. Let's take that offline, and write it up. Last item, hiring. We have two open roles. A senior backend engineer with Go, and gRPC experience, and a machine learning engineer for the recommendation work. We have three candidates in the final round. Priya and Thomas, please submit your interview feedback in Greenhouse by Friday. Will do. Yes, I will have mine done tomorrow. Great. To summarize the action items. Priya will fix the Riddiz storage class issue by Tuesday. Thomas will review the Terraform pull request today, and deploy the index migration. Aisha will schedule the Pinecone security review, and draft the log retention plan with.",
+    "segments": [
+      {
+        "id": 0,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 3.6600000858306885,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 0.0,
+        "temperature": 0.0,
+        "text": " and move them to Glacier after 90 days.",
+        "tokens": [
+          50414,
+          293,
+          1286,
+          552,
+          281,
+          5209,
+          326,
+          811,
+          934,
+          4289,
+          1708,
+          13,
+          50564
+        ]
+      },
+      {
+        "id": 1,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 8.0,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 4.139999866485596,
+        "temperature": 0.0,
+        "text": " That would be cheap, and it would meet the retention requirement.",
+        "tokens": [
+          50564,
+          663,
+          576,
+          312,
+          7084,
+          11,
+          293,
+          309,
+          576,
+          1677,
+          264,
+          22871,
+          11695,
+          13,
+          50764
+        ]
+      },
+      {
+        "id": 2,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 12.899999618530273,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 9.119999885559082,
+        "temperature": 0.0,
+        "text": " Perfect. Let's take that offline, and write it up.",
+        "tokens": [
+          50814,
+          10246,
+          13,
+          961,
+          311,
+          747,
+          300,
+          21857,
+          11,
+          293,
+          2464,
+          309,
+          493,
+          13,
+          51014
+        ]
+      },
+      {
+        "id": 3,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 15.680000305175781,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 14.0600004196167,
+        "temperature": 0.0,
+        "text": " Last item, hiring.",
+        "tokens": [
+          51064,
+          5264,
+          3174,
+          11,
+          15335,
+          13,
+          51164
+        ]
+      },
+      {
+        "id": 4,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 17.780000686645508,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 16.200000762939453,
+        "temperature": 0.0,
+        "text": " We have two open roles.",
+        "tokens": [
+          51164,
+          492,
+          362,
+          732,
+          1269,
+          9604,
+          13,
+          51264
+        ]
+      },
+      {
+        "id": 5,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 22.1200008392334,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 18.040000915527344,
+        "temperature": 0.0,
+        "text": " A senior backend engineer with Go, and gRPC experience,",
+        "tokens": [
+          51264,
+          316,
+          7965,
+          38087,
+          11403,
+          365,
+          1037,
+          11,
+          293,
+          290,
+          49,
+          12986,
+          1752,
+          11,
+          51464
+        ]
+      },
+      {
+        "id": 6,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 25.6200008392334,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 22.459999084472656,
+        "temperature": 0.0,
+        "text": " and a machine learning engineer for the recommendation work.",
+        "tokens": [
+          51464,
+          293,
+          257,
+          3479,
+          2539,
+          11403,
+          337,
+          264,
+          11879,
+          589,
+          13,
+          51664
+        ]
+      },
+      {
+        "id": 7,
+        "avg_logprob": -0.2535126209259033,
+        "compression_ratio": 1.5296610593795776,
+        "end": 28.6200008392334,
+        "no_speech_prob": 0.8176842331886292,
+        "seek": 0,
+        "start": 25.719999313354492,
+        "temperature": 0.0,
+        "text": " We have three candidates in the final round.",
+        "tokens": [
+          51664,
+          492,
+          362,
+          1045,
+          11255,
+          294,
+          264,
+          2572,
+          3098,
+          13,
+          51814
+        ]
+      },
+      {
+        "id": 8,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 34.400001525878906,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 28.6200008392334,
+        "temperature": 0.0,
+        "text": " Priya and Thomas, please submit your interview feedback in Greenhouse by Friday.",
+        "tokens": [
+          50364,
+          8087,
+          3016,
+          293,
+          8500,
+          11,
+          1767,
+          10315,
+          428,
+          4049,
+          5824,
+          294,
+          6969,
+          6410,
+          538,
+          6984,
+          13,
+          50664
+        ]
+      },
+      {
+        "id": 9,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 36.279998779296875,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 35.79999923706055,
+        "temperature": 0.0,
+        "text": " Will do.",
+        "tokens": [
+          50664,
+          3099,
+          360,
+          13,
+          50764
+        ]
+      },
+      {
+        "id": 10,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 39.84000015258789,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 37.52000045776367,
+        "temperature": 0.0,
+        "text": " Yes, I will have mine done tomorrow.",
+        "tokens": [
+          50764,
+          1079,
+          11,
+          286,
+          486,
+          362,
+          3892,
+          1096,
+          4153,
+          13,
+          50914
+        ]
+      },
+      {
+        "id": 11,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 43.619998931884766,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 40.86000061035156,
+        "temperature": 0.0,
+        "text": " Great. To summarize the action items.",
+        "tokens": [
+          50964,
+          3769,
+          13,
+          1407,
+          20858,
+          264,
+          3069,
+          4754,
+          13,
+          51114
+        ]
+      },
+      {
+        "id": 12,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 47.81999969482422,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 44.58000183105469,
+        "temperature": 0.0,
+        "text": " Priya will fix the Riddiz storage class issue by Tuesday.",
+        "tokens": [
+          51114,
+          8087,
+          3016,
+          486,
+          3191,
+          264,
+          497,
+          14273,
+          590,
+          6725,
+          1508,
+          2734,
+          538,
+          10017,
+          13,
+          51314
+        ]
+      },
+      {
+        "id": 13,
+        "avg_logprob": -0.2662673592567444,
+        "compression_ratio": 1.4688994884490967,
+        "end": 53.81999969482422,
+        "no_speech_prob": 0.06447621434926987,
+        "seek": 2862,
+        "start": 48.599998474121094,
+        "temperature": 0.0,
+        "text": " Thomas will review the Terraform pull request today, and deploy the index migration.",
+        "tokens": [
+          51314,
+          8500,
+          486,
+          3131,
+          264,
+          25366,
+          837,
+          2235,
+          5308,
+          965,
+          11,
+          293,
+          7274,
+          264,
+          8186,
+          17011,
+          13,
+          51614
+        ]
+      },
+      {
+        "id": 14,
+        "avg_logprob": -0.3268946409225464,
+        "compression_ratio": 1.047619104385376,
+        "end": 59.97999954223633,
+        "no_speech_prob": 0.8369940519332886,
+        "seek": 5382,
+        "start": 53.81999969482422,
+        "temperature": 0.0,
+        "text": " Aisha will schedule the Pinecone security review, and draft the log retention plan with.",
+        "tokens": [
+          50364,
+          316,
+          16546,
+          486,
+          7567,
+          264,
+          33531,
+          66,
+          546,
+          3825,
+          3131,
+          11,
+          293,
+          11206,
+          264,
+          3565,
+          22871,
+          1393,
+          365,
+          13,
+          50664
+        ]
+      }
+    ],
+    "usage": {
+      "seconds": 60.0,
+      "type": "duration"
+    },
+    "words": [
+      {
+        "end": 0.7400000095367432,
+        "start": 0.0,
+        "word": "and"
+      },
+      {
+        "end": 1.399999976158142,
+        "start": 0.7400000095367432,
+        "word": "move"
+      },
+      {
+        "end": 1.7400000095367432,
+        "start": 1.399999976158142,
+        "word": "them"
+      },
+      {
+        "end": 1.9800000190734863,
+        "start": 1.7400000095367432,
+        "word": "to"
+      },
+      {
+        "end": 2.299999952316284,
+        "start": 1.9800000190734863,
+        "word": "Glacier"
+      },
+      {
+        "end": 2.740000009536743,
+        "start": 2.299999952316284,
+        "word": "after"
+      },
+      {
+        "end": 3.2200000286102295,
+        "start": 2.740000009536743,
+        "word": "90"
+      },
+      {
+        "end": 3.6600000858306885,
+        "start": 3.2200000286102295,
+        "word": "days"
+      },
+      {
+        "end": 4.380000114440918,
+        "start": 4.139999866485596,
+        "word": "That"
+      },
+      {
+        "end": 4.579999923706055,
+        "start": 4.380000114440918,
+        "word": "would"
+      },
+      {
+        "end": 4.860000133514404,
+        "start": 4.579999923706055,
+        "word": "be"
+      },
+      {
+        "end": 5.079999923706055,
+        "start": 4.860000133514404,
+        "word": "cheap"
+      },
+      {
+        "end": 5.519999980926514,
+        "start": 5.300000190734863,
+        "word": "and"
+      },
+      {
+        "end": 5.699999809265137,
+        "start": 5.519999980926514,
+        "word": "it"
+      },
+      {
+        "end": 5.940000057220459,
+        "start": 5.699999809265137,
+        "word": "would"
+      },
+      {
+        "end": 6.139999866485596,
+        "start": 5.940000057220459,
+        "word": "meet"
+      },
+      {
+        "end": 6.420000076293945,
+        "start": 6.139999866485596,
+        "word": "the"
+      },
+      {
+        "end": 6.860000133514404,
+        "start": 6.420000076293945,
+        "word": "retention"
+      },
+      {
+        "end": 8.0,
+        "start": 6.860000133514404,
+        "word": "requirement"
+      },
+      {
+        "end": 9.539999961853027,
+        "start": 9.119999885559082,
+        "word": "Perfect"
+      },
+      {
+        "end": 10.460000038146973,
+        "start": 10.0600004196167,
+        "word": "Let's"
+      },
+      {
+        "end": 10.84000015258789,
+        "start": 10.460000038146973,
+        "word": "take"
+      },
+      {
+        "end": 11.100000381469727,
+        "start": 10.84000015258789,
+        "word": "that"
+      },
+      {
+        "end": 11.520000457763672,
+        "start": 11.100000381469727,
+        "word": "offline"
+      },
+      {
+        "end": 11.960000038146973,
+        "start": 11.760000228881836,
+        "word": "and"
+      },
+      {
+        "end": 12.260000228881836,
+        "start": 11.960000038146973,
+        "word": "write"
+      },
+      {
+        "end": 12.460000038146973,
+        "start": 12.260000228881836,
+        "word": "it"
+      },
+      {
+        "end": 12.899999618530273,
+        "start": 12.460000038146973,
+        "word": "up"
+      },
+      {
+        "end": 14.399999618530273,
+        "start": 14.0600004196167,
+        "word": "Last"
+      },
+      {
+        "end": 14.84000015258789,
+        "start": 14.399999618530273,
+        "word": "item"
+      },
+      {
+        "end": 15.680000305175781,
+        "start": 15.680000305175781,
+        "word": "hiring"
+      },
+      {
+        "end": 16.31999969482422,
+        "start": 16.200000762939453,
+        "word": "We"
+      },
+      {
+        "end": 16.6200008392334,
+        "start": 16.31999969482422,
+        "word": "have"
+      },
+      {
+        "end": 16.84000015258789,
+        "start": 16.6200008392334,
+        "word": "two"
+      },
+      {
+        "end": 17.219999313354492,
+        "start": 16.84000015258789,
+        "word": "open"
+      },
+      {
+        "end": 17.780000686645508,
+        "start": 17.219999313354492,
+        "word": "roles"
+      },
+      {
+        "end": 18.18000030517578,
+        "start": 18.040000915527344,
+        "word": "A"
+      },
+      {
+        "end": 18.540000915527344,
+        "start": 18.18000030517578,
+        "word": "senior"
+      },
+      {
+        "end": 19.1200008392334,
+        "start": 18.540000915527344,
+        "word": "backend"
+      },
+      {
+        "end": 19.579999923706055,
+        "start": 19.1200008392334,
+        "word": "engineer"
+      },
+      {
+        "end": 19.899999618530273,
+        "start": 19.579999923706055,
+        "word": "with"
+      },
+      {
+        "end": 20.18000030517578,
+        "start": 19.899999618530273,
+        "word": "Go"
+      },
+      {
+        "end": 20.639999389648438,
+        "start": 20.260000228881836,
+        "word": "and"
+      },
+      {
+        "end": 21.18000030517578,
+        "start": 20.639999389648438,
+        "word": "gRPC"
+      },
+      {
+        "end": 22.1200008392334,
+        "start": 21.18000030517578,
+        "word": "experience"
+      },
+      {
+        "end": 22.579999923706055,
+        "start": 22.459999084472656,
+        "word": "and"
+      },
+      {
+        "end": 22.84000015258789,
+        "start": 22.579999923706055,
+        "word": "a"
+      },
+      {
+        "end": 23.1200008392334,
+        "start": 22.84000015258789,
+        "word": "machine"
+      },
+      {
+        "end": 23.520000457763672,
+        "start": 23.1200008392334,
+        "word": "learning"
+      },
+      {
+        "end": 23.940000534057617,
+        "start": 23.520000457763672,
+        "word": "engineer"
+      },
+      {
+        "end": 24.239999771118164,
+        "start": 23.940000534057617,
+        "word": "for"
+      },
+      {
+        "end": 24.559999465942383,
+        "start": 24.239999771118164,
+        "word": "the"
+      },
+      {
+        "end": 25.079999923706055,
+        "start": 24.559999465942383,
+        "word": "recommendation"
+      },
+      {
+        "end": 25.6200008392334,
+        "start": 25.079999923706055,
+        "word": "work"
+      },
+      {
+        "end": 26.280000686645508,
+        "start": 25.719999313354492,
+        "word": "We"
+      },
+      {
+        "end": 26.540000915527344,
+        "start": 26.280000686645508,
+        "word": "have"
+      },
+      {
+        "end": 26.920000076293945,
+        "start": 26.540000915527344,
+        "word": "three"
+      },
+      {
+        "end": 27.399999618530273,
+        "start": 26.920000076293945,
+        "word": "candidates"
+      },
+      {
+        "end": 27.760000228881836,
+        "start": 27.399999618530273,
+        "word": "in"
+      },
+      {
+        "end": 27.959999084472656,
+        "start": 27.760000228881836,
+        "word": "the"
+      },
+      {
+        "end": 28.260000228881836,
+        "start": 27.959999084472656,
+        "word": "final"
+      },
+      {
+        "end": 28.6200008392334,
+        "start": 28.260000228881836,
+        "word": "round"
+      },
+      {
+        "end": 29.440000534057617,
+        "start": 28.6200008392334,
+        "word": "Priya"
+      },
+      {
+        "end": 29.700000762939453,
+        "start": 29.440000534057617,
+        "word": "and"
+      },
+      {
+        "end": 30.280000686645508,
+        "start": 29.700000762939453,
+        "word": "Thomas"
+      },
+      {
+        "end": 31.040000915527344,
+        "start": 30.579999923706055,
+        "word": "please"
+      },
+      {
+        "end": 31.420000076293945,
+        "start": 31.040000915527344,
+        "word": "submit"
+      },
+      {
+        "end": 31.760000228881836,
+        "start": 31.420000076293945,
+        "word": "your"
+      },
+      {
+        "end": 32.2599983215332,
+        "start": 31.760000228881836,
+        "word": "interview"
+      },
+      {
+        "end": 32.779998779296875,
+        "start": 32.2599983215332,
+        "word": "feedback"
+      },
+      {
+        "end": 33.08000183105469,
+        "start": 32.779998779296875,
+        "word": "in"
+      },
+      {
+        "end": 33.560001373291016,
+        "start": 33.08000183105469,
+        "word": "Greenhouse"
+      },
+      {
+        "end": 33.84000015258789,
+        "start": 33.560001373291016,
+        "word": "by"
+      },
+      {
+        "end": 34.400001525878906,
+        "start": 33.84000015258789,
+        "word": "Friday"
+      },
+      {
+        "end": 35.86000061035156,
+        "start": 35.79999923706055,
+        "word": "Will"
+      },
+      {
+        "end": 36.279998779296875,
+        "start": 35.86000061035156,
+        "word": "do"
+      },
+      {
+        "end": 37.86000061035156,
+        "start": 37.52000045776367,
+        "word": "Yes"
+      },
+      {
+        "end": 38.2400016784668,
+        "start": 37.880001068115234,
+        "word": "I"
+      },
+      {
+        "end": 38.439998626708984,
+        "start": 38.2400016784668,
+        "word": "will"
+      },
+      {
+        "end": 38.65999984741211,
+        "start": 38.439998626708984,
+        "word": "have"
+      },
+      {
+        "end": 39.02000045776367,
+        "start": 38.65999984741211,
+        "word": "mine"
+      },
+      {
+        "end": 39.34000015258789,
+        "start": 39.02000045776367,
+        "word": "done"
+      },
+      {
+        "end": 39.84000015258789,
+        "start": 39.34000015258789,
+        "word": "tomorrow"
+      },
+      {
+        "end": 41.58000183105469,
+        "start": 40.86000061035156,
+        "word": "Great"
+      },
+      {
+        "end": 42.15999984741211,
+        "start": 41.900001525878906,
+        "word": "To"
+      },
+      {
+        "end": 42.459999084472656,
+        "start": 42.15999984741211,
+        "word": "summarize"
+      },
+      {
+        "end": 42.880001068115234,
+        "start": 42.459999084472656,
+        "word": "the"
+      },
+      {
+        "end": 43.36000061035156,
+        "start": 42.880001068115234,
+        "word": "action"
+      },
+      {
+        "end": 43.720001220703125,
+        "start": 43.36000061035156,
+        "word": "items"
+      },
+      {
+        "end": 44.63999938964844,
+        "start": 44.58000183105469,
+        "word": "Priya"
+      },
+      {
+        "end": 44.959999084472656,
+        "start": 44.63999938964844,
+        "word": "will"
+      },
+      {
+        "end": 45.29999923706055,
+        "start": 44.959999084472656,
+        "word": "fix"
+      },
+      {
+        "end": 45.599998474121094,
+        "start": 45.29999923706055,
+        "word": "the"
+      },
+      {
+        "end": 45.779998779296875,
+        "start": 45.599998474121094,
+        "word": "Riddiz"
+      },
+      {
+        "end": 46.2599983215332,
+        "start": 45.779998779296875,
+        "word": "storage"
+      },
+      {
+        "end": 46.779998779296875,
+        "start": 46.2599983215332,
+        "word": "class"
+      },
+      {
+        "end": 47.060001373291016,
+        "start": 46.779998779296875,
+        "word": "issue"
+      },
+      {
+        "end": 47.34000015258789,
+        "start": 47.060001373291016,
+        "word": "by"
+      },
+      {
+        "end": 47.81999969482422,
+        "start": 47.34000015258789,
+        "word": "Tuesday"
+      },
+      {
+        "end": 48.7599983215332,
+        "start": 48.599998474121094,
+        "word": "Thomas"
+      },
+      {
+        "end": 49.119998931884766,
+        "start": 48.7599983215332,
+        "word": "will"
+      },
+      {
+        "end": 49.47999954223633,
+        "start": 49.119998931884766,
+        "word": "review"
+      },
+      {
+        "end": 49.7599983215332,
+        "start": 49.47999954223633,
+        "word": "the"
+      },
+      {
+        "end": 50.29999923706055,
+        "start": 49.7599983215332,
+        "word": "Terraform"
+      },
+      {
+        "end": 50.619998931884766,
+        "start": 50.29999923706055,
+        "word": "pull"
+      },
+      {
+        "end": 51.15999984741211,
+        "start": 50.619998931884766,
+        "word": "request"
+      },
+      {
+        "end": 51.65999984741211,
+        "start": 51.15999984741211,
+        "word": "today"
+      },
+      {
+        "end": 52.060001373291016,
+        "start": 51.81999969482422,
+        "word": "and"
+      },
+      {
+        "end": 52.459999084472656,
+        "start": 52.060001373291016,
+        "word": "deploy"
+      },
+      {
+        "end": 52.84000015258789,
+        "start": 52.459999084472656,
+        "word": "the"
+      },
+      {
+        "end": 53.15999984741211,
+        "start": 52.84000015258789,
+        "word": "index"
+      },
+      {
+        "end": 53.81999969482422,
+        "start": 53.15999984741211,
+        "word": "migration"
+      },
+      {
+        "end": 54.70000076293945,
+        "start": 53.81999969482422,
+        "word": "Aisha"
+      },
+      {
+        "end": 55.0,
+        "start": 54.70000076293945,
+        "word": "will"
+      },
+      {
+        "end": 55.459999084472656,
+        "start": 55.0,
+        "word": "schedule"
+      },
+      {
+        "end": 55.7599983215332,
+        "start": 55.459999084472656,
+        "word": "the"
+      },
+      {
+        "end": 56.20000076293945,
+        "start": 55.7599983215332,
+        "word": "Pinecone"
+      },
+      {
+        "end": 56.86000061035156,
+        "start": 56.20000076293945,
+        "word": "security"
+      },
+      {
+        "end": 57.400001525878906,
+        "start": 56.86000061035156,
+        "word": "review"
+      },
+      {
+        "end": 57.86000061035156,
+        "start": 57.63999938964844,
+        "word": "and"
+      },
+      {
+        "end": 58.18000030517578,
+        "start": 57.86000061035156,
+        "word": "draft"
+      },
+      {
+        "end": 58.52000045776367,
+        "start": 58.18000030517578,
+        "word": "the"
+      },
+      {
+        "end": 58.70000076293945,
+        "start": 58.52000045776367,
+        "word": "log"
+      },
+      {
+        "end": 59.2400016784668,
+        "start": 58.70000076293945,
+        "word": "retention"
+      },
+      {
+        "end": 59.70000076293945,
+        "start": 59.2400016784668,
+        "word": "plan"
+      },
+      {
+        "end": 59.97999954223633,
+        "start": 59.70000076293945,
+        "word": "with"
+      }
+    ],
+    "task": "transcribe"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "duration": 9.199999809265137,
+  "language": "english",
+  "text": "And everyone, please send your greenhouse feedback by Friday. Thanks everyone, see you next week.",
+  "segments": [
+    {
+      "id": 0,
+      "avg_logprob": -0.38825392723083496,
+      "compression_ratio": 1.1149425506591797,
+      "end": 4.820000171661377,
+      "no_speech_prob": 0.30276763439178467,
+      "seek": 0,
+      "start": 0.0,
+      "temperature": 0.0,
+      "text": " And everyone, please send your greenhouse feedback by Friday.",
+      "tokens": [
+        50414,
+        400,
+        1518,
+        11,
+        1767,
+        2845,
+        428,
+        22126,
+        5824,
+        538,
+        6984,
+        13,
+        50614
+      ]
+    },
+    {
+      "id": 1,
+      "avg_logprob": -0.38825392723083496,
+      "compression_ratio": 1.1149425506591797,
+      "end": 7.940000057220459,
+      "no_speech_prob": 0.30276763439178467,
+      "seek": 0,
+      "start": 5.360000133514404,
+      "temperature": 0.0,
+      "text": " Thanks everyone, see you next week.",
+      "tokens": [
+        50614,
+        2561,
+        1518,
+        11,
+        536,
+        291,
+        958,
+        1243,
+        13,
+        50764
+      ]
+    }
+  ],
+  "usage": {
+    "seconds": 10.0,
+    "type": "duration"
+  },
+  "words": [
+    {
+      "end": 1.0,
+      "start": 0.0,
+      "word": "And"
+    },
+    {
+      "end": 1.7000000476837158,
+      "start": 1.0,
+      "word": "everyone"
+    },
+    {
+      "end": 2.4000000953674316,
+      "start": 2.059999942779541,
+      "word": "please"
+    },
+    {
+      "end": 2.740000009536743,
+      "start": 2.4000000953674316,
+      "word": "send"
+    },
+    {
+      "end": 2.9800000190734863,
+      "start": 2.740000009536743,
+      "word": "your"
+    },
+    {
+      "end": 3.4800000190734863,
+      "start": 2.9800000190734863,
+      "word": "greenhouse"
+    },
+    {
+      "end": 4.019999980926514,
+      "start": 3.4800000190734863,
+      "word": "feedback"
+    },
+    {
+      "end": 4.340000152587891,
+      "start": 4.019999980926514,
+      "word": "by"
+    },
+    {
+      "end": 4.820000171661377,
+      "start": 4.340000152587891,
+      "word": "Friday"
+    },
+    {
+      "end": 5.840000152587891,
+      "start": 5.360000133514404,
+      "word": "Thanks"
+    },
+    {
+      "end": 6.519999980926514,
+      "start": 5.840000152587891,
+      "word": "everyone"
+    },
+    {
+      "end": 7.0,
+      "start": 6.78000020980835,
+      "word": "see"
+    },
+    {
+      "end": 7.199999809265137,
+      "start": 7.0,
+      "word": "you"
+    },
+    {
+      "end": 7.599999904632568,
+      "start": 7.199999809265137,
+      "word": "next"
+    },
+    {
+      "end": 7.940000057220459,
+      "start": 7.599999904632568,
+      "word": "week"
+    }
+  ],
+  "task": "transcribe"
+}
