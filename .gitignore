@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+
+audio_chunks/
+transcription_exports/
+
+*.mp3
