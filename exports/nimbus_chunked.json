@@ -1,0 +1,337 @@
+{
+  "source_file": "project_nimbus_meeting.mp3",
+  "segment_count": 55,
+  "duration_seconds": 308.0,
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 5.82,
+      "text": "Good morning everyone! This is the weekly engineering sync for Project Nimbus."
+    },
+    {
+      "id": 1,
+      "start": 5.82,
+      "end": 9.92,
+      "text": "Today is Thursday, and we have four items on the agenda."
+    },
+    {
+      "id": 2,
+      "start": 9.92,
+      "end": 18.02,
+      "text": "The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update."
+    },
+    {
+      "id": 3,
+      "start": 18.02,
+      "end": 22.38,
+      "text": "Priya, do you want to start with the migration?"
+    },
+    {
+      "id": 4,
+      "start": 22.38,
+      "end": 28.96,
+      "text": "Sure, thanks Marcus. So the Kubernetes migration is about 70% done."
+    },
+    {
+      "id": 5,
+      "start": 28.96,
+      "end": 35.62,
+      "text": "We moved the authentication service, and the billing service to the new EKS cluster last week."
+    },
+    {
+      "id": 6,
+      "start": 35.62,
+      "end": 38.58,
+      "text": "The main blocker right now is the RIDIS cache."
+    },
+    {
+      "id": 7,
+      "start": 38.58,
+      "end": 46.38,
+      "text": "When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class."
+    },
+    {
+      "id": 8,
+      "start": 46.38,
+      "end": 54.58,
+      "text": "I opened a ticket, Jira number NIM-482, and I expect it to be fixed by Tuesday."
+    },
+    {
+      "id": 9,
+      "start": 54.58,
+      "end": 60.0,
+      "text": "Okay, good. Do we need anything from the DevOps team?"
+    },
+    {
+      "id": 10,
+      "start": 60.0,
+      "end": 65.96,
+      "text": "Yes, we need Tomasz to approve the Terraform changes for the VPC peering."
+    },
+    {
+      "id": 11,
+      "start": 65.96,
+      "end": 72.08,
+      "text": "Without that, the pods in the staging namespace cannot reach the legacy database."
+    },
+    {
+      "id": 12,
+      "start": 72.08,
+      "end": 76.04,
+      "text": "I can review the Terraform pull request this afternoon."
+    },
+    {
+      "id": 13,
+      "start": 76.04,
+      "end": 80.44,
+      "text": "I saw it in GitHub yesterday, but I did not have time."
+    },
+    {
+      "id": 14,
+      "start": 80.44,
+      "end": 86.32,
+      "text": "Just to confirm, are we still using the T3 large instances for the worker nodes, or did"
+    },
+    {
+      "id": 15,
+      "start": 86.32,
+      "end": 89.12,
+      "text": "we switch to Graviton?"
+    },
+    {
+      "id": 16,
+      "start": 89.12,
+      "end": 91.16,
+      "text": "We switched to Graviton."
+    },
+    {
+      "id": 17,
+      "start": 91.16,
+      "end": 99.16,
+      "text": "The ARM-based instances are about 20% cheaper, and our Docker images now build for both architectures."
+    },
+    {
+      "id": 18,
+      "start": 99.16,
+      "end": 100.16,
+      "text": "Great."
+    },
+    {
+      "id": 19,
+      "start": 100.16,
+      "end": 105.56,
+      "text": "Let's move to item 2, the PostgreSQL latency issue."
+    },
+    {
+      "id": 20,
+      "start": 105.56,
+      "end": 108.16,
+      "text": "Tomasz, what did you find?"
+    },
+    {
+      "id": 21,
+      "start": 108.16,
+      "end": 115.24,
+      "text": "So, the P99 latency on the order endpoint went from about 80 milliseconds to almost"
+    },
+    {
+      "id": 22,
+      "start": 115.28,
+      "end": 119.16,
+      "text": "400 milliseconds after the release on the 12th."
+    },
+    {
+      "id": 23,
+      "start": 119.16,
+      "end": 119.92,
+      "text": "Ironic, ple-"
+    },
+    {
+      "id": 24,
+      "start": 120.0,
+      "end": 126.16,
+      "text": "analyze on the slope queries and the problem is a missing composite index on the orders table"
+    },
+    {
+      "id": 25,
+      "start": 126.16,
+      "end": 132.72,
+      "text": "on customer id and created that. Someone dropped it during the schema migration with Alembic."
+    },
+    {
+      "id": 26,
+      "start": 134.0,
+      "end": 136.16,
+      "text": "Ouch! Is there a fix ready?"
+    },
+    {
+      "id": 27,
+      "start": 137.36,
+      "end": 142.48,
+      "text": "Yes. I wrote a new migration that recreates the index concurrently,"
+    },
+    {
+      "id": 28,
+      "start": 142.48,
+      "end": 147.84,
+      "text": "so it will not lock the table. I also added a check in our CI pipeline,"
+    },
+    {
+      "id": 29,
+      "start": 147.84,
+      "end": 155.44,
+      "text": "using pgstat statements, so we get an alert in metadog if any query goes above 200 milliseconds."
+    },
+    {
+      "id": 30,
+      "start": 156.72,
+      "end": 164.32,
+      "text": "That's really helpful. From the product side, customers definitely noticed. We had 11 support"
+    },
+    {
+      "id": 31,
+      "start": 164.32,
+      "end": 170.48,
+      "text": "tickets about slow checkout in the last week, and our NPS score dropped by 3 points."
+    },
+    {
+      "id": 32,
+      "start": 170.48,
+      "end": 179.44,
+      "text": "Thanks, Aisha. Okay, item 3, the Q3OKRs. Aisha, can you give us the summary?"
+    },
+    {
+      "id": 33,
+      "start": 180.0,
+      "end": 185.0,
+      "text": "Sure. We have three key results for this quarter."
+    },
+    {
+      "id": 34,
+      "start": 185.0,
+      "end": 190.0,
+      "text": "First, reduce checkout abandonment from 18% to 12%."
+    },
+    {
+      "id": 35,
+      "start": 190.0,
+      "end": 196.0,
+      "text": "We are currently at 14%, so we are on track, but not finished."
+    },
+    {
+      "id": 36,
+      "start": 196.0,
+      "end": 203.0,
+      "text": "Second, launch the new recommendation engine, which uses the embedding model from the data science team."
+    },
+    {
+      "id": 37,
+      "start": 203.0,
+      "end": 212.0,
+      "text": "That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team."
+    },
+    {
+      "id": 38,
+      "start": 212.0,
+      "end": 219.0,
+      "text": "And third, achieve SOC 2 type 2 readiness. We are about halfway there."
+    },
+    {
+      "id": 39,
+      "start": 219.0,
+      "end": 223.0,
+      "text": "What is the risk on the SOC 2 work?"
+    },
+    {
+      "id": 40,
+      "start": 223.0,
+      "end": 231.0,
+      "text": "The main risk is the audit logging. We need every access to customer data to be logged and retained for one year."
+    },
+    {
+      "id": 41,
+      "start": 231.0,
+      "end": 236.0,
+      "text": "Right now we only keep logs in CloudWatch for 30 days."
+    },
+    {
+      "id": 42,
+      "start": 236.0,
+      "end": 240.0,
+      "text": "We could export the logs to S3 with a live site."
+    },
+    {
+      "id": 43,
+      "start": 240.0,
+      "end": 245.8,
+      "text": "policy and move them to Glacier after 90 days. That would be cheap, and it would"
+    },
+    {
+      "id": 44,
+      "start": 245.8,
+      "end": 253.28,
+      "text": "meet the retention requirement. Perfect. Let's take that offline and write it up."
+    },
+    {
+      "id": 45,
+      "start": 253.28,
+      "end": 260.24,
+      "text": "Last item, hiring. We have two open roles, a senior back-end engineer with Go and"
+    },
+    {
+      "id": 46,
+      "start": 260.24,
+      "end": 266.2,
+      "text": "gRPC experience, and a machine learning engineer for the recommendation work. We"
+    },
+    {
+      "id": 47,
+      "start": 266.2,
+      "end": 271.64,
+      "text": "have three candidates in the final round. Priya and Thomas, please submit your"
+    },
+    {
+      "id": 48,
+      "start": 271.64,
+      "end": 278.86,
+      "text": "interview feedback in Greenhouse by Friday. We'll do. Yes, I will have mine"
+    },
+    {
+      "id": 49,
+      "start": 278.86,
+      "end": 285.44,
+      "text": "done tomorrow. Great. To summarize the action items, Priya will fix the"
+    },
+    {
+      "id": 50,
+      "start": 285.44,
+      "end": 290.52,
+      "text": "Redis storage class issue by Tuesday. Thomas will review the Terraform poll"
+    },
+    {
+      "id": 51,
+      "start": 290.52,
+      "end": 295.84,
+      "text": "request today and deploy the index migration. Aisha will schedule the Pine"
+    },
+    {
+      "id": 52,
+      "start": 295.84,
+      "end": 301.84,
+      "text": "Cone security review and draft the log retention plan with"
+    },
+    {
+      "id": 53,
+      "start": 300.0,
+      "end": 305.0,
+      "text": "And everyone, please send your greenhouse feedback by Friday."
+    },
+    {
+      "id": 54,
+      "start": 305.0,
+      "end": 308.0,
+      "text": "Thanks everyone, see you next week!"
+    }
+  ]
+}
