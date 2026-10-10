@@ -1,0 +1,41 @@
+{
+  "text": "Connect to OpenAI using your API key What more? Play distance allowed for about 30 seconds In this case Three mistakes The research analyzed the wind farm that showed variable wind patterns The prior lead will lead the change through complex permit processes",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "text": "Connect to OpenAI using your API key"
+    },
+    {
+      "start": 13.0,
+      "end": 15.0,
+      "text": "What more?"
+    },
+    {
+      "start": 18.0,
+      "end": 23.0,
+      "text": "Play distance allowed for about 30 seconds"
+    },
+    {
+      "start": 26.0,
+      "end": 28.0,
+      "text": "In this case"
+    },
+    {
+      "start": 30.0,
+      "end": 32.0,
+      "text": "Three mistakes"
+    },
+    {
+      "start": 33.0,
+      "end": 38.0,
+      "text": "The research analyzed the wind farm that showed variable wind patterns"
+    },
+    {
+      "start": 39.0,
+      "end": 44.0,
+      "text": "The prior lead will lead the change through complex permit processes"
+    }
+  ],
+  "duration_seconds": 45.0
+}

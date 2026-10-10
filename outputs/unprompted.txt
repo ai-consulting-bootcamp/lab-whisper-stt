@@ -1,0 +1,7 @@
+[00:00:00,000 - 00:00:08,000] Connect to OpenAI using your API key
+[00:00:13,000 - 00:00:15,000] What more?
+[00:00:18,000 - 00:00:23,000] Play distance allowed for about 30 seconds
+[00:00:26,000 - 00:00:28,000] In this case
+[00:00:30,000 - 00:00:32,000] Three mistakes
+[00:00:33,000 - 00:00:38,000] The research analyzed the wind farm that showed variable wind patterns
+[00:00:39,000 - 00:00:44,000] The prior lead will lead the change through complex permit processes
