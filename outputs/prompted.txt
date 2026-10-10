@@ -1,0 +1,5 @@
+[00:00:00,000 - 00:00:08,000] Connect to OpenAI using your API key
+[00:00:13,000 - 00:00:15,000] What more?
+[00:00:18,000 - 00:00:23,000] Play this text aloud for about 30 seconds
+[00:00:23,000 - 00:00:32,000] In this case, read this text
+[00:00:33,000 - 00:00:44,000] The research analyzes the wind farms that show variable wind patterns. The prior lead will lead the change through complex permit processes.
