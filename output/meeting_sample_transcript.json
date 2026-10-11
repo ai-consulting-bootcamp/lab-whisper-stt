@@ -1,0 +1,5999 @@
+{
+  "source": "meetings/meeting_sample.wav",
+  "model": "whisper-1",
+  "prompt": "Research group meeting about recruiting volunteer participants for recorded meetings and managing data storage and archiving. ",
+  "duration": 299.04000091552734,
+  "full_text": "If you're talking about something simple where you throw away a lot of these dimensions, then you can do that right away. If you're talking about something that has all of these different facets that we have here, it won't happen quickly, it won't be easy. There's all sorts of issues about keeping the equipment safe or else falling to the ground. So then maybe we should try to bring people here. I think our first priority should be to try to get people to come here. We're set up for it. The room is really underused. I thought the free lunch idea was a great idea. Yeah, I thought so too. Free lunch is good. I think we can get people to come here, but the issue is you definitely want to make sure that the kind of group that you're getting is the right group, so you don't waste a lot of your time in the overhead and bring people down. No crunch in the food. Well, I was thinking lunch afterwards. No crunch afterwards, right. They have to do their digits. Yeah, they have to do their digits or they don't get their food. Yeah. I spoke with some people up at Haas Business School who volunteered. Should I pursue that? Oh, definitely. They decide not to go into speech, so I'm not sure whether they'll still be so willing to volunteer, but all of a sudden you mail them out to them for free lunch, and they'll say there's no such thing. I'd love to get people that are not linguists or engineers. Right. These are both weird. We need a writer sampling. The problem with engineers is... They make funny sounds. The other thing we talked about is giving them an extra CD. Yeah. So if they basically want an audio record... I thought he meant give them a music CD. A CD of their speech, and I guess it depends on what audience you're talking to. I personally would not want a CD of my meeting, but maybe... If you're having some planning meeting of some sort... Oh, that would be fun. I think it would just be fun, you know, if nothing else is a novelty item. It also, I think, builds up towards the goal of saying, look, you know, you're going to get this, isn't that neat that you're going to go home with it? It's actually probably going to be pretty useless, but you'll appreciate, you know, where it's useful and where it's useless. And then we're going to move this technology somewhere that will become useful. No, I think that's a great idea. What if you can tell them that you'll give them the transcripts? Oh, yeah. I mean, anyone can have the transcripts, so. I have to raise a little concern about giving them the CD immediately because of these issues of, you know, this kind of stuff, or maybe, you know. Good point. That's a very good point. Convert it after it's been cleared with the transcript stage. Right. And then they can get a CD, but just not the same date. It should be the same CD-ROM that we distribute publicly, right? Right. Otherwise, they're not allowed to. There we go. Oh, I like that. That's right. So after the transcript screening phase. Yeah. Things have been weeded out. Yeah, I got the CD. Your Honor, I. That's a good point. Yeah, so let's start with Tom. Sorry, I have to leave. I will be here full time next week. Okay, see ya. Do you want me to do the pictures?  Alright, I'll see you guys next week. See ya. So, let's see. So that was that topic. And then I guess another topic would be where are we in the whole disk resources question. We are slowly, slowly getting to the point where we have enough room to record meetings. So I did a bunch of archiving and still doing a bunch of archiving. I'm in the midst of doing the P files from Broadcast News and it took 11 hours to copy it and it will take another 11 to do the clone.  Well, it's Avid. It's Avid, but it's a lot of data. It's copied from one place in Avid to another place in Avid? I did not tape. So I'm archiving it and then I'm going to delete files. So that will give us 10 gigabytes of free space. Yeah, the archiving probably does take a long time. Yeah, and so that will be done in about two hours. And so at that point, we'll be able to record five more meetings. One thing, the good news about that is that once it's archived, it's pretty quick to get back. The other direction is fast, but this direction is really slow. Well, especially because I'm generating a clone also. Yeah, okay. Generating two copies, one off-site, one on-site. Now, what about, is the plan to, so stuff will be saved, it's just that you're relocating it? I mean, so we're going to get more disk space, or did I? No, these are the key files from Broadcast News, which are regeneratable. Oh, okay. Regeneratable. I see. If we really need to, but we had a lot of them, and for the full 140-hour sets. And so they were two gigabytes per file that we had.",
+  "segments": [
+    {
+      "chunk": 0,
+      "start": 1.2200000286102295,
+      "end": 6.079999923706055,
+      "text": "If you're talking about something simple where you throw away a lot of these dimensions, then you can do that right away."
+    },
+    {
+      "chunk": 0,
+      "start": 6.360000133514404,
+      "end": 11.800000190734863,
+      "text": "If you're talking about something that has all of these different facets that we have here, it won't happen quickly, it won't be easy."
+    },
+    {
+      "chunk": 0,
+      "start": 12.039999961853027,
+      "end": 16.520000457763672,
+      "text": "There's all sorts of issues about keeping the equipment safe or else falling to the ground."
+    },
+    {
+      "chunk": 0,
+      "start": 16.639999389648438,
+      "end": 18.8799991607666,
+      "text": "So then maybe we should try to bring people here."
+    },
+    {
+      "chunk": 0,
+      "start": 18.8799991607666,
+      "end": 22.639999389648438,
+      "text": "I think our first priority should be to try to get people to come here."
+    },
+    {
+      "chunk": 0,
+      "start": 22.860000610351562,
+      "end": 27.219999313354492,
+      "text": "We're set up for it. The room is really underused."
+    },
+    {
+      "chunk": 0,
+      "start": 28.360000610351562,
+      "end": 30.31999969482422,
+      "text": "I thought the free lunch idea was a great idea."
+    },
+    {
+      "chunk": 0,
+      "start": 30.65999984741211,
+      "end": 31.579999923706055,
+      "text": "Yeah, I thought so too."
+    },
+    {
+      "chunk": 0,
+      "start": 31.600000381469727,
+      "end": 31.799999237060547,
+      "text": "Free lunch is good."
+    },
+    {
+      "chunk": 0,
+      "start": 31.8799991607666,
+      "end": 38.20000076293945,
+      "text": "I think we can get people to come here, but the issue is you definitely want to make sure that the kind of group that you're getting is the right group,"
+    },
+    {
+      "chunk": 0,
+      "start": 38.2599983215332,
+      "end": 41.779998779296875,
+      "text": "so you don't waste a lot of your time in the overhead and bring people down."
+    },
+    {
+      "chunk": 0,
+      "start": 41.91999816894531,
+      "end": 42.97999954223633,
+      "text": "No crunch in the food."
+    },
+    {
+      "chunk": 0,
+      "start": 44.040000915527344,
+      "end": 44.91999816894531,
+      "text": "Well, I was thinking lunch afterwards."
+    },
+    {
+      "chunk": 0,
+      "start": 44.91999816894531,
+      "end": 47.220001220703125,
+      "text": "No crunch afterwards, right. They have to do their digits."
+    },
+    {
+      "chunk": 0,
+      "start": 47.52000045776367,
+      "end": 50.2400016784668,
+      "text": "Yeah, they have to do their digits or they don't get their food."
+    },
+    {
+      "chunk": 0,
+      "start": 50.560001373291016,
+      "end": 50.81999969482422,
+      "text": "Yeah."
+    },
+    {
+      "chunk": 0,
+      "start": 52.31999969482422,
+      "end": 56.58000183105469,
+      "text": "I spoke with some people up at Haas Business School who volunteered. Should I pursue that?"
+    },
+    {
+      "chunk": 0,
+      "start": 56.58000183105469,
+      "end": 57.7599983215332,
+      "text": "Oh, definitely."
+    },
+    {
+      "chunk": 1,
+      "start": 60.0,
+      "end": 68.65999984741211,
+      "text": "They decide not to go into speech, so I'm not sure whether they'll still be so willing to volunteer, but all of a sudden you mail them out to them for free lunch, and they'll say there's no such thing."
+    },
+    {
+      "chunk": 1,
+      "start": 69.19999980926514,
+      "end": 71.85999965667725,
+      "text": "I'd love to get people that are not linguists or engineers."
+    },
+    {
+      "chunk": 1,
+      "start": 72.0600004196167,
+      "end": 72.22000026702881,
+      "text": "Right."
+    },
+    {
+      "chunk": 1,
+      "start": 72.89999961853027,
+      "end": 74.23999977111816,
+      "text": "These are both weird."
+    },
+    {
+      "chunk": 1,
+      "start": 76.13999938964844,
+      "end": 77.94000053405762,
+      "text": "We need a writer sampling."
+    },
+    {
+      "chunk": 1,
+      "start": 83.5,
+      "end": 85.97999954223633,
+      "text": "The problem with engineers is..."
+    },
+    {
+      "chunk": 1,
+      "start": 85.97999954223633,
+      "end": 88.86000061035156,
+      "text": "They make funny sounds."
+    },
+    {
+      "chunk": 1,
+      "start": 89.15999984741211,
+      "end": 94.84000015258789,
+      "text": "The other thing we talked about is giving them an extra CD."
+    },
+    {
+      "chunk": 1,
+      "start": 95.27999877929688,
+      "end": 95.4000015258789,
+      "text": "Yeah."
+    },
+    {
+      "chunk": 1,
+      "start": 96.31999969482422,
+      "end": 99.2599983215332,
+      "text": "So if they basically want an audio record..."
+    },
+    {
+      "chunk": 1,
+      "start": 99.2599983215332,
+      "end": 101.93999862670898,
+      "text": "I thought he meant give them a music CD."
+    },
+    {
+      "chunk": 1,
+      "start": 103.04000091552734,
+      "end": 106.93999862670898,
+      "text": "A CD of their speech, and I guess it depends on what audience you're talking to."
+    },
+    {
+      "chunk": 1,
+      "start": 107.68000030517578,
+      "end": 112.22000122070312,
+      "text": "I personally would not want a CD of my meeting, but maybe..."
+    },
+    {
+      "chunk": 1,
+      "start": 112.22000122070312,
+      "end": 114.22000122070312,
+      "text": "If you're having some planning meeting of some sort..."
+    },
+    {
+      "chunk": 1,
+      "start": 114.7599983215332,
+      "end": 115.81999969482422,
+      "text": "Oh, that would be fun."
+    },
+    {
+      "chunk": 1,
+      "start": 116.36000061035156,
+      "end": 119.4000015258789,
+      "text": "I think it would just be fun, you know, if nothing else is a novelty item."
+    },
+    {
+      "chunk": 2,
+      "start": 120.0,
+      "end": 125.38000011444092,
+      "text": "It also, I think, builds up towards the goal of saying, look, you know, you're going to get this, isn't that neat that you're going to go home with it?"
+    },
+    {
+      "chunk": 2,
+      "start": 125.42000007629395,
+      "end": 130.97999954223633,
+      "text": "It's actually probably going to be pretty useless, but you'll appreciate, you know, where it's useful and where it's useless."
+    },
+    {
+      "chunk": 2,
+      "start": 131.6599998474121,
+      "end": 134.11999988555908,
+      "text": "And then we're going to move this technology somewhere that will become useful."
+    },
+    {
+      "chunk": 2,
+      "start": 134.42000007629395,
+      "end": 135.81999969482422,
+      "text": "No, I think that's a great idea."
+    },
+    {
+      "chunk": 2,
+      "start": 136.29999923706055,
+      "end": 139.76000022888184,
+      "text": "What if you can tell them that you'll give them the transcripts?"
+    },
+    {
+      "chunk": 2,
+      "start": 140.73999977111816,
+      "end": 141.54000091552734,
+      "text": "Oh, yeah."
+    },
+    {
+      "chunk": 2,
+      "start": 141.63999938964844,
+      "end": 143.7199993133545,
+      "text": "I mean, anyone can have the transcripts, so."
+    },
+    {
+      "chunk": 2,
+      "start": 143.7199993133545,
+      "end": 154.31999969482422,
+      "text": "I have to raise a little concern about giving them the CD immediately because of these issues of, you know, this kind of stuff, or maybe, you know."
+    },
+    {
+      "chunk": 2,
+      "start": 154.31999969482422,
+      "end": 155.81999969482422,
+      "text": "Good point. That's a very good point."
+    },
+    {
+      "chunk": 2,
+      "start": 156.38000106811523,
+      "end": 158.02000045776367,
+      "text": "Convert it after it's been cleared with the transcript stage."
+    },
+    {
+      "chunk": 2,
+      "start": 158.52000045776367,
+      "end": 158.88000106811523,
+      "text": "Right."
+    },
+    {
+      "chunk": 2,
+      "start": 158.88000106811523,
+      "end": 160.70000076293945,
+      "text": "And then they can get a CD, but just not the same date."
+    },
+    {
+      "chunk": 2,
+      "start": 161.2599983215332,
+      "end": 164.88000106811523,
+      "text": "It should be the same CD-ROM that we distribute publicly, right?"
+    },
+    {
+      "chunk": 2,
+      "start": 164.88000106811523,
+      "end": 165.1599998474121,
+      "text": "Right."
+    },
+    {
+      "chunk": 2,
+      "start": 165.29999923706055,
+      "end": 166.56000137329102,
+      "text": "Otherwise, they're not allowed to."
+    },
+    {
+      "chunk": 2,
+      "start": 166.56000137329102,
+      "end": 167.4000015258789,
+      "text": "There we go. Oh, I like that."
+    },
+    {
+      "chunk": 2,
+      "start": 167.4000015258789,
+      "end": 168.0,
+      "text": "That's right."
+    },
+    {
+      "chunk": 2,
+      "start": 168.3400001525879,
+      "end": 170.27999877929688,
+      "text": "So after the transcript screening phase."
+    },
+    {
+      "chunk": 2,
+      "start": 170.29999923706055,
+      "end": 170.7400016784668,
+      "text": "Yeah."
+    },
+    {
+      "chunk": 2,
+      "start": 171.0,
+      "end": 171.97999954223633,
+      "text": "Things have been weeded out."
+    },
+    {
+      "chunk": 2,
+      "start": 172.79999923706055,
+      "end": 175.20000076293945,
+      "text": "Yeah, I got the CD."
+    },
+    {
+      "chunk": 2,
+      "start": 175.63999938964844,
+      "end": 176.56000137329102,
+      "text": "Your Honor, I."
+    },
+    {
+      "chunk": 2,
+      "start": 178.72000122070312,
+      "end": 179.86000061035156,
+      "text": "That's a good point."
+    },
+    {
+      "chunk": 3,
+      "start": 180.0,
+      "end": 183.6800000667572,
+      "text": "Yeah, so let's start with Tom."
+    },
+    {
+      "chunk": 3,
+      "start": 184.17999982833862,
+      "end": 187.0199999809265,
+      "text": "Sorry, I have to leave. I will be here full time next week."
+    },
+    {
+      "chunk": 3,
+      "start": 187.53999996185303,
+      "end": 188.10000038146973,
+      "text": "Okay, see ya."
+    },
+    {
+      "chunk": 3,
+      "start": 190.1599998474121,
+      "end": 191.4399995803833,
+      "text": "Do you want me to do the pictures?"
+    },
+    {
+      "chunk": 3,
+      "start": 192.03999996185303,
+      "end": 192.03999996185303,
+      "text": ""
+    },
+    {
+      "chunk": 3,
+      "start": 192.60000038146973,
+      "end": 194.1599998474121,
+      "text": "Alright, I'll see you guys next week."
+    },
+    {
+      "chunk": 3,
+      "start": 194.35999965667725,
+      "end": 194.60000038146973,
+      "text": "See ya."
+    },
+    {
+      "chunk": 3,
+      "start": 198.63999938964844,
+      "end": 200.86000061035156,
+      "text": "So, let's see. So that was that topic."
+    },
+    {
+      "chunk": 3,
+      "start": 201.95999908447266,
+      "end": 208.95999908447266,
+      "text": "And then I guess another topic would be where are we in the whole disk resources question."
+    },
+    {
+      "chunk": 3,
+      "start": 209.95999908447266,
+      "end": 215.54000091552734,
+      "text": "We are slowly, slowly getting to the point where we have enough room to record meetings."
+    },
+    {
+      "chunk": 3,
+      "start": 216.29999923706055,
+      "end": 220.0,
+      "text": "So I did a bunch of archiving and still doing a bunch of archiving."
+    },
+    {
+      "chunk": 3,
+      "start": 220.38000106811523,
+      "end": 231.2599983215332,
+      "text": "I'm in the midst of doing the P files from Broadcast News and it took 11 hours to copy it and it will take another 11 to do the clone."
+    },
+    {
+      "chunk": 3,
+      "start": 232.13999938964844,
+      "end": 232.13999938964844,
+      "text": ""
+    },
+    {
+      "chunk": 3,
+      "start": 232.13999938964844,
+      "end": 236.4000015258789,
+      "text": "Well, it's Avid. It's Avid, but it's a lot of data."
+    },
+    {
+      "chunk": 3,
+      "start": 236.72000122070312,
+      "end": 238.43999862670898,
+      "text": "It's copied from one place in Avid to another place in Avid?"
+    },
+    {
+      "chunk": 3,
+      "start": 238.7599983215332,
+      "end": 239.18000030517578,
+      "text": "I did not tape."
+    },
+    {
+      "chunk": 4,
+      "start": 240.5600000023842,
+      "end": 243.38000011444092,
+      "text": "So I'm archiving it and then I'm going to delete files."
+    },
+    {
+      "chunk": 4,
+      "start": 243.70000004768372,
+      "end": 246.57999992370605,
+      "text": "So that will give us 10 gigabytes of free space."
+    },
+    {
+      "chunk": 4,
+      "start": 246.57999992370605,
+      "end": 248.92000007629395,
+      "text": "Yeah, the archiving probably does take a long time."
+    },
+    {
+      "chunk": 4,
+      "start": 249.1599998474121,
+      "end": 253.23999977111816,
+      "text": "Yeah, and so that will be done in about two hours."
+    },
+    {
+      "chunk": 4,
+      "start": 253.47999954223633,
+      "end": 257.0,
+      "text": "And so at that point, we'll be able to record five more meetings."
+    },
+    {
+      "chunk": 4,
+      "start": 257.6200008392334,
+      "end": 261.9799995422363,
+      "text": "One thing, the good news about that is that once it's archived, it's pretty quick to get back."
+    },
+    {
+      "chunk": 4,
+      "start": 262.6800003051758,
+      "end": 265.26000022888184,
+      "text": "The other direction is fast, but this direction is really slow."
+    },
+    {
+      "chunk": 4,
+      "start": 265.6000003814697,
+      "end": 268.1000003814697,
+      "text": "Well, especially because I'm generating a clone also."
+    },
+    {
+      "chunk": 4,
+      "start": 268.1000003814697,
+      "end": 269.5,
+      "text": "Yeah, okay."
+    },
+    {
+      "chunk": 4,
+      "start": 270.20000076293945,
+      "end": 273.5800018310547,
+      "text": "Generating two copies, one off-site, one on-site."
+    },
+    {
+      "chunk": 4,
+      "start": 274.4799995422363,
+      "end": 280.7200012207031,
+      "text": "Now, what about, is the plan to, so stuff will be saved, it's just that you're relocating it?"
+    },
+    {
+      "chunk": 4,
+      "start": 280.7599983215332,
+      "end": 282.9000015258789,
+      "text": "I mean, so we're going to get more disk space, or did I?"
+    },
+    {
+      "chunk": 4,
+      "start": 283.38000106811523,
+      "end": 287.4000015258789,
+      "text": "No, these are the key files from Broadcast News, which are regeneratable."
+    },
+    {
+      "chunk": 4,
+      "start": 287.6599998474121,
+      "end": 288.1599998474121,
+      "text": "Oh, okay."
+    },
+    {
+      "chunk": 4,
+      "start": 288.5,
+      "end": 288.939998626709,
+      "text": "Regeneratable."
+    },
+    {
+      "chunk": 4,
+      "start": 289.1599998474121,
+      "end": 289.560001373291,
+      "text": "I see."
+    },
+    {
+      "chunk": 4,
+      "start": 289.7200012207031,
+      "end": 295.5999984741211,
+      "text": "If we really need to, but we had a lot of them, and for the full 140-hour sets."
+    },
+    {
+      "chunk": 4,
+      "start": 295.5999984741211,
+      "end": 299.04000091552734,
+      "text": "And so they were two gigabytes per file that we had."
+    }
+  ],
+  "words": [
+    {
+      "chunk": 0,
+      "word": "If",
+      "start": 1.2200000286102295,
+      "end": 1.7000000476837158
+    },
+    {
+      "chunk": 0,
+      "word": "you're",
+      "start": 1.7000000476837158,
+      "end": 2.180000066757202
+    },
+    {
+      "chunk": 0,
+      "word": "talking",
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "chunk": 0,
+      "word": "about",
+      "start": 2.180000066757202,
+      "end": 2.3399999141693115
+    },
+    {
+      "chunk": 0,
+      "word": "something",
+      "start": 2.3399999141693115,
+      "end": 2.4800000190734863
+    },
+    {
+      "chunk": 0,
+      "word": "simple",
+      "start": 2.4800000190734863,
+      "end": 2.859999895095825
+    },
+    {
+      "chunk": 0,
+      "word": "where",
+      "start": 2.859999895095825,
+      "end": 3.0799999237060547
+    },
+    {
+      "chunk": 0,
+      "word": "you",
+      "start": 3.0799999237060547,
+      "end": 3.2200000286102295
+    },
+    {
+      "chunk": 0,
+      "word": "throw",
+      "start": 3.2200000286102295,
+      "end": 3.380000114440918
+    },
+    {
+      "chunk": 0,
+      "word": "away",
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "chunk": 0,
+      "word": "a",
+      "start": 3.6600000858306885,
+      "end": 3.8399999141693115
+    },
+    {
+      "chunk": 0,
+      "word": "lot",
+      "start": 3.8399999141693115,
+      "end": 3.8399999141693115
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 3.8399999141693115,
+      "end": 3.9200000762939453
+    },
+    {
+      "chunk": 0,
+      "word": "these",
+      "start": 3.9200000762939453,
+      "end": 4.199999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "dimensions",
+      "start": 4.199999809265137,
+      "end": 4.599999904632568
+    },
+    {
+      "chunk": 0,
+      "word": "then",
+      "start": 4.900000095367432,
+      "end": 5.059999942779541
+    },
+    {
+      "chunk": 0,
+      "word": "you",
+      "start": 5.059999942779541,
+      "end": 5.159999847412109
+    },
+    {
+      "chunk": 0,
+      "word": "can",
+      "start": 5.159999847412109,
+      "end": 5.400000095367432
+    },
+    {
+      "chunk": 0,
+      "word": "do",
+      "start": 5.400000095367432,
+      "end": 5.400000095367432
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 5.400000095367432,
+      "end": 5.559999942779541
+    },
+    {
+      "chunk": 0,
+      "word": "right",
+      "start": 5.559999942779541,
+      "end": 5.820000171661377
+    },
+    {
+      "chunk": 0,
+      "word": "away",
+      "start": 5.820000171661377,
+      "end": 6.079999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "If",
+      "start": 6.360000133514404,
+      "end": 6.619999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "you're",
+      "start": 6.619999885559082,
+      "end": 6.619999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "talking",
+      "start": 6.619999885559082,
+      "end": 6.619999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "about",
+      "start": 6.619999885559082,
+      "end": 6.840000152587891
+    },
+    {
+      "chunk": 0,
+      "word": "something",
+      "start": 6.840000152587891,
+      "end": 7.059999942779541
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 7.059999942779541,
+      "end": 7.320000171661377
+    },
+    {
+      "chunk": 0,
+      "word": "has",
+      "start": 7.320000171661377,
+      "end": 7.739999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "all",
+      "start": 7.739999771118164,
+      "end": 8.199999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 8.199999809265137,
+      "end": 8.199999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "these",
+      "start": 8.199999809265137,
+      "end": 8.300000190734863
+    },
+    {
+      "chunk": 0,
+      "word": "different",
+      "start": 8.300000190734863,
+      "end": 8.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "facets",
+      "start": 8.65999984741211,
+      "end": 9.0
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 9.0,
+      "end": 9.260000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 9.260000228881836,
+      "end": 9.260000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "have",
+      "start": 9.260000228881836,
+      "end": 9.4399995803833
+    },
+    {
+      "chunk": 0,
+      "word": "here",
+      "start": 9.4399995803833,
+      "end": 9.699999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "it",
+      "start": 10.079999923706055,
+      "end": 10.319999694824219
+    },
+    {
+      "chunk": 0,
+      "word": "won't",
+      "start": 10.319999694824219,
+      "end": 10.460000038146973
+    },
+    {
+      "chunk": 0,
+      "word": "happen",
+      "start": 10.460000038146973,
+      "end": 10.819999694824219
+    },
+    {
+      "chunk": 0,
+      "word": "quickly",
+      "start": 10.819999694824219,
+      "end": 11.119999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "it",
+      "start": 11.140000343322754,
+      "end": 11.380000114440918
+    },
+    {
+      "chunk": 0,
+      "word": "won't",
+      "start": 11.380000114440918,
+      "end": 11.380000114440918
+    },
+    {
+      "chunk": 0,
+      "word": "be",
+      "start": 11.380000114440918,
+      "end": 11.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "easy",
+      "start": 11.579999923706055,
+      "end": 11.800000190734863
+    },
+    {
+      "chunk": 0,
+      "word": "There's",
+      "start": 12.039999961853027,
+      "end": 12.180000305175781
+    },
+    {
+      "chunk": 0,
+      "word": "all",
+      "start": 12.180000305175781,
+      "end": 12.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "sorts",
+      "start": 12.579999923706055,
+      "end": 12.619999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 12.619999885559082,
+      "end": 12.880000114440918
+    },
+    {
+      "chunk": 0,
+      "word": "issues",
+      "start": 12.880000114440918,
+      "end": 13.0600004196167
+    },
+    {
+      "chunk": 0,
+      "word": "about",
+      "start": 13.0600004196167,
+      "end": 13.5
+    },
+    {
+      "chunk": 0,
+      "word": "keeping",
+      "start": 13.5,
+      "end": 14.520000457763672
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 14.520000457763672,
+      "end": 14.720000267028809
+    },
+    {
+      "chunk": 0,
+      "word": "equipment",
+      "start": 14.720000267028809,
+      "end": 14.9399995803833
+    },
+    {
+      "chunk": 0,
+      "word": "safe",
+      "start": 14.9399995803833,
+      "end": 15.319999694824219
+    },
+    {
+      "chunk": 0,
+      "word": "or",
+      "start": 15.319999694824219,
+      "end": 15.640000343322754
+    },
+    {
+      "chunk": 0,
+      "word": "else",
+      "start": 15.640000343322754,
+      "end": 15.819999694824219
+    },
+    {
+      "chunk": 0,
+      "word": "falling",
+      "start": 15.819999694824219,
+      "end": 16.079999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 16.079999923706055,
+      "end": 16.399999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 16.399999618530273,
+      "end": 16.399999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "ground",
+      "start": 16.399999618530273,
+      "end": 16.520000457763672
+    },
+    {
+      "chunk": 0,
+      "word": "So",
+      "start": 16.639999389648438,
+      "end": 16.700000762939453
+    },
+    {
+      "chunk": 0,
+      "word": "then",
+      "start": 16.700000762939453,
+      "end": 17.139999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "maybe",
+      "start": 17.139999389648438,
+      "end": 17.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 17.34000015258789,
+      "end": 17.5
+    },
+    {
+      "chunk": 0,
+      "word": "should",
+      "start": 17.5,
+      "end": 17.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "try",
+      "start": 17.65999984741211,
+      "end": 17.959999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 17.959999084472656,
+      "end": 18.100000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "bring",
+      "start": 18.100000381469727,
+      "end": 18.260000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "people",
+      "start": 18.260000228881836,
+      "end": 18.6200008392334
+    },
+    {
+      "chunk": 0,
+      "word": "here",
+      "start": 18.6200008392334,
+      "end": 18.8799991607666
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 18.8799991607666,
+      "end": 19.020000457763672
+    },
+    {
+      "chunk": 0,
+      "word": "think",
+      "start": 19.020000457763672,
+      "end": 19.239999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "our",
+      "start": 19.239999771118164,
+      "end": 19.520000457763672
+    },
+    {
+      "chunk": 0,
+      "word": "first",
+      "start": 19.520000457763672,
+      "end": 19.780000686645508
+    },
+    {
+      "chunk": 0,
+      "word": "priority",
+      "start": 19.780000686645508,
+      "end": 20.18000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "should",
+      "start": 20.18000030517578,
+      "end": 20.479999542236328
+    },
+    {
+      "chunk": 0,
+      "word": "be",
+      "start": 20.479999542236328,
+      "end": 20.6200008392334
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 20.6200008392334,
+      "end": 20.799999237060547
+    },
+    {
+      "chunk": 0,
+      "word": "try",
+      "start": 20.799999237060547,
+      "end": 21.639999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 21.639999389648438,
+      "end": 21.760000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "get",
+      "start": 21.760000228881836,
+      "end": 21.860000610351562
+    },
+    {
+      "chunk": 0,
+      "word": "people",
+      "start": 21.860000610351562,
+      "end": 22.100000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 22.100000381469727,
+      "end": 22.3799991607666
+    },
+    {
+      "chunk": 0,
+      "word": "come",
+      "start": 22.3799991607666,
+      "end": 22.459999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "here",
+      "start": 22.459999084472656,
+      "end": 22.639999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "We're",
+      "start": 22.860000610351562,
+      "end": 23.100000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "set",
+      "start": 23.100000381469727,
+      "end": 23.260000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "up",
+      "start": 23.260000228881836,
+      "end": 23.399999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "for",
+      "start": 23.399999618530273,
+      "end": 23.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "it",
+      "start": 23.65999984741211,
+      "end": 23.899999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "The",
+      "start": 24.18000030517578,
+      "end": 24.5
+    },
+    {
+      "chunk": 0,
+      "word": "room",
+      "start": 24.5,
+      "end": 24.68000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 24.68000030517578,
+      "end": 25.399999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "really",
+      "start": 25.399999618530273,
+      "end": 25.979999542236328
+    },
+    {
+      "chunk": 0,
+      "word": "underused",
+      "start": 25.979999542236328,
+      "end": 27.219999313354492
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 28.360000610351562,
+      "end": 28.760000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "thought",
+      "start": 28.760000228881836,
+      "end": 28.940000534057617
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 28.940000534057617,
+      "end": 29.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "free",
+      "start": 29.15999984741211,
+      "end": 29.360000610351562
+    },
+    {
+      "chunk": 0,
+      "word": "lunch",
+      "start": 29.360000610351562,
+      "end": 29.479999542236328
+    },
+    {
+      "chunk": 0,
+      "word": "idea",
+      "start": 29.479999542236328,
+      "end": 29.739999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "was",
+      "start": 29.739999771118164,
+      "end": 29.920000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "a",
+      "start": 29.920000076293945,
+      "end": 30.059999465942383
+    },
+    {
+      "chunk": 0,
+      "word": "great",
+      "start": 30.059999465942383,
+      "end": 30.200000762939453
+    },
+    {
+      "chunk": 0,
+      "word": "idea",
+      "start": 30.200000762939453,
+      "end": 30.31999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "Yeah",
+      "start": 30.65999984741211,
+      "end": 31.059999465942383
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 31.059999465942383,
+      "end": 31.459999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "thought",
+      "start": 31.459999084472656,
+      "end": 31.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "so",
+      "start": 31.579999923706055,
+      "end": 31.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "too",
+      "start": 31.579999923706055,
+      "end": 31.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "Free",
+      "start": 31.600000381469727,
+      "end": 31.600000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "lunch",
+      "start": 31.600000381469727,
+      "end": 31.600000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 31.600000381469727,
+      "end": 31.639999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "good",
+      "start": 31.639999389648438,
+      "end": 31.799999237060547
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 31.8799991607666,
+      "end": 32.060001373291016
+    },
+    {
+      "chunk": 0,
+      "word": "think",
+      "start": 32.060001373291016,
+      "end": 32.279998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 32.279998779296875,
+      "end": 32.5
+    },
+    {
+      "chunk": 0,
+      "word": "can",
+      "start": 32.5,
+      "end": 32.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "get",
+      "start": 32.65999984741211,
+      "end": 32.880001068115234
+    },
+    {
+      "chunk": 0,
+      "word": "people",
+      "start": 32.880001068115234,
+      "end": 33.08000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 33.08000183105469,
+      "end": 33.29999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "come",
+      "start": 33.29999923706055,
+      "end": 33.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "here",
+      "start": 33.540000915527344,
+      "end": 33.720001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "but",
+      "start": 34.15999984741211,
+      "end": 34.400001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 34.400001525878906,
+      "end": 34.599998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "issue",
+      "start": 34.599998474121094,
+      "end": 34.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 34.7599983215332,
+      "end": 34.939998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "you",
+      "start": 34.939998626708984,
+      "end": 35.08000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "definitely",
+      "start": 35.08000183105469,
+      "end": 35.400001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "want",
+      "start": 35.400001525878906,
+      "end": 35.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 35.540000915527344,
+      "end": 35.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "make",
+      "start": 35.70000076293945,
+      "end": 35.79999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "sure",
+      "start": 35.79999923706055,
+      "end": 35.91999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 35.91999816894531,
+      "end": 36.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 36.099998474121094,
+      "end": 36.2599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "kind",
+      "start": 36.2599983215332,
+      "end": 36.619998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 36.619998931884766,
+      "end": 36.619998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "group",
+      "start": 36.619998931884766,
+      "end": 36.7400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 36.7400016784668,
+      "end": 36.959999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "you're",
+      "start": 36.959999084472656,
+      "end": 37.040000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "getting",
+      "start": 37.040000915527344,
+      "end": 37.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 37.34000015258789,
+      "end": 37.599998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 37.599998474121094,
+      "end": 37.7400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "right",
+      "start": 37.7400016784668,
+      "end": 37.97999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "group",
+      "start": 37.97999954223633,
+      "end": 38.20000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "so",
+      "start": 38.2599983215332,
+      "end": 38.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "you",
+      "start": 38.34000015258789,
+      "end": 38.439998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "don't",
+      "start": 38.439998626708984,
+      "end": 38.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "waste",
+      "start": 38.65999984741211,
+      "end": 38.81999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "a",
+      "start": 38.81999969482422,
+      "end": 39.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "lot",
+      "start": 39.15999984741211,
+      "end": 39.220001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 39.220001220703125,
+      "end": 39.880001068115234
+    },
+    {
+      "chunk": 0,
+      "word": "your",
+      "start": 39.880001068115234,
+      "end": 40.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "time",
+      "start": 40.099998474121094,
+      "end": 40.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "in",
+      "start": 40.34000015258789,
+      "end": 40.52000045776367
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 40.52000045776367,
+      "end": 40.560001373291016
+    },
+    {
+      "chunk": 0,
+      "word": "overhead",
+      "start": 40.560001373291016,
+      "end": 40.939998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "and",
+      "start": 40.939998626708984,
+      "end": 41.08000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "bring",
+      "start": 41.08000183105469,
+      "end": 41.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "people",
+      "start": 41.2400016784668,
+      "end": 41.5
+    },
+    {
+      "chunk": 0,
+      "word": "down",
+      "start": 41.5,
+      "end": 41.779998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "No",
+      "start": 41.91999816894531,
+      "end": 42.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "crunch",
+      "start": 42.2400016784668,
+      "end": 42.439998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "in",
+      "start": 42.439998626708984,
+      "end": 42.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 42.7599983215332,
+      "end": 42.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "food",
+      "start": 42.7599983215332,
+      "end": 42.97999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "Well",
+      "start": 44.040000915527344,
+      "end": 44.119998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 44.20000076293945,
+      "end": 44.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "was",
+      "start": 44.2400016784668,
+      "end": 44.41999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "thinking",
+      "start": 44.41999816894531,
+      "end": 44.619998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "lunch",
+      "start": 44.619998931884766,
+      "end": 44.86000061035156
+    },
+    {
+      "chunk": 0,
+      "word": "afterwards",
+      "start": 44.86000061035156,
+      "end": 44.91999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "No",
+      "start": 44.91999816894531,
+      "end": 45.13999938964844
+    },
+    {
+      "chunk": 0,
+      "word": "crunch",
+      "start": 45.13999938964844,
+      "end": 45.13999938964844
+    },
+    {
+      "chunk": 0,
+      "word": "afterwards",
+      "start": 45.13999938964844,
+      "end": 45.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "right",
+      "start": 45.65999984741211,
+      "end": 46.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "They",
+      "start": 46.18000030517578,
+      "end": 46.400001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "have",
+      "start": 46.400001525878906,
+      "end": 46.599998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 46.599998474121094,
+      "end": 46.720001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "do",
+      "start": 46.720001220703125,
+      "end": 46.81999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "their",
+      "start": 46.81999969482422,
+      "end": 47.0
+    },
+    {
+      "chunk": 0,
+      "word": "digits",
+      "start": 47.0,
+      "end": 47.220001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "Yeah",
+      "start": 47.52000045776367,
+      "end": 47.68000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "they",
+      "start": 47.720001220703125,
+      "end": 48.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "have",
+      "start": 48.2400016784668,
+      "end": 48.47999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 48.47999954223633,
+      "end": 48.5
+    },
+    {
+      "chunk": 0,
+      "word": "do",
+      "start": 48.5,
+      "end": 48.5
+    },
+    {
+      "chunk": 0,
+      "word": "their",
+      "start": 48.5,
+      "end": 48.5
+    },
+    {
+      "chunk": 0,
+      "word": "digits",
+      "start": 48.5,
+      "end": 48.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "or",
+      "start": 48.540000915527344,
+      "end": 48.79999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "they",
+      "start": 48.79999923706055,
+      "end": 49.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "don't",
+      "start": 49.540000915527344,
+      "end": 49.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "get",
+      "start": 49.540000915527344,
+      "end": 49.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "their",
+      "start": 49.7599983215332,
+      "end": 49.959999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "food",
+      "start": 49.959999084472656,
+      "end": 50.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "Yeah",
+      "start": 50.560001373291016,
+      "end": 50.81999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 52.31999969482422,
+      "end": 52.720001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "spoke",
+      "start": 52.720001220703125,
+      "end": 53.119998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "with",
+      "start": 53.119998931884766,
+      "end": 53.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "some",
+      "start": 53.2400016784668,
+      "end": 53.459999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "people",
+      "start": 53.459999084472656,
+      "end": 53.58000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "up",
+      "start": 53.58000183105469,
+      "end": 53.79999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "at",
+      "start": 53.79999923706055,
+      "end": 54.060001373291016
+    },
+    {
+      "chunk": 0,
+      "word": "Haas",
+      "start": 54.060001373291016,
+      "end": 54.119998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "Business",
+      "start": 54.119998931884766,
+      "end": 54.459999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "School",
+      "start": 54.459999084472656,
+      "end": 54.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "who",
+      "start": 54.70000076293945,
+      "end": 54.97999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "volunteered",
+      "start": 54.97999954223633,
+      "end": 55.47999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "Should",
+      "start": 55.779998779296875,
+      "end": 55.880001068115234
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 55.880001068115234,
+      "end": 56.119998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "pursue",
+      "start": 56.119998931884766,
+      "end": 56.279998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "that",
+      "start": 56.279998779296875,
+      "end": 56.58000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "Oh",
+      "start": 56.58000183105469,
+      "end": 57.18000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "definitely",
+      "start": 57.18000030517578,
+      "end": 57.7599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "They",
+      "start": 60.0,
+      "end": 60.0
+    },
+    {
+      "chunk": 1,
+      "word": "decide",
+      "start": 60.0,
+      "end": 60.41999998688698
+    },
+    {
+      "chunk": 1,
+      "word": "not",
+      "start": 60.41999998688698,
+      "end": 60.74000000953674
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 60.74000000953674,
+      "end": 60.9200000166893
+    },
+    {
+      "chunk": 1,
+      "word": "go",
+      "start": 60.9200000166893,
+      "end": 61.299999952316284
+    },
+    {
+      "chunk": 1,
+      "word": "into",
+      "start": 61.299999952316284,
+      "end": 61.5
+    },
+    {
+      "chunk": 1,
+      "word": "speech",
+      "start": 61.5,
+      "end": 62.03999996185303
+    },
+    {
+      "chunk": 1,
+      "word": "so",
+      "start": 62.480000019073486,
+      "end": 62.579999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "I'm",
+      "start": 62.579999923706055,
+      "end": 62.66000008583069
+    },
+    {
+      "chunk": 1,
+      "word": "not",
+      "start": 62.66000008583069,
+      "end": 62.799999952316284
+    },
+    {
+      "chunk": 1,
+      "word": "sure",
+      "start": 62.799999952316284,
+      "end": 62.920000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "whether",
+      "start": 62.920000076293945,
+      "end": 63.09999990463257
+    },
+    {
+      "chunk": 1,
+      "word": "they'll",
+      "start": 63.09999990463257,
+      "end": 63.33999991416931
+    },
+    {
+      "chunk": 1,
+      "word": "still",
+      "start": 63.33999991416931,
+      "end": 63.579999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "be",
+      "start": 63.579999923706055,
+      "end": 63.700000047683716
+    },
+    {
+      "chunk": 1,
+      "word": "so",
+      "start": 63.700000047683716,
+      "end": 63.96000003814697
+    },
+    {
+      "chunk": 1,
+      "word": "willing",
+      "start": 63.96000003814697,
+      "end": 64.07999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 64.07999992370605,
+      "end": 64.6399998664856
+    },
+    {
+      "chunk": 1,
+      "word": "volunteer",
+      "start": 64.6399998664856,
+      "end": 64.6399998664856
+    },
+    {
+      "chunk": 1,
+      "word": "but",
+      "start": 64.71999979019165,
+      "end": 64.8600001335144
+    },
+    {
+      "chunk": 1,
+      "word": "all",
+      "start": 64.8600001335144,
+      "end": 65.15999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "of",
+      "start": 65.15999984741211,
+      "end": 65.30000019073486
+    },
+    {
+      "chunk": 1,
+      "word": "a",
+      "start": 65.30000019073486,
+      "end": 65.30000019073486
+    },
+    {
+      "chunk": 1,
+      "word": "sudden",
+      "start": 65.30000019073486,
+      "end": 65.30000019073486
+    },
+    {
+      "chunk": 1,
+      "word": "you",
+      "start": 65.30000019073486,
+      "end": 65.55999994277954
+    },
+    {
+      "chunk": 1,
+      "word": "mail",
+      "start": 65.55999994277954,
+      "end": 65.71999979019165
+    },
+    {
+      "chunk": 1,
+      "word": "them",
+      "start": 65.71999979019165,
+      "end": 65.96000003814697
+    },
+    {
+      "chunk": 1,
+      "word": "out",
+      "start": 65.96000003814697,
+      "end": 66.34000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 66.34000015258789,
+      "end": 66.59999990463257
+    },
+    {
+      "chunk": 1,
+      "word": "them",
+      "start": 66.59999990463257,
+      "end": 66.59999990463257
+    },
+    {
+      "chunk": 1,
+      "word": "for",
+      "start": 66.59999990463257,
+      "end": 66.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "free",
+      "start": 66.84000015258789,
+      "end": 67.01999998092651
+    },
+    {
+      "chunk": 1,
+      "word": "lunch",
+      "start": 67.01999998092651,
+      "end": 67.11999988555908
+    },
+    {
+      "chunk": 1,
+      "word": "and",
+      "start": 67.26000022888184,
+      "end": 67.44000005722046
+    },
+    {
+      "chunk": 1,
+      "word": "they'll",
+      "start": 67.44000005722046,
+      "end": 67.55999994277954
+    },
+    {
+      "chunk": 1,
+      "word": "say",
+      "start": 67.55999994277954,
+      "end": 67.73999977111816
+    },
+    {
+      "chunk": 1,
+      "word": "there's",
+      "start": 67.73999977111816,
+      "end": 67.8600001335144
+    },
+    {
+      "chunk": 1,
+      "word": "no",
+      "start": 67.8600001335144,
+      "end": 68.03999996185303
+    },
+    {
+      "chunk": 1,
+      "word": "such",
+      "start": 68.03999996185303,
+      "end": 68.23999977111816
+    },
+    {
+      "chunk": 1,
+      "word": "thing",
+      "start": 68.23999977111816,
+      "end": 68.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "I'd",
+      "start": 69.19999980926514,
+      "end": 69.64000034332275
+    },
+    {
+      "chunk": 1,
+      "word": "love",
+      "start": 69.64000034332275,
+      "end": 69.64000034332275
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 69.64000034332275,
+      "end": 69.69999980926514
+    },
+    {
+      "chunk": 1,
+      "word": "get",
+      "start": 69.69999980926514,
+      "end": 69.85999965667725
+    },
+    {
+      "chunk": 1,
+      "word": "people",
+      "start": 69.85999965667725,
+      "end": 70.0600004196167
+    },
+    {
+      "chunk": 1,
+      "word": "that",
+      "start": 70.0600004196167,
+      "end": 70.30000019073486
+    },
+    {
+      "chunk": 1,
+      "word": "are",
+      "start": 70.30000019073486,
+      "end": 70.42000007629395
+    },
+    {
+      "chunk": 1,
+      "word": "not",
+      "start": 70.42000007629395,
+      "end": 70.76000022888184
+    },
+    {
+      "chunk": 1,
+      "word": "linguists",
+      "start": 70.76000022888184,
+      "end": 71.11999988555908
+    },
+    {
+      "chunk": 1,
+      "word": "or",
+      "start": 71.11999988555908,
+      "end": 71.4399995803833
+    },
+    {
+      "chunk": 1,
+      "word": "engineers",
+      "start": 71.4399995803833,
+      "end": 71.85999965667725
+    },
+    {
+      "chunk": 1,
+      "word": "Right",
+      "start": 72.0600004196167,
+      "end": 72.22000026702881
+    },
+    {
+      "chunk": 1,
+      "word": "These",
+      "start": 72.89999961853027,
+      "end": 73.38000011444092
+    },
+    {
+      "chunk": 1,
+      "word": "are",
+      "start": 73.38000011444092,
+      "end": 73.5
+    },
+    {
+      "chunk": 1,
+      "word": "both",
+      "start": 73.5,
+      "end": 73.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "weird",
+      "start": 73.84000015258789,
+      "end": 74.23999977111816
+    },
+    {
+      "chunk": 1,
+      "word": "We",
+      "start": 76.13999938964844,
+      "end": 76.6200008392334
+    },
+    {
+      "chunk": 1,
+      "word": "need",
+      "start": 76.6200008392334,
+      "end": 76.78000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "a",
+      "start": 76.78000068664551,
+      "end": 76.92000007629395
+    },
+    {
+      "chunk": 1,
+      "word": "writer",
+      "start": 76.92000007629395,
+      "end": 77.23999977111816
+    },
+    {
+      "chunk": 1,
+      "word": "sampling",
+      "start": 77.23999977111816,
+      "end": 77.94000053405762
+    },
+    {
+      "chunk": 1,
+      "word": "The",
+      "start": 83.5,
+      "end": 83.97999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "problem",
+      "start": 83.97999954223633,
+      "end": 84.28000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "with",
+      "start": 84.28000068664551,
+      "end": 84.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "engineers",
+      "start": 84.79999923706055,
+      "end": 84.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "is",
+      "start": 84.79999923706055,
+      "end": 85.97999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "They",
+      "start": 85.97999954223633,
+      "end": 86.89999961853027
+    },
+    {
+      "chunk": 1,
+      "word": "make",
+      "start": 86.89999961853027,
+      "end": 88.28000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "funny",
+      "start": 88.28000068664551,
+      "end": 88.54000091552734
+    },
+    {
+      "chunk": 1,
+      "word": "sounds",
+      "start": 88.54000091552734,
+      "end": 88.86000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "The",
+      "start": 89.15999984741211,
+      "end": 89.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "other",
+      "start": 89.68000030517578,
+      "end": 90.20000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "thing",
+      "start": 90.20000076293945,
+      "end": 90.44000053405762
+    },
+    {
+      "chunk": 1,
+      "word": "we",
+      "start": 90.44000053405762,
+      "end": 91.95999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "talked",
+      "start": 91.95999908447266,
+      "end": 92.63999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "about",
+      "start": 92.63999938964844,
+      "end": 92.88000106811523
+    },
+    {
+      "chunk": 1,
+      "word": "is",
+      "start": 92.88000106811523,
+      "end": 93.06000137329102
+    },
+    {
+      "chunk": 1,
+      "word": "giving",
+      "start": 93.06000137329102,
+      "end": 93.2400016784668
+    },
+    {
+      "chunk": 1,
+      "word": "them",
+      "start": 93.2400016784668,
+      "end": 93.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "an",
+      "start": 93.79999923706055,
+      "end": 94.27999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "extra",
+      "start": 94.27999877929688,
+      "end": 94.5999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "CD",
+      "start": 94.5999984741211,
+      "end": 94.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "Yeah",
+      "start": 95.27999877929688,
+      "end": 95.4000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "So",
+      "start": 96.31999969482422,
+      "end": 96.45999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "if",
+      "start": 96.45999908447266,
+      "end": 96.77999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "they",
+      "start": 96.77999877929688,
+      "end": 97.18000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "basically",
+      "start": 97.18000030517578,
+      "end": 98.20000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "want",
+      "start": 98.20000076293945,
+      "end": 98.36000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "an",
+      "start": 98.36000061035156,
+      "end": 98.61999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "audio",
+      "start": 98.61999893188477,
+      "end": 98.72000122070312
+    },
+    {
+      "chunk": 1,
+      "word": "record",
+      "start": 98.72000122070312,
+      "end": 99.2599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 99.2599983215332,
+      "end": 99.2599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "thought",
+      "start": 99.2599983215332,
+      "end": 99.4000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "he",
+      "start": 99.4000015258789,
+      "end": 100.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "meant",
+      "start": 100.47999954223633,
+      "end": 100.7400016784668
+    },
+    {
+      "chunk": 1,
+      "word": "give",
+      "start": 100.7400016784668,
+      "end": 100.97999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "them",
+      "start": 100.97999954223633,
+      "end": 101.11999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "a",
+      "start": 101.11999893188477,
+      "end": 101.2599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "music",
+      "start": 101.2599983215332,
+      "end": 101.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "CD",
+      "start": 101.70000076293945,
+      "end": 101.93999862670898
+    },
+    {
+      "chunk": 1,
+      "word": "A",
+      "start": 103.04000091552734,
+      "end": 103.36000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "CD",
+      "start": 103.36000061035156,
+      "end": 103.58000183105469
+    },
+    {
+      "chunk": 1,
+      "word": "of",
+      "start": 103.58000183105469,
+      "end": 104.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "their",
+      "start": 104.02000045776367,
+      "end": 104.2400016784668
+    },
+    {
+      "chunk": 1,
+      "word": "speech",
+      "start": 104.2400016784668,
+      "end": 104.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "and",
+      "start": 104.52000045776367,
+      "end": 104.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 104.68000030517578,
+      "end": 104.77999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "guess",
+      "start": 104.77999877929688,
+      "end": 104.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "it",
+      "start": 104.91999816894531,
+      "end": 105.08000183105469
+    },
+    {
+      "chunk": 1,
+      "word": "depends",
+      "start": 105.08000183105469,
+      "end": 105.45999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "on",
+      "start": 105.45999908447266,
+      "end": 105.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "what",
+      "start": 105.70000076293945,
+      "end": 105.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "audience",
+      "start": 105.91999816894531,
+      "end": 106.2599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "you're",
+      "start": 106.2599983215332,
+      "end": 106.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "talking",
+      "start": 106.68000030517578,
+      "end": 106.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 106.68000030517578,
+      "end": 106.93999862670898
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 107.68000030517578,
+      "end": 108.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "personally",
+      "start": 108.02000045776367,
+      "end": 108.41999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "would",
+      "start": 108.41999816894531,
+      "end": 108.61999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "not",
+      "start": 108.61999893188477,
+      "end": 108.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "want",
+      "start": 108.84000015258789,
+      "end": 109.18000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "a",
+      "start": 109.18000030517578,
+      "end": 109.5
+    },
+    {
+      "chunk": 1,
+      "word": "CD",
+      "start": 109.5,
+      "end": 109.5
+    },
+    {
+      "chunk": 1,
+      "word": "of",
+      "start": 109.5,
+      "end": 110.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "my",
+      "start": 110.02000045776367,
+      "end": 110.2400016784668
+    },
+    {
+      "chunk": 1,
+      "word": "meeting",
+      "start": 110.2400016784668,
+      "end": 110.5
+    },
+    {
+      "chunk": 1,
+      "word": "but",
+      "start": 110.58000183105469,
+      "end": 111.15999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "maybe",
+      "start": 111.15999984741211,
+      "end": 112.22000122070312
+    },
+    {
+      "chunk": 1,
+      "word": "If",
+      "start": 112.22000122070312,
+      "end": 112.31999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "you're",
+      "start": 112.31999969482422,
+      "end": 112.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "having",
+      "start": 112.47999954223633,
+      "end": 112.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "some",
+      "start": 112.65999984741211,
+      "end": 112.9000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "planning",
+      "start": 112.9000015258789,
+      "end": 113.15999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "meeting",
+      "start": 113.15999984741211,
+      "end": 113.5
+    },
+    {
+      "chunk": 1,
+      "word": "of",
+      "start": 113.5,
+      "end": 113.63999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "some",
+      "start": 113.63999938964844,
+      "end": 113.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "sort",
+      "start": 113.91999816894531,
+      "end": 114.22000122070312
+    },
+    {
+      "chunk": 1,
+      "word": "Oh",
+      "start": 114.7599983215332,
+      "end": 114.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "that",
+      "start": 115.04000091552734,
+      "end": 115.08000183105469
+    },
+    {
+      "chunk": 1,
+      "word": "would",
+      "start": 115.08000183105469,
+      "end": 115.38000106811523
+    },
+    {
+      "chunk": 1,
+      "word": "be",
+      "start": 115.38000106811523,
+      "end": 115.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "fun",
+      "start": 115.47999954223633,
+      "end": 115.81999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 116.36000061035156,
+      "end": 116.5
+    },
+    {
+      "chunk": 1,
+      "word": "think",
+      "start": 116.5,
+      "end": 116.58000183105469
+    },
+    {
+      "chunk": 1,
+      "word": "it",
+      "start": 116.58000183105469,
+      "end": 116.61999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "would",
+      "start": 116.61999893188477,
+      "end": 116.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "just",
+      "start": 116.65999984741211,
+      "end": 116.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "be",
+      "start": 116.79999923706055,
+      "end": 116.95999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "fun",
+      "start": 116.95999908447266,
+      "end": 117.15999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "you",
+      "start": 117.2599983215332,
+      "end": 117.27999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "know",
+      "start": 117.27999877929688,
+      "end": 117.38000106811523
+    },
+    {
+      "chunk": 1,
+      "word": "if",
+      "start": 117.41999816894531,
+      "end": 117.56000137329102
+    },
+    {
+      "chunk": 1,
+      "word": "nothing",
+      "start": 117.56000137329102,
+      "end": 117.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "else",
+      "start": 117.70000076293945,
+      "end": 117.93999862670898
+    },
+    {
+      "chunk": 1,
+      "word": "is",
+      "start": 117.93999862670898,
+      "end": 118.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "a",
+      "start": 118.79999923706055,
+      "end": 119.0999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "novelty",
+      "start": 119.0999984741211,
+      "end": 119.11999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "item",
+      "start": 119.11999893188477,
+      "end": 119.4000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "It",
+      "start": 120.0,
+      "end": 120.14000000059605
+    },
+    {
+      "chunk": 2,
+      "word": "also",
+      "start": 120.14000000059605,
+      "end": 120.40000000596046
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 120.95999997854233,
+      "end": 120.95999997854233
+    },
+    {
+      "chunk": 2,
+      "word": "think",
+      "start": 120.95999997854233,
+      "end": 120.95999997854233
+    },
+    {
+      "chunk": 2,
+      "word": "builds",
+      "start": 120.95999997854233,
+      "end": 120.98000001907349
+    },
+    {
+      "chunk": 2,
+      "word": "up",
+      "start": 120.98000001907349,
+      "end": 121.5
+    },
+    {
+      "chunk": 2,
+      "word": "towards",
+      "start": 121.5,
+      "end": 121.5
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 121.5,
+      "end": 121.77999997138977
+    },
+    {
+      "chunk": 2,
+      "word": "goal",
+      "start": 121.77999997138977,
+      "end": 121.98000001907349
+    },
+    {
+      "chunk": 2,
+      "word": "of",
+      "start": 121.98000001907349,
+      "end": 122.20000004768372
+    },
+    {
+      "chunk": 2,
+      "word": "saying",
+      "start": 122.20000004768372,
+      "end": 122.3199999332428
+    },
+    {
+      "chunk": 2,
+      "word": "look",
+      "start": 122.55999994277954,
+      "end": 122.55999994277954
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 122.61999988555908,
+      "end": 122.83999991416931
+    },
+    {
+      "chunk": 2,
+      "word": "know",
+      "start": 122.83999991416931,
+      "end": 122.83999991416931
+    },
+    {
+      "chunk": 2,
+      "word": "you're",
+      "start": 122.83999991416931,
+      "end": 123.03999996185303
+    },
+    {
+      "chunk": 2,
+      "word": "going",
+      "start": 123.03999996185303,
+      "end": 123.03999996185303
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 123.03999996185303,
+      "end": 123.14000010490417
+    },
+    {
+      "chunk": 2,
+      "word": "get",
+      "start": 123.14000010490417,
+      "end": 123.29999995231628
+    },
+    {
+      "chunk": 2,
+      "word": "this",
+      "start": 123.29999995231628,
+      "end": 123.59999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "isn't",
+      "start": 123.85999989509583,
+      "end": 124.0
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 124.0,
+      "end": 124.32000017166138
+    },
+    {
+      "chunk": 2,
+      "word": "neat",
+      "start": 124.32000017166138,
+      "end": 124.32000017166138
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 124.32000017166138,
+      "end": 124.46000003814697
+    },
+    {
+      "chunk": 2,
+      "word": "you're",
+      "start": 124.46000003814697,
+      "end": 124.67999982833862
+    },
+    {
+      "chunk": 2,
+      "word": "going",
+      "start": 124.67999982833862,
+      "end": 124.67999982833862
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 124.67999982833862,
+      "end": 124.76000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "go",
+      "start": 124.76000022888184,
+      "end": 124.8600001335144
+    },
+    {
+      "chunk": 2,
+      "word": "home",
+      "start": 124.8600001335144,
+      "end": 125.09999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "with",
+      "start": 125.09999990463257,
+      "end": 125.23999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "it",
+      "start": 125.23999977111816,
+      "end": 125.38000011444092
+    },
+    {
+      "chunk": 2,
+      "word": "It's",
+      "start": 125.42000007629395,
+      "end": 125.59999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "actually",
+      "start": 125.59999990463257,
+      "end": 125.94000005722046
+    },
+    {
+      "chunk": 2,
+      "word": "probably",
+      "start": 125.94000005722046,
+      "end": 126.67999982833862
+    },
+    {
+      "chunk": 2,
+      "word": "going",
+      "start": 126.67999982833862,
+      "end": 126.84000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 126.84000015258789,
+      "end": 126.84000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "be",
+      "start": 126.84000015258789,
+      "end": 126.94000005722046
+    },
+    {
+      "chunk": 2,
+      "word": "pretty",
+      "start": 126.94000005722046,
+      "end": 127.11999988555908
+    },
+    {
+      "chunk": 2,
+      "word": "useless",
+      "start": 127.11999988555908,
+      "end": 127.32000017166138
+    },
+    {
+      "chunk": 2,
+      "word": "but",
+      "start": 127.55999994277954,
+      "end": 128.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "you'll",
+      "start": 128.3400001525879,
+      "end": 128.69999980926514
+    },
+    {
+      "chunk": 2,
+      "word": "appreciate",
+      "start": 128.69999980926514,
+      "end": 129.2799997329712
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 129.35999965667725,
+      "end": 129.61999988555908
+    },
+    {
+      "chunk": 2,
+      "word": "know",
+      "start": 129.61999988555908,
+      "end": 129.61999988555908
+    },
+    {
+      "chunk": 2,
+      "word": "where",
+      "start": 129.61999988555908,
+      "end": 129.73999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "it's",
+      "start": 129.73999977111816,
+      "end": 129.9399995803833
+    },
+    {
+      "chunk": 2,
+      "word": "useful",
+      "start": 129.9399995803833,
+      "end": 130.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "and",
+      "start": 130.18000030517578,
+      "end": 130.39999961853027
+    },
+    {
+      "chunk": 2,
+      "word": "where",
+      "start": 130.39999961853027,
+      "end": 130.52000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "it's",
+      "start": 130.52000045776367,
+      "end": 130.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "useless",
+      "start": 130.97999954223633,
+      "end": 130.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "And",
+      "start": 131.6599998474121,
+      "end": 131.7799997329712
+    },
+    {
+      "chunk": 2,
+      "word": "then",
+      "start": 131.7799997329712,
+      "end": 132.03999996185303
+    },
+    {
+      "chunk": 2,
+      "word": "we're",
+      "start": 132.03999996185303,
+      "end": 132.35999965667725
+    },
+    {
+      "chunk": 2,
+      "word": "going",
+      "start": 132.35999965667725,
+      "end": 132.42000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 132.42000007629395,
+      "end": 132.5
+    },
+    {
+      "chunk": 2,
+      "word": "move",
+      "start": 132.5,
+      "end": 132.57999992370605
+    },
+    {
+      "chunk": 2,
+      "word": "this",
+      "start": 132.57999992370605,
+      "end": 132.73999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "technology",
+      "start": 132.73999977111816,
+      "end": 133.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "somewhere",
+      "start": 133.1599998474121,
+      "end": 133.46000003814697
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 133.46000003814697,
+      "end": 133.69999980926514
+    },
+    {
+      "chunk": 2,
+      "word": "will",
+      "start": 133.69999980926514,
+      "end": 133.69999980926514
+    },
+    {
+      "chunk": 2,
+      "word": "become",
+      "start": 133.69999980926514,
+      "end": 133.9399995803833
+    },
+    {
+      "chunk": 2,
+      "word": "useful",
+      "start": 133.9399995803833,
+      "end": 134.11999988555908
+    },
+    {
+      "chunk": 2,
+      "word": "No",
+      "start": 134.42000007629395,
+      "end": 134.53999996185303
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 134.53999996185303,
+      "end": 134.73999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "think",
+      "start": 134.73999977111816,
+      "end": 134.88000011444092
+    },
+    {
+      "chunk": 2,
+      "word": "that's",
+      "start": 134.88000011444092,
+      "end": 135.0600004196167
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 135.0600004196167,
+      "end": 135.2200002670288
+    },
+    {
+      "chunk": 2,
+      "word": "great",
+      "start": 135.2200002670288,
+      "end": 135.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "idea",
+      "start": 135.3400001525879,
+      "end": 135.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "What",
+      "start": 136.29999923706055,
+      "end": 136.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "if",
+      "start": 136.47999954223633,
+      "end": 136.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 136.54000091552734,
+      "end": 136.63999938964844
+    },
+    {
+      "chunk": 2,
+      "word": "can",
+      "start": 136.63999938964844,
+      "end": 136.89999961853027
+    },
+    {
+      "chunk": 2,
+      "word": "tell",
+      "start": 136.89999961853027,
+      "end": 137.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "them",
+      "start": 137.02000045776367,
+      "end": 137.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 137.18000030517578,
+      "end": 137.26000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "you'll",
+      "start": 137.26000022888184,
+      "end": 137.36000061035156
+    },
+    {
+      "chunk": 2,
+      "word": "give",
+      "start": 137.36000061035156,
+      "end": 137.5
+    },
+    {
+      "chunk": 2,
+      "word": "them",
+      "start": 137.5,
+      "end": 137.7199993133545
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 137.7199993133545,
+      "end": 139.1200008392334
+    },
+    {
+      "chunk": 2,
+      "word": "transcripts",
+      "start": 139.1200008392334,
+      "end": 139.76000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "Oh",
+      "start": 140.73999977111816,
+      "end": 141.13999938964844
+    },
+    {
+      "chunk": 2,
+      "word": "yeah",
+      "start": 141.13999938964844,
+      "end": 141.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 141.63999938964844,
+      "end": 141.8799991607666
+    },
+    {
+      "chunk": 2,
+      "word": "mean",
+      "start": 141.8799991607666,
+      "end": 141.8799991607666
+    },
+    {
+      "chunk": 2,
+      "word": "anyone",
+      "start": 141.8799991607666,
+      "end": 142.05999946594238
+    },
+    {
+      "chunk": 2,
+      "word": "can",
+      "start": 142.05999946594238,
+      "end": 142.26000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "have",
+      "start": 142.26000022888184,
+      "end": 142.3799991607666
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 142.3799991607666,
+      "end": 142.76000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "transcripts",
+      "start": 142.76000022888184,
+      "end": 143.1200008392334
+    },
+    {
+      "chunk": 2,
+      "word": "so",
+      "start": 143.1200008392334,
+      "end": 143.7199993133545
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 143.7199993133545,
+      "end": 144.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "have",
+      "start": 144.31999969482422,
+      "end": 144.55999946594238
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 144.55999946594238,
+      "end": 145.04000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "raise",
+      "start": 145.04000091552734,
+      "end": 145.76000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 145.76000022888184,
+      "end": 146.07999992370605
+    },
+    {
+      "chunk": 2,
+      "word": "little",
+      "start": 146.07999992370605,
+      "end": 146.52000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "concern",
+      "start": 146.52000045776367,
+      "end": 147.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "about",
+      "start": 147.31999969482422,
+      "end": 147.68000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "giving",
+      "start": 147.68000030517578,
+      "end": 148.42000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "them",
+      "start": 148.42000007629395,
+      "end": 148.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 148.6599998474121,
+      "end": 148.94000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "CD",
+      "start": 148.94000053405762,
+      "end": 148.94000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "immediately",
+      "start": 148.94000053405762,
+      "end": 149.44000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "because",
+      "start": 149.44000053405762,
+      "end": 149.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "of",
+      "start": 149.81999969482422,
+      "end": 150.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "these",
+      "start": 150.18000030517578,
+      "end": 150.3799991607666
+    },
+    {
+      "chunk": 2,
+      "word": "issues",
+      "start": 150.3799991607666,
+      "end": 150.70000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "of",
+      "start": 150.70000076293945,
+      "end": 150.8799991607666
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 150.8799991607666,
+      "end": 151.42000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "know",
+      "start": 151.42000007629395,
+      "end": 151.42000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "this",
+      "start": 151.42000007629395,
+      "end": 151.5
+    },
+    {
+      "chunk": 2,
+      "word": "kind",
+      "start": 151.5,
+      "end": 151.8400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "of",
+      "start": 151.8400001525879,
+      "end": 151.8400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "stuff",
+      "start": 151.8400001525879,
+      "end": 152.4000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "or",
+      "start": 152.4000015258789,
+      "end": 152.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "maybe",
+      "start": 152.56000137329102,
+      "end": 153.0999984741211
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 153.0999984741211,
+      "end": 154.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "know",
+      "start": 154.31999969482422,
+      "end": 154.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "Good",
+      "start": 154.31999969482422,
+      "end": 154.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "point",
+      "start": 154.31999969482422,
+      "end": 154.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "That's",
+      "start": 155.18000030517578,
+      "end": 155.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 155.3400001525879,
+      "end": 155.43999862670898
+    },
+    {
+      "chunk": 2,
+      "word": "very",
+      "start": 155.43999862670898,
+      "end": 155.5800018310547
+    },
+    {
+      "chunk": 2,
+      "word": "good",
+      "start": 155.5800018310547,
+      "end": 155.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "point",
+      "start": 155.7400016784668,
+      "end": 155.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "Convert",
+      "start": 156.38000106811523,
+      "end": 156.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "it",
+      "start": 156.38000106811523,
+      "end": 156.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "after",
+      "start": 156.38000106811523,
+      "end": 156.52000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "it's",
+      "start": 156.52000045776367,
+      "end": 156.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "been",
+      "start": 156.6599998474121,
+      "end": 156.86000061035156
+    },
+    {
+      "chunk": 2,
+      "word": "cleared",
+      "start": 156.86000061035156,
+      "end": 156.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "with",
+      "start": 156.97999954223633,
+      "end": 157.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 157.1599998474121,
+      "end": 157.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "transcript",
+      "start": 157.54000091552734,
+      "end": 157.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "stage",
+      "start": 157.54000091552734,
+      "end": 158.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "Right",
+      "start": 158.52000045776367,
+      "end": 158.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "And",
+      "start": 158.88000106811523,
+      "end": 158.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "then",
+      "start": 158.88000106811523,
+      "end": 158.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "they",
+      "start": 158.97999954223633,
+      "end": 159.11999893188477
+    },
+    {
+      "chunk": 2,
+      "word": "can",
+      "start": 159.11999893188477,
+      "end": 159.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "get",
+      "start": 159.18000030517578,
+      "end": 159.4000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 159.4000015258789,
+      "end": 159.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "CD",
+      "start": 159.6599998474121,
+      "end": 159.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "but",
+      "start": 159.7599983215332,
+      "end": 159.9000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "just",
+      "start": 159.9000015258789,
+      "end": 160.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "not",
+      "start": 160.02000045776367,
+      "end": 160.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 160.1599998474121,
+      "end": 160.29999923706055
+    },
+    {
+      "chunk": 2,
+      "word": "same",
+      "start": 160.29999923706055,
+      "end": 160.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "date",
+      "start": 160.47999954223633,
+      "end": 160.70000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "It",
+      "start": 161.2599983215332,
+      "end": 161.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "should",
+      "start": 161.6599998474121,
+      "end": 161.9000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "be",
+      "start": 161.9000015258789,
+      "end": 162.04000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 162.04000091552734,
+      "end": 162.20000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "same",
+      "start": 162.20000076293945,
+      "end": 162.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "CD",
+      "start": 162.54000091552734,
+      "end": 162.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "ROM",
+      "start": 162.88000106811523,
+      "end": 163.06000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 163.06000137329102,
+      "end": 163.29999923706055
+    },
+    {
+      "chunk": 2,
+      "word": "we",
+      "start": 163.29999923706055,
+      "end": 163.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "distribute",
+      "start": 163.56000137329102,
+      "end": 164.0
+    },
+    {
+      "chunk": 2,
+      "word": "publicly",
+      "start": 164.0,
+      "end": 164.5800018310547
+    },
+    {
+      "chunk": 2,
+      "word": "right",
+      "start": 164.5800018310547,
+      "end": 164.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "Right",
+      "start": 164.88000106811523,
+      "end": 165.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "Otherwise",
+      "start": 165.29999923706055,
+      "end": 165.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "they're",
+      "start": 165.77999877929688,
+      "end": 165.9199981689453
+    },
+    {
+      "chunk": 2,
+      "word": "not",
+      "start": 165.9199981689453,
+      "end": 166.20000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "allowed",
+      "start": 166.20000076293945,
+      "end": 166.52000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "to",
+      "start": 166.52000045776367,
+      "end": 166.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "There",
+      "start": 166.56000137329102,
+      "end": 166.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "we",
+      "start": 166.7400016784668,
+      "end": 166.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "go",
+      "start": 166.88000106811523,
+      "end": 166.9199981689453
+    },
+    {
+      "chunk": 2,
+      "word": "Oh",
+      "start": 167.02000045776367,
+      "end": 167.13999938964844
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 167.13999938964844,
+      "end": 167.22000122070312
+    },
+    {
+      "chunk": 2,
+      "word": "like",
+      "start": 167.22000122070312,
+      "end": 167.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 167.38000106811523,
+      "end": 167.4000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "That's",
+      "start": 167.4000015258789,
+      "end": 167.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "right",
+      "start": 167.54000091552734,
+      "end": 168.0
+    },
+    {
+      "chunk": 2,
+      "word": "So",
+      "start": 168.3400001525879,
+      "end": 168.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "after",
+      "start": 168.81999969482422,
+      "end": 169.06000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 169.06000137329102,
+      "end": 169.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "transcript",
+      "start": 169.47999954223633,
+      "end": 169.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "screening",
+      "start": 169.47999954223633,
+      "end": 169.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "phase",
+      "start": 169.88000106811523,
+      "end": 170.27999877929688
+    },
+    {
+      "chunk": 2,
+      "word": "Yeah",
+      "start": 170.29999923706055,
+      "end": 170.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "Things",
+      "start": 171.0,
+      "end": 171.27999877929688
+    },
+    {
+      "chunk": 2,
+      "word": "have",
+      "start": 171.27999877929688,
+      "end": 171.45999908447266
+    },
+    {
+      "chunk": 2,
+      "word": "been",
+      "start": 171.45999908447266,
+      "end": 171.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "weeded",
+      "start": 171.7400016784668,
+      "end": 171.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "out",
+      "start": 171.81999969482422,
+      "end": 171.97999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "Yeah",
+      "start": 172.79999923706055,
+      "end": 173.2400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 174.5,
+      "end": 174.5
+    },
+    {
+      "chunk": 2,
+      "word": "got",
+      "start": 174.5,
+      "end": 174.70000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 174.70000076293945,
+      "end": 174.9199981689453
+    },
+    {
+      "chunk": 2,
+      "word": "CD",
+      "start": 174.9199981689453,
+      "end": 175.20000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "Your",
+      "start": 175.63999938964844,
+      "end": 176.0800018310547
+    },
+    {
+      "chunk": 2,
+      "word": "Honor",
+      "start": 176.0800018310547,
+      "end": 176.27999877929688
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 176.36000061035156,
+      "end": 176.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "That's",
+      "start": 178.72000122070312,
+      "end": 179.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 179.1599998474121,
+      "end": 179.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "good",
+      "start": 179.31999969482422,
+      "end": 179.4199981689453
+    },
+    {
+      "chunk": 2,
+      "word": "point",
+      "start": 179.4199981689453,
+      "end": 179.86000061035156
+    },
+    {
+      "chunk": 3,
+      "word": "Yeah",
+      "start": 180.0,
+      "end": 180.36000001430511
+    },
+    {
+      "chunk": 3,
+      "word": "so",
+      "start": 180.36000001430511,
+      "end": 182.38000011444092
+    },
+    {
+      "chunk": 3,
+      "word": "let's",
+      "start": 182.38000011444092,
+      "end": 182.9800000190735
+    },
+    {
+      "chunk": 3,
+      "word": "start",
+      "start": 182.9800000190735,
+      "end": 183.27999997138977
+    },
+    {
+      "chunk": 3,
+      "word": "with",
+      "start": 183.27999997138977,
+      "end": 183.59999990463257
+    },
+    {
+      "chunk": 3,
+      "word": "Tom",
+      "start": 183.59999990463257,
+      "end": 183.6800000667572
+    },
+    {
+      "chunk": 3,
+      "word": "Sorry",
+      "start": 184.17999982833862,
+      "end": 184.28000020980835
+    },
+    {
+      "chunk": 3,
+      "word": "I",
+      "start": 184.38000011444092,
+      "end": 184.46000003814697
+    },
+    {
+      "chunk": 3,
+      "word": "have",
+      "start": 184.46000003814697,
+      "end": 184.67999982833862
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 184.67999982833862,
+      "end": 185.23999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "leave",
+      "start": 185.23999977111816,
+      "end": 185.32000017166138
+    },
+    {
+      "chunk": 3,
+      "word": "I",
+      "start": 185.57999992370605,
+      "end": 185.80000019073486
+    },
+    {
+      "chunk": 3,
+      "word": "will",
+      "start": 185.80000019073486,
+      "end": 185.82000017166138
+    },
+    {
+      "chunk": 3,
+      "word": "be",
+      "start": 185.82000017166138,
+      "end": 185.92000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "here",
+      "start": 185.92000007629395,
+      "end": 186.09999990463257
+    },
+    {
+      "chunk": 3,
+      "word": "full",
+      "start": 186.09999990463257,
+      "end": 186.28000020980835
+    },
+    {
+      "chunk": 3,
+      "word": "time",
+      "start": 186.28000020980835,
+      "end": 186.55999994277954
+    },
+    {
+      "chunk": 3,
+      "word": "next",
+      "start": 186.55999994277954,
+      "end": 187.0199999809265
+    },
+    {
+      "chunk": 3,
+      "word": "week",
+      "start": 187.0199999809265,
+      "end": 187.0199999809265
+    },
+    {
+      "chunk": 3,
+      "word": "Okay",
+      "start": 187.53999996185303,
+      "end": 187.71999979019165
+    },
+    {
+      "chunk": 3,
+      "word": "see",
+      "start": 187.73999977111816,
+      "end": 188.0
+    },
+    {
+      "chunk": 3,
+      "word": "ya",
+      "start": 188.0,
+      "end": 188.10000038146973
+    },
+    {
+      "chunk": 3,
+      "word": "Do",
+      "start": 190.1599998474121,
+      "end": 190.52000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "you",
+      "start": 190.52000045776367,
+      "end": 190.5600004196167
+    },
+    {
+      "chunk": 3,
+      "word": "want",
+      "start": 190.5600004196167,
+      "end": 190.64000034332275
+    },
+    {
+      "chunk": 3,
+      "word": "me",
+      "start": 190.64000034332275,
+      "end": 190.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 190.8400001525879,
+      "end": 190.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "do",
+      "start": 190.8400001525879,
+      "end": 191.02000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 191.02000045776367,
+      "end": 191.18000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "pictures",
+      "start": 191.18000030517578,
+      "end": 191.4399995803833
+    },
+    {
+      "chunk": 3,
+      "word": "Alright",
+      "start": 192.60000038146973,
+      "end": 192.88000011444092
+    },
+    {
+      "chunk": 3,
+      "word": "I'll",
+      "start": 193.11999988555908,
+      "end": 193.23999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "see",
+      "start": 193.23999977111816,
+      "end": 193.4399995803833
+    },
+    {
+      "chunk": 3,
+      "word": "you",
+      "start": 193.4399995803833,
+      "end": 193.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "guys",
+      "start": 193.47999954223633,
+      "end": 193.76000022888184
+    },
+    {
+      "chunk": 3,
+      "word": "next",
+      "start": 193.76000022888184,
+      "end": 193.96000003814697
+    },
+    {
+      "chunk": 3,
+      "word": "week",
+      "start": 193.96000003814697,
+      "end": 194.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "See",
+      "start": 194.35999965667725,
+      "end": 194.53999996185303
+    },
+    {
+      "chunk": 3,
+      "word": "ya",
+      "start": 194.53999996185303,
+      "end": 194.60000038146973
+    },
+    {
+      "chunk": 3,
+      "word": "So",
+      "start": 198.63999938964844,
+      "end": 199.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "let's",
+      "start": 199.1599998474121,
+      "end": 199.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "see",
+      "start": 199.68000030517578,
+      "end": 199.73999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "So",
+      "start": 199.76000022888184,
+      "end": 199.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "that",
+      "start": 199.95999908447266,
+      "end": 200.0
+    },
+    {
+      "chunk": 3,
+      "word": "was",
+      "start": 200.0,
+      "end": 200.1200008392334
+    },
+    {
+      "chunk": 3,
+      "word": "that",
+      "start": 200.1200008392334,
+      "end": 200.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "topic",
+      "start": 200.45999908447266,
+      "end": 200.86000061035156
+    },
+    {
+      "chunk": 3,
+      "word": "And",
+      "start": 201.95999908447266,
+      "end": 202.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "then",
+      "start": 202.47999954223633,
+      "end": 203.0
+    },
+    {
+      "chunk": 3,
+      "word": "I",
+      "start": 203.0,
+      "end": 203.73999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "guess",
+      "start": 203.73999977111816,
+      "end": 203.8799991607666
+    },
+    {
+      "chunk": 3,
+      "word": "another",
+      "start": 203.8799991607666,
+      "end": 204.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "topic",
+      "start": 204.20000076293945,
+      "end": 204.5
+    },
+    {
+      "chunk": 3,
+      "word": "would",
+      "start": 204.5,
+      "end": 204.79999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "be",
+      "start": 204.79999923706055,
+      "end": 205.52000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "where",
+      "start": 205.52000045776367,
+      "end": 206.10000038146973
+    },
+    {
+      "chunk": 3,
+      "word": "are",
+      "start": 206.10000038146973,
+      "end": 206.23999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "we",
+      "start": 206.23999977111816,
+      "end": 206.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "in",
+      "start": 206.47999954223633,
+      "end": 206.6200008392334
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 206.6200008392334,
+      "end": 206.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "whole",
+      "start": 206.8400001525879,
+      "end": 207.1200008392334
+    },
+    {
+      "chunk": 3,
+      "word": "disk",
+      "start": 207.1200008392334,
+      "end": 207.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "resources",
+      "start": 207.45999908447266,
+      "end": 207.94000053405762
+    },
+    {
+      "chunk": 3,
+      "word": "question",
+      "start": 207.94000053405762,
+      "end": 208.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 209.73999977111816,
+      "end": 210.04000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "are",
+      "start": 210.04000091552734,
+      "end": 210.42000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "slowly",
+      "start": 210.42000007629395,
+      "end": 211.07999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "slowly",
+      "start": 211.54000091552734,
+      "end": 211.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "getting",
+      "start": 211.54000091552734,
+      "end": 211.7199993133545
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 211.7199993133545,
+      "end": 211.97999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 211.97999954223633,
+      "end": 212.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "point",
+      "start": 212.1599998474121,
+      "end": 212.2599983215332
+    },
+    {
+      "chunk": 3,
+      "word": "where",
+      "start": 212.2599983215332,
+      "end": 212.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "we",
+      "start": 212.54000091552734,
+      "end": 212.88000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "have",
+      "start": 212.88000106811523,
+      "end": 213.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "enough",
+      "start": 213.2400016784668,
+      "end": 214.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "room",
+      "start": 214.0800018310547,
+      "end": 214.56000137329102
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 214.56000137329102,
+      "end": 214.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "record",
+      "start": 214.7400016784668,
+      "end": 215.06000137329102
+    },
+    {
+      "chunk": 3,
+      "word": "meetings",
+      "start": 215.06000137329102,
+      "end": 215.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "So",
+      "start": 216.29999923706055,
+      "end": 216.5
+    },
+    {
+      "chunk": 3,
+      "word": "I",
+      "start": 216.5,
+      "end": 216.79999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "did",
+      "start": 216.79999923706055,
+      "end": 217.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "a",
+      "start": 217.2400016784668,
+      "end": 217.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "bunch",
+      "start": 217.47999954223633,
+      "end": 217.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "of",
+      "start": 217.47999954223633,
+      "end": 217.72000122070312
+    },
+    {
+      "chunk": 3,
+      "word": "archiving",
+      "start": 217.72000122070312,
+      "end": 218.04000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "and",
+      "start": 218.04000091552734,
+      "end": 218.5800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "still",
+      "start": 218.5800018310547,
+      "end": 218.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "doing",
+      "start": 218.95999908447266,
+      "end": 219.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "a",
+      "start": 219.2400016784668,
+      "end": 219.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "bunch",
+      "start": 219.54000091552734,
+      "end": 219.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "of",
+      "start": 219.54000091552734,
+      "end": 220.0
+    },
+    {
+      "chunk": 3,
+      "word": "archiving",
+      "start": 220.0,
+      "end": 220.0
+    },
+    {
+      "chunk": 3,
+      "word": "I'm",
+      "start": 220.38000106811523,
+      "end": 220.81999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "in",
+      "start": 220.81999969482422,
+      "end": 221.0
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 221.0,
+      "end": 221.36000061035156
+    },
+    {
+      "chunk": 3,
+      "word": "midst",
+      "start": 221.36000061035156,
+      "end": 221.38000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "of",
+      "start": 221.38000106811523,
+      "end": 221.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "doing",
+      "start": 221.54000091552734,
+      "end": 222.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 222.20000076293945,
+      "end": 222.5999984741211
+    },
+    {
+      "chunk": 3,
+      "word": "P",
+      "start": 222.5999984741211,
+      "end": 222.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "files",
+      "start": 222.68000030517578,
+      "end": 222.97999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "from",
+      "start": 222.97999954223633,
+      "end": 223.70000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "Broadcast",
+      "start": 223.70000076293945,
+      "end": 224.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "News",
+      "start": 224.63999938964844,
+      "end": 225.0
+    },
+    {
+      "chunk": 3,
+      "word": "and",
+      "start": 225.0,
+      "end": 225.5800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "it",
+      "start": 225.5800018310547,
+      "end": 225.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "took",
+      "start": 225.9000015258789,
+      "end": 225.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "11",
+      "start": 225.9000015258789,
+      "end": 226.5
+    },
+    {
+      "chunk": 3,
+      "word": "hours",
+      "start": 226.5,
+      "end": 227.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 227.0800018310547,
+      "end": 227.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "copy",
+      "start": 227.9000015258789,
+      "end": 228.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "it",
+      "start": 228.8400001525879,
+      "end": 229.02000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "and",
+      "start": 229.02000045776367,
+      "end": 229.0999984741211
+    },
+    {
+      "chunk": 3,
+      "word": "it",
+      "start": 229.0999984741211,
+      "end": 229.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "will",
+      "start": 229.2400016784668,
+      "end": 229.31999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "take",
+      "start": 229.31999969482422,
+      "end": 229.52000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "another",
+      "start": 229.52000045776367,
+      "end": 229.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "11",
+      "start": 229.9000015258789,
+      "end": 230.18000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 230.18000030517578,
+      "end": 230.4199981689453
+    },
+    {
+      "chunk": 3,
+      "word": "do",
+      "start": 230.4199981689453,
+      "end": 230.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 230.68000030517578,
+      "end": 230.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "clone",
+      "start": 230.9000015258789,
+      "end": 231.2599983215332
+    },
+    {
+      "chunk": 3,
+      "word": "Well",
+      "start": 232.13999938964844,
+      "end": 232.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "it's",
+      "start": 232.54000091552734,
+      "end": 232.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "Avid",
+      "start": 232.8400001525879,
+      "end": 232.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "It's",
+      "start": 233.77999877929688,
+      "end": 233.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "Avid",
+      "start": 233.95999908447266,
+      "end": 234.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "but",
+      "start": 234.31999969482422,
+      "end": 235.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "it's",
+      "start": 235.1599998474121,
+      "end": 235.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "a",
+      "start": 235.63999938964844,
+      "end": 235.7599983215332
+    },
+    {
+      "chunk": 3,
+      "word": "lot",
+      "start": 235.7599983215332,
+      "end": 236.0
+    },
+    {
+      "chunk": 3,
+      "word": "of",
+      "start": 236.0,
+      "end": 236.29999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "data",
+      "start": 236.29999923706055,
+      "end": 236.4000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "It's",
+      "start": 236.72000122070312,
+      "end": 236.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "copied",
+      "start": 236.7400016784668,
+      "end": 236.9199981689453
+    },
+    {
+      "chunk": 3,
+      "word": "from",
+      "start": 236.9199981689453,
+      "end": 237.11999893188477
+    },
+    {
+      "chunk": 3,
+      "word": "one",
+      "start": 237.11999893188477,
+      "end": 237.3400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "place",
+      "start": 237.3400001525879,
+      "end": 237.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "in",
+      "start": 237.45999908447266,
+      "end": 237.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "Avid",
+      "start": 237.7400016784668,
+      "end": 237.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 237.7400016784668,
+      "end": 237.9199981689453
+    },
+    {
+      "chunk": 3,
+      "word": "another",
+      "start": 237.9199981689453,
+      "end": 238.0999984741211
+    },
+    {
+      "chunk": 3,
+      "word": "place",
+      "start": 238.0999984741211,
+      "end": 238.29999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "in",
+      "start": 238.29999923706055,
+      "end": 238.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "Avid",
+      "start": 238.43999862670898,
+      "end": 238.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "I",
+      "start": 238.7599983215332,
+      "end": 239.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "did",
+      "start": 239.0800018310547,
+      "end": 239.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "not",
+      "start": 239.0800018310547,
+      "end": 239.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "tape",
+      "start": 239.0800018310547,
+      "end": 239.18000030517578
+    },
+    {
+      "chunk": 4,
+      "word": "So",
+      "start": 240.5600000023842,
+      "end": 241.0
+    },
+    {
+      "chunk": 4,
+      "word": "I'm",
+      "start": 241.0,
+      "end": 241.20000004768372
+    },
+    {
+      "chunk": 4,
+      "word": "archiving",
+      "start": 241.20000004768372,
+      "end": 241.58000004291534
+    },
+    {
+      "chunk": 4,
+      "word": "it",
+      "start": 241.58000004291534,
+      "end": 241.77999997138977
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 241.77999997138977,
+      "end": 241.89999997615814
+    },
+    {
+      "chunk": 4,
+      "word": "then",
+      "start": 241.89999997615814,
+      "end": 242.0
+    },
+    {
+      "chunk": 4,
+      "word": "I'm",
+      "start": 242.0,
+      "end": 242.05999994277954
+    },
+    {
+      "chunk": 4,
+      "word": "going",
+      "start": 242.05999994277954,
+      "end": 242.1600000858307
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 242.1600000858307,
+      "end": 242.35999989509583
+    },
+    {
+      "chunk": 4,
+      "word": "delete",
+      "start": 242.35999989509583,
+      "end": 242.59999990463257
+    },
+    {
+      "chunk": 4,
+      "word": "files",
+      "start": 242.59999990463257,
+      "end": 243.38000011444092
+    },
+    {
+      "chunk": 4,
+      "word": "So",
+      "start": 243.70000004768372,
+      "end": 243.70000004768372
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 243.70000004768372,
+      "end": 243.85999989509583
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 243.85999989509583,
+      "end": 244.03999996185303
+    },
+    {
+      "chunk": 4,
+      "word": "give",
+      "start": 244.03999996185303,
+      "end": 244.21999979019165
+    },
+    {
+      "chunk": 4,
+      "word": "us",
+      "start": 244.21999979019165,
+      "end": 244.67999982833862
+    },
+    {
+      "chunk": 4,
+      "word": "10",
+      "start": 244.67999982833862,
+      "end": 245.19999980926514
+    },
+    {
+      "chunk": 4,
+      "word": "gigabytes",
+      "start": 245.19999980926514,
+      "end": 245.73999977111816
+    },
+    {
+      "chunk": 4,
+      "word": "of",
+      "start": 245.73999977111816,
+      "end": 246.17999982833862
+    },
+    {
+      "chunk": 4,
+      "word": "free",
+      "start": 246.17999982833862,
+      "end": 246.3600001335144
+    },
+    {
+      "chunk": 4,
+      "word": "space",
+      "start": 246.3600001335144,
+      "end": 246.57999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "Yeah",
+      "start": 246.57999992370605,
+      "end": 246.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 246.8400001525879,
+      "end": 246.9800000190735
+    },
+    {
+      "chunk": 4,
+      "word": "archiving",
+      "start": 246.9800000190735,
+      "end": 247.30000019073486
+    },
+    {
+      "chunk": 4,
+      "word": "probably",
+      "start": 247.30000019073486,
+      "end": 248.0600004196167
+    },
+    {
+      "chunk": 4,
+      "word": "does",
+      "start": 248.0600004196167,
+      "end": 248.3400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "take",
+      "start": 248.3400001525879,
+      "end": 248.4399995803833
+    },
+    {
+      "chunk": 4,
+      "word": "a",
+      "start": 248.4399995803833,
+      "end": 248.5600004196167
+    },
+    {
+      "chunk": 4,
+      "word": "long",
+      "start": 248.5600004196167,
+      "end": 248.69999980926514
+    },
+    {
+      "chunk": 4,
+      "word": "time",
+      "start": 248.69999980926514,
+      "end": 248.92000007629395
+    },
+    {
+      "chunk": 4,
+      "word": "Yeah",
+      "start": 249.1599998474121,
+      "end": 249.31999969482422
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 249.46000003814697,
+      "end": 249.6599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "so",
+      "start": 249.6599998474121,
+      "end": 249.7799997329712
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 249.7799997329712,
+      "end": 250.6599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 250.6599998474121,
+      "end": 250.97999954223633
+    },
+    {
+      "chunk": 4,
+      "word": "be",
+      "start": 250.97999954223633,
+      "end": 251.14000034332275
+    },
+    {
+      "chunk": 4,
+      "word": "done",
+      "start": 251.14000034332275,
+      "end": 251.39999961853027
+    },
+    {
+      "chunk": 4,
+      "word": "in",
+      "start": 251.39999961853027,
+      "end": 252.38000011444092
+    },
+    {
+      "chunk": 4,
+      "word": "about",
+      "start": 252.38000011444092,
+      "end": 252.61999988555908
+    },
+    {
+      "chunk": 4,
+      "word": "two",
+      "start": 252.61999988555908,
+      "end": 252.88000011444092
+    },
+    {
+      "chunk": 4,
+      "word": "hours",
+      "start": 252.88000011444092,
+      "end": 253.23999977111816
+    },
+    {
+      "chunk": 4,
+      "word": "And",
+      "start": 253.47999954223633,
+      "end": 253.61999988555908
+    },
+    {
+      "chunk": 4,
+      "word": "so",
+      "start": 253.61999988555908,
+      "end": 253.96000003814697
+    },
+    {
+      "chunk": 4,
+      "word": "at",
+      "start": 253.96000003814697,
+      "end": 255.03999996185303
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 255.03999996185303,
+      "end": 255.31999969482422
+    },
+    {
+      "chunk": 4,
+      "word": "point",
+      "start": 255.31999969482422,
+      "end": 255.4399995803833
+    },
+    {
+      "chunk": 4,
+      "word": "we'll",
+      "start": 255.46000003814697,
+      "end": 255.57999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "be",
+      "start": 255.57999992370605,
+      "end": 255.76000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "able",
+      "start": 255.76000022888184,
+      "end": 255.81999969482422
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 255.81999969482422,
+      "end": 256.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "record",
+      "start": 256.0200004577637,
+      "end": 256.2199993133545
+    },
+    {
+      "chunk": 4,
+      "word": "five",
+      "start": 256.2199993133545,
+      "end": 256.5
+    },
+    {
+      "chunk": 4,
+      "word": "more",
+      "start": 256.5,
+      "end": 256.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "meetings",
+      "start": 256.70000076293945,
+      "end": 257.0
+    },
+    {
+      "chunk": 4,
+      "word": "One",
+      "start": 257.6200008392334,
+      "end": 258.0599994659424
+    },
+    {
+      "chunk": 4,
+      "word": "thing",
+      "start": 258.0599994659424,
+      "end": 258.23999977111816
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 258.3199996948242,
+      "end": 258.45999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "good",
+      "start": 258.45999908447266,
+      "end": 258.57999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "news",
+      "start": 258.57999992370605,
+      "end": 258.76000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "about",
+      "start": 258.76000022888184,
+      "end": 259.0
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 259.0,
+      "end": 259.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "is",
+      "start": 259.3199996948242,
+      "end": 259.6800003051758
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 259.6800003051758,
+      "end": 259.92000007629395
+    },
+    {
+      "chunk": 4,
+      "word": "once",
+      "start": 259.92000007629395,
+      "end": 260.2800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "it's",
+      "start": 260.2800006866455,
+      "end": 260.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "archived",
+      "start": 260.70000076293945,
+      "end": 260.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "it's",
+      "start": 260.73999977111816,
+      "end": 260.9400005340576
+    },
+    {
+      "chunk": 4,
+      "word": "pretty",
+      "start": 260.9400005340576,
+      "end": 261.26000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "quick",
+      "start": 261.26000022888184,
+      "end": 261.3799991607666
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 261.3799991607666,
+      "end": 261.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "get",
+      "start": 261.54000091552734,
+      "end": 261.6599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "back",
+      "start": 261.6599998474121,
+      "end": 261.9799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "The",
+      "start": 262.6800003051758,
+      "end": 263.1200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "other",
+      "start": 263.1200008392334,
+      "end": 263.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "direction",
+      "start": 263.36000061035156,
+      "end": 263.57999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "is",
+      "start": 263.57999992370605,
+      "end": 263.7800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "fast",
+      "start": 263.7800006866455,
+      "end": 264.07999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "but",
+      "start": 264.1000003814697,
+      "end": 264.26000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "this",
+      "start": 264.26000022888184,
+      "end": 264.45999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "direction",
+      "start": 264.45999908447266,
+      "end": 264.6800003051758
+    },
+    {
+      "chunk": 4,
+      "word": "is",
+      "start": 264.6800003051758,
+      "end": 264.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "really",
+      "start": 264.8400001525879,
+      "end": 265.04000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "slow",
+      "start": 265.04000091552734,
+      "end": 265.26000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "Well",
+      "start": 265.6000003814697,
+      "end": 265.92000007629395
+    },
+    {
+      "chunk": 4,
+      "word": "especially",
+      "start": 265.92000007629395,
+      "end": 266.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "because",
+      "start": 266.1599998474121,
+      "end": 266.3400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "I'm",
+      "start": 266.3400001525879,
+      "end": 266.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "generating",
+      "start": 266.86000061035156,
+      "end": 266.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "a",
+      "start": 266.86000061035156,
+      "end": 267.2800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "clone",
+      "start": 267.2800006866455,
+      "end": 267.2800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "also",
+      "start": 267.2800006866455,
+      "end": 268.1000003814697
+    },
+    {
+      "chunk": 4,
+      "word": "Yeah",
+      "start": 268.1000003814697,
+      "end": 268.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "okay",
+      "start": 268.6800003051758,
+      "end": 269.5
+    },
+    {
+      "chunk": 4,
+      "word": "Generating",
+      "start": 270.20000076293945,
+      "end": 270.63999938964844
+    },
+    {
+      "chunk": 4,
+      "word": "two",
+      "start": 270.63999938964844,
+      "end": 271.07999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "copies",
+      "start": 271.07999992370605,
+      "end": 271.4400005340576
+    },
+    {
+      "chunk": 4,
+      "word": "one",
+      "start": 271.8199996948242,
+      "end": 272.0
+    },
+    {
+      "chunk": 4,
+      "word": "off",
+      "start": 272.0,
+      "end": 272.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "site",
+      "start": 272.3199996948242,
+      "end": 272.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "one",
+      "start": 273.0800018310547,
+      "end": 273.0800018310547
+    },
+    {
+      "chunk": 4,
+      "word": "on",
+      "start": 273.0800018310547,
+      "end": 273.0800018310547
+    },
+    {
+      "chunk": 4,
+      "word": "site",
+      "start": 273.0800018310547,
+      "end": 273.5800018310547
+    },
+    {
+      "chunk": 4,
+      "word": "Now",
+      "start": 274.4799995422363,
+      "end": 274.61999893188477
+    },
+    {
+      "chunk": 4,
+      "word": "what",
+      "start": 274.7400016784668,
+      "end": 274.9199981689453
+    },
+    {
+      "chunk": 4,
+      "word": "about",
+      "start": 274.9199981689453,
+      "end": 275.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "is",
+      "start": 275.38000106811523,
+      "end": 275.7400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 275.7400016784668,
+      "end": 275.939998626709
+    },
+    {
+      "chunk": 4,
+      "word": "plan",
+      "start": 275.939998626709,
+      "end": 276.2200012207031
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 276.2200012207031,
+      "end": 276.88000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "so",
+      "start": 277.88000106811523,
+      "end": 277.88000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "stuff",
+      "start": 277.88000106811523,
+      "end": 278.7400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 278.7400016784668,
+      "end": 278.88000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "be",
+      "start": 278.88000106811523,
+      "end": 279.060001373291
+    },
+    {
+      "chunk": 4,
+      "word": "saved",
+      "start": 279.060001373291,
+      "end": 279.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "it's",
+      "start": 279.439998626709,
+      "end": 279.5800018310547
+    },
+    {
+      "chunk": 4,
+      "word": "just",
+      "start": 279.5800018310547,
+      "end": 279.7400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 279.7400016784668,
+      "end": 280.060001373291
+    },
+    {
+      "chunk": 4,
+      "word": "you're",
+      "start": 280.060001373291,
+      "end": 280.060001373291
+    },
+    {
+      "chunk": 4,
+      "word": "relocating",
+      "start": 280.060001373291,
+      "end": 280.5
+    },
+    {
+      "chunk": 4,
+      "word": "it",
+      "start": 280.5,
+      "end": 280.7200012207031
+    },
+    {
+      "chunk": 4,
+      "word": "I",
+      "start": 280.7599983215332,
+      "end": 281.0
+    },
+    {
+      "chunk": 4,
+      "word": "mean",
+      "start": 281.0,
+      "end": 281.0
+    },
+    {
+      "chunk": 4,
+      "word": "so",
+      "start": 281.0,
+      "end": 281.11999893188477
+    },
+    {
+      "chunk": 4,
+      "word": "we're",
+      "start": 281.11999893188477,
+      "end": 281.2599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "going",
+      "start": 281.2599983215332,
+      "end": 281.29999923706055
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 281.29999923706055,
+      "end": 281.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "get",
+      "start": 281.36000061035156,
+      "end": 281.5
+    },
+    {
+      "chunk": 4,
+      "word": "more",
+      "start": 281.5,
+      "end": 281.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "disk",
+      "start": 281.8400001525879,
+      "end": 281.9799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "space",
+      "start": 281.9799995422363,
+      "end": 282.2400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "or",
+      "start": 282.3199996948242,
+      "end": 282.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "did",
+      "start": 282.54000091552734,
+      "end": 282.7599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "I",
+      "start": 282.7599983215332,
+      "end": 282.9000015258789
+    },
+    {
+      "chunk": 4,
+      "word": "No",
+      "start": 283.38000106811523,
+      "end": 283.8199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "these",
+      "start": 283.8199996948242,
+      "end": 284.2599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "are",
+      "start": 284.2599983215332,
+      "end": 284.5
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 284.5,
+      "end": 284.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "key",
+      "start": 284.70000076293945,
+      "end": 285.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "files",
+      "start": 285.0200004577637,
+      "end": 285.2400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "from",
+      "start": 285.2400016784668,
+      "end": 285.5999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "Broadcast",
+      "start": 285.5999984741211,
+      "end": 285.95999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "News",
+      "start": 285.95999908447266,
+      "end": 286.2200012207031
+    },
+    {
+      "chunk": 4,
+      "word": "which",
+      "start": 286.2599983215332,
+      "end": 286.439998626709
+    },
+    {
+      "chunk": 4,
+      "word": "are",
+      "start": 286.439998626709,
+      "end": 286.7599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "regeneratable",
+      "start": 286.7599983215332,
+      "end": 287.4000015258789
+    },
+    {
+      "chunk": 4,
+      "word": "Oh",
+      "start": 287.6599998474121,
+      "end": 287.9199981689453
+    },
+    {
+      "chunk": 4,
+      "word": "okay",
+      "start": 287.939998626709,
+      "end": 288.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "Regeneratable",
+      "start": 288.5,
+      "end": 288.939998626709
+    },
+    {
+      "chunk": 4,
+      "word": "I",
+      "start": 289.1599998474121,
+      "end": 289.38000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "see",
+      "start": 289.38000106811523,
+      "end": 289.560001373291
+    },
+    {
+      "chunk": 4,
+      "word": "If",
+      "start": 289.7200012207031,
+      "end": 290.0999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "we",
+      "start": 290.0999984741211,
+      "end": 290.2400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "really",
+      "start": 290.2400016784668,
+      "end": 290.5200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "need",
+      "start": 290.5200004577637,
+      "end": 290.7400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "to",
+      "start": 290.7400016784668,
+      "end": 290.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "but",
+      "start": 290.9000015258789,
+      "end": 291.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "we",
+      "start": 291.0200004577637,
+      "end": 291.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "had",
+      "start": 291.1599998474121,
+      "end": 291.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "a",
+      "start": 291.3199996948242,
+      "end": 291.7200012207031
+    },
+    {
+      "chunk": 4,
+      "word": "lot",
+      "start": 291.7200012207031,
+      "end": 291.7599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "of",
+      "start": 291.7599983215332,
+      "end": 291.939998626709
+    },
+    {
+      "chunk": 4,
+      "word": "them",
+      "start": 291.939998626709,
+      "end": 292.0999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 292.3199996948242,
+      "end": 292.63999938964844
+    },
+    {
+      "chunk": 4,
+      "word": "for",
+      "start": 292.63999938964844,
+      "end": 293.060001373291
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 293.060001373291,
+      "end": 293.0999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "full",
+      "start": 293.0999984741211,
+      "end": 293.3400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "140",
+      "start": 293.3400001525879,
+      "end": 294.04000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "hour",
+      "start": 294.04000091552734,
+      "end": 294.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "sets",
+      "start": 294.54000091552734,
+      "end": 295.5999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "And",
+      "start": 295.5999984741211,
+      "end": 296.2200012207031
+    },
+    {
+      "chunk": 4,
+      "word": "so",
+      "start": 296.2200012207031,
+      "end": 296.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "they",
+      "start": 296.36000061035156,
+      "end": 296.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "were",
+      "start": 296.70000076293945,
+      "end": 296.9000015258789
+    },
+    {
+      "chunk": 4,
+      "word": "two",
+      "start": 296.9000015258789,
+      "end": 297.11999893188477
+    },
+    {
+      "chunk": 4,
+      "word": "gigabytes",
+      "start": 297.11999893188477,
+      "end": 297.4799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "per",
+      "start": 297.4799995422363,
+      "end": 298.0
+    },
+    {
+      "chunk": 4,
+      "word": "file",
+      "start": 298.0,
+      "end": 298.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "that",
+      "start": 298.36000061035156,
+      "end": 298.560001373291
+    },
+    {
+      "chunk": 4,
+      "word": "we",
+      "start": 298.560001373291,
+      "end": 298.7599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "had",
+      "start": 298.7599983215332,
+      "end": 299.04000091552734
+    }
+  ]
+}

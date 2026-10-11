@@ -1,0 +1,4121 @@
+{
+  "source": "recordings/project_nimbus_meeting.mp3",
+  "model": "whisper-1",
+  "prompt": "Weekly engineering sync for Project Nimbus. Participants: Marcus, Priya. Topics: Kubernetes migration, EKS cluster, Helm, Redis cache, persistent volume claims, storage class, PostgreSQL latency, Q3 OKRs, DevOps team, Jira ticket.",
+  "duration": 307.94000005722046,
+  "full_text": "Good morning everyone. This is the weekly engineering sync for Project Nimbus. Today is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start with the migration? Sure, thanks Marcus. So the Kubernetes migration is about 70% done. We moved the authentication service, and the billing service to the new EKS cluster last week. The main blocker right now is the Redis cache. When we deployed it with Helm, the persistent volume claims were failing, because of a misconfigured storage class. I opened a ticket, Jira number NIM cache 482, and I expect it to be fixed by Tuesday. OK, good. Do we need anything from the DevOps team? Yes, we need Thomas to approve the Terraform changes for the VPC peering. Without that, the pods in the staging namespace cannot reach the legacy database. I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but I did not have time. Just to confirm, are we still using the T3 large instances for the worker nodes, or did we switch to Graviton? We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker image is now built for both architectures. Great. Let's move to item 2, the PostgreSQL latency issue. Thomas, what did you find? So, the P99 latency on the order's endpoint went from about 80 milliseconds to almost 400 milliseconds after the release on the 12th. Ironically, They analyze on the slope queries, and the problem is a missing composite index on the orders table, on customer ID, and created that. Someone dropped it during the schema migration with Alembic. Ouch! Is there a fix ready? Yes. I wrote a new migration that recreates the index concurrently, so it will not lock the table. I also added a check in our CI pipeline, using pgstat statements, so we get an alert in metadata, if any query goes above 200 milliseconds. That's really helpful. From the product side, customers definitely noticed. We had 11 support tickets about slow checkout in the last week, and our NPS score dropped by 3 points. Thanks, Aisha. Okay, item 3, the Q3 OKRs. Aisha, can you give us the summary? Sure. We have three key results for this quarter. First, reduce checkout abandonment from 18% to 12%. We are currently at 14%, so we are on track, but not finished. Second, launch the new recommendation engine, which uses the embedding model from the data science team. That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team. And third, achieve SoC 2 type 2 readiness. We are about halfway there. What is the risk on the SoC 2 work? The main risk is the audit logging. We need every access to customer data to be logged and retained for one year. Right now we only keep logs in CloudWatch for 30 days. We could export the logs to S3 with a live site. Last item, hiring. We have two open roles. A senior backend engineer with Go and gRPC experience, and a machine learning engineer for the recommendation work. We have three candidates in the final round. Priya and Top. Thomas, please submit your interview feedback in Greenhouse by Friday. Will do. Yes, I will have mine done tomorrow. Great. To summarize the action items. Priya will fix the Redis storage class issue by Tuesday. Thomas will review the Terraform pull request today, and deploy the index migration. Aisha will schedule the Pinecone security review, and draft the log retention plan with Priya. Priya. And everyone, please send your Greenhouse feedback by Friday. Thanks everyone, see you next week.",
+  "segments": [
+    {
+      "chunk": 0,
+      "start": 0.0,
+      "end": 6.079999923706055,
+      "text": "Good morning everyone. This is the weekly engineering sync for Project Nimbus. Today"
+    },
+    {
+      "chunk": 0,
+      "start": 6.079999923706055,
+      "end": 13.0600004196167,
+      "text": "is Thursday, and we have four items on the agenda. The Kubernetes migration, the PostgreSQL"
+    },
+    {
+      "chunk": 0,
+      "start": 13.0600004196167,
+      "end": 20.280000686645508,
+      "text": "latency issue, the Q3 OKRs, and the hiring update. Priya, do you want to start with the"
+    },
+    {
+      "chunk": 0,
+      "start": 21.040000915527344,
+      "end": 29.899999618530273,
+      "text": "migration? Sure, thanks Marcus. So the Kubernetes migration is about 70% done. We moved the"
+    },
+    {
+      "chunk": 0,
+      "start": 29.959999084472656,
+      "end": 36.20000076293945,
+      "text": "authentication service, and the billing service to the new EKS cluster last week. The main"
+    },
+    {
+      "chunk": 0,
+      "start": 36.20000076293945,
+      "end": 42.0,
+      "text": "blocker right now is the Redis cache. When we deployed it with Helm, the persistent volume"
+    },
+    {
+      "chunk": 0,
+      "start": 42.0,
+      "end": 48.58000183105469,
+      "text": "claims were failing, because of a misconfigured storage class. I opened a ticket, Jira number"
+    },
+    {
+      "chunk": 0,
+      "start": 48.58000183105469,
+      "end": 57.20000076293945,
+      "text": "NIM cache 482, and I expect it to be fixed by Tuesday. OK, good. Do we need anything"
+    },
+    {
+      "chunk": 0,
+      "start": 57.20000076293945,
+      "end": 58.70000076293945,
+      "text": "from the DevOps team?"
+    },
+    {
+      "chunk": 1,
+      "start": 60.0,
+      "end": 66.5,
+      "text": "Yes, we need Thomas to approve the Terraform changes for the VPC peering. Without that,"
+    },
+    {
+      "chunk": 1,
+      "start": 66.76000022888184,
+      "end": 70.85999965667725,
+      "text": "the pods in the staging namespace cannot reach the legacy database."
+    },
+    {
+      "chunk": 1,
+      "start": 72.15999984741211,
+      "end": 78.39999961853027,
+      "text": "I can review the Terraform pull request this afternoon. I saw it in GitHub yesterday, but"
+    },
+    {
+      "chunk": 1,
+      "start": 78.39999961853027,
+      "end": 84.70000076293945,
+      "text": "I did not have time. Just to confirm, are we still using the T3 large instances for"
+    },
+    {
+      "chunk": 1,
+      "start": 84.70000076293945,
+      "end": 87.81999969482422,
+      "text": "the worker nodes, or did we switch to Graviton?"
+    },
+    {
+      "chunk": 1,
+      "start": 88.78000068664551,
+      "end": 96.31999969482422,
+      "text": "We switched to Graviton. The ARM-based instances are about 20% cheaper, and our Docker image"
+    },
+    {
+      "chunk": 1,
+      "start": 96.31999969482422,
+      "end": 98.79999923706055,
+      "text": "is now built for both architectures."
+    },
+    {
+      "chunk": 1,
+      "start": 100.29999923706055,
+      "end": 107.47999954223633,
+      "text": "Great. Let's move to item 2, the PostgreSQL latency issue. Thomas, what did you find?"
+    },
+    {
+      "chunk": 1,
+      "start": 108.72000122070312,
+      "end": 115.29999923706055,
+      "text": "So, the P99 latency on the order's endpoint went from about 80 milliseconds to almost"
+    },
+    {
+      "chunk": 1,
+      "start": 115.29999923706055,
+      "end": 119.84000015258789,
+      "text": "400 milliseconds after the release on the 12th. Ironically,"
+    },
+    {
+      "chunk": 2,
+      "start": 120.0,
+      "end": 125.23999977111816,
+      "text": "They analyze on the slope queries, and the problem is a missing composite index on the"
+    },
+    {
+      "chunk": 2,
+      "start": 125.23999977111816,
+      "end": 128.85999965667725,
+      "text": "orders table, on customer ID, and created that."
+    },
+    {
+      "chunk": 2,
+      "start": 129.2799997329712,
+      "end": 132.8400001525879,
+      "text": "Someone dropped it during the schema migration with Alembic."
+    },
+    {
+      "chunk": 2,
+      "start": 134.14000034332275,
+      "end": 136.2199993133545,
+      "text": "Ouch! Is there a fix ready?"
+    },
+    {
+      "chunk": 2,
+      "start": 137.42000007629395,
+      "end": 143.7800006866455,
+      "text": "Yes. I wrote a new migration that recreates the index concurrently, so it will not lock"
+    },
+    {
+      "chunk": 2,
+      "start": 143.79999923706055,
+      "end": 144.44000053405762,
+      "text": "the table."
+    },
+    {
+      "chunk": 2,
+      "start": 144.44000053405762,
+      "end": 151.44000053405762,
+      "text": "I also added a check in our CI pipeline, using pgstat statements, so we get an alert"
+    },
+    {
+      "chunk": 2,
+      "start": 151.44000053405762,
+      "end": 155.61999893188477,
+      "text": "in metadata, if any query goes above 200 milliseconds."
+    },
+    {
+      "chunk": 2,
+      "start": 156.95999908447266,
+      "end": 164.43999862670898,
+      "text": "That's really helpful. From the product side, customers definitely noticed. We had 11 support"
+    },
+    {
+      "chunk": 2,
+      "start": 164.43999862670898,
+      "end": 170.63999938964844,
+      "text": "tickets about slow checkout in the last week, and our NPS score dropped by 3 points."
+    },
+    {
+      "chunk": 2,
+      "start": 172.0800018310547,
+      "end": 179.56000137329102,
+      "text": "Thanks, Aisha. Okay, item 3, the Q3 OKRs. Aisha, can you give us the summary?"
+    },
+    {
+      "chunk": 3,
+      "start": 181.0,
+      "end": 184.59999990463257,
+      "text": "Sure. We have three key results for this quarter."
+    },
+    {
+      "chunk": 3,
+      "start": 185.57999992370605,
+      "end": 190.0,
+      "text": "First, reduce checkout abandonment from 18% to 12%."
+    },
+    {
+      "chunk": 3,
+      "start": 190.6599998474121,
+      "end": 195.69999980926514,
+      "text": "We are currently at 14%, so we are on track, but not finished."
+    },
+    {
+      "chunk": 3,
+      "start": 196.29999923706055,
+      "end": 203.20000076293945,
+      "text": "Second, launch the new recommendation engine, which uses the embedding model from the data science team."
+    },
+    {
+      "chunk": 3,
+      "start": 203.20000076293945,
+      "end": 212.18000030517578,
+      "text": "That one is delayed, because the vector database, we chose Pinecone, needs a security review from the compliance team."
+    },
+    {
+      "chunk": 3,
+      "start": 212.70000076293945,
+      "end": 218.81999969482422,
+      "text": "And third, achieve SoC 2 type 2 readiness. We are about halfway there."
+    },
+    {
+      "chunk": 3,
+      "start": 219.63999938964844,
+      "end": 222.0,
+      "text": "What is the risk on the SoC 2 work?"
+    },
+    {
+      "chunk": 3,
+      "start": 222.77999877929688,
+      "end": 230.9199981689453,
+      "text": "The main risk is the audit logging. We need every access to customer data to be logged and retained for one year."
+    },
+    {
+      "chunk": 3,
+      "start": 230.9199981689453,
+      "end": 235.7400016784668,
+      "text": "Right now we only keep logs in CloudWatch for 30 days."
+    },
+    {
+      "chunk": 3,
+      "start": 237.0,
+      "end": 239.97999954223633,
+      "text": "We could export the logs to S3 with a live site."
+    },
+    {
+      "chunk": 4,
+      "start": 253.46000003814697,
+      "end": 269.9799995422363,
+      "text": "Last item, hiring. We have two open roles. A senior backend engineer with Go and gRPC experience, and a machine learning engineer for the recommendation work. We have three candidates in the final round. Priya and Top."
+    },
+    {
+      "chunk": 4,
+      "start": 269.9799995422363,
+      "end": 274.36000061035156,
+      "text": "Thomas, please submit your interview feedback in Greenhouse by Friday."
+    },
+    {
+      "chunk": 4,
+      "start": 275.61999893188477,
+      "end": 276.2799987792969,
+      "text": "Will do."
+    },
+    {
+      "chunk": 4,
+      "start": 277.439998626709,
+      "end": 279.86000061035156,
+      "text": "Yes, I will have mine done tomorrow."
+    },
+    {
+      "chunk": 4,
+      "start": 280.8400001525879,
+      "end": 283.8400001525879,
+      "text": "Great. To summarize the action items."
+    },
+    {
+      "chunk": 4,
+      "start": 284.63999938964844,
+      "end": 288.0200004577637,
+      "text": "Priya will fix the Redis storage class issue by Tuesday."
+    },
+    {
+      "chunk": 4,
+      "start": 288.38000106811523,
+      "end": 293.8400001525879,
+      "text": "Thomas will review the Terraform pull request today, and deploy the index migration."
+    },
+    {
+      "chunk": 4,
+      "start": 294.38000106811523,
+      "end": 299.9799995422363,
+      "text": "Aisha will schedule the Pinecone security review, and draft the log retention plan with Priya."
+    },
+    {
+      "chunk": 5,
+      "start": 300.0,
+      "end": 307.19999980926514,
+      "text": "Priya. And everyone, please send your Greenhouse feedback by Friday. Thanks everyone, see you"
+    },
+    {
+      "chunk": 5,
+      "start": 307.19999980926514,
+      "end": 307.94000005722046,
+      "text": "next week."
+    }
+  ],
+  "words": [
+    {
+      "chunk": 0,
+      "word": "Good",
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "chunk": 0,
+      "word": "morning",
+      "start": 0.2199999988079071,
+      "end": 0.6200000047683716
+    },
+    {
+      "chunk": 0,
+      "word": "everyone",
+      "start": 0.6200000047683716,
+      "end": 1.3600000143051147
+    },
+    {
+      "chunk": 0,
+      "word": "This",
+      "start": 1.9800000190734863,
+      "end": 2.0199999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 2.0199999809265137,
+      "end": 2.240000009536743
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 2.240000009536743,
+      "end": 2.4200000762939453
+    },
+    {
+      "chunk": 0,
+      "word": "weekly",
+      "start": 2.4200000762939453,
+      "end": 2.7799999713897705
+    },
+    {
+      "chunk": 0,
+      "word": "engineering",
+      "start": 2.7799999713897705,
+      "end": 3.4000000953674316
+    },
+    {
+      "chunk": 0,
+      "word": "sync",
+      "start": 3.4000000953674316,
+      "end": 3.799999952316284
+    },
+    {
+      "chunk": 0,
+      "word": "for",
+      "start": 3.799999952316284,
+      "end": 4.119999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "Project",
+      "start": 4.119999885559082,
+      "end": 4.760000228881836
+    },
+    {
+      "chunk": 0,
+      "word": "Nimbus",
+      "start": 4.760000228881836,
+      "end": 5.699999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "Today",
+      "start": 5.980000019073486,
+      "end": 6.079999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 6.079999923706055,
+      "end": 6.440000057220459
+    },
+    {
+      "chunk": 0,
+      "word": "Thursday",
+      "start": 6.440000057220459,
+      "end": 6.900000095367432
+    },
+    {
+      "chunk": 0,
+      "word": "and",
+      "start": 7.260000228881836,
+      "end": 7.440000057220459
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 7.440000057220459,
+      "end": 7.639999866485596
+    },
+    {
+      "chunk": 0,
+      "word": "have",
+      "start": 7.639999866485596,
+      "end": 7.900000095367432
+    },
+    {
+      "chunk": 0,
+      "word": "four",
+      "start": 7.900000095367432,
+      "end": 8.239999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "items",
+      "start": 8.239999771118164,
+      "end": 8.539999961853027
+    },
+    {
+      "chunk": 0,
+      "word": "on",
+      "start": 8.539999961853027,
+      "end": 8.800000190734863
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 8.800000190734863,
+      "end": 9.0600004196167
+    },
+    {
+      "chunk": 0,
+      "word": "agenda",
+      "start": 9.0600004196167,
+      "end": 9.460000038146973
+    },
+    {
+      "chunk": 0,
+      "word": "The",
+      "start": 10.0600004196167,
+      "end": 10.119999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "Kubernetes",
+      "start": 10.119999885559082,
+      "end": 10.680000305175781
+    },
+    {
+      "chunk": 0,
+      "word": "migration",
+      "start": 10.680000305175781,
+      "end": 11.319999694824219
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 11.800000190734863,
+      "end": 11.960000038146973
+    },
+    {
+      "chunk": 0,
+      "word": "PostgreSQL",
+      "start": 11.960000038146973,
+      "end": 13.0600004196167
+    },
+    {
+      "chunk": 0,
+      "word": "latency",
+      "start": 13.0600004196167,
+      "end": 13.619999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "issue",
+      "start": 13.619999885559082,
+      "end": 14.100000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 14.420000076293945,
+      "end": 14.699999809265137
+    },
+    {
+      "chunk": 0,
+      "word": "Q3",
+      "start": 14.699999809265137,
+      "end": 15.119999885559082
+    },
+    {
+      "chunk": 0,
+      "word": "OKRs",
+      "start": 15.119999885559082,
+      "end": 16.040000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "and",
+      "start": 16.059999465942383,
+      "end": 16.31999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 16.31999969482422,
+      "end": 16.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "hiring",
+      "start": 16.65999984741211,
+      "end": 16.940000534057617
+    },
+    {
+      "chunk": 0,
+      "word": "update",
+      "start": 16.940000534057617,
+      "end": 17.68000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "Priya",
+      "start": 18.299999237060547,
+      "end": 18.420000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "do",
+      "start": 18.600000381469727,
+      "end": 18.84000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "you",
+      "start": 18.84000015258789,
+      "end": 19.040000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "want",
+      "start": 19.040000915527344,
+      "end": 19.3799991607666
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 19.3799991607666,
+      "end": 19.68000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "start",
+      "start": 19.68000030517578,
+      "end": 19.959999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "with",
+      "start": 19.959999084472656,
+      "end": 20.239999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 20.239999771118164,
+      "end": 20.579999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "migration",
+      "start": 21.040000915527344,
+      "end": 21.079999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "Sure",
+      "start": 22.15999984741211,
+      "end": 22.84000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "thanks",
+      "start": 23.1200008392334,
+      "end": 23.559999465942383
+    },
+    {
+      "chunk": 0,
+      "word": "Marcus",
+      "start": 23.559999465942383,
+      "end": 24.100000381469727
+    },
+    {
+      "chunk": 0,
+      "word": "So",
+      "start": 24.540000915527344,
+      "end": 24.860000610351562
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 24.860000610351562,
+      "end": 25.139999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "Kubernetes",
+      "start": 25.139999389648438,
+      "end": 25.65999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "migration",
+      "start": 25.65999984741211,
+      "end": 26.299999237060547
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 26.299999237060547,
+      "end": 26.6200008392334
+    },
+    {
+      "chunk": 0,
+      "word": "about",
+      "start": 26.6200008392334,
+      "end": 27.020000457763672
+    },
+    {
+      "chunk": 0,
+      "word": "70",
+      "start": 27.020000457763672,
+      "end": 27.639999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "",
+      "start": 27.639999389648438,
+      "end": 28.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "done",
+      "start": 28.15999984741211,
+      "end": 28.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "We",
+      "start": 28.899999618530273,
+      "end": 29.200000762939453
+    },
+    {
+      "chunk": 0,
+      "word": "moved",
+      "start": 29.200000762939453,
+      "end": 29.559999465942383
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 29.559999465942383,
+      "end": 29.899999618530273
+    },
+    {
+      "chunk": 0,
+      "word": "authentication",
+      "start": 29.959999084472656,
+      "end": 30.639999389648438
+    },
+    {
+      "chunk": 0,
+      "word": "service",
+      "start": 30.639999389648438,
+      "end": 31.31999969482422
+    },
+    {
+      "chunk": 0,
+      "word": "and",
+      "start": 31.5,
+      "end": 31.739999771118164
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 31.739999771118164,
+      "end": 32.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "billing",
+      "start": 32.099998474121094,
+      "end": 32.2400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "service",
+      "start": 32.2400016784668,
+      "end": 32.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 32.70000076293945,
+      "end": 32.97999954223633
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 32.97999954223633,
+      "end": 33.2599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "new",
+      "start": 33.2599983215332,
+      "end": 33.560001373291016
+    },
+    {
+      "chunk": 0,
+      "word": "EKS",
+      "start": 33.560001373291016,
+      "end": 33.939998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "cluster",
+      "start": 33.939998626708984,
+      "end": 34.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "last",
+      "start": 34.34000015258789,
+      "end": 34.84000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "week",
+      "start": 34.84000015258789,
+      "end": 35.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "The",
+      "start": 35.439998626708984,
+      "end": 35.86000061035156
+    },
+    {
+      "chunk": 0,
+      "word": "main",
+      "start": 35.86000061035156,
+      "end": 36.20000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "blocker",
+      "start": 36.20000076293945,
+      "end": 36.720001220703125
+    },
+    {
+      "chunk": 0,
+      "word": "right",
+      "start": 36.720001220703125,
+      "end": 36.900001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "now",
+      "start": 36.900001525878906,
+      "end": 37.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "is",
+      "start": 37.099998474121094,
+      "end": 37.279998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 37.279998779296875,
+      "end": 37.540000915527344
+    },
+    {
+      "chunk": 0,
+      "word": "Redis",
+      "start": 37.540000915527344,
+      "end": 37.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "cache",
+      "start": 37.7599983215332,
+      "end": 38.13999938964844
+    },
+    {
+      "chunk": 0,
+      "word": "When",
+      "start": 38.52000045776367,
+      "end": 38.79999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 38.79999923706055,
+      "end": 39.119998931884766
+    },
+    {
+      "chunk": 0,
+      "word": "deployed",
+      "start": 39.119998931884766,
+      "end": 39.439998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "it",
+      "start": 39.439998626708984,
+      "end": 39.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "with",
+      "start": 39.70000076293945,
+      "end": 40.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "Helm",
+      "start": 40.099998474121094,
+      "end": 40.5
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 40.5,
+      "end": 40.79999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "persistent",
+      "start": 40.79999923706055,
+      "end": 41.400001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "volume",
+      "start": 41.400001525878906,
+      "end": 42.0
+    },
+    {
+      "chunk": 0,
+      "word": "claims",
+      "start": 42.0,
+      "end": 42.41999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "were",
+      "start": 42.41999816894531,
+      "end": 42.7599983215332
+    },
+    {
+      "chunk": 0,
+      "word": "failing",
+      "start": 42.7599983215332,
+      "end": 43.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "because",
+      "start": 43.400001525878906,
+      "end": 43.7400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "of",
+      "start": 43.7400016784668,
+      "end": 43.91999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "a",
+      "start": 43.91999816894531,
+      "end": 44.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "misconfigured",
+      "start": 44.15999984741211,
+      "end": 44.86000061035156
+    },
+    {
+      "chunk": 0,
+      "word": "storage",
+      "start": 44.86000061035156,
+      "end": 45.400001525878906
+    },
+    {
+      "chunk": 0,
+      "word": "class",
+      "start": 45.400001525878906,
+      "end": 45.939998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 46.099998474121094,
+      "end": 46.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "opened",
+      "start": 46.70000076293945,
+      "end": 46.959999084472656
+    },
+    {
+      "chunk": 0,
+      "word": "a",
+      "start": 46.959999084472656,
+      "end": 47.29999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "ticket",
+      "start": 47.29999923706055,
+      "end": 47.560001373291016
+    },
+    {
+      "chunk": 0,
+      "word": "Jira",
+      "start": 47.880001068115234,
+      "end": 48.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "number",
+      "start": 48.15999984741211,
+      "end": 48.58000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "NIM",
+      "start": 48.58000183105469,
+      "end": 49.099998474121094
+    },
+    {
+      "chunk": 0,
+      "word": "cache",
+      "start": 49.099998474121094,
+      "end": 49.41999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "482",
+      "start": 49.41999816894531,
+      "end": 50.439998626708984
+    },
+    {
+      "chunk": 0,
+      "word": "and",
+      "start": 50.619998931884766,
+      "end": 50.86000061035156
+    },
+    {
+      "chunk": 0,
+      "word": "I",
+      "start": 50.86000061035156,
+      "end": 51.02000045776367
+    },
+    {
+      "chunk": 0,
+      "word": "expect",
+      "start": 51.02000045776367,
+      "end": 51.52000045776367
+    },
+    {
+      "chunk": 0,
+      "word": "it",
+      "start": 51.52000045776367,
+      "end": 51.7400016784668
+    },
+    {
+      "chunk": 0,
+      "word": "to",
+      "start": 51.7400016784668,
+      "end": 51.91999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "be",
+      "start": 51.91999816894531,
+      "end": 52.15999984741211
+    },
+    {
+      "chunk": 0,
+      "word": "fixed",
+      "start": 52.15999984741211,
+      "end": 52.41999816894531
+    },
+    {
+      "chunk": 0,
+      "word": "by",
+      "start": 52.41999816894531,
+      "end": 52.779998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "Tuesday",
+      "start": 52.779998779296875,
+      "end": 53.34000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "OK",
+      "start": 54.720001220703125,
+      "end": 55.08000183105469
+    },
+    {
+      "chunk": 0,
+      "word": "good",
+      "start": 55.439998626708984,
+      "end": 55.70000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "Do",
+      "start": 56.060001373291016,
+      "end": 56.29999923706055
+    },
+    {
+      "chunk": 0,
+      "word": "we",
+      "start": 56.29999923706055,
+      "end": 56.5
+    },
+    {
+      "chunk": 0,
+      "word": "need",
+      "start": 56.5,
+      "end": 56.779998779296875
+    },
+    {
+      "chunk": 0,
+      "word": "anything",
+      "start": 56.779998779296875,
+      "end": 57.20000076293945
+    },
+    {
+      "chunk": 0,
+      "word": "from",
+      "start": 57.20000076293945,
+      "end": 57.5
+    },
+    {
+      "chunk": 0,
+      "word": "the",
+      "start": 57.5,
+      "end": 57.84000015258789
+    },
+    {
+      "chunk": 0,
+      "word": "DevOps",
+      "start": 57.84000015258789,
+      "end": 58.18000030517578
+    },
+    {
+      "chunk": 0,
+      "word": "team",
+      "start": 58.18000030517578,
+      "end": 58.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "Yes",
+      "start": 60.0,
+      "end": 60.34000000357628
+    },
+    {
+      "chunk": 1,
+      "word": "we",
+      "start": 60.60000002384186,
+      "end": 60.77999997138977
+    },
+    {
+      "chunk": 1,
+      "word": "need",
+      "start": 60.77999997138977,
+      "end": 61.080000042915344
+    },
+    {
+      "chunk": 1,
+      "word": "Thomas",
+      "start": 61.080000042915344,
+      "end": 61.519999980926514
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 61.519999980926514,
+      "end": 61.82000005245209
+    },
+    {
+      "chunk": 1,
+      "word": "approve",
+      "start": 61.82000005245209,
+      "end": 62.22000002861023
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 62.22000002861023,
+      "end": 62.6800000667572
+    },
+    {
+      "chunk": 1,
+      "word": "Terraform",
+      "start": 62.6800000667572,
+      "end": 62.94000005722046
+    },
+    {
+      "chunk": 1,
+      "word": "changes",
+      "start": 62.94000005722046,
+      "end": 63.55999994277954
+    },
+    {
+      "chunk": 1,
+      "word": "for",
+      "start": 63.55999994277954,
+      "end": 63.88000011444092
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 63.88000011444092,
+      "end": 64.07999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "VPC",
+      "start": 64.07999992370605,
+      "end": 64.57999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "peering",
+      "start": 64.57999992370605,
+      "end": 65.09999990463257
+    },
+    {
+      "chunk": 1,
+      "word": "Without",
+      "start": 65.6399998664856,
+      "end": 65.98000001907349
+    },
+    {
+      "chunk": 1,
+      "word": "that",
+      "start": 65.98000001907349,
+      "end": 66.5
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 66.76000022888184,
+      "end": 66.94000005722046
+    },
+    {
+      "chunk": 1,
+      "word": "pods",
+      "start": 66.94000005722046,
+      "end": 67.15999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "in",
+      "start": 67.15999984741211,
+      "end": 67.38000011444092
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 67.38000011444092,
+      "end": 67.57999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "staging",
+      "start": 67.57999992370605,
+      "end": 68.0
+    },
+    {
+      "chunk": 1,
+      "word": "namespace",
+      "start": 68.0,
+      "end": 68.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "cannot",
+      "start": 68.65999984741211,
+      "end": 69.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "reach",
+      "start": 69.02000045776367,
+      "end": 69.39999961853027
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 69.39999961853027,
+      "end": 69.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "legacy",
+      "start": 69.65999984741211,
+      "end": 70.10000038146973
+    },
+    {
+      "chunk": 1,
+      "word": "database",
+      "start": 70.10000038146973,
+      "end": 70.85999965667725
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 72.15999984741211,
+      "end": 72.19999980926514
+    },
+    {
+      "chunk": 1,
+      "word": "can",
+      "start": 72.19999980926514,
+      "end": 72.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "review",
+      "start": 72.47999954223633,
+      "end": 72.88000011444092
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 72.88000011444092,
+      "end": 73.22000026702881
+    },
+    {
+      "chunk": 1,
+      "word": "Terraform",
+      "start": 73.22000026702881,
+      "end": 73.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "pull",
+      "start": 73.65999984741211,
+      "end": 74.07999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "request",
+      "start": 74.07999992370605,
+      "end": 74.53999996185303
+    },
+    {
+      "chunk": 1,
+      "word": "this",
+      "start": 74.53999996185303,
+      "end": 75.0600004196167
+    },
+    {
+      "chunk": 1,
+      "word": "afternoon",
+      "start": 75.0600004196167,
+      "end": 75.53999996185303
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 76.04000091552734,
+      "end": 76.23999977111816
+    },
+    {
+      "chunk": 1,
+      "word": "saw",
+      "start": 76.23999977111816,
+      "end": 76.52000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "it",
+      "start": 76.52000045776367,
+      "end": 76.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "in",
+      "start": 76.68000030517578,
+      "end": 76.89999961853027
+    },
+    {
+      "chunk": 1,
+      "word": "GitHub",
+      "start": 76.89999961853027,
+      "end": 77.34000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "yesterday",
+      "start": 77.34000015258789,
+      "end": 77.94000053405762
+    },
+    {
+      "chunk": 1,
+      "word": "but",
+      "start": 78.13999938964844,
+      "end": 78.39999961853027
+    },
+    {
+      "chunk": 1,
+      "word": "I",
+      "start": 78.39999961853027,
+      "end": 78.6200008392334
+    },
+    {
+      "chunk": 1,
+      "word": "did",
+      "start": 78.6200008392334,
+      "end": 78.76000022888184
+    },
+    {
+      "chunk": 1,
+      "word": "not",
+      "start": 78.76000022888184,
+      "end": 78.95999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "have",
+      "start": 78.95999908447266,
+      "end": 79.31999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "time",
+      "start": 79.31999969482422,
+      "end": 79.76000022888184
+    },
+    {
+      "chunk": 1,
+      "word": "Just",
+      "start": 80.31999969482422,
+      "end": 80.5
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 80.5,
+      "end": 80.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "confirm",
+      "start": 80.84000015258789,
+      "end": 81.3799991607666
+    },
+    {
+      "chunk": 1,
+      "word": "are",
+      "start": 81.68000030517578,
+      "end": 81.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "we",
+      "start": 81.84000015258789,
+      "end": 82.04000091552734
+    },
+    {
+      "chunk": 1,
+      "word": "still",
+      "start": 82.04000091552734,
+      "end": 82.36000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "using",
+      "start": 82.36000061035156,
+      "end": 82.71999931335449
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 82.71999931335449,
+      "end": 83.07999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "T3",
+      "start": 83.07999992370605,
+      "end": 83.42000007629395
+    },
+    {
+      "chunk": 1,
+      "word": "large",
+      "start": 83.42000007629395,
+      "end": 83.92000007629395
+    },
+    {
+      "chunk": 1,
+      "word": "instances",
+      "start": 83.92000007629395,
+      "end": 84.28000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "for",
+      "start": 84.28000068664551,
+      "end": 84.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 84.70000076293945,
+      "end": 84.89999961853027
+    },
+    {
+      "chunk": 1,
+      "word": "worker",
+      "start": 84.89999961853027,
+      "end": 85.28000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "nodes",
+      "start": 85.28000068664551,
+      "end": 85.63999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "or",
+      "start": 85.8799991607666,
+      "end": 86.13999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "did",
+      "start": 86.13999938964844,
+      "end": 86.34000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "we",
+      "start": 86.34000015258789,
+      "end": 86.63999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "switch",
+      "start": 86.63999938964844,
+      "end": 86.94000053405762
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 86.94000053405762,
+      "end": 87.26000022888184
+    },
+    {
+      "chunk": 1,
+      "word": "Graviton",
+      "start": 87.26000022888184,
+      "end": 87.81999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "We",
+      "start": 88.78000068664551,
+      "end": 89.18000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "switched",
+      "start": 89.18000030517578,
+      "end": 89.68000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 89.68000030517578,
+      "end": 90.07999992370605
+    },
+    {
+      "chunk": 1,
+      "word": "Graviton",
+      "start": 90.07999992370605,
+      "end": 90.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "The",
+      "start": 91.15999984741211,
+      "end": 91.34000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "ARM",
+      "start": 91.34000015258789,
+      "end": 91.78000068664551
+    },
+    {
+      "chunk": 1,
+      "word": "based",
+      "start": 91.78000068664551,
+      "end": 92.2599983215332
+    },
+    {
+      "chunk": 1,
+      "word": "instances",
+      "start": 92.2599983215332,
+      "end": 92.72000122070312
+    },
+    {
+      "chunk": 1,
+      "word": "are",
+      "start": 92.72000122070312,
+      "end": 93.06000137329102
+    },
+    {
+      "chunk": 1,
+      "word": "about",
+      "start": 93.06000137329102,
+      "end": 93.43999862670898
+    },
+    {
+      "chunk": 1,
+      "word": "20",
+      "start": 93.43999862670898,
+      "end": 93.97999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "",
+      "start": 93.97999954223633,
+      "end": 94.5
+    },
+    {
+      "chunk": 1,
+      "word": "cheaper",
+      "start": 94.5,
+      "end": 94.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "and",
+      "start": 95.20000076293945,
+      "end": 95.41999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "our",
+      "start": 95.41999816894531,
+      "end": 95.77999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "Docker",
+      "start": 95.77999877929688,
+      "end": 96.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "image",
+      "start": 96.02000045776367,
+      "end": 96.31999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "is",
+      "start": 96.31999969482422,
+      "end": 96.52000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "now",
+      "start": 96.52000045776367,
+      "end": 96.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "built",
+      "start": 96.84000015258789,
+      "end": 97.13999938964844
+    },
+    {
+      "chunk": 1,
+      "word": "for",
+      "start": 97.13999938964844,
+      "end": 97.45999908447266
+    },
+    {
+      "chunk": 1,
+      "word": "both",
+      "start": 97.45999908447266,
+      "end": 97.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "architectures",
+      "start": 97.79999923706055,
+      "end": 98.79999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "Great",
+      "start": 100.29999923706055,
+      "end": 100.4000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "Let's",
+      "start": 100.84000015258789,
+      "end": 101.27999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "move",
+      "start": 101.27999877929688,
+      "end": 101.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 101.47999954223633,
+      "end": 101.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "item",
+      "start": 101.91999816894531,
+      "end": 102.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "2",
+      "start": 102.02000045776367,
+      "end": 102.43999862670898
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 102.63999938964844,
+      "end": 102.86000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "PostgreSQL",
+      "start": 102.86000061035156,
+      "end": 103.97999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "latency",
+      "start": 103.97999954223633,
+      "end": 104.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "issue",
+      "start": 104.47999954223633,
+      "end": 105.41999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "Thomas",
+      "start": 105.47999954223633,
+      "end": 106.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "what",
+      "start": 106.29999923706055,
+      "end": 106.61999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "did",
+      "start": 106.61999893188477,
+      "end": 106.86000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "you",
+      "start": 106.86000061035156,
+      "end": 107.0999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "find",
+      "start": 107.0999984741211,
+      "end": 107.47999954223633
+    },
+    {
+      "chunk": 1,
+      "word": "So",
+      "start": 108.72000122070312,
+      "end": 109.18000030517578
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 109.41999816894531,
+      "end": 109.61999893188477
+    },
+    {
+      "chunk": 1,
+      "word": "P99",
+      "start": 109.61999893188477,
+      "end": 110.5
+    },
+    {
+      "chunk": 1,
+      "word": "latency",
+      "start": 110.5,
+      "end": 111.08000183105469
+    },
+    {
+      "chunk": 1,
+      "word": "on",
+      "start": 111.08000183105469,
+      "end": 111.34000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 111.34000015258789,
+      "end": 111.65999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "order's",
+      "start": 111.65999984741211,
+      "end": 112.0
+    },
+    {
+      "chunk": 1,
+      "word": "endpoint",
+      "start": 112.0,
+      "end": 112.36000061035156
+    },
+    {
+      "chunk": 1,
+      "word": "went",
+      "start": 112.36000061035156,
+      "end": 112.70000076293945
+    },
+    {
+      "chunk": 1,
+      "word": "from",
+      "start": 112.70000076293945,
+      "end": 113.02000045776367
+    },
+    {
+      "chunk": 1,
+      "word": "about",
+      "start": 113.02000045776367,
+      "end": 113.38000106811523
+    },
+    {
+      "chunk": 1,
+      "word": "80",
+      "start": 113.38000106811523,
+      "end": 113.77999877929688
+    },
+    {
+      "chunk": 1,
+      "word": "milliseconds",
+      "start": 113.77999877929688,
+      "end": 114.41999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "to",
+      "start": 114.41999816894531,
+      "end": 114.91999816894531
+    },
+    {
+      "chunk": 1,
+      "word": "almost",
+      "start": 114.91999816894531,
+      "end": 115.29999923706055
+    },
+    {
+      "chunk": 1,
+      "word": "400",
+      "start": 115.29999923706055,
+      "end": 116.04000091552734
+    },
+    {
+      "chunk": 1,
+      "word": "milliseconds",
+      "start": 116.04000091552734,
+      "end": 116.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "after",
+      "start": 116.84000015258789,
+      "end": 117.31999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 117.31999969482422,
+      "end": 117.5999984741211
+    },
+    {
+      "chunk": 1,
+      "word": "release",
+      "start": 117.5999984741211,
+      "end": 117.84000015258789
+    },
+    {
+      "chunk": 1,
+      "word": "on",
+      "start": 117.84000015258789,
+      "end": 118.06000137329102
+    },
+    {
+      "chunk": 1,
+      "word": "the",
+      "start": 118.06000137329102,
+      "end": 118.22000122070312
+    },
+    {
+      "chunk": 1,
+      "word": "12th",
+      "start": 118.22000122070312,
+      "end": 119.31999969482422
+    },
+    {
+      "chunk": 1,
+      "word": "Ironically",
+      "start": 119.4000015258789,
+      "end": 119.84000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "They",
+      "start": 120.0,
+      "end": 120.30000001192093
+    },
+    {
+      "chunk": 2,
+      "word": "analyze",
+      "start": 120.30000001192093,
+      "end": 120.5799999833107
+    },
+    {
+      "chunk": 2,
+      "word": "on",
+      "start": 120.5799999833107,
+      "end": 120.83999997377396
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 120.83999997377396,
+      "end": 121.03999996185303
+    },
+    {
+      "chunk": 2,
+      "word": "slope",
+      "start": 121.03999996185303,
+      "end": 121.3400000333786
+    },
+    {
+      "chunk": 2,
+      "word": "queries",
+      "start": 121.3400000333786,
+      "end": 121.86000001430511
+    },
+    {
+      "chunk": 2,
+      "word": "and",
+      "start": 122.14000010490417,
+      "end": 122.3199999332428
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 122.3199999332428,
+      "end": 122.59999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "problem",
+      "start": 122.59999990463257,
+      "end": 122.92000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "is",
+      "start": 122.92000007629395,
+      "end": 123.09999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 123.09999990463257,
+      "end": 123.59999990463257
+    },
+    {
+      "chunk": 2,
+      "word": "missing",
+      "start": 123.59999990463257,
+      "end": 123.64000010490417
+    },
+    {
+      "chunk": 2,
+      "word": "composite",
+      "start": 123.64000010490417,
+      "end": 124.32000017166138
+    },
+    {
+      "chunk": 2,
+      "word": "index",
+      "start": 124.32000017166138,
+      "end": 124.6399998664856
+    },
+    {
+      "chunk": 2,
+      "word": "on",
+      "start": 124.6399998664856,
+      "end": 124.94000005722046
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 124.94000005722046,
+      "end": 125.23999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "orders",
+      "start": 125.23999977111816,
+      "end": 125.48000001907349
+    },
+    {
+      "chunk": 2,
+      "word": "table",
+      "start": 125.48000001907349,
+      "end": 125.98000001907349
+    },
+    {
+      "chunk": 2,
+      "word": "on",
+      "start": 126.30000019073486,
+      "end": 126.61999988555908
+    },
+    {
+      "chunk": 2,
+      "word": "customer",
+      "start": 126.61999988555908,
+      "end": 127.07999992370605
+    },
+    {
+      "chunk": 2,
+      "word": "ID",
+      "start": 127.07999992370605,
+      "end": 127.46000003814697
+    },
+    {
+      "chunk": 2,
+      "word": "and",
+      "start": 127.65999984741211,
+      "end": 127.92000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "created",
+      "start": 127.92000007629395,
+      "end": 128.5
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 128.5,
+      "end": 128.85999965667725
+    },
+    {
+      "chunk": 2,
+      "word": "Someone",
+      "start": 129.2799997329712,
+      "end": 129.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "dropped",
+      "start": 129.6599998474121,
+      "end": 130.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "it",
+      "start": 130.02000045776367,
+      "end": 130.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "during",
+      "start": 130.3400001525879,
+      "end": 130.69999980926514
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 130.69999980926514,
+      "end": 131.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "schema",
+      "start": 131.31999969482422,
+      "end": 131.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "migration",
+      "start": 131.31999969482422,
+      "end": 131.85999965667725
+    },
+    {
+      "chunk": 2,
+      "word": "with",
+      "start": 131.85999965667725,
+      "end": 132.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "Alembic",
+      "start": 132.3400001525879,
+      "end": 132.8400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "Ouch",
+      "start": 134.14000034332275,
+      "end": 134.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "Is",
+      "start": 134.92000007629395,
+      "end": 135.1599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "there",
+      "start": 135.1599998474121,
+      "end": 135.4399995803833
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 135.4399995803833,
+      "end": 135.7200002670288
+    },
+    {
+      "chunk": 2,
+      "word": "fix",
+      "start": 135.7200002670288,
+      "end": 135.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "ready",
+      "start": 135.81999969482422,
+      "end": 136.2199993133545
+    },
+    {
+      "chunk": 2,
+      "word": "Yes",
+      "start": 137.42000007629395,
+      "end": 137.89999961853027
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 137.94000053405762,
+      "end": 138.55999946594238
+    },
+    {
+      "chunk": 2,
+      "word": "wrote",
+      "start": 138.55999946594238,
+      "end": 138.70000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 138.70000076293945,
+      "end": 138.94000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "new",
+      "start": 138.94000053405762,
+      "end": 139.26000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "migration",
+      "start": 139.26000022888184,
+      "end": 139.68000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "that",
+      "start": 139.68000030517578,
+      "end": 140.20000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "recreates",
+      "start": 140.20000076293945,
+      "end": 140.8400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 140.8400001525879,
+      "end": 141.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "index",
+      "start": 141.47999954223633,
+      "end": 141.47999954223633
+    },
+    {
+      "chunk": 2,
+      "word": "concurrently",
+      "start": 141.47999954223633,
+      "end": 142.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "so",
+      "start": 142.54000091552734,
+      "end": 142.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "it",
+      "start": 142.81999969482422,
+      "end": 143.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "will",
+      "start": 143.02000045776367,
+      "end": 143.23999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "not",
+      "start": 143.23999977111816,
+      "end": 143.5
+    },
+    {
+      "chunk": 2,
+      "word": "lock",
+      "start": 143.5,
+      "end": 143.7800006866455
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 143.79999923706055,
+      "end": 144.44000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "table",
+      "start": 144.44000053405762,
+      "end": 144.44000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "I",
+      "start": 144.44000053405762,
+      "end": 145.04000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "also",
+      "start": 145.04000091552734,
+      "end": 145.5
+    },
+    {
+      "chunk": 2,
+      "word": "added",
+      "start": 145.5,
+      "end": 145.8400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "a",
+      "start": 145.8400001525879,
+      "end": 146.23999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "check",
+      "start": 146.23999977111816,
+      "end": 146.26000022888184
+    },
+    {
+      "chunk": 2,
+      "word": "in",
+      "start": 146.26000022888184,
+      "end": 146.42000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "our",
+      "start": 146.42000007629395,
+      "end": 146.7199993133545
+    },
+    {
+      "chunk": 2,
+      "word": "CI",
+      "start": 146.7199993133545,
+      "end": 147.10000038146973
+    },
+    {
+      "chunk": 2,
+      "word": "pipeline",
+      "start": 147.10000038146973,
+      "end": 147.70000076293945
+    },
+    {
+      "chunk": 2,
+      "word": "using",
+      "start": 148.04000091552734,
+      "end": 148.39999961853027
+    },
+    {
+      "chunk": 2,
+      "word": "pgstat",
+      "start": 148.39999961853027,
+      "end": 149.2199993133545
+    },
+    {
+      "chunk": 2,
+      "word": "statements",
+      "start": 149.2199993133545,
+      "end": 150.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "so",
+      "start": 150.3799991607666,
+      "end": 150.60000038146973
+    },
+    {
+      "chunk": 2,
+      "word": "we",
+      "start": 150.60000038146973,
+      "end": 150.81999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "get",
+      "start": 150.81999969482422,
+      "end": 151.0
+    },
+    {
+      "chunk": 2,
+      "word": "an",
+      "start": 151.0,
+      "end": 151.23999977111816
+    },
+    {
+      "chunk": 2,
+      "word": "alert",
+      "start": 151.23999977111816,
+      "end": 151.44000053405762
+    },
+    {
+      "chunk": 2,
+      "word": "in",
+      "start": 151.44000053405762,
+      "end": 151.92000007629395
+    },
+    {
+      "chunk": 2,
+      "word": "metadata",
+      "start": 151.92000007629395,
+      "end": 152.11999893188477
+    },
+    {
+      "chunk": 2,
+      "word": "if",
+      "start": 152.43999862670898,
+      "end": 152.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "any",
+      "start": 152.6599998474121,
+      "end": 153.04000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "query",
+      "start": 153.04000091552734,
+      "end": 153.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "goes",
+      "start": 153.38000106811523,
+      "end": 153.63999938964844
+    },
+    {
+      "chunk": 2,
+      "word": "above",
+      "start": 153.63999938964844,
+      "end": 153.95999908447266
+    },
+    {
+      "chunk": 2,
+      "word": "200",
+      "start": 153.95999908447266,
+      "end": 154.7400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "milliseconds",
+      "start": 154.7400016784668,
+      "end": 155.61999893188477
+    },
+    {
+      "chunk": 2,
+      "word": "That's",
+      "start": 156.95999908447266,
+      "end": 157.2400016784668
+    },
+    {
+      "chunk": 2,
+      "word": "really",
+      "start": 157.2400016784668,
+      "end": 157.61999893188477
+    },
+    {
+      "chunk": 2,
+      "word": "helpful",
+      "start": 157.61999893188477,
+      "end": 158.2599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "From",
+      "start": 158.79999923706055,
+      "end": 159.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 159.02000045776367,
+      "end": 159.2599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "product",
+      "start": 159.2599983215332,
+      "end": 159.7599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "side",
+      "start": 159.7599983215332,
+      "end": 160.4000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "customers",
+      "start": 161.20000076293945,
+      "end": 161.22000122070312
+    },
+    {
+      "chunk": 2,
+      "word": "definitely",
+      "start": 161.22000122070312,
+      "end": 161.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "noticed",
+      "start": 161.88000106811523,
+      "end": 162.54000091552734
+    },
+    {
+      "chunk": 2,
+      "word": "We",
+      "start": 163.02000045776367,
+      "end": 163.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "had",
+      "start": 163.18000030517578,
+      "end": 163.4199981689453
+    },
+    {
+      "chunk": 2,
+      "word": "11",
+      "start": 163.4199981689453,
+      "end": 163.79999923706055
+    },
+    {
+      "chunk": 2,
+      "word": "support",
+      "start": 163.79999923706055,
+      "end": 164.43999862670898
+    },
+    {
+      "chunk": 2,
+      "word": "tickets",
+      "start": 164.43999862670898,
+      "end": 164.88000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "about",
+      "start": 164.88000106811523,
+      "end": 165.36000061035156
+    },
+    {
+      "chunk": 2,
+      "word": "slow",
+      "start": 165.36000061035156,
+      "end": 165.7599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "checkout",
+      "start": 165.7599983215332,
+      "end": 166.11999893188477
+    },
+    {
+      "chunk": 2,
+      "word": "in",
+      "start": 166.11999893188477,
+      "end": 166.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 166.38000106811523,
+      "end": 166.68000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "last",
+      "start": 166.68000030517578,
+      "end": 166.93999862670898
+    },
+    {
+      "chunk": 2,
+      "word": "week",
+      "start": 166.93999862670898,
+      "end": 167.3400001525879
+    },
+    {
+      "chunk": 2,
+      "word": "and",
+      "start": 167.5800018310547,
+      "end": 167.79999923706055
+    },
+    {
+      "chunk": 2,
+      "word": "our",
+      "start": 167.79999923706055,
+      "end": 168.06000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "NPS",
+      "start": 168.06000137329102,
+      "end": 168.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "score",
+      "start": 168.56000137329102,
+      "end": 168.95999908447266
+    },
+    {
+      "chunk": 2,
+      "word": "dropped",
+      "start": 168.95999908447266,
+      "end": 169.2599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "by",
+      "start": 169.2599983215332,
+      "end": 169.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "3",
+      "start": 169.6599998474121,
+      "end": 170.0
+    },
+    {
+      "chunk": 2,
+      "word": "points",
+      "start": 170.0,
+      "end": 170.63999938964844
+    },
+    {
+      "chunk": 2,
+      "word": "Thanks",
+      "start": 172.0800018310547,
+      "end": 172.6599998474121
+    },
+    {
+      "chunk": 2,
+      "word": "Aisha",
+      "start": 173.0999984741211,
+      "end": 173.2599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "Okay",
+      "start": 173.93999862670898,
+      "end": 174.31999969482422
+    },
+    {
+      "chunk": 2,
+      "word": "item",
+      "start": 174.54000091552734,
+      "end": 174.9000015258789
+    },
+    {
+      "chunk": 2,
+      "word": "3",
+      "start": 174.9000015258789,
+      "end": 175.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 175.5800018310547,
+      "end": 175.79999923706055
+    },
+    {
+      "chunk": 2,
+      "word": "Q3",
+      "start": 175.79999923706055,
+      "end": 176.2599983215332
+    },
+    {
+      "chunk": 2,
+      "word": "OKRs",
+      "start": 176.2599983215332,
+      "end": 177.18000030517578
+    },
+    {
+      "chunk": 2,
+      "word": "Aisha",
+      "start": 177.88000106811523,
+      "end": 178.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "can",
+      "start": 178.18000030517578,
+      "end": 178.38000106811523
+    },
+    {
+      "chunk": 2,
+      "word": "you",
+      "start": 178.38000106811523,
+      "end": 178.56000137329102
+    },
+    {
+      "chunk": 2,
+      "word": "give",
+      "start": 178.56000137329102,
+      "end": 178.77999877929688
+    },
+    {
+      "chunk": 2,
+      "word": "us",
+      "start": 178.77999877929688,
+      "end": 179.02000045776367
+    },
+    {
+      "chunk": 2,
+      "word": "the",
+      "start": 179.02000045776367,
+      "end": 179.36000061035156
+    },
+    {
+      "chunk": 2,
+      "word": "summary",
+      "start": 179.36000061035156,
+      "end": 179.56000137329102
+    },
+    {
+      "chunk": 3,
+      "word": "Sure",
+      "start": 181.0,
+      "end": 181.41999995708466
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 181.79999995231628,
+      "end": 182.03999996185303
+    },
+    {
+      "chunk": 3,
+      "word": "have",
+      "start": 182.03999996185303,
+      "end": 182.29999995231628
+    },
+    {
+      "chunk": 3,
+      "word": "three",
+      "start": 182.29999995231628,
+      "end": 182.6800000667572
+    },
+    {
+      "chunk": 3,
+      "word": "key",
+      "start": 182.6800000667572,
+      "end": 182.94000005722046
+    },
+    {
+      "chunk": 3,
+      "word": "results",
+      "start": 182.94000005722046,
+      "end": 183.35999989509583
+    },
+    {
+      "chunk": 3,
+      "word": "for",
+      "start": 183.35999989509583,
+      "end": 183.72000002861023
+    },
+    {
+      "chunk": 3,
+      "word": "this",
+      "start": 183.72000002861023,
+      "end": 184.0
+    },
+    {
+      "chunk": 3,
+      "word": "quarter",
+      "start": 184.0,
+      "end": 184.59999990463257
+    },
+    {
+      "chunk": 3,
+      "word": "First",
+      "start": 185.57999992370605,
+      "end": 185.57999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "reduce",
+      "start": 185.96000003814697,
+      "end": 186.30000019073486
+    },
+    {
+      "chunk": 3,
+      "word": "checkout",
+      "start": 186.30000019073486,
+      "end": 186.8400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "abandonment",
+      "start": 186.8400001525879,
+      "end": 187.61999988555908
+    },
+    {
+      "chunk": 3,
+      "word": "from",
+      "start": 187.61999988555908,
+      "end": 187.88000011444092
+    },
+    {
+      "chunk": 3,
+      "word": "18",
+      "start": 187.88000011444092,
+      "end": 188.31999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "",
+      "start": 188.31999969482422,
+      "end": 188.81999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 188.81999969482422,
+      "end": 189.07999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "12",
+      "start": 189.07999992370605,
+      "end": 190.0
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 190.6599998474121,
+      "end": 190.88000011444092
+    },
+    {
+      "chunk": 3,
+      "word": "are",
+      "start": 190.88000011444092,
+      "end": 191.10000038146973
+    },
+    {
+      "chunk": 3,
+      "word": "currently",
+      "start": 191.10000038146973,
+      "end": 191.52000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "at",
+      "start": 191.52000045776367,
+      "end": 191.80000019073486
+    },
+    {
+      "chunk": 3,
+      "word": "14",
+      "start": 191.80000019073486,
+      "end": 193.14000034332275
+    },
+    {
+      "chunk": 3,
+      "word": "so",
+      "start": 193.14000034332275,
+      "end": 193.57999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "we",
+      "start": 193.57999992370605,
+      "end": 193.73999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "are",
+      "start": 193.73999977111816,
+      "end": 193.92000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "on",
+      "start": 193.92000007629395,
+      "end": 194.5
+    },
+    {
+      "chunk": 3,
+      "word": "track",
+      "start": 194.5,
+      "end": 194.5
+    },
+    {
+      "chunk": 3,
+      "word": "but",
+      "start": 194.69999980926514,
+      "end": 194.89999961853027
+    },
+    {
+      "chunk": 3,
+      "word": "not",
+      "start": 194.89999961853027,
+      "end": 195.2200002670288
+    },
+    {
+      "chunk": 3,
+      "word": "finished",
+      "start": 195.2200002670288,
+      "end": 195.69999980926514
+    },
+    {
+      "chunk": 3,
+      "word": "Second",
+      "start": 196.29999923706055,
+      "end": 196.7800006866455
+    },
+    {
+      "chunk": 3,
+      "word": "launch",
+      "start": 197.07999992370605,
+      "end": 197.47999954223633
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 197.47999954223633,
+      "end": 197.70000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "new",
+      "start": 197.70000076293945,
+      "end": 198.02000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "recommendation",
+      "start": 198.02000045776367,
+      "end": 198.57999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "engine",
+      "start": 198.57999992370605,
+      "end": 199.39999961853027
+    },
+    {
+      "chunk": 3,
+      "word": "which",
+      "start": 199.6200008392334,
+      "end": 199.92000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "uses",
+      "start": 199.92000007629395,
+      "end": 200.2800006866455
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 200.2800006866455,
+      "end": 200.60000038146973
+    },
+    {
+      "chunk": 3,
+      "word": "embedding",
+      "start": 200.60000038146973,
+      "end": 201.07999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "model",
+      "start": 201.07999992370605,
+      "end": 201.3799991607666
+    },
+    {
+      "chunk": 3,
+      "word": "from",
+      "start": 201.3799991607666,
+      "end": 201.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 201.68000030517578,
+      "end": 202.0
+    },
+    {
+      "chunk": 3,
+      "word": "data",
+      "start": 202.0,
+      "end": 202.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "science",
+      "start": 202.20000076293945,
+      "end": 202.6200008392334
+    },
+    {
+      "chunk": 3,
+      "word": "team",
+      "start": 202.6200008392334,
+      "end": 203.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "That",
+      "start": 203.20000076293945,
+      "end": 203.94000053405762
+    },
+    {
+      "chunk": 3,
+      "word": "one",
+      "start": 203.94000053405762,
+      "end": 204.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "is",
+      "start": 204.20000076293945,
+      "end": 204.3799991607666
+    },
+    {
+      "chunk": 3,
+      "word": "delayed",
+      "start": 204.3799991607666,
+      "end": 204.92000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "because",
+      "start": 205.2800006866455,
+      "end": 205.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 205.63999938964844,
+      "end": 205.89999961853027
+    },
+    {
+      "chunk": 3,
+      "word": "vector",
+      "start": 205.89999961853027,
+      "end": 206.3400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "database",
+      "start": 206.3400001525879,
+      "end": 207.07999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "we",
+      "start": 207.2800006866455,
+      "end": 207.57999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "chose",
+      "start": 207.57999992370605,
+      "end": 207.92000007629395
+    },
+    {
+      "chunk": 3,
+      "word": "Pinecone",
+      "start": 207.92000007629395,
+      "end": 208.6599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "needs",
+      "start": 209.23999977111816,
+      "end": 209.23999977111816
+    },
+    {
+      "chunk": 3,
+      "word": "a",
+      "start": 209.23999977111816,
+      "end": 209.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "security",
+      "start": 209.54000091552734,
+      "end": 210.04000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "review",
+      "start": 210.04000091552734,
+      "end": 210.52000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "from",
+      "start": 210.52000045776367,
+      "end": 210.76000022888184
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 210.76000022888184,
+      "end": 211.07999992370605
+    },
+    {
+      "chunk": 3,
+      "word": "compliance",
+      "start": 211.07999992370605,
+      "end": 211.54000091552734
+    },
+    {
+      "chunk": 3,
+      "word": "team",
+      "start": 211.54000091552734,
+      "end": 212.18000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "And",
+      "start": 212.70000076293945,
+      "end": 212.93999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "third",
+      "start": 212.93999862670898,
+      "end": 213.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "achieve",
+      "start": 213.72000122070312,
+      "end": 214.13999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "SoC",
+      "start": 214.13999938964844,
+      "end": 214.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "2",
+      "start": 214.63999938964844,
+      "end": 215.0
+    },
+    {
+      "chunk": 3,
+      "word": "type",
+      "start": 215.0,
+      "end": 215.31999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "2",
+      "start": 215.31999969482422,
+      "end": 215.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "readiness",
+      "start": 215.7400016784668,
+      "end": 216.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 216.63999938964844,
+      "end": 216.81999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "are",
+      "start": 216.81999969482422,
+      "end": 217.0
+    },
+    {
+      "chunk": 3,
+      "word": "about",
+      "start": 217.0,
+      "end": 217.3400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "halfway",
+      "start": 217.3400001525879,
+      "end": 217.79999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "there",
+      "start": 217.79999923706055,
+      "end": 218.81999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "What",
+      "start": 219.63999938964844,
+      "end": 219.88000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "is",
+      "start": 219.88000106811523,
+      "end": 220.06000137329102
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 220.06000137329102,
+      "end": 220.36000061035156
+    },
+    {
+      "chunk": 3,
+      "word": "risk",
+      "start": 220.36000061035156,
+      "end": 220.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "on",
+      "start": 220.43999862670898,
+      "end": 220.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 220.68000030517578,
+      "end": 220.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "SoC",
+      "start": 220.95999908447266,
+      "end": 221.27999877929688
+    },
+    {
+      "chunk": 3,
+      "word": "2",
+      "start": 221.27999877929688,
+      "end": 221.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "work",
+      "start": 221.63999938964844,
+      "end": 222.0
+    },
+    {
+      "chunk": 3,
+      "word": "The",
+      "start": 222.77999877929688,
+      "end": 223.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "main",
+      "start": 223.43999862670898,
+      "end": 223.7599983215332
+    },
+    {
+      "chunk": 3,
+      "word": "risk",
+      "start": 223.7599983215332,
+      "end": 224.02000045776367
+    },
+    {
+      "chunk": 3,
+      "word": "is",
+      "start": 224.02000045776367,
+      "end": 224.22000122070312
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 224.22000122070312,
+      "end": 224.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "audit",
+      "start": 224.43999862670898,
+      "end": 224.77999877929688
+    },
+    {
+      "chunk": 3,
+      "word": "logging",
+      "start": 224.77999877929688,
+      "end": 225.3400001525879
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 225.8400001525879,
+      "end": 226.0
+    },
+    {
+      "chunk": 3,
+      "word": "need",
+      "start": 226.0,
+      "end": 226.31999969482422
+    },
+    {
+      "chunk": 3,
+      "word": "every",
+      "start": 226.31999969482422,
+      "end": 226.72000122070312
+    },
+    {
+      "chunk": 3,
+      "word": "access",
+      "start": 226.72000122070312,
+      "end": 227.0999984741211
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 227.0999984741211,
+      "end": 227.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "customer",
+      "start": 227.45999908447266,
+      "end": 227.88000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "data",
+      "start": 227.88000106811523,
+      "end": 228.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 228.2400016784668,
+      "end": 228.4199981689453
+    },
+    {
+      "chunk": 3,
+      "word": "be",
+      "start": 228.4199981689453,
+      "end": 228.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "logged",
+      "start": 228.9000015258789,
+      "end": 228.9000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "and",
+      "start": 228.9000015258789,
+      "end": 229.29999923706055
+    },
+    {
+      "chunk": 3,
+      "word": "retained",
+      "start": 229.29999923706055,
+      "end": 229.72000122070312
+    },
+    {
+      "chunk": 3,
+      "word": "for",
+      "start": 229.72000122070312,
+      "end": 230.0999984741211
+    },
+    {
+      "chunk": 3,
+      "word": "one",
+      "start": 230.0999984741211,
+      "end": 230.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "year",
+      "start": 230.45999908447266,
+      "end": 230.9199981689453
+    },
+    {
+      "chunk": 3,
+      "word": "Right",
+      "start": 230.9199981689453,
+      "end": 231.77999877929688
+    },
+    {
+      "chunk": 3,
+      "word": "now",
+      "start": 231.77999877929688,
+      "end": 232.0800018310547
+    },
+    {
+      "chunk": 3,
+      "word": "we",
+      "start": 232.0800018310547,
+      "end": 232.2400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "only",
+      "start": 232.2400016784668,
+      "end": 232.63999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "keep",
+      "start": 232.63999938964844,
+      "end": 232.95999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "logs",
+      "start": 232.95999908447266,
+      "end": 233.38000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "in",
+      "start": 233.38000106811523,
+      "end": 233.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "CloudWatch",
+      "start": 233.68000030517578,
+      "end": 234.38000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "for",
+      "start": 234.38000106811523,
+      "end": 234.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "30",
+      "start": 234.7400016784668,
+      "end": 235.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "days",
+      "start": 235.1599998474121,
+      "end": 235.7400016784668
+    },
+    {
+      "chunk": 3,
+      "word": "We",
+      "start": 237.0,
+      "end": 237.1599998474121
+    },
+    {
+      "chunk": 3,
+      "word": "could",
+      "start": 237.1599998474121,
+      "end": 237.45999908447266
+    },
+    {
+      "chunk": 3,
+      "word": "export",
+      "start": 237.45999908447266,
+      "end": 237.88000106811523
+    },
+    {
+      "chunk": 3,
+      "word": "the",
+      "start": 237.88000106811523,
+      "end": 238.20000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "logs",
+      "start": 238.20000076293945,
+      "end": 238.43999862670898
+    },
+    {
+      "chunk": 3,
+      "word": "to",
+      "start": 238.43999862670898,
+      "end": 238.70000076293945
+    },
+    {
+      "chunk": 3,
+      "word": "S3",
+      "start": 238.70000076293945,
+      "end": 239.13999938964844
+    },
+    {
+      "chunk": 3,
+      "word": "with",
+      "start": 239.13999938964844,
+      "end": 239.4000015258789
+    },
+    {
+      "chunk": 3,
+      "word": "a",
+      "start": 239.4000015258789,
+      "end": 239.68000030517578
+    },
+    {
+      "chunk": 3,
+      "word": "live",
+      "start": 239.68000030517578,
+      "end": 239.77999877929688
+    },
+    {
+      "chunk": 3,
+      "word": "site",
+      "start": 239.77999877929688,
+      "end": 239.97999954223633
+    },
+    {
+      "chunk": 4,
+      "word": "Last",
+      "start": 253.46000003814697,
+      "end": 254.18000030517578
+    },
+    {
+      "chunk": 4,
+      "word": "item",
+      "start": 254.18000030517578,
+      "end": 254.89999961853027
+    },
+    {
+      "chunk": 4,
+      "word": "hiring",
+      "start": 255.73999977111816,
+      "end": 255.73999977111816
+    },
+    {
+      "chunk": 4,
+      "word": "We",
+      "start": 256.1800003051758,
+      "end": 256.29999923706055
+    },
+    {
+      "chunk": 4,
+      "word": "have",
+      "start": 256.29999923706055,
+      "end": 256.6000003814697
+    },
+    {
+      "chunk": 4,
+      "word": "two",
+      "start": 256.6000003814697,
+      "end": 256.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "open",
+      "start": 256.8400001525879,
+      "end": 257.2199993133545
+    },
+    {
+      "chunk": 4,
+      "word": "roles",
+      "start": 257.2199993133545,
+      "end": 257.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "A",
+      "start": 258.07999992370605,
+      "end": 258.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "senior",
+      "start": 258.1599998474121,
+      "end": 258.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "backend",
+      "start": 258.54000091552734,
+      "end": 259.1200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "engineer",
+      "start": 259.1200008392334,
+      "end": 259.57999992370605
+    },
+    {
+      "chunk": 4,
+      "word": "with",
+      "start": 259.57999992370605,
+      "end": 259.8999996185303
+    },
+    {
+      "chunk": 4,
+      "word": "Go",
+      "start": 259.8999996185303,
+      "end": 260.1800003051758
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 260.1800003051758,
+      "end": 260.5599994659424
+    },
+    {
+      "chunk": 4,
+      "word": "gRPC",
+      "start": 260.5599994659424,
+      "end": 261.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "experience",
+      "start": 261.1599998474121,
+      "end": 262.1200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 262.45999908447266,
+      "end": 262.5599994659424
+    },
+    {
+      "chunk": 4,
+      "word": "a",
+      "start": 262.5599994659424,
+      "end": 262.8199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "machine",
+      "start": 262.8199996948242,
+      "end": 263.1200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "learning",
+      "start": 263.1200008392334,
+      "end": 263.5200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "engineer",
+      "start": 263.5200004577637,
+      "end": 263.9400005340576
+    },
+    {
+      "chunk": 4,
+      "word": "for",
+      "start": 263.9400005340576,
+      "end": 264.23999977111816
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 264.23999977111816,
+      "end": 264.6000003814697
+    },
+    {
+      "chunk": 4,
+      "word": "recommendation",
+      "start": 264.6000003814697,
+      "end": 265.2800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "work",
+      "start": 265.2800006866455,
+      "end": 265.6200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "We",
+      "start": 266.0200004577637,
+      "end": 266.26000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "have",
+      "start": 266.26000022888184,
+      "end": 266.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "three",
+      "start": 266.54000091552734,
+      "end": 267.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "candidates",
+      "start": 267.0200004577637,
+      "end": 267.3999996185303
+    },
+    {
+      "chunk": 4,
+      "word": "in",
+      "start": 267.3999996185303,
+      "end": 267.76000022888184
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 267.76000022888184,
+      "end": 267.92000007629395
+    },
+    {
+      "chunk": 4,
+      "word": "final",
+      "start": 267.92000007629395,
+      "end": 268.2800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "round",
+      "start": 268.2800006866455,
+      "end": 268.6200008392334
+    },
+    {
+      "chunk": 4,
+      "word": "Priya",
+      "start": 269.3400001525879,
+      "end": 269.4799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 269.4799995422363,
+      "end": 269.7800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "Top",
+      "start": 269.7800006866455,
+      "end": 269.9799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "Thomas",
+      "start": 269.9799995422363,
+      "end": 270.13999938964844
+    },
+    {
+      "chunk": 4,
+      "word": "please",
+      "start": 270.6200008392334,
+      "end": 271.04000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "submit",
+      "start": 271.04000091552734,
+      "end": 271.42000007629395
+    },
+    {
+      "chunk": 4,
+      "word": "your",
+      "start": 271.42000007629395,
+      "end": 271.7800006866455
+    },
+    {
+      "chunk": 4,
+      "word": "interview",
+      "start": 271.7800006866455,
+      "end": 272.2599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "feedback",
+      "start": 272.2599983215332,
+      "end": 272.7799987792969
+    },
+    {
+      "chunk": 4,
+      "word": "in",
+      "start": 272.7799987792969,
+      "end": 273.0999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "Greenhouse",
+      "start": 273.0999984741211,
+      "end": 273.560001373291
+    },
+    {
+      "chunk": 4,
+      "word": "by",
+      "start": 273.560001373291,
+      "end": 273.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "Friday",
+      "start": 273.8400001525879,
+      "end": 274.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "Will",
+      "start": 275.61999893188477,
+      "end": 275.88000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "do",
+      "start": 275.88000106811523,
+      "end": 276.2799987792969
+    },
+    {
+      "chunk": 4,
+      "word": "Yes",
+      "start": 277.439998626709,
+      "end": 277.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "I",
+      "start": 277.939998626709,
+      "end": 278.2400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 278.2400016784668,
+      "end": 278.439998626709
+    },
+    {
+      "chunk": 4,
+      "word": "have",
+      "start": 278.439998626709,
+      "end": 278.6599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "mine",
+      "start": 278.6599998474121,
+      "end": 279.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "done",
+      "start": 279.0200004577637,
+      "end": 279.3400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "tomorrow",
+      "start": 279.3400001525879,
+      "end": 279.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "Great",
+      "start": 280.8400001525879,
+      "end": 281.5999984741211
+    },
+    {
+      "chunk": 4,
+      "word": "To",
+      "start": 281.9799995422363,
+      "end": 282.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "summarize",
+      "start": 282.1599998474121,
+      "end": 282.45999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 282.45999908447266,
+      "end": 282.88000106811523
+    },
+    {
+      "chunk": 4,
+      "word": "action",
+      "start": 282.88000106811523,
+      "end": 283.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "items",
+      "start": 283.3199996948242,
+      "end": 283.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "Priya",
+      "start": 284.63999938964844,
+      "end": 284.63999938964844
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 284.63999938964844,
+      "end": 284.95999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "fix",
+      "start": 284.95999908447266,
+      "end": 285.3199996948242
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 285.3199996948242,
+      "end": 285.54000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "Redis",
+      "start": 285.54000091552734,
+      "end": 285.79999923706055
+    },
+    {
+      "chunk": 4,
+      "word": "storage",
+      "start": 285.79999923706055,
+      "end": 286.2599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "class",
+      "start": 286.2599983215332,
+      "end": 286.7799987792969
+    },
+    {
+      "chunk": 4,
+      "word": "issue",
+      "start": 286.7799987792969,
+      "end": 287.04000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "by",
+      "start": 287.04000091552734,
+      "end": 287.3400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "Tuesday",
+      "start": 287.3400001525879,
+      "end": 288.0200004577637
+    },
+    {
+      "chunk": 4,
+      "word": "Thomas",
+      "start": 288.38000106811523,
+      "end": 288.79999923706055
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 288.79999923706055,
+      "end": 289.11999893188477
+    },
+    {
+      "chunk": 4,
+      "word": "review",
+      "start": 289.11999893188477,
+      "end": 289.5
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 289.5,
+      "end": 289.7599983215332
+    },
+    {
+      "chunk": 4,
+      "word": "Terraform",
+      "start": 289.7599983215332,
+      "end": 290.29999923706055
+    },
+    {
+      "chunk": 4,
+      "word": "pull",
+      "start": 290.29999923706055,
+      "end": 290.61999893188477
+    },
+    {
+      "chunk": 4,
+      "word": "request",
+      "start": 290.61999893188477,
+      "end": 291.1800003051758
+    },
+    {
+      "chunk": 4,
+      "word": "today",
+      "start": 291.1800003051758,
+      "end": 291.6800003051758
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 291.79999923706055,
+      "end": 292.060001373291
+    },
+    {
+      "chunk": 4,
+      "word": "deploy",
+      "start": 292.060001373291,
+      "end": 292.45999908447266
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 292.45999908447266,
+      "end": 292.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "index",
+      "start": 292.8400001525879,
+      "end": 293.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "migration",
+      "start": 293.1599998474121,
+      "end": 293.8400001525879
+    },
+    {
+      "chunk": 4,
+      "word": "Aisha",
+      "start": 294.38000106811523,
+      "end": 294.6599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "will",
+      "start": 294.6599998474121,
+      "end": 295.04000091552734
+    },
+    {
+      "chunk": 4,
+      "word": "schedule",
+      "start": 295.04000091552734,
+      "end": 295.439998626709
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 295.439998626709,
+      "end": 295.86000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "Pinecone",
+      "start": 295.86000061035156,
+      "end": 296.13999938964844
+    },
+    {
+      "chunk": 4,
+      "word": "security",
+      "start": 296.13999938964844,
+      "end": 296.9199981689453
+    },
+    {
+      "chunk": 4,
+      "word": "review",
+      "start": 296.9199981689453,
+      "end": 297.36000061035156
+    },
+    {
+      "chunk": 4,
+      "word": "and",
+      "start": 297.560001373291,
+      "end": 297.9000015258789
+    },
+    {
+      "chunk": 4,
+      "word": "draft",
+      "start": 297.9000015258789,
+      "end": 298.1599998474121
+    },
+    {
+      "chunk": 4,
+      "word": "the",
+      "start": 298.1599998474121,
+      "end": 298.560001373291
+    },
+    {
+      "chunk": 4,
+      "word": "log",
+      "start": 298.560001373291,
+      "end": 298.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "retention",
+      "start": 298.70000076293945,
+      "end": 299.2400016784668
+    },
+    {
+      "chunk": 4,
+      "word": "plan",
+      "start": 299.2400016784668,
+      "end": 299.70000076293945
+    },
+    {
+      "chunk": 4,
+      "word": "with",
+      "start": 299.70000076293945,
+      "end": 299.9799995422363
+    },
+    {
+      "chunk": 4,
+      "word": "Priya",
+      "start": 299.9799995422363,
+      "end": 299.9799995422363
+    },
+    {
+      "chunk": 5,
+      "word": "Priya",
+      "start": 300.0,
+      "end": 300.46000000834465
+    },
+    {
+      "chunk": 5,
+      "word": "And",
+      "start": 300.8799999952316,
+      "end": 301.05999994277954
+    },
+    {
+      "chunk": 5,
+      "word": "everyone",
+      "start": 301.05999994277954,
+      "end": 301.72000002861023
+    },
+    {
+      "chunk": 5,
+      "word": "please",
+      "start": 302.05999994277954,
+      "end": 302.3800001144409
+    },
+    {
+      "chunk": 5,
+      "word": "send",
+      "start": 302.3800001144409,
+      "end": 302.74000000953674
+    },
+    {
+      "chunk": 5,
+      "word": "your",
+      "start": 302.74000000953674,
+      "end": 302.9800000190735
+    },
+    {
+      "chunk": 5,
+      "word": "Greenhouse",
+      "start": 302.9800000190735,
+      "end": 303.4800000190735
+    },
+    {
+      "chunk": 5,
+      "word": "feedback",
+      "start": 303.4800000190735,
+      "end": 304.0199999809265
+    },
+    {
+      "chunk": 5,
+      "word": "by",
+      "start": 304.0199999809265,
+      "end": 304.3400001525879
+    },
+    {
+      "chunk": 5,
+      "word": "Friday",
+      "start": 304.3400001525879,
+      "end": 304.8200001716614
+    },
+    {
+      "chunk": 5,
+      "word": "Thanks",
+      "start": 305.3600001335144,
+      "end": 305.8400001525879
+    },
+    {
+      "chunk": 5,
+      "word": "everyone",
+      "start": 305.8400001525879,
+      "end": 306.5199999809265
+    },
+    {
+      "chunk": 5,
+      "word": "see",
+      "start": 306.78000020980835,
+      "end": 307.0
+    },
+    {
+      "chunk": 5,
+      "word": "you",
+      "start": 307.0,
+      "end": 307.19999980926514
+    },
+    {
+      "chunk": 5,
+      "word": "next",
+      "start": 307.19999980926514,
+      "end": 307.59999990463257
+    },
+    {
+      "chunk": 5,
+      "word": "week",
+      "start": 307.59999990463257,
+      "end": 307.94000005722046
+    }
+  ]
+}
