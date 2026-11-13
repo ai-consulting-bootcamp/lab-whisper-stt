@@ -1,0 +1,10 @@
+.env
+*.mp3
+*.wav
+*.m4a
+audio/
+chunks/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store

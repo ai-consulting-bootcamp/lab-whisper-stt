@@ -1,0 +1,94 @@
+{
+  "source_file": "CA138clip.mp3",
+  "model": "whisper-1",
+  "prompt": "A casual conversation about the Apollo moon landing. Topics: NASA, astronauts, lunar surface, kangaroo hop, splashdown, ticker-tape parade in New York.",
+  "chunk_seconds": 30,
+  "duration_sec": 86.2,
+  "full_text": "It was rather interesting just to watch them gathering their materials and bouncing around their, what they call it, kangaroo walk or something like that. Who named it that? I don't know. I bet those men are going to get quite a reception when they get back to Earth. Yes, I'll be so glad when they land back now, but I think that's pretty well a fact because they've landed so many safely now. I feel relieved. Just getting off of the moon was the thing that was... Have they met with the one that was circling? Yes, they've rendezvoused. So I understand. That wasn't shown either, so I... But they say they have rendezvoused, so that's a matter of making the circles and then coming down. What do you sort of imagine for the future? Do you imagine them sending a... I think they will. I think they will. We'll do some more exploring up there, because that was such a very small area, when you think of it, that they just gathered rocks and, oh, samples of soil and all, and they did a probe for some samples, and just what was going to come of that, I don't know, I'd be glad to read it.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 13.0,
+      "text": "It was rather interesting just to watch them gathering their materials and bouncing around their, what they call it, kangaroo walk or something like that.",
+      "chunk": 0
+    },
+    {
+      "start": 13.0,
+      "end": 15.0,
+      "text": "Who named it that? I don't know.",
+      "chunk": 0
+    },
+    {
+      "start": 15.0,
+      "end": 19.0,
+      "text": "I bet those men are going to get quite a reception when they get back to Earth.",
+      "chunk": 0
+    },
+    {
+      "start": 19.0,
+      "end": 30.0,
+      "text": "Yes, I'll be so glad when they land back now, but I think that's pretty well a fact because they've landed so many safely now.",
+      "chunk": 0
+    },
+    {
+      "start": 31.0,
+      "end": 35.0,
+      "text": "I feel relieved. Just getting off of the moon was the thing that was...",
+      "chunk": 1
+    },
+    {
+      "start": 35.0,
+      "end": 38.0,
+      "text": "Have they met with the one that was circling?",
+      "chunk": 1
+    },
+    {
+      "start": 38.0,
+      "end": 44.0,
+      "text": "Yes, they've rendezvoused. So I understand. That wasn't shown either, so I...",
+      "chunk": 1
+    },
+    {
+      "start": 44.0,
+      "end": 53.0,
+      "text": "But they say they have rendezvoused, so that's a matter of making the circles and then coming down.",
+      "chunk": 1
+    },
+    {
+      "start": 53.0,
+      "end": 57.0,
+      "text": "What do you sort of imagine for the future? Do you imagine them sending a...",
+      "chunk": 1
+    },
+    {
+      "start": 57.0,
+      "end": 60.0,
+      "text": "I think they will. I think they will.",
+      "chunk": 1
+    },
+    {
+      "start": 60.0,
+      "end": 67.76,
+      "text": "We'll do some more exploring up there, because that was such a very small area, when you",
+      "chunk": 2
+    },
+    {
+      "start": 67.76,
+      "end": 78.68,
+      "text": "think of it, that they just gathered rocks and, oh, samples of soil and all, and they",
+      "chunk": 2
+    },
+    {
+      "start": 78.68,
+      "end": 84.84,
+      "text": "did a probe for some samples, and just what was going to come of that, I don't know, I'd",
+      "chunk": 2
+    },
+    {
+      "start": 84.84,
+      "end": 85.88,
+      "text": "be glad to read it.",
+      "chunk": 2
+    }
+  ]
+}
