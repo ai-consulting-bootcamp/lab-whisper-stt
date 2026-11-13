@@ -1,0 +1,17 @@
+Transcript of CA138clip.mp3
+Model: whisper-1 | Chunks: 3 x 30s | Prompt: guided
+
+[00:00.00 - 00:13.00]  It was rather interesting just to watch them gathering their materials and bouncing around their, what they call it, kangaroo walk or something like that.
+[00:13.00 - 00:15.00]  Who named it that? I don't know.
+[00:15.00 - 00:19.00]  I bet those men are going to get quite a reception when they get back to Earth.
+[00:19.00 - 00:30.00]  Yes, I'll be so glad when they land back now, but I think that's pretty well a fact because they've landed so many safely now.
+[00:31.00 - 00:35.00]  I feel relieved. Just getting off of the moon was the thing that was...
+[00:35.00 - 00:38.00]  Have they met with the one that was circling?
+[00:38.00 - 00:44.00]  Yes, they've rendezvoused. So I understand. That wasn't shown either, so I...
+[00:44.00 - 00:53.00]  But they say they have rendezvoused, so that's a matter of making the circles and then coming down.
+[00:53.00 - 00:57.00]  What do you sort of imagine for the future? Do you imagine them sending a...
+[00:57.00 - 01:00.00]  I think they will. I think they will.
+[01:00.00 - 01:07.76]  We'll do some more exploring up there, because that was such a very small area, when you
+[01:07.76 - 01:18.68]  think of it, that they just gathered rocks and, oh, samples of soil and all, and they
+[01:18.68 - 01:24.84]  did a probe for some samples, and just what was going to come of that, I don't know, I'd
+[01:24.84 - 01:25.88]  be glad to read it.
