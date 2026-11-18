@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "model": "whisper-1",
+    "prompted": false
+  },
+  "duration": 3729.9,
+  "full_text": "Welcome everyone to the meeting. Let's start with the quarterly roadmap. Final item: deployment schedule.",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.5,
+      "text": "Welcome everyone to the meeting.",
+      "start_formatted": "00:00:00",
+      "end_formatted": "00:00:03"
+    },
+    {
+      "id": 1,
+      "start": 3.5,
+      "end": 8.25,
+      "text": "Let's start with the quarterly roadmap.",
+      "start_formatted": "00:00:03",
+      "end_formatted": "00:00:08"
+    },
+    {
+      "id": 2,
+      "start": 3725.1,
+      "end": 3729.9,
+      "text": "Final item: deployment schedule.",
+      "start_formatted": "01:02:05",
+      "end_formatted": "01:02:09"
+    }
+  ]
+}

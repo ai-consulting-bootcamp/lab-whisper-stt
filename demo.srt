@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:03,500
+Welcome everyone to the meeting.
+
+2
+00:00:03,500 --> 00:00:08,250
+Let's start with the quarterly roadmap.
+
+3
+01:02:05,100 --> 01:02:09,900
+Final item: deployment schedule.
+
